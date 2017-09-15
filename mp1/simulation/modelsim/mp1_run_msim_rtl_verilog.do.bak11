@@ -9,6 +9,7 @@ vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/lc3
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/plus2.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/register.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mux2.sv}
+vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mux3.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mux4.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/adj.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/alu.sv}

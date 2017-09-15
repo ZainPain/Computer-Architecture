@@ -8,6 +8,8 @@ entity control is
         branch_enable   : in     vl_logic;
         imm             : in     vl_logic;
         bit11           : in     vl_logic;
+        bit4            : in     vl_logic;
+        alu_out         : in     vl_logic_vector(15 downto 0);
         load_pc         : out    vl_logic;
         load_ir         : out    vl_logic;
         load_regfile    : out    vl_logic;
@@ -15,9 +17,10 @@ entity control is
         load_mdr        : out    vl_logic;
         load_cc         : out    vl_logic;
         mask_enable     : out    vl_logic;
+        truncate        : out    vl_logic;
         pcmux_sel       : out    vl_logic_vector(1 downto 0);
         storemux_sel    : out    vl_logic;
-        alumux_sel      : out    vl_logic;
+        alumux_sel      : out    vl_logic_vector(1 downto 0);
         regfilemux_sel  : out    vl_logic_vector(1 downto 0);
         marmux_sel      : out    vl_logic_vector(1 downto 0);
         mdrmux_sel      : out    vl_logic;

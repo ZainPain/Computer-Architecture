@@ -21,6 +21,7 @@ vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/add
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/cccomp.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/adj_imm.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mask.sv}
+vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/truncator.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/datapath.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mp1.sv}
 

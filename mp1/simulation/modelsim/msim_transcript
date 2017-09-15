@@ -63,9 +63,11 @@
 # 	alu
 # vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: /home/zpaya2/ece411/mp1/control.sv(99): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # -- Compiling package control_sv_unit
 # -- Importing package lc3b_types
 # -- Compiling module control
+# ** Warning: /home/zpaya2/ece411/mp1/control.sv(99): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	control
@@ -125,6 +127,14 @@
 # 
 # Top level modules:
 # 	mask
+# vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/truncator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package truncator_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module truncator
+# 
+# Top level modules:
+# 	truncator
 # vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package datapath_sv_unit
@@ -181,6 +191,8 @@
 # Loading work.ir
 # Loading work.adj_imm_sv_unit
 # Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit
@@ -223,6 +235,8 @@ restart -f; run 3000ns;
 # Loading work.ir
 # Loading work.adj_imm_sv_unit
 # Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit
@@ -257,6 +271,8 @@ restart -f; run 3000ns;
 # Loading work.ir
 # Loading work.adj_imm_sv_unit
 # Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit
@@ -291,6 +307,8 @@ restart -f; run 3000ns;
 # Loading work.ir
 # Loading work.adj_imm_sv_unit
 # Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit
@@ -325,6 +343,188 @@ restart -f; run 3000ns;
 # Loading work.ir
 # Loading work.adj_imm_sv_unit
 # Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.mask_sv_unit
+# Loading work.mask
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.memory
+restart -f; run 3000ns;
+# Loading sv_std.std
+# Loading work.mp1_tb
+# Loading work.lc3b_types
+# Loading work.mp1_sv_unit
+# Loading work.mp1
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.register
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux3
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.adj_imm_sv_unit
+# Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.mask_sv_unit
+# Loading work.mask
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.memory
+restart -f; run 3000ns;
+# Loading sv_std.std
+# Loading work.mp1_tb
+# Loading work.lc3b_types
+# Loading work.mp1_sv_unit
+# Loading work.mp1
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.register
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux3
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.adj_imm_sv_unit
+# Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.mask_sv_unit
+# Loading work.mask
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.memory
+restart -f; run 3000ns;
+# Loading sv_std.std
+# Loading work.mp1_tb
+# Loading work.lc3b_types
+# Loading work.mp1_sv_unit
+# Loading work.mp1
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.register
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux3
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.adj_imm_sv_unit
+# Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.mask_sv_unit
+# Loading work.mask
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.memory
+restart -f; run 3000ns;
+# Loading sv_std.std
+# Loading work.mp1_tb
+# Loading work.lc3b_types
+# Loading work.mp1_sv_unit
+# Loading work.mp1
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.register
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux3
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.adj_imm_sv_unit
+# Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.mask_sv_unit
+# Loading work.mask
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.memory
+restart -f; run 30000ns;
+# Loading sv_std.std
+# Loading work.mp1_tb
+# Loading work.lc3b_types
+# Loading work.mp1_sv_unit
+# Loading work.mp1
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.register
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux3
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.adj_imm_sv_unit
+# Loading work.adj_imm
+# Loading work.truncator_sv_unit
+# Loading work.truncator
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit

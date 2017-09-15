@@ -23,10 +23,11 @@ module mp1
 	 logic load_mdr;
 	 logic load_cc;
 	 logic mask_enable;
+	 logic truncate;
 	 
 	 logic [1:0] pcmux_sel;
 	 logic storemux_sel;
-	 logic alumux_sel;
+	 logic [1:0] alumux_sel;
 	 logic [1:0] regfilemux_sel;
 	 logic [1:0]marmux_sel;
 	 logic mdrmux_sel;
@@ -37,6 +38,8 @@ module mp1
 	 lc3b_opcode opcode;
 	 logic imm;
 	 logic bit11;
+	 logic bit4;
+	 lc3b_word alu_out;
 	 
 datapath Datapath
 (
@@ -51,6 +54,7 @@ datapath Datapath
 	 .load_mdr(load_mdr),
 	 .load_cc(load_cc),
 	 .mask_enable(mask_enable),
+	 .truncate(truncate),
 	 /* Select signals */
 	 
 	 .pcmux_sel(pcmux_sel),
@@ -70,7 +74,9 @@ datapath Datapath
 	 .mem_address(mem_address),
 	 .mem_wdata(mem_wdata),
 	 .imm(imm),
-	 .bit11(bit11)
+	 .bit11(bit11),
+	 .bit4(bit4),
+	 .alu_out(alu_out)
 	
 );
 
@@ -84,6 +90,8 @@ control Control
 	 .branch_enable(branch_enable), 
 	 .imm(imm),
 	 .bit11(bit11),
+	 .bit4(bit4),
+	 .alu_out(alu_out),
 	 /* Datapath Loads */
 	 .load_pc(load_pc),
 	 .load_ir(load_ir),
@@ -92,6 +100,7 @@ control Control
 	 .load_mdr(load_mdr),
 	 .load_cc(load_cc),
 	 .mask_enable(mask_enable),
+	 .truncate(truncate),
 	 /* Datapath mux select bits */
 	 .pcmux_sel(pcmux_sel),
 	 .storemux_sel(storemux_sel),

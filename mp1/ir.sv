@@ -12,7 +12,9 @@ module ir
 	 output lc3b_offset11 offset11,
 	 output logic imm,
 	 output logic [4:0] imm5,
-	 output logic bit11
+	 output lc3b_word imm4,
+	 output logic bit11,
+	 output logic bit4
 	 
 );
 
@@ -38,8 +40,10 @@ begin
     offset9 = data[8:0];
 	 offset11 = data[10:0];
 	 imm5 = data[4:0];
+	 imm4 = $unsigned(data[3:0]);
 	 if(opcode == op_jsr)
 			dest = 3'b111;
 	 bit11 = data[10];
+	 bit4 = data[4];
 end
 endmodule : ir

@@ -11,9 +11,10 @@ entity datapath is
         load_mdr        : in     vl_logic;
         load_cc         : in     vl_logic;
         mask_enable     : in     vl_logic;
+        truncate        : in     vl_logic;
         pcmux_sel       : in     vl_logic_vector(1 downto 0);
         storemux_sel    : in     vl_logic;
-        alumux_sel      : in     vl_logic;
+        alumux_sel      : in     vl_logic_vector(1 downto 0);
         regfilemux_sel  : in     vl_logic_vector(1 downto 0);
         marmux_sel      : in     vl_logic_vector(1 downto 0);
         mdrmux_sel      : in     vl_logic;
@@ -26,6 +27,8 @@ entity datapath is
         mem_address     : out    vl_logic_vector(15 downto 0);
         mem_wdata       : out    vl_logic_vector(15 downto 0);
         imm             : out    vl_logic;
-        bit11           : out    vl_logic
+        bit11           : out    vl_logic;
+        bit4            : out    vl_logic;
+        alu_out         : out    vl_logic_vector(15 downto 0)
     );
 end datapath;

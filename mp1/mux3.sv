@@ -1,7 +1,8 @@
 module mux3 #(parameter width = 16)
 (
 	input [1:0] sel,
-	input [width-1:0] a, b, c,
+	input [width-1:0] a, b, 
+	input [width-1:0] c,
 	output logic [width-1:0] f
 );
 

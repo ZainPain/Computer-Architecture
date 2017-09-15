@@ -9,8 +9,10 @@ module control
 	 
 	 input lc3b_opcode opcode,
 	 input logic branch_enable, 
-	 input logic imm,
+	 input logic imm,	/* bit5 */
 	 input logic bit11,
+	 input logic bit4,
+	 input lc3b_word alu_out,
 				
 	 /* Datapath Loads */
 	 output logic load_pc,
@@ -20,11 +22,11 @@ module control
 	 output logic load_mdr,
 	 output logic load_cc,
 	 output logic mask_enable,
-	 
-	 /* Datapath mux select bits */
+	 output logic truncate,
+	 /* Datapath mux select bits =*/
 	 output logic [1:0] pcmux_sel,
 	 output logic storemux_sel,
-	 output logic alumux_sel,
+	 output logic [1:0] alumux_sel,
 	 output logic [1:0] regfilemux_sel,
 	 output logic [1:0]marmux_sel,
 	 output logic mdrmux_sel,
@@ -65,7 +67,16 @@ enum int unsigned {
 	ldi1,
 	ldi2,
 	ldi3,
-	ldi4
+	ldi4,
+	shf,
+	lshf,
+	rshfl,
+	rshfa,
+	stb1_odd,
+	stb1_even,
+	stb2_odd,
+	stb2_even
+	
 	
     /* List of states */
 } state, next_states;
@@ -85,12 +96,13 @@ begin : state_actions
 	 /* MUX Select bits */
 	 pcmux_sel = 1'b0;
 	 storemux_sel = 1'b0;
-	 alumux_sel = 1'b0;
+	 alumux_sel = 1'b00;
 	 regfilemux_sel = 2'b00;
 	 marmux_sel = 1'b0;
 	 mdrmux_sel = 1'b0;
 	 adjmux_sel = 1'b0;
 	 mask_enable = 1'b0;
+	 truncate = 1'b0;
 	 aluop = alu_add;
 	 aluop_imm = alu_pass;
 	 
@@ -183,11 +195,11 @@ begin : state_actions
 		
 		calc_addr: begin
 			/* MAR <- A + SEXT(IR[5:0] << 1) */
-			if(opcode == op_ldb)
+			if(opcode == op_ldb || opcode == op_stb)
 				begin
 					adjmux_sel = 1'b1;
 				end
-			alumux_sel = 1'b1;
+			alumux_sel = 2'b01;
 			aluop = alu_add;
 			load_mar = 1'b1;
 		end 
@@ -251,13 +263,13 @@ begin : state_actions
 					mdrmux_sel = 1'b1;
 					load_mdr = 1'b1;
 					mem_read = 1'b1;
-					alumux_sel = 1'b1;
+					alumux_sel = 2'b01;
 					adjmux_sel = 1'b1;
 			end
 			
 		ldb2:
 			begin
-				alumux_sel = 1'b1;
+				alumux_sel = 2'b01;
 				adjmux_sel = 1'b1;
 				regfilemux_sel = 2'b01;
 				load_regfile = 1'b1;
@@ -292,8 +304,56 @@ begin : state_actions
 			
 		end
 		
+		shf: /* Do nothing */
 		
+		lshf: begin
+			alumux_sel = 2'b10;
+			aluop = alu_sll;
+			load_cc = 1'b1;
+			load_regfile = 1'b1;
+		end
+		
+		rshfl: begin
+			alumux_sel = 2'b10;
+			aluop = alu_srl;
+			load_cc = 1'b1;
+			load_regfile = 1'b1;
+		end
+		
+		rshfa: begin
+			alumux_sel = 2'b10;
+			aluop = alu_sra; 
+			load_cc = 1'b1;
+			load_regfile = 1'b1;
+		end
+		
+		stb1_odd: begin
+			truncate = 1'b1;
+			storemux_sel = 1'b1;
+			aluop = alu_pass;
+			load_mdr = 1'b1;
 			
+		end
+		
+		stb1_even: begin
+			truncate = 1'b1;
+			storemux_sel = 1'b1;
+			aluop = alu_pass;
+			load_mdr = 1'b1;
+			
+		end
+		
+		stb2_odd: begin
+			mem_write = 1'b1;
+			mem_byte_enable = 2'b10;
+			//mem_byte_enable
+		end
+		
+		stb2_even: begin
+			mem_write = 1'b1;
+			mem_byte_enable = 2'b01;
+			//mem_byte_enable
+		end
 		default: /* Do Nothing */;
 	endcase
 	 
@@ -357,6 +417,12 @@ begin : next_state_logic
 					op_ldi:
 						next_states <= calc_addr;
 						
+					op_shf:
+						next_states <= shf;
+					
+					op_stb:
+						next_states <= calc_addr;
+						
 					default: /* Do Nothing */;
 					
 				endcase
@@ -394,6 +460,13 @@ begin : next_state_logic
 				else if (opcode == op_ldb)
 					next_states <= ldb1;
 					
+				else if(opcode == op_stb)
+					begin
+						if(alu_out[0] == 1'b0)
+							next_states <= stb1_even;	
+						else
+							next_states <= stb1_odd;
+					end
 			end
 		
 		ldr1:
@@ -461,6 +534,56 @@ begin : next_state_logic
 		ldi4:
 			next_states <= fetch1;
 			
+		shf: begin
+			if(bit4 == 0) 
+				begin
+					next_states <= lshf;
+				end
+			
+			else
+				begin
+					if(imm)	/* where imm = bit5 = A */
+						next_states <= rshfa;
+					else
+						next_states <= rshfl;
+				end
+		end
+		
+		lshf: begin
+			next_states <= fetch1;
+		end
+		
+		rshfl: begin
+			next_states <= fetch1;
+		end
+		
+		rshfa: begin
+			next_states <= fetch1;
+		end
+		
+		stb1_even: begin
+			next_states <= stb2_even;
+		
+		end
+		
+		stb1_odd: begin
+			next_states <= stb2_odd;
+		
+		end
+		
+		stb2_odd: begin
+				if(mem_resp)
+					next_states <= fetch1;
+				else
+					next_states <= stb2_odd;
+		end
+		
+		stb2_even: begin
+				if(mem_resp)
+					next_states <= fetch1;
+				else
+					next_states <= stb2_even;
+		end
 		endcase
 	 
 end

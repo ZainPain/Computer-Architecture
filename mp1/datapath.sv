@@ -13,12 +13,13 @@ module datapath
 	 input load_mdr,
 	 input load_cc,
 	 input mask_enable,
+	 input truncate,
 	 
 	 /* Select signals */
 	 
 	 input [1:0] pcmux_sel,
 	 input storemux_sel,
-	 input alumux_sel,
+	 input [1:0] alumux_sel,
 	 input [1:0] regfilemux_sel,
 	 input [1:0] marmux_sel,
 	 input mdrmux_sel,
@@ -34,7 +35,9 @@ module datapath
 	 output lc3b_word mem_wdata,
 	 
 	 output logic imm,
-	 output logic bit11
+	 output logic bit11,
+	 output logic bit4,
+	 output lc3b_word alu_out
 );
 
 /* declare internal signals */
@@ -49,7 +52,9 @@ lc3b_reg dest;
 lc3b_reg storemux_out;
 
 logic [4:0] imm5;
-    
+
+lc3b_word imm4;
+
 lc3b_word sr1_out;
 lc3b_word sr2_out;
 
@@ -58,7 +63,7 @@ lc3b_word adj6_out;
 lc3b_word adj9_out;
 lc3b_word adj11_out;
 lc3b_word adjnoshift_out;
-
+lc3b_word truncate_out;
 lc3b_word mask_out;
 
 lc3b_word alumux_out;
@@ -69,8 +74,8 @@ lc3b_word adjmux_out;
 lc3b_word wdata_out;
 lc3b_word byte_out;
 
-
-lc3b_word alu_out;
+lc3b_word truncator_out;
+//lc3b_word alu_out;
 lc3b_word alu_imm_out;
 
 lc3b_nzp gencc_out;
@@ -213,7 +218,9 @@ ir IR
 	 .offset11(offset11),
 	 .imm(imm),
 	 .imm5(imm5),
-	 .bit11(bit11)
+	 .imm4(imm4),
+	 .bit11(bit11),
+	 .bit4(bit4)
 );
 adj #(.width(6)) ADJ6 
 (
@@ -232,12 +239,19 @@ mux2 #(.width(16)) adjmux
 	.b(adjnoshift_out),
 	.f(adjmux_out)
 );
-mux2 #(.width(16)) alumux
+mux3 #(.width(16)) alumux
 (
 	.sel(alumux_sel),
 	.a(sr2_out),
 	.b(adjmux_out),
+	.c(imm4),
 	.f(alumux_out)
+);
+truncator Truncate_SR1
+(
+	.sel(truncate),
+	.in(sr1_out),
+	.out(truncate_out)
 );
 
 regfile REGFILE 
@@ -256,7 +270,7 @@ regfile REGFILE
 alu ALU
 (
     .aluop(aluop),
-    .a(sr1_out),
+    .a(truncate_out),
 	 .b(alumux_out),
     .f(alu_out)
 );
