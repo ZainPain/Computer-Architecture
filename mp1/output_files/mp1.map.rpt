@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Thu Sep 14 23:43:39 2017
+Fri Sep 15 00:50:12 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -25,7 +25,7 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  17. Parameter Settings for User Entity Instance: datapath:Datapath|adj:ADJ11
  18. Parameter Settings for User Entity Instance: datapath:Datapath|adj:ADJ9
  19. Parameter Settings for User Entity Instance: datapath:Datapath|adder:_adder2
- 20. Parameter Settings for User Entity Instance: datapath:Datapath|mux2:marmux
+ 20. Parameter Settings for User Entity Instance: datapath:Datapath|mux3:marmux
  21. Parameter Settings for User Entity Instance: datapath:Datapath|register:MAR
  22. Parameter Settings for User Entity Instance: datapath:Datapath|mux2:mdrmux
  23. Parameter Settings for User Entity Instance: datapath:Datapath|register:MDR
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Thu Sep 14 23:43:39 2017       ;
+; Analysis & Synthesis Status   ; Successful - Fri Sep 15 00:50:12 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp1                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 315                                         ;
+;     Combinational ALUTs       ; 328                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 215                                         ;
-; Total registers               ; 215                                         ;
+;     Dedicated logic registers ; 219                                         ;
+; Total registers               ; 219                                         ;
 ; Total pins                    ; 54                                          ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -182,11 +182,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -210,6 +211,7 @@ applicable agreement for further details.
 ; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/adder.sv      ;         ;
 ; cccomp.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/cccomp.sv     ;         ;
 ; adj_imm.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/adj_imm.sv    ;         ;
+; mux3.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/mux3.sv       ;         ;
 ; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/mux4.sv       ;         ;
 ; mask.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/mask.sv       ;         ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
@@ -220,34 +222,34 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 315       ;
-;     -- Combinational ALUTs                    ; 315       ;
+; Estimated ALUTs Used                          ; 328       ;
+;     -- Combinational ALUTs                    ; 328       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 215       ;
+; Dedicated logic registers                     ; 219       ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 65        ;
-;     -- Due to unpartnered combinational logic ; 65        ;
+; Estimated ALUTs Unavailable                   ; 66        ;
+;     -- Due to unpartnered combinational logic ; 66        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 315       ;
+; Total combinational functions                 ; 328       ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 65        ;
-;     -- 6 input functions                      ; 43        ;
-;     -- 5 input functions                      ; 60        ;
-;     -- 4 input functions                      ; 36        ;
-;     -- <=3 input functions                    ; 111       ;
+;     -- 7 input functions                      ; 66        ;
+;     -- 6 input functions                      ; 59        ;
+;     -- 5 input functions                      ; 69        ;
+;     -- 4 input functions                      ; 26        ;
+;     -- <=3 input functions                    ; 108       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 173       ;
-;     -- extended LUT mode                      ; 65        ;
+;     -- normal mode                            ; 185       ;
+;     -- extended LUT mode                      ; 66        ;
 ;     -- arithmetic mode                        ; 77        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 468       ;
+; Estimated ALUT/register pairs used            ; 477       ;
 ;                                               ;           ;
-; Total registers                               ; 215       ;
-;     -- Dedicated logic registers              ; 215       ;
+; Total registers                               ; 219       ;
+;     -- Dedicated logic registers              ; 219       ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -255,9 +257,9 @@ applicable agreement for further details.
 ; I/O pins                                      ; 54        ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 215       ;
-; Total fan-out                                 ; 2248      ;
-; Average fan-out                               ; 3.52      ;
+; Maximum fan-out                               ; 219       ;
+; Total fan-out                                 ; 2357      ;
+; Average fan-out                               ; 3.60      ;
 +-----------------------------------------------+-----------+
 
 
@@ -266,20 +268,21 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; |mp1                       ; 315 (0)           ; 215 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp1                                   ; work         ;
-;    |control:Control|       ; 34 (34)           ; 20 (20)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|control:Control                   ; work         ;
-;    |datapath:Datapath|     ; 281 (0)           ; 195 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath                 ; work         ;
+; |mp1                       ; 328 (0)           ; 219 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp1                                   ; work         ;
+;    |control:Control|       ; 41 (41)           ; 24 (24)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|control:Control                   ; work         ;
+;    |datapath:Datapath|     ; 287 (0)           ; 195 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath                 ; work         ;
 ;       |adder:_adder2|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|adder:_adder2   ; work         ;
 ;       |adder:_adder|       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|adder:_adder    ; work         ;
 ;       |alu:ALU_IMM|        ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|alu:ALU_IMM     ; work         ;
 ;       |alu:ALU|            ; 52 (52)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|alu:ALU         ; work         ;
 ;       |cccomp:CCCOMP|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|cccomp:CCCOMP   ; work         ;
-;       |gencc:GENCC|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|gencc:GENCC     ; work         ;
+;       |gencc:GENCC|        ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|gencc:GENCC     ; work         ;
 ;       |ir:IR|              ; 3 (3)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|ir:IR           ; work         ;
 ;       |mux2:alumux|        ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux2:alumux     ; work         ;
 ;       |mux2:storemux|      ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux2:storemux   ; work         ;
+;       |mux3:marmux|        ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux3:marmux     ; work         ;
 ;       |mux4:pcmux|         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux4:pcmux      ; work         ;
-;       |mux4:regfilemux|    ; 61 (61)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux4:regfilemux ; work         ;
+;       |mux4:regfilemux|    ; 54 (54)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux4:regfilemux ; work         ;
 ;       |plus2:_plus2|       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|plus2:_plus2    ; work         ;
 ;       |regfile:REGFILE|    ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|regfile:REGFILE ; work         ;
 ;       |register:CC|        ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:CC     ; work         ;
@@ -291,32 +294,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |mp1|control:Control|state                                                                                                                                                                                                                                                          ;
-+-----------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; Name            ; state.ldb2 ; state.ldb1 ; state.jsr2 ; state.jsr1 ; state.lea ; state.jmp ; state.str2 ; state.str1 ; state.ldr2 ; state.ldr1 ; state.calc_addr ; state.br_taken ; state.br ; state.s_not ; state.s_and ; state.s_add ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
-+-----------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; state.fetch1    ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
-; state.fetch2    ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
-; state.fetch3    ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
-; state.decode    ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
-; state.s_add     ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_and     ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_not     ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br        ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 1        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br_taken  ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 1              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.calc_addr ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 1               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr1      ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 1          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr2      ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 1          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str1      ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str2      ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jmp       ; 0          ; 0          ; 0          ; 0          ; 0         ; 1         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.lea       ; 0          ; 0          ; 0          ; 0          ; 1         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jsr1      ; 0          ; 0          ; 0          ; 1          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jsr2      ; 0          ; 0          ; 1          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldb1      ; 0          ; 1          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldb2      ; 1          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-+-----------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |mp1|control:Control|state                                                                                                                                                                                                                                                                                                              ;
++-----------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
+; Name            ; state.ldi4 ; state.ldi3 ; state.ldi2 ; state.ldi1 ; state.ldb2 ; state.ldb1 ; state.jsr2 ; state.jsr1 ; state.lea ; state.jmp ; state.str2 ; state.str1 ; state.ldr2 ; state.ldr1 ; state.calc_addr ; state.br_taken ; state.br ; state.s_not ; state.s_and ; state.s_add ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
++-----------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
+; state.fetch1    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
+; state.fetch2    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
+; state.fetch3    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
+; state.decode    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
+; state.s_add     ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_and     ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_not     ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.br        ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 1        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.br_taken  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 1              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.calc_addr ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 1               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr1      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 1          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr2      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 1          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str1      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str2      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jmp       ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.lea       ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jsr1      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jsr2      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldb1      ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldb2      ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi1      ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi2      ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi3      ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi4      ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
++-----------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
 
 
 +-------------------------------------------------------------+
@@ -365,7 +372,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 215   ;
+; Total registers                              ; 219   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -380,14 +387,16 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 4:1                ; 15 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:pc|data[9]  ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux2:alumux|f[1]     ;
-; 4:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:Control|next_states            ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|Selector0    ;
-; 8:1                ; 2 bits    ; 10 ALUTs      ; 8 ALUTs              ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector23             ;
-; 8:1                ; 2 bits    ; 10 ALUTs      ; 8 ALUTs              ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector31             ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:MAR|data[0] ;
+; 4:1                ; 15 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:pc|data[1]  ;
+; 3:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux2:alumux|f[3]     ;
+; 5:1                ; 9 bits    ; 27 ALUTs      ; 27 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:Control|next_states            ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|Selector2    ;
 ; 8:1                ; 8 bits    ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux4:regfilemux|f[8] ;
-; 9:1                ; 7 bits    ; 42 ALUTs      ; 35 ALUTs             ; 7 ALUTs                ; No         ; |mp1|datapath:Datapath|mux4:regfilemux|f[5] ;
+; 9:1                ; 2 bits    ; 12 ALUTs      ; 10 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector23             ;
+; 9:1                ; 2 bits    ; 12 ALUTs      ; 10 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector32             ;
+; 9:1                ; 2 bits    ; 12 ALUTs      ; 10 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector34             ;
+; 9:1                ; 7 bits    ; 42 ALUTs      ; 35 ALUTs             ; 7 ALUTs                ; No         ; |mp1|datapath:Datapath|mux4:regfilemux|f[7] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
@@ -472,7 +481,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:Datapath|mux2:marmux ;
+; Parameter Settings for User Entity Instance: datapath:Datapath|mux3:marmux ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
@@ -616,7 +625,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Thu Sep 14 23:43:34 2017
+    Info: Processing started: Fri Sep 15 00:50:08 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file memory.sv
@@ -674,7 +683,8 @@ Info (12128): Elaborating entity "register" for hierarchy "datapath:Datapath|reg
 Info (12128): Elaborating entity "adder" for hierarchy "datapath:Datapath|adder:_adder"
 Info (12128): Elaborating entity "adj" for hierarchy "datapath:Datapath|adj:ADJ11"
 Info (12128): Elaborating entity "adj" for hierarchy "datapath:Datapath|adj:ADJ9"
-Info (12128): Elaborating entity "mux2" for hierarchy "datapath:Datapath|mux2:marmux"
+Info (12128): Elaborating entity "mux3" for hierarchy "datapath:Datapath|mux3:marmux"
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:Datapath|mux2:mdrmux"
 Info (12128): Elaborating entity "mux4" for hierarchy "datapath:Datapath|mux4:regfilemux"
 Info (12128): Elaborating entity "gencc" for hierarchy "datapath:Datapath|gencc:GENCC"
 Info (12128): Elaborating entity "register" for hierarchy "datapath:Datapath|register:CC"
@@ -697,14 +707,14 @@ Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/zpaya2/ece411/mp1/output_files/mp1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 547 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 543 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 493 logic cells
+    Info (21061): Implemented 489 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 444 megabytes
-    Info: Processing ended: Thu Sep 14 23:43:39 2017
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Fri Sep 15 00:50:12 2017
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

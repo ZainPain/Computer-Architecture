@@ -26,7 +26,7 @@ module control
 	 output logic storemux_sel,
 	 output logic alumux_sel,
 	 output logic [1:0] regfilemux_sel,
-	 output logic marmux_sel,
+	 output logic [1:0]marmux_sel,
 	 output logic mdrmux_sel,
 	 output logic adjmux_sel,
 	 
@@ -61,7 +61,11 @@ enum int unsigned {
 	jsr1,
 	jsr2,
 	ldb1,
-	ldb2
+	ldb2,
+	ldi1,
+	ldi2,
+	ldi3,
+	ldi4
 	
     /* List of states */
 } state, next_states;
@@ -261,6 +265,35 @@ begin : state_actions
 				mask_enable = 1'b1;
 			end
 			
+		ldi1: begin
+			/* MDR <- M[MAR] */
+			mdrmux_sel = 1'b1;
+			load_mdr = 1'b1;
+			mem_read = 1'b1;
+		end
+		
+		ldi2: begin
+			/* DR <- MDR */
+			marmux_sel = 2'b10;
+			load_mar = 1'b1;
+		end
+		
+		ldi3: begin
+			mdrmux_sel = 1'b1;
+			load_mdr = 1'b1;
+			mem_read = 1'b1;
+		end
+		
+		ldi4: begin
+			regfilemux_sel = 2'b01;
+			load_regfile = 1'b1;
+			load_cc = 1'b1;
+			mask_enable = 1'b0;
+			
+		end
+		
+		
+			
 		default: /* Do Nothing */;
 	endcase
 	 
@@ -317,9 +350,12 @@ begin : next_state_logic
 						
 					op_jsr:
 						next_states <= jsr1;
+						
 					op_ldb:
 						next_states <= calc_addr;
 					
+					op_ldi:
+						next_states <= calc_addr;
 						
 					default: /* Do Nothing */;
 					
@@ -348,6 +384,9 @@ begin : next_state_logic
 			begin
 				if(opcode == op_ldr)
 					next_states <= ldr1;
+					
+				else if(opcode ==  op_ldi)
+					next_states <= ldi1;
 					
 				else if(opcode == op_str)
 					next_states <= str1;
@@ -404,6 +443,24 @@ begin : next_state_logic
 		ldb2:
 			next_states <= fetch1;
 		
+		ldi1: begin
+			if(mem_resp)
+				next_states <= ldi2;
+			else
+				next_states <= ldi1;
+		end
+		
+		ldi2:
+			next_states <= ldi3;
+		
+		ldi3:
+			if(mem_resp)
+				next_states <= ldi4;
+			else
+				next_states <= ldi3;
+		ldi4:
+			next_states <= fetch1;
+			
 		endcase
 	 
 end

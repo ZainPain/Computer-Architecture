@@ -28,7 +28,7 @@ module mp1
 	 logic storemux_sel;
 	 logic alumux_sel;
 	 logic [1:0] regfilemux_sel;
-	 logic marmux_sel;
+	 logic [1:0]marmux_sel;
 	 logic mdrmux_sel;
 	 logic adjmux_sel;
 	 lc3b_aluop aluop;

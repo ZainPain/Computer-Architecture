@@ -20,7 +20,7 @@ module datapath
 	 input storemux_sel,
 	 input alumux_sel,
 	 input [1:0] regfilemux_sel,
-	 input marmux_sel,
+	 input [1:0] marmux_sel,
 	 input mdrmux_sel,
 	 input adjmux_sel,
 	 
@@ -136,11 +136,12 @@ adder #(.width(16))_adder2
 	.in(pc_out),
 	.out(adj11_plus_pc_out)
 );
-mux2 marmux
+mux3 marmux
 (
 	.sel(marmux_sel),
 	.a(alu_out),
 	.b(pc_out),
+	.c(mem_wdata),
 	.f(marmux_out)
 );
 
