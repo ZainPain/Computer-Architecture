@@ -14,6 +14,7 @@ module datapath
 	 input load_cc,
 	 input mask_enable,
 	 input truncate,
+	 input shift,
 	 
 	 /* Select signals */
 	 
@@ -77,7 +78,7 @@ lc3b_word byte_out;
 lc3b_word truncator_out;
 //lc3b_word alu_out;
 lc3b_word alu_imm_out;
-
+lc3b_word shift_out;
 lc3b_nzp gencc_out;
 lc3b_nzp cc_out;
 
@@ -161,7 +162,7 @@ register MAR
 mux2 mdrmux
 (
 	.sel(mdrmux_sel),
-	.a(alu_out),
+	.a(shift_out),
 	.b(mem_rdata),
 	.f(mdrmux_out)
 );
@@ -295,19 +296,13 @@ mask #(.width(16)) Mask
 	 .mask_enable(mask_enable),
     .mask_out(wdata_out)
 );
-//byte_select #(.width(16)) byteSelect
-//(
-//	.in(mem_wdata),
-//	.address(alu_out),
-//	.out(byte_out)
-//);
-//mux2 #(.width(16)) wdata_mux
-//(
-//	.sel(mask_enable),
-//	.a(mem_wdata),
-//	.b(byte_out),
-//	.f(wdata_out)
-//);
-//
+
+stb_shifter alu_out_to_mdrmux
+(
+	.in(alu_out),
+	.shift(shift),
+	.out(shift_out)
+);
+
 
 endmodule : datapath

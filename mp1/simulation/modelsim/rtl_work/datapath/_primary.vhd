@@ -12,6 +12,7 @@ entity datapath is
         load_cc         : in     vl_logic;
         mask_enable     : in     vl_logic;
         truncate        : in     vl_logic;
+        shift           : in     vl_logic;
         pcmux_sel       : in     vl_logic_vector(1 downto 0);
         storemux_sel    : in     vl_logic;
         alumux_sel      : in     vl_logic_vector(1 downto 0);

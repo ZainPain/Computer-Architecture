@@ -23,6 +23,7 @@ module control
 	 output logic load_cc,
 	 output logic mask_enable,
 	 output logic truncate,
+	 output logic shift,
 	 /* Datapath mux select bits =*/
 	 output logic [1:0] pcmux_sel,
 	 output logic storemux_sel,
@@ -92,7 +93,7 @@ begin : state_actions
 	 load_mar = 1'b0;
 	 load_mdr = 1'b0;
 	 load_cc = 1'b0;
-	
+	 shift = 1'b0;
 	 /* MUX Select bits */
 	 pcmux_sel = 1'b0;
 	 storemux_sel = 1'b0;
@@ -328,6 +329,7 @@ begin : state_actions
 		end
 		
 		stb1_odd: begin
+			shift = 1'b1;
 			truncate = 1'b1;
 			storemux_sel = 1'b1;
 			aluop = alu_pass;

@@ -18,6 +18,7 @@ entity control is
         load_cc         : out    vl_logic;
         mask_enable     : out    vl_logic;
         truncate        : out    vl_logic;
+        shift           : out    vl_logic;
         pcmux_sel       : out    vl_logic_vector(1 downto 0);
         storemux_sel    : out    vl_logic;
         alumux_sel      : out    vl_logic_vector(1 downto 0);

@@ -18,7 +18,7 @@ Z5 8/home/zpaya2/ece411/mp1/adder.sv
 Z6 F/home/zpaya2/ece411/mp1/adder.sv
 L0 3
 Z7 OV;L;10.1d;51
-Z8 !s108 1505515349.044080
+Z8 !s108 1505525336.304949
 Z9 !s107 /home/zpaya2/ece411/mp1/adder.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/adder.sv|
 Z11 o-sv -work work -O0
@@ -67,7 +67,7 @@ Z14 8/home/zpaya2/ece411/mp1/adj.sv
 Z15 F/home/zpaya2/ece411/mp1/adj.sv
 L0 6
 R7
-Z16 !s108 1505515348.115866
+Z16 !s108 1505525335.300591
 Z17 !s107 /home/zpaya2/ece411/mp1/adj.sv|
 Z18 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/adj.sv|
 R11
@@ -92,7 +92,7 @@ Z20 8/home/zpaya2/ece411/mp1/adj_imm.sv
 Z21 F/home/zpaya2/ece411/mp1/adj_imm.sv
 L0 6
 R7
-Z22 !s108 1505515349.553916
+Z22 !s108 1505525336.765547
 Z23 !s107 /home/zpaya2/ece411/mp1/adj_imm.sv|
 Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/adj_imm.sv|
 R11
@@ -165,7 +165,7 @@ Z25 8/home/zpaya2/ece411/mp1/alu.sv
 Z26 F/home/zpaya2/ece411/mp1/alu.sv
 L0 3
 R7
-Z27 !s108 1505515348.336963
+Z27 !s108 1505525335.456885
 Z28 !s107 /home/zpaya2/ece411/mp1/alu.sv|
 Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/alu.sv|
 R11
@@ -214,7 +214,7 @@ Z30 8/home/zpaya2/ece411/mp1/cccomp.sv
 Z31 F/home/zpaya2/ece411/mp1/cccomp.sv
 L0 3
 R7
-Z32 !s108 1505515349.187132
+Z32 !s108 1505525336.565352
 Z33 !s107 /home/zpaya2/ece411/mp1/cccomp.sv|
 Z34 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/cccomp.sv|
 R11
@@ -252,25 +252,25 @@ vcontrol
 R1
 R2
 DXx4 work 15 control_sv_unit 0 22 NcH9ZE;@`Q?YMcKkD6`2`1
-Vj>7DYm8EeW[;Pi9I5QSE61
+V@eTQIdj7QY]oUZ3kQP18n3
 r1
 31
-IP1ee<?`k=0o<FNkYCZ]ja2
+I_JC5DgI6DlT4OS=Uaf6e13
 S1
 R3
-Z35 w1505514858
+Z35 w1505525110
 Z36 8/home/zpaya2/ece411/mp1/control.sv
 Z37 F/home/zpaya2/ece411/mp1/control.sv
 L0 3
 R7
-Z38 !s108 1505515348.459119
+Z38 !s108 1505525335.602843
 Z39 !s107 /home/zpaya2/ece411/mp1/control.sv|
 Z40 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/control.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 0K1II6@XW0H8h`_e9=JL>3
+!s100 BG?dBE_c>Ijl`=l2A0hU;3
 !s105 control_sv_unit
 !s101 -O0
 Xcontrol_sv_unit
@@ -301,25 +301,25 @@ vdatapath
 R1
 R2
 DXx4 work 16 datapath_sv_unit 0 22 biGelzz]7Pf[4SRWlEJZK2
-V;9^h5h`U1MVcizS=HBfWa2
+V?eIWQXIXo8>;>A:FlJ7cj0
 r1
 31
-IF;J=0?_BXe49D=lCQg@5F0
+Id21RiW7N:X1QlM]MO[cN:1
 S1
 R3
-Z41 w1505514950
+Z41 w1505525086
 Z42 8/home/zpaya2/ece411/mp1/datapath.sv
 Z43 F/home/zpaya2/ece411/mp1/datapath.sv
 L0 3
 R7
-Z44 !s108 1505515349.961186
+Z44 !s108 1505525337.330009
 Z45 !s107 /home/zpaya2/ece411/mp1/datapath.sv|
 Z46 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 OYBOZcNVl_4WYPA[DfAD>2
+!s100 1d_LjKmAO8gQjS[N=ZeQZ0
 !s105 datapath_sv_unit
 !s101 -O0
 Xdatapath_sv_unit
@@ -361,7 +361,7 @@ Z47 8/home/zpaya2/ece411/mp1/gencc.sv
 Z48 F/home/zpaya2/ece411/mp1/gencc.sv
 L0 3
 R7
-Z49 !s108 1505515348.595621
+Z49 !s108 1505525335.774892
 Z50 !s107 /home/zpaya2/ece411/mp1/gencc.sv|
 Z51 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/gencc.sv|
 R11
@@ -410,7 +410,7 @@ Z53 8/home/zpaya2/ece411/mp1/ir.sv
 Z54 F/home/zpaya2/ece411/mp1/ir.sv
 L0 3
 R7
-Z55 !s108 1505515348.719302
+Z55 !s108 1505525335.945286
 Z56 !s107 /home/zpaya2/ece411/mp1/ir.sv|
 Z57 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/ir.sv|
 R11
@@ -462,7 +462,7 @@ R12
 !i10b 1
 !s100 dRag?3CIYCi0>A;aHMB<a1
 !s85 0
-!s108 1505515347.545147
+!s108 1505525334.571037
 !s107 /home/zpaya2/ece411/mp1/lc3b_types.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/lc3b_types.sv|
 !s101 -O0
@@ -481,7 +481,7 @@ Z59 8/home/zpaya2/ece411/mp1/mask.sv
 Z60 F/home/zpaya2/ece411/mp1/mask.sv
 L0 6
 R7
-Z61 !s108 1505515349.674894
+Z61 !s108 1505525336.939959
 Z62 !s107 /home/zpaya2/ece411/mp1/mask.sv|
 Z63 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/mask.sv|
 R11
@@ -532,7 +532,7 @@ R7
 r1
 !s85 0
 31
-!s108 1505515350.320495
+!s108 1505525337.827002
 !s107 /home/zpaya2/ece411/mp1/memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/memory.sv|
 !s101 -O0
@@ -545,22 +545,22 @@ DXx4 work 11 mp1_sv_unit 0 22 zTOjMkg]IK9T?lOLjm[^Y0
 Vl?`i9MP@<MbHRYAOa9CDF0
 r1
 31
-I>g_1:F9?glKc3^eaA6MnE2
+IiXHJDn^kYN4ko<Q2>2TzX2
 S1
 R3
-Z64 w1505515048
+Z64 w1505525273
 Z65 8/home/zpaya2/ece411/mp1/mp1.sv
 Z66 F/home/zpaya2/ece411/mp1/mp1.sv
 L0 3
 R7
-Z67 !s108 1505515350.128568
+Z67 !s108 1505525337.505702
 Z68 !s107 /home/zpaya2/ece411/mp1/mp1.sv|
 Z69 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/mp1.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 N`>AkX;DnDcOUKJe@UjY]2
+!s100 nSLYfVh>S4dVNOkg<PRZQ1
 !s105 mp1_sv_unit
 !s101 -O0
 Xmp1_sv_unit
@@ -606,7 +606,7 @@ R12
 !s100 6W:3Yn<[3;MlE1S@Li9Jk2
 !s105 mp1_tb_sv_unit
 !s85 0
-!s108 1505515350.249237
+!s108 1505525337.699392
 !s107 /home/zpaya2/ece411/mp1/mp1_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/mp1_tb.sv|
 !s101 -O0
@@ -629,7 +629,7 @@ R12
 !s100 WJO;[XdK[=nK24ZZQjM8Y2
 !s105 mux2_sv_unit
 !s85 0
-!s108 1505515347.878933
+!s108 1505525334.875360
 !s107 /home/zpaya2/ece411/mp1/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/mux2.sv|
 !s101 -O0
@@ -652,7 +652,7 @@ R12
 !s100 O379>QU?bd7i2PfBcS4dd3
 !s105 mux3_sv_unit
 !s85 0
-!s108 1505515347.950319
+!s108 1505525335.000354
 !s107 /home/zpaya2/ece411/mp1/mux3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/mux3.sv|
 !s101 -O0
@@ -675,7 +675,7 @@ R12
 !s100 @[^6mDHcciO8Il<]aIG331
 !s105 mux4_sv_unit
 !s85 0
-!s108 1505515348.040890
+!s108 1505525335.099480
 !s107 /home/zpaya2/ece411/mp1/mux4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/mux4.sv|
 !s101 -O0
@@ -698,7 +698,7 @@ R12
 !s100 [Nk[_^:UJZn5Ic@_UL0Tc1
 !s105 plus2_sv_unit
 !s85 0
-!s108 1505515347.660183
+!s108 1505525334.683686
 !s107 /home/zpaya2/ece411/mp1/plus2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/plus2.sv|
 !s101 -O0
@@ -717,7 +717,7 @@ Z70 8/home/zpaya2/ece411/mp1/regfile.sv
 Z71 F/home/zpaya2/ece411/mp1/regfile.sv
 L0 3
 R7
-Z72 !s108 1505515348.838396
+Z72 !s108 1505525336.115808
 Z73 !s107 /home/zpaya2/ece411/mp1/regfile.sv|
 Z74 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/regfile.sv|
 R11
@@ -770,9 +770,32 @@ R12
 !s100 eIAj93Lh<TjLZ5WjMZ;i21
 !s105 register_sv_unit
 !s85 0
-!s108 1505515347.764987
+!s108 1505525334.782149
 !s107 /home/zpaya2/ece411/mp1/register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/register.sv|
+!s101 -O0
+vstb_shifter
+R1
+IfQUM[7?Cff5QSzUlz<kP@3
+V6Q5HlP;iC2OaYg<IQD=EF1
+S1
+R3
+w1505524838
+8/home/zpaya2/ece411/mp1/stb_shifter.sv
+F/home/zpaya2/ece411/mp1/stb_shifter.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 :17S6gT5fJQzmG=B=8l]^0
+!s105 stb_shifter_sv_unit
+!s85 0
+!s108 1505525335.206288
+!s107 /home/zpaya2/ece411/mp1/stb_shifter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/stb_shifter.sv|
 !s101 -O0
 vtruncator
 R1
@@ -789,7 +812,7 @@ Z76 8/home/zpaya2/ece411/mp1/truncator.sv
 Z77 F/home/zpaya2/ece411/mp1/truncator.sv
 L0 3
 R7
-Z78 !s108 1505515349.794138
+Z78 !s108 1505525337.140621
 Z79 !s107 /home/zpaya2/ece411/mp1/truncator.sv|
 Z80 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/ece411/mp1|/home/zpaya2/ece411/mp1/truncator.sv|
 R11

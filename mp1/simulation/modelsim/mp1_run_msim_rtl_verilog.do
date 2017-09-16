@@ -11,6 +11,7 @@ vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/reg
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mux2.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mux3.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/mux4.sv}
+vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/stb_shifter.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/adj.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/alu.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp1 {/home/zpaya2/ece411/mp1/control.sv}

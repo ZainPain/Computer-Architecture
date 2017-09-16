@@ -24,7 +24,7 @@ module mp1
 	 logic load_cc;
 	 logic mask_enable;
 	 logic truncate;
-	 
+	 logic shift;
 	 logic [1:0] pcmux_sel;
 	 logic storemux_sel;
 	 logic [1:0] alumux_sel;
@@ -55,6 +55,7 @@ datapath Datapath
 	 .load_cc(load_cc),
 	 .mask_enable(mask_enable),
 	 .truncate(truncate),
+	 .shift(shift),
 	 /* Select signals */
 	 
 	 .pcmux_sel(pcmux_sel),
@@ -101,6 +102,7 @@ control Control
 	 .load_cc(load_cc),
 	 .mask_enable(mask_enable),
 	 .truncate(truncate),
+	 .shift(shift),
 	 /* Datapath mux select bits */
 	 .pcmux_sel(pcmux_sel),
 	 .storemux_sel(storemux_sel),

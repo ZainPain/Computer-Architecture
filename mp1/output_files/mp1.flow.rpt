@@ -1,5 +1,5 @@
 Flow report for mp1
-Fri Sep 15 17:38:17 2017
+Fri Sep 15 20:28:38 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Fri Sep 15 17:38:17 2017       ;
+; Flow Status                   ; Successful - Fri Sep 15 20:28:38 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp1                                         ;
@@ -48,7 +48,7 @@ applicable agreement for further details.
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
 ; Logic utilization             ; 2 %                                         ;
-;     Combinational ALUTs       ; 523 / 38,000 ( 1 % )                        ;
+;     Combinational ALUTs       ; 524 / 38,000 ( 1 % )                        ;
 ;     Memory ALUTs              ; 0 / 19,000 ( 0 % )                          ;
 ;     Dedicated logic registers ; 227 / 38,000 ( < 1 % )                      ;
 ; Total registers               ; 227                                         ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/15/2017 17:37:37 ;
+; Start date & time ; 09/15/2017 20:27:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp1                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 176231578741459.150551505728843       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 26830023713944.150552527906948        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp1_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp1_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
@@ -106,12 +106,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 455 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:13     ; 1.0                     ; 784 MB              ; 00:00:14                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 432 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 504 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 381 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 440 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:14     ; 1.8                     ; 782 MB              ; 00:00:14                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 417 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 499 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 380 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:29     ; --                      ; --                  ; 00:00:26                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,11 +120,11 @@ applicable agreement for further details.
 +---------------------------+------------------------------+--------------+--------------+----------------+
 ; Module Name               ; Machine Hostname             ; OS Name      ; OS Version   ; Processor type ;
 +---------------------------+------------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis      ; dcl-l520-28.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Fitter                    ; dcl-l520-28.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Assembler                 ; dcl-l520-28.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; TimeQuest Timing Analyzer ; dcl-l520-28.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; EDA Netlist Writer        ; dcl-l520-28.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Analysis & Synthesis      ; gelib-4c-45.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Fitter                    ; gelib-4c-45.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Assembler                 ; gelib-4c-45.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; TimeQuest Timing Analyzer ; gelib-4c-45.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; EDA Netlist Writer        ; gelib-4c-45.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
 +---------------------------+------------------------------+--------------+--------------+----------------+
 
 
