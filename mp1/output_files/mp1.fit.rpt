@@ -1,5 +1,5 @@
 Fitter report for mp1
-Sat Sep 16 21:11:57 2017
+Sun Sep 17 02:25:02 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Fitter Summary                                                              ;
 +-------------------------------+---------------------------------------------+
-; Fitter Status                 ; Successful - Sat Sep 16 21:11:57 2017       ;
+; Fitter Status                 ; Successful - Sun Sep 17 02:25:02 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp1                                         ;
@@ -160,15 +160,16 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.23        ;
+; Average used               ; 1.20        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   7.7%      ;
+;     Processors 2-4         ;   6.7%      ;
+;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -303,11 +304,11 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ;                                                                                   ;                         ;
 ; Logic utilization                                                                 ; 754 / 38,000 ( 2 % )    ;
 ;     -- Difficulty Clustering Design                                               ; Low                     ;
-;     -- Combinational ALUT/register pairs used in final Placement                  ; 633                     ;
-;         -- Combinational with no register                                         ; 398                     ;
-;         -- Register only                                                          ; 99                      ;
-;         -- Combinational with a register                                          ; 136                     ;
-;     -- Estimated pairs recoverable by pairing ALUTs and registers as design grows ; -79                     ;
+;     -- Combinational ALUT/register pairs used in final Placement                  ; 597                     ;
+;         -- Combinational with no register                                         ; 362                     ;
+;         -- Register only                                                          ; 63                      ;
+;         -- Combinational with a register                                          ; 172                     ;
+;     -- Estimated pairs recoverable by pairing ALUTs and registers as design grows ; -43                     ;
 ;     -- Estimated Combinational ALUT/register pairs unavailable                    ; 200                     ;
 ;         -- Unavailable due to Memory LAB use                                      ; 0                       ;
 ;         -- Unavailable due to unpartnered 7 LUTs                                  ; 73                      ;
@@ -321,7 +322,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ;     -- I/O registers                                                              ; 0 / 2,752 ( 0 % )       ;
 ;     -- LUT_REGs                                                                   ; 0                       ;
 ;                                                                                   ;                         ;
-; ALMs:  partially or completely used                                               ; 390 / 19,000 ( 2 % )    ;
+; ALMs:  partially or completely used                                               ; 389 / 19,000 ( 2 % )    ;
 ;                                                                                   ;                         ;
 ; Total LABs:  partially or completely used                                         ; 42 / 1,900 ( 2 % )      ;
 ;     -- Logic LABs                                                                 ; 42 / 42 ( 100 % )       ;
@@ -329,7 +330,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ;                                                                                   ;                         ;
 ; Virtual pins                                                                      ; 0                       ;
 ; I/O pins                                                                          ; 54 / 488 ( 11 % )       ;
-;     -- Clock pins                                                                 ; 10 / 16 ( 63 % )        ;
+;     -- Clock pins                                                                 ; 11 / 16 ( 69 % )        ;
 ;     -- Dedicated input pins                                                       ; 0 / 12 ( 0 % )          ;
 ;                                                                                   ;                         ;
 ; Global signals                                                                    ; 1                       ;
@@ -351,22 +352,22 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; Remote update blocks                                                              ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                                                          ; 0 / 8 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)                                            ; 0% / 0% / 0%            ;
-; Peak interconnect usage (total/H/V)                                               ; 6% / 6% / 6%            ;
+; Peak interconnect usage (total/H/V)                                               ; 6% / 6% / 5%            ;
 ;                                                                                   ;                         ;
-; Programmable power technology low-power tiles                                     ; 1,408 / 1,410 ( 100 % ) ;
-;     -- low-power tiles that are used by the design                                ; 139 / 1,408 ( 10 % )    ;
-;     -- unused tiles (low-power)                                                   ; 1,269 / 1,408 ( 90 % )  ;
-; Programmable power technology high-speed tiles                                    ; 2 / 1,410 ( < 1 % )     ;
+; Programmable power technology low-power tiles                                     ; 1,407 / 1,410 ( 100 % ) ;
+;     -- low-power tiles that are used by the design                                ; 151 / 1,407 ( 11 % )    ;
+;     -- unused tiles (low-power)                                                   ; 1,256 / 1,407 ( 89 % )  ;
+; Programmable power technology high-speed tiles                                    ; 3 / 1,410 ( < 1 % )     ;
 ;                                                                                   ;                         ;
-; Programmable power technology low-power LAB tiles                                 ; 948 / 950 ( 100 % )     ;
-;     -- low-power LAB tiles that are used by the design                            ; 139 / 948 ( 15 % )      ;
-;     -- unused LAB tiles (low-power)                                               ; 809 / 948 ( 85 % )      ;
-; Programmable power technology high-speed LAB tiles                                ; 2 / 950 ( < 1 % )       ;
+; Programmable power technology low-power LAB tiles                                 ; 947 / 950 ( 100 % )     ;
+;     -- low-power LAB tiles that are used by the design                            ; 151 / 947 ( 16 % )      ;
+;     -- unused LAB tiles (low-power)                                               ; 796 / 947 ( 84 % )      ;
+; Programmable power technology high-speed LAB tiles                                ; 3 / 950 ( < 1 % )       ;
 ;                                                                                   ;                         ;
 ; Maximum fan-out                                                                   ; 235                     ;
 ; Highest non-global fan-out                                                        ; 47                      ;
-; Total fan-out                                                                     ; 3386                    ;
-; Average fan-out                                                                   ; 3.81                    ;
+; Total fan-out                                                                     ; 3389                    ;
+; Average fan-out                                                                   ; 3.80                    ;
 +-----------------------------------------------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -380,11 +381,11 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; Difficulty Clustering Region                                                      ; Low                   ; Low                            ;
 ;                                                                                   ;                       ;                                ;
 ; Logic utilization                                                                 ; 754 / 38000 ( 2 % )   ; 0 / 38000 ( 0 % )              ;
-;     -- Combinational ALUT/register pairs used in final Placement                  ; 633                   ; 0                              ;
-;         -- Combinational with no register                                         ; 398                   ; 0                              ;
-;         -- Register only                                                          ; 99                    ; 0                              ;
-;         -- Combinational with a register                                          ; 136                   ; 0                              ;
-;     -- Estimated pairs recoverable by pairing ALUTs and registers as design grows ; -79                   ; 0                              ;
+;     -- Combinational ALUT/register pairs used in final Placement                  ; 597                   ; 0                              ;
+;         -- Combinational with no register                                         ; 362                   ; 0                              ;
+;         -- Register only                                                          ; 63                    ; 0                              ;
+;         -- Combinational with a register                                          ; 172                   ; 0                              ;
+;     -- Estimated pairs recoverable by pairing ALUTs and registers as design grows ; -43                   ; 0                              ;
 ;     -- Estimated Combinational ALUT/register pairs unavailable                    ; 200                   ; 0                              ;
 ;         -- Unavailable due to Memory LAB use                                      ; 0                     ; 0                              ;
 ;         -- Unavailable due to unpartnered 7 LUTs                                  ; 73                    ; 0                              ;
@@ -421,7 +422,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ;     -- 64-address deep                                                            ; 0                     ; 0                              ;
 ;     -- 32-address deep                                                            ; 0                     ; 0                              ;
 ;                                                                                   ;                       ;                                ;
-; ALMs:  partially or completely used                                               ; 390 / 19000 ( 2 % )   ; 0 / 19000 ( 0 % )              ;
+; ALMs:  partially or completely used                                               ; 389 / 19000 ( 2 % )   ; 0 / 19000 ( 0 % )              ;
 ;                                                                                   ;                       ;                                ;
 ; Total LABs:  partially or completely used                                         ; 42 / 1900 ( 2 % )     ; 0 / 1900 ( 0 % )               ;
 ;     -- Logic LABs                                                                 ; 42                    ; 0                              ;
@@ -441,7 +442,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ;     -- Registered Output Connections                                              ; 0                     ; 0                              ;
 ;                                                                                   ;                       ;                                ;
 ; Internal Connections                                                              ;                       ;                                ;
-;     -- Total Connections                                                          ; 3385                  ; 1                              ;
+;     -- Total Connections                                                          ; 3388                  ; 1                              ;
 ;     -- Registered Connections                                                     ; 971                   ; 0                              ;
 ;                                                                                   ;                       ;                                ;
 ; External Connections                                                              ;                       ;                                ;
@@ -475,23 +476,23 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; clk           ; P28   ; 1C       ; 0            ; 28           ; 0            ; 235                   ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[0]  ; AF14  ; 4C       ; 28           ; 0            ; 93           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[10] ; T2    ; 5C       ; 53           ; 20           ; 93           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[11] ; R28   ; 2C       ; 0            ; 23           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[12] ; U1    ; 5C       ; 53           ; 22           ; 93           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[13] ; R1    ; 5C       ; 53           ; 23           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[14] ; AH14  ; 4C       ; 28           ; 0            ; 62           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[15] ; R20   ; 2C       ; 0            ; 22           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[1]  ; AF10  ; 4C       ; 34           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[2]  ; R25   ; 2C       ; 0            ; 21           ; 62           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[3]  ; T1    ; 5C       ; 53           ; 23           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[4]  ; D15   ; 8C       ; 22           ; 51           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[5]  ; R6    ; 5C       ; 53           ; 21           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[6]  ; T27   ; 2C       ; 0            ; 21           ; 93           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[7]  ; C14   ; 7C       ; 28           ; 51           ; 93           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[8]  ; R27   ; 2C       ; 0            ; 23           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_rdata[9]  ; AD13  ; 4C       ; 31           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; mem_resp      ; R4    ; 5C       ; 53           ; 21           ; 93           ; 20                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[0]  ; T20   ; 2C       ; 0            ; 20           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[10] ; N26   ; 1C       ; 0            ; 29           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[11] ; P2    ; 6C       ; 53           ; 28           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[12] ; M27   ; 1C       ; 0            ; 31           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[13] ; P20   ; 1C       ; 0            ; 29           ; 62           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[14] ; P23   ; 1C       ; 0            ; 30           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[15] ; M21   ; 1C       ; 0            ; 34           ; 62           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[1]  ; R28   ; 2C       ; 0            ; 23           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[2]  ; T22   ; 2C       ; 0            ; 17           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[3]  ; N23   ; 1C       ; 0            ; 30           ; 62           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[4]  ; R9    ; 5C       ; 53           ; 22           ; 62           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[5]  ; T25   ; 2C       ; 0            ; 21           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[6]  ; R1    ; 5C       ; 53           ; 23           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[7]  ; R27   ; 2C       ; 0            ; 23           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[8]  ; R26   ; 2C       ; 0            ; 21           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_rdata[9]  ; N28   ; 1C       ; 0            ; 28           ; 31           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; mem_resp      ; T1    ; 5C       ; 53           ; 23           ; 31           ; 20                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
@@ -500,65 +501,73 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 +--------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name               ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +--------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; mem_address[0]     ; AH16  ; 3C       ; 21           ; 0            ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[10]    ; U4    ; 5C       ; 53           ; 19           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[11]    ; U28   ; 2C       ; 0            ; 22           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[12]    ; N4    ; 6C       ; 53           ; 30           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[13]    ; M1    ; 6C       ; 53           ; 29           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[14]    ; N8    ; 6C       ; 53           ; 32           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[15]    ; R10   ; 5C       ; 53           ; 22           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[1]     ; P9    ; 6C       ; 53           ; 29           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[2]     ; T6    ; 5C       ; 53           ; 21           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[3]     ; U8    ; 5C       ; 53           ; 17           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[4]     ; U9    ; 5C       ; 53           ; 17           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[5]     ; R26   ; 2C       ; 0            ; 21           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[6]     ; U5    ; 5C       ; 53           ; 19           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[7]     ; AG13  ; 4C       ; 28           ; 0            ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[8]     ; V28   ; 2C       ; 0            ; 20           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_address[9]     ; R9    ; 5C       ; 53           ; 22           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_byte_enable[0] ; Y13   ; 4C       ; 29           ; 0            ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_byte_enable[1] ; U7    ; 5C       ; 53           ; 16           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_read           ; T9    ; 5C       ; 53           ; 20           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[0]       ; T5    ; 5C       ; 53           ; 21           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[10]      ; AF11  ; 4C       ; 34           ; 0            ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[11]      ; N1    ; 6C       ; 53           ; 29           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[12]      ; T4    ; 5C       ; 53           ; 19           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[13]      ; T21   ; 2C       ; 0            ; 20           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[14]      ; T20   ; 2C       ; 0            ; 20           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[15]      ; T28   ; 2C       ; 0            ; 22           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[1]       ; T25   ; 2C       ; 0            ; 21           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[2]       ; R21   ; 2C       ; 0            ; 22           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[0]     ; N6    ; 6C       ; 53           ; 30           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[10]    ; D15   ; 8C       ; 22           ; 51           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[11]    ; M28   ; 1C       ; 0            ; 31           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[12]    ; P25   ; 1C       ; 0            ; 30           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[13]    ; N24   ; 1C       ; 0            ; 30           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[14]    ; N4    ; 6C       ; 53           ; 30           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[15]    ; N25   ; 1C       ; 0            ; 31           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[1]     ; U25   ; 2C       ; 0            ; 19           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[2]     ; T5    ; 5C       ; 53           ; 21           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[3]     ; R20   ; 2C       ; 0            ; 22           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[4]     ; AG15  ; 3C       ; 22           ; 0            ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[5]     ; U28   ; 2C       ; 0            ; 22           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[6]     ; R10   ; 5C       ; 53           ; 22           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[7]     ; T24   ; 2C       ; 0            ; 19           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[8]     ; AE15  ; 3C       ; 22           ; 0            ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_address[9]     ; P4    ; 6C       ; 53           ; 30           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_byte_enable[0] ; V26   ; 2C       ; 0            ; 19           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_byte_enable[1] ; U26   ; 2C       ; 0            ; 19           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_read           ; T28   ; 2C       ; 0            ; 22           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[0]       ; T27   ; 2C       ; 0            ; 21           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[10]      ; R21   ; 2C       ; 0            ; 22           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[11]      ; P19   ; 1C       ; 0            ; 29           ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[12]      ; N27   ; 1C       ; 0            ; 29           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[13]      ; U2    ; 5C       ; 53           ; 22           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[14]      ; V28   ; 2C       ; 0            ; 20           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[15]      ; T21   ; 2C       ; 0            ; 20           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[1]       ; P8    ; 6C       ; 53           ; 29           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[2]       ; R25   ; 2C       ; 0            ; 21           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; mem_wdata[3]       ; V27   ; 2C       ; 0            ; 20           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[4]       ; T3    ; 5C       ; 53           ; 20           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[5]       ; AF12  ; 4C       ; 34           ; 0            ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[6]       ; P8    ; 6C       ; 53           ; 29           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[7]       ; AA13  ; 4C       ; 31           ; 0            ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[8]       ; T8    ; 5C       ; 53           ; 20           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_wdata[9]       ; U2    ; 5C       ; 53           ; 22           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; mem_write          ; U3    ; 5C       ; 53           ; 19           ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[4]       ; T6    ; 5C       ; 53           ; 21           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[5]       ; T4    ; 5C       ; 53           ; 19           ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[6]       ; AH15  ; 3C       ; 22           ; 0            ; 62           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[7]       ; AF15  ; 3C       ; 22           ; 0            ; 93           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[8]       ; Y15   ; 3C       ; 21           ; 0            ; 31           ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_wdata[9]       ; M1    ; 6C       ; 53           ; 29           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; mem_write          ; V24   ; 2C       ; 0            ; 16           ; 0            ; no              ; no                     ; no            ; 3         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +--------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Dual Purpose and Dedicated Pins                                                                                           ;
-+----------+-------------------------------------------+---------------------+------------------+---------------------------+
-; Location ; Pin Name                                  ; Reserved As         ; User Signal Name ; Pin Type                  ;
-+----------+-------------------------------------------+---------------------+------------------+---------------------------+
-; N21      ; DQ6L, DIFFIO_TX_L11n, DIFFOUT_L21n, DATA0 ; As input tri-stated ; ~ALTERA_DATA0~   ; Dual Purpose Pin          ;
-; W19      ; nCONFIG                                   ; -                   ; -                ; Dedicated Programming Pin ;
-; AD25     ; nSTATUS                                   ; -                   ; -                ; Dedicated Programming Pin ;
-; AE26     ; CONF_DONE                                 ; -                   ; -                ; Dedicated Programming Pin ;
-; AB23     ; PORSEL                                    ; -                   ; -                ; Dedicated Programming Pin ;
-; Y20      ; nCE                                       ; -                   ; -                ; Dedicated Programming Pin ;
-; AE3      ; nIO_PULLUP                                ; -                   ; -                ; Dedicated Programming Pin ;
-; AB5      ; nCEO                                      ; -                   ; -                ; Dedicated Programming Pin ;
-; AC5      ; DCLK                                      ; -                   ; -                ; Dedicated Programming Pin ;
-; AD4      ; nCSO                                      ; -                   ; -                ; Dedicated Programming Pin ;
-; AA6      ; ASDO                                      ; -                   ; -                ; Dedicated Programming Pin ;
-; G7       ; MSEL2                                     ; -                   ; -                ; Dedicated Programming Pin ;
-; J9       ; MSEL1                                     ; -                   ; -                ; Dedicated Programming Pin ;
-; H8       ; MSEL0                                     ; -                   ; -                ; Dedicated Programming Pin ;
-+----------+-------------------------------------------+---------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Dual Purpose and Dedicated Pins                                                                                               ;
++----------+-----------------------------------------------+---------------------+------------------+---------------------------+
+; Location ; Pin Name                                      ; Reserved As         ; User Signal Name ; Pin Type                  ;
++----------+-----------------------------------------------+---------------------+------------------+---------------------------+
+; M21      ; DQ5L, DIFFIO_TX_L10n, DIFFOUT_L19n, CLKUSR    ; Use as regular IO   ; mem_rdata[15]    ; Dual Purpose Pin          ;
+; N21      ; DQ6L, DIFFIO_TX_L11n, DIFFOUT_L21n, DATA0     ; As input tri-stated ; ~ALTERA_DATA0~   ; Dual Purpose Pin          ;
+; N25      ; DQ6L, DIFFIO_TX_L12n, DIFFOUT_L23n, DATA4     ; Use as regular IO   ; mem_address[15]  ; Dual Purpose Pin          ;
+; M28      ; DQSn7L, DIFFIO_RX_L12n, DIFFOUT_L24n, DATA6   ; Use as regular IO   ; mem_address[11]  ; Dual Purpose Pin          ;
+; M27      ; DQS7L, DIFFIO_RX_L12p, DIFFOUT_L24p, DATA7    ; Use as regular IO   ; mem_rdata[12]    ; Dual Purpose Pin          ;
+; N23      ; DQ7L, DIFFIO_TX_L13n, DIFFOUT_L25n, INIT_DONE ; Use as regular IO   ; mem_rdata[3]     ; Dual Purpose Pin          ;
+; P23      ; DQ7L, DIFFIO_TX_L13p, DIFFOUT_L25p, CRC_ERROR ; Use as regular IO   ; mem_rdata[14]    ; Dual Purpose Pin          ;
+; P25      ; DQ7L, DIFFIO_RX_L13n, DIFFOUT_L26n, DEV_OE    ; Use as regular IO   ; mem_address[12]  ; Dual Purpose Pin          ;
+; N24      ; DQ7L, DIFFIO_RX_L13p, DIFFOUT_L26p, DEV_CLRn  ; Use as regular IO   ; mem_address[13]  ; Dual Purpose Pin          ;
+; W19      ; nCONFIG                                       ; -                   ; -                ; Dedicated Programming Pin ;
+; AD25     ; nSTATUS                                       ; -                   ; -                ; Dedicated Programming Pin ;
+; AE26     ; CONF_DONE                                     ; -                   ; -                ; Dedicated Programming Pin ;
+; AB23     ; PORSEL                                        ; -                   ; -                ; Dedicated Programming Pin ;
+; Y20      ; nCE                                           ; -                   ; -                ; Dedicated Programming Pin ;
+; AE3      ; nIO_PULLUP                                    ; -                   ; -                ; Dedicated Programming Pin ;
+; AB5      ; nCEO                                          ; -                   ; -                ; Dedicated Programming Pin ;
+; AC5      ; DCLK                                          ; -                   ; -                ; Dedicated Programming Pin ;
+; AD4      ; nCSO                                          ; -                   ; -                ; Dedicated Programming Pin ;
+; AA6      ; ASDO                                          ; -                   ; -                ; Dedicated Programming Pin ;
+; G7       ; MSEL2                                         ; -                   ; -                ; Dedicated Programming Pin ;
+; J9       ; MSEL1                                         ; -                   ; -                ; Dedicated Programming Pin ;
+; H8       ; MSEL0                                         ; -                   ; -                ; Dedicated Programming Pin ;
++----------+-----------------------------------------------+---------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------+
@@ -567,19 +576,19 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
 +----------+------------------+---------------+--------------+---------------+
 ; 1A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 1C       ; 2 / 26 ( 8 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 2C       ; 14 / 26 ( 54 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 1C       ; 15 / 26 ( 58 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 2C       ; 20 / 26 ( 77 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 2A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 3A       ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 3C       ; 1 / 24 ( 4 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 4C       ; 9 / 24 ( 38 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3C       ; 5 / 24 ( 21 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 4C       ; 0 / 24 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 5C       ; 21 / 26 ( 81 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 5C       ; 8 / 26 ( 31 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 6C       ; 6 / 26 ( 23 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7A       ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7C       ; 1 / 24 ( 4 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 7C       ; 0 / 24 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 8C       ; 1 / 24 ( 4 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 8A       ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 +----------+------------------+---------------+--------------+---------------+
@@ -628,7 +637,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; AA10     ; 241        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AA11     ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; AA12     ;            ; 4C       ; VREFB4CN0                       ; power  ;              ;                     ; --         ;                 ; --       ; --           ;
-; AA13     ; 200        ; 4C       ; mem_wdata[7]                    ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; AA13     ; 200        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AA14     ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; AA15     ; 182        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AA16     ;            ; 3C       ; VREFB3CN0                       ; power  ;              ;                     ; --         ;                 ; --       ; --           ;
@@ -712,7 +721,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; AD10     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; AD11     ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; AD12     ; 210        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; AD13     ; 198        ; 4C       ; mem_rdata[9]                    ; input  ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; AD13     ; 198        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AD14     ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; AD15     ;            ; --       ; VCCPT                           ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; AD16     ; 175        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
@@ -742,7 +751,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; AE12     ; 211        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AE13     ; 199        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AE14     ; 190        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; AE15     ; 189        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; AE15     ; 189        ; 3C       ; mem_address[8]                  ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
 ; AE16     ; 174        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AE17     ; 177        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AE18     ; 173        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
@@ -765,12 +774,12 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; AF7      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; AF8      ; 224        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AF9      ; 223        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; AF10     ; 206        ; 4C       ; mem_rdata[1]                    ; input  ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
-; AF11     ; 207        ; 4C       ; mem_wdata[10]                   ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
-; AF12     ; 208        ; 4C       ; mem_wdata[5]                    ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; AF10     ; 206        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; AF11     ; 207        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; AF12     ; 208        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AF13     ;            ; 4C       ; VCCIO4C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
-; AF14     ; 191        ; 4C       ; mem_rdata[0]                    ; input  ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
-; AF15     ; 188        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; AF14     ; 191        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; AF15     ; 188        ; 3C       ; mem_wdata[7]                    ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
 ; AF16     ; 176        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AF17     ; 172        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AF18     ;            ; 3C       ; VCCIO3C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
@@ -796,9 +805,9 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; AG10     ; 202        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AG11     ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; AG12     ; 194        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; AG13     ; 192        ; 4C       ; mem_address[7]                  ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; AG13     ; 192        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AG14     ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; AG15     ; 187        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; AG15     ; 187        ; 3C       ; mem_address[4]                  ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
 ; AG16     ; 185        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AG17     ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; AG18     ; 169        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
@@ -824,9 +833,9 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; AH11     ; 204        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AH12     ; 205        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AH13     ; 195        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; AH14     ; 193        ; 4C       ; mem_rdata[14]                   ; input  ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
-; AH15     ; 186        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; AH16     ; 184        ; 3C       ; mem_address[0]                  ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; AH14     ; 193        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; AH15     ; 186        ; 3C       ; mem_wdata[6]                    ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; AH16     ; 184        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AH17     ; 170        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AH18     ; 171        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; AH19     ; 168        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
@@ -879,7 +888,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; C11      ;            ; 7C       ; VCCIO7C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; C12      ; 424        ; 7C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; C13      ; 428        ; 7C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; C14      ; 440        ; 7C       ; mem_rdata[7]                    ; input  ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; C14      ; 440        ; 7C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; C15      ; 443        ; 8C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; C16      ;            ; 8C       ; VCCIO8C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; C17      ; 461        ; 8C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
@@ -908,7 +917,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; D12      ; 429        ; 7C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; D13      ; 427        ; 7C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; D14      ; 441        ; 7C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; D15      ; 442        ; 8C       ; mem_rdata[4]                    ; input  ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; D15      ; 442        ; 8C       ; mem_address[10]                 ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
 ; D16      ; 451        ; 8C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; D17      ; 463        ; 8C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; D18      ; 464        ; 8C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
@@ -1118,7 +1127,7 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; L26      ; 39         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; L27      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; L28      ; 44         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; M1       ; 319        ; 6C       ; mem_address[13]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; M1       ; 319        ; 6C       ; mem_wdata[9]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; M2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; M3       ; 336        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; M4       ; 330        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
@@ -1138,22 +1147,22 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; M18      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
 ; M19      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; M20      ; 42         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; M21      ; 41         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; M21      ; 41         ; 1C       ; mem_rdata[15]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; M22      ; 38         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; M23      ; 37         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; M24      ; 50         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; M25      ; 48         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; M26      ; 47         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; M27      ; 52         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; M28      ; 51         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N1       ; 320        ; 6C       ; mem_wdata[11]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; M27      ; 52         ; 1C       ; mem_rdata[12]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; M28      ; 51         ; 1C       ; mem_address[11]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N1       ; 320        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; N2       ; 328        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; N3       ;            ; 6C       ; VCCIO6C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
-; N4       ; 323        ; 6C       ; mem_address[12]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N4       ; 323        ; 6C       ; mem_address[14]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; N5       ; 329        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N6       ; 326        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; N6       ; 326        ; 6C       ; mem_address[0]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; N7       ; 325        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N8       ; 334        ; 6C       ; mem_address[14]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N8       ; 334        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; N9       ; 333        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; N10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; N11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
@@ -1168,21 +1177,21 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; N20      ; 46         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; N21      ; 45         ; 1C       ; ~ALTERA_DATA0~ / RESERVED_INPUT ; input  ; 1.8 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; N22      ;            ; 1C       ; VREFB1CN0                       ; power  ;              ;                     ; --         ;                 ; --       ; --           ;
-; N23      ; 53         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N24      ; 56         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N25      ; 49         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N26      ; 60         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N27      ; 59         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; N28      ; 61         ; 1C       ; GND+                            ;        ;              ;                     ; Row I/O    ;                 ; --       ; --           ;
+; N23      ; 53         ; 1C       ; mem_rdata[3]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N24      ; 56         ; 1C       ; mem_address[13]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N25      ; 49         ; 1C       ; mem_address[15]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N26      ; 60         ; 1C       ; mem_rdata[10]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N27      ; 59         ; 1C       ; mem_wdata[12]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; N28      ; 61         ; 1C       ; mem_rdata[9]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; P1       ; 318        ; 6C       ; GND+                            ;        ;              ;                     ; Row I/O    ;                 ; --       ; --           ;
-; P2       ; 317        ; 6C       ; GND+                            ;        ;              ;                     ; Row I/O    ;                 ; --       ; --           ;
+; P2       ; 317        ; 6C       ; mem_rdata[11]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; P3       ; 327        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; P4       ; 324        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; P4       ; 324        ; 6C       ; mem_address[9]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; P5       ;            ; --       ; VCCPT                           ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; P6       ;            ; 5C       ; VCCIO5C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; P7       ;            ;          ; VCCD_PLL_R2                     ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
-; P8       ; 322        ; 6C       ; mem_wdata[6]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; P9       ; 321        ; 6C       ; mem_address[1]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; P8       ; 322        ; 6C       ; mem_wdata[1]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; P9       ; 321        ; 6C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; P10      ;            ; 6C       ; VCCPD6C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; P11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; P12      ;            ; --       ; VCCL                            ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
@@ -1192,26 +1201,26 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; P16      ;            ; --       ; VCCL                            ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
 ; P17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; P18      ;            ; --       ; VCCL                            ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
-; P19      ; 58         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; P20      ; 57         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; P19      ; 58         ; 1C       ; mem_wdata[11]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; P20      ; 57         ; 1C       ; mem_rdata[13]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; P21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; P22      ;            ;          ; VCCD_PLL_L2                     ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
-; P23      ; 54         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; P23      ; 54         ; 1C       ; mem_rdata[14]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; P24      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; P25      ; 55         ; 1C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; P25      ; 55         ; 1C       ; mem_address[12]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; P26      ;            ; 1C       ; VCCIO1C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; P27      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; P28      ; 62         ; 1C       ; clk                             ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; R1       ; 316        ; 5C       ; mem_rdata[13]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R1       ; 316        ; 5C       ; mem_rdata[6]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; R2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; R3       ;            ; 5C       ; VCCIO5C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
-; R4       ; 309        ; 5C       ; mem_resp                        ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R4       ; 309        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; R5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; R6       ; 308        ; 5C       ; mem_rdata[5]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R6       ; 308        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; R7       ;            ;          ; VCCA_PLL_R2                     ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; R8       ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; R9       ; 311        ; 5C       ; mem_address[9]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; R10      ; 312        ; 5C       ; mem_address[15]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R9       ; 311        ; 5C       ; mem_rdata[4]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R10      ; 312        ; 5C       ; mem_address[6]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; R11      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
 ; R12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; R13      ;            ; --       ; VCCL                            ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
@@ -1221,24 +1230,24 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; R17      ;            ; --       ; VCCL                            ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
 ; R18      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; R19      ;            ; 2C       ; VCCPD2C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
-; R20      ; 67         ; 2C       ; mem_rdata[15]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; R21      ; 68         ; 2C       ; mem_wdata[2]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R20      ; 67         ; 2C       ; mem_address[3]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R21      ; 68         ; 2C       ; mem_wdata[10]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; R22      ;            ;          ; VCCA_PLL_L2                     ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; R23      ;            ; 1C       ; VCCIO1C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; R24      ;            ; --       ; VCCPT                           ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
-; R25      ; 72         ; 2C       ; mem_rdata[2]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; R26      ; 69         ; 2C       ; mem_address[5]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; R27      ; 63         ; 2C       ; mem_rdata[8]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; R28      ; 64         ; 2C       ; mem_rdata[11]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T1       ; 315        ; 5C       ; mem_rdata[3]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T2       ; 305        ; 5C       ; mem_rdata[10]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T3       ; 306        ; 5C       ; mem_wdata[4]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T4       ; 299        ; 5C       ; mem_wdata[12]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T5       ; 310        ; 5C       ; mem_wdata[0]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T6       ; 307        ; 5C       ; mem_address[2]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R25      ; 72         ; 2C       ; mem_wdata[2]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R26      ; 69         ; 2C       ; mem_rdata[8]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R27      ; 63         ; 2C       ; mem_rdata[7]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; R28      ; 64         ; 2C       ; mem_rdata[1]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T1       ; 315        ; 5C       ; mem_resp                        ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T2       ; 305        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; T3       ; 306        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; T4       ; 299        ; 5C       ; mem_wdata[5]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T5       ; 310        ; 5C       ; mem_address[2]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T6       ; 307        ; 5C       ; mem_wdata[4]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; T7       ;            ; 5C       ; VREFB5CN0                       ; power  ;              ;                     ; --         ;                 ; --       ; --           ;
-; T8       ; 303        ; 5C       ; mem_wdata[8]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T9       ; 304        ; 5C       ; mem_read                        ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T8       ; 303        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; T9       ; 304        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; T10      ;            ; 5C       ; VCCPD5C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; T11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; T12      ;            ; --       ; VCCL                            ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
@@ -1249,24 +1258,24 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; T17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; T18      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
 ; T19      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; T20      ; 75         ; 2C       ; mem_wdata[14]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T21      ; 76         ; 2C       ; mem_wdata[13]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T22      ; 83         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; T20      ; 75         ; 2C       ; mem_rdata[0]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T21      ; 76         ; 2C       ; mem_wdata[15]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T22      ; 83         ; 2C       ; mem_rdata[2]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; T23      ; 84         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; T24      ; 79         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; T25      ; 71         ; 2C       ; mem_wdata[1]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T24      ; 79         ; 2C       ; mem_address[7]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T25      ; 71         ; 2C       ; mem_rdata[5]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; T26      ;            ; 2C       ; VCCIO2C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
-; T27      ; 70         ; 2C       ; mem_rdata[6]                    ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; T28      ; 66         ; 2C       ; mem_wdata[15]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; U1       ; 313        ; 5C       ; mem_rdata[12]                   ; input  ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; U2       ; 314        ; 5C       ; mem_wdata[9]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; U3       ; 301        ; 5C       ; mem_write                       ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; U4       ; 302        ; 5C       ; mem_address[10]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; U5       ; 300        ; 5C       ; mem_address[6]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T27      ; 70         ; 2C       ; mem_wdata[0]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; T28      ; 66         ; 2C       ; mem_read                        ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; U1       ; 313        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; U2       ; 314        ; 5C       ; mem_wdata[13]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; U3       ; 301        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; U4       ; 302        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; U5       ; 300        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; U6       ; 291        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; U7       ; 292        ; 5C       ; mem_byte_enable[1]              ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; U8       ; 295        ; 5C       ; mem_address[3]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; U9       ; 296        ; 5C       ; mem_address[4]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; U7       ; 292        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; U8       ; 295        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; U9       ; 296        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; U10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; U11      ;            ; --       ; VCCL                            ; power  ;              ; 1.1V                ; --         ;                 ; --       ; --           ;
 ; U12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
@@ -1282,10 +1291,10 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; U22      ;            ; 2C       ; VREFB2CN0                       ; power  ;              ;                     ; --         ;                 ; --       ; --           ;
 ; U23      ; 88         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; U24      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; U25      ; 80         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; U26      ; 78         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; U25      ; 80         ; 2C       ; mem_address[1]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; U26      ; 78         ; 2C       ; mem_byte_enable[1]              ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; U27      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; U28      ; 65         ; 2C       ; mem_address[11]                 ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; U28      ; 65         ; 2C       ; mem_address[5]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; V1       ; 298        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; V2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; V3       ; 293        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
@@ -1309,11 +1318,11 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; V21      ; 100        ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; V22      ;            ; 2C       ; VCCIO2C                         ; power  ;              ; 2.5V                ; --         ;                 ; --       ; --           ;
 ; V23      ; 87         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; V24      ; 85         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; V24      ; 85         ; 2C       ; mem_write                       ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; V25      ; 86         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
-; V26      ; 77         ; 2C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
+; V26      ; 77         ; 2C       ; mem_byte_enable[0]              ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; V27      ; 73         ; 2C       ; mem_wdata[3]                    ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
-; V28      ; 74         ; 2C       ; mem_address[8]                  ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
+; V28      ; 74         ; 2C       ; mem_wdata[14]                   ; output ; 2.5 V        ;                     ; Row I/O    ; N               ; no       ; Off          ;
 ; W1       ; 297        ; 5C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; W2       ; 286        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
 ; W3       ; 289        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O    ;                 ; no       ; On           ;
@@ -1354,9 +1363,9 @@ The pin-out file can be found in /home/zpaya2/ece411/mp1/output_files/mp1.pin.
 ; Y10      ; 216        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; Y11      ; 217        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; Y12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
-; Y13      ; 196        ; 4C       ; mem_byte_enable[0]              ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
+; Y13      ; 196        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; Y14      ; 197        ; 4C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
-; Y15      ; 183        ; 3C       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
+; Y15      ; 183        ; 3C       ; mem_wdata[8]                    ; output ; 2.5 V        ;                     ; Column I/O ; N               ; no       ; Off          ;
 ; Y16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --         ;                 ; --       ; --           ;
 ; Y17      ; 165        ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
 ; Y18      ; 164        ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O ;                 ; no       ; On           ;
@@ -1380,24 +1389,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Memory ALUTs ; LUT_REGs ; ALMs      ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M9Ks ; M144Ks ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Combinational with no register ; Register-Only      ; Combinational with a register ; Full Hierarchy Name                    ; Library Name ;
 ;                            ;                     ;              ;          ;           ;                           ;               ;                   ;      ;        ;              ;         ;           ;           ;           ;      ;              ; ALUT/register pair             ; ALUT/register pair ; ALUT/register pair            ;                                        ;              ;
 +----------------------------+---------------------+--------------+----------+-----------+---------------------------+---------------+-------------------+------+--------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------+--------------------+-------------------------------+----------------------------------------+--------------+
-; |mp1                       ; 534 (0)             ; 0 (0)        ; 0 (0)    ; 390 (0)   ; 235 (0)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; 398 (0)                        ; 99 (0)             ; 136 (0)                       ; |mp1                                   ; work         ;
-;    |control:Control|       ; 63 (63)             ; 0 (0)        ; 0 (0)    ; 44 (44)   ; 40 (40)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 23 (23)                        ; 1 (1)              ; 41 (41)                       ; |mp1|control:Control                   ; work         ;
-;    |datapath:Datapath|     ; 471 (0)             ; 0 (0)        ; 0 (0)    ; 366 (0)   ; 195 (0)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 375 (0)                        ; 98 (0)             ; 98 (0)                        ; |mp1|datapath:Datapath                 ; work         ;
+; |mp1                       ; 534 (0)             ; 0 (0)        ; 0 (0)    ; 389 (0)   ; 235 (0)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; 362 (0)                        ; 63 (0)             ; 172 (0)                       ; |mp1                                   ; work         ;
+;    |control:Control|       ; 63 (63)             ; 0 (0)        ; 0 (0)    ; 43 (43)   ; 40 (40)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 21 (21)                        ; 1 (1)              ; 43 (43)                       ; |mp1|control:Control                   ; work         ;
+;    |datapath:Datapath|     ; 471 (0)             ; 0 (0)        ; 0 (0)    ; 364 (0)   ; 195 (0)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 341 (0)                        ; 62 (0)             ; 134 (0)                       ; |mp1|datapath:Datapath                 ; work         ;
 ;       |adder:_adder2|      ; 15 (15)             ; 0 (0)        ; 0 (0)    ; 8 (8)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 14 (14)                        ; 0 (0)              ; 1 (1)                         ; |mp1|datapath:Datapath|adder:_adder2   ; work         ;
 ;       |adder:_adder|       ; 15 (15)             ; 0 (0)        ; 0 (0)    ; 8 (8)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 13 (13)                        ; 0 (0)              ; 2 (2)                         ; |mp1|datapath:Datapath|adder:_adder    ; work         ;
 ;       |alu:ALU_IMM|        ; 16 (16)             ; 0 (0)        ; 0 (0)    ; 8 (8)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 16 (16)                        ; 0 (0)              ; 0 (0)                         ; |mp1|datapath:Datapath|alu:ALU_IMM     ; work         ;
-;       |alu:ALU|            ; 198 (198)           ; 0 (0)        ; 0 (0)    ; 150 (150) ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 190 (190)                      ; 0 (0)              ; 8 (8)                         ; |mp1|datapath:Datapath|alu:ALU         ; work         ;
+;       |alu:ALU|            ; 198 (198)           ; 0 (0)        ; 0 (0)    ; 147 (147) ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 189 (189)                      ; 0 (0)              ; 9 (9)                         ; |mp1|datapath:Datapath|alu:ALU         ; work         ;
 ;       |cccomp:CCCOMP|      ; 2 (2)               ; 0 (0)        ; 0 (0)    ; 2 (2)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 2 (2)                          ; 0 (0)              ; 0 (0)                         ; |mp1|datapath:Datapath|cccomp:CCCOMP   ; work         ;
 ;       |gencc:GENCC|        ; 6 (6)               ; 0 (0)        ; 0 (0)    ; 6 (6)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 4 (4)                          ; 0 (0)              ; 2 (2)                         ; |mp1|datapath:Datapath|gencc:GENCC     ; work         ;
-;       |ir:IR|              ; 1 (1)               ; 0 (0)        ; 0 (0)    ; 14 (14)   ; 16 (16)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 0 (0)                          ; 4 (4)              ; 12 (12)                       ; |mp1|datapath:Datapath|ir:IR           ; work         ;
+;       |ir:IR|              ; 1 (1)               ; 0 (0)        ; 0 (0)    ; 13 (13)   ; 16 (16)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 0 (0)                          ; 3 (3)              ; 13 (13)                       ; |mp1|datapath:Datapath|ir:IR           ; work         ;
 ;       |mux2:mdrmux|        ; 8 (8)               ; 0 (0)        ; 0 (0)    ; 8 (8)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 0 (0)                          ; 0 (0)              ; 8 (8)                         ; |mp1|datapath:Datapath|mux2:mdrmux     ; work         ;
 ;       |mux2:storemux|      ; 3 (3)               ; 0 (0)        ; 0 (0)    ; 3 (3)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 0 (0)                          ; 0 (0)              ; 3 (3)                         ; |mp1|datapath:Datapath|mux2:storemux   ; work         ;
-;       |mux3:alumux|        ; 21 (21)             ; 0 (0)        ; 0 (0)    ; 17 (17)   ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 17 (17)                        ; 0 (0)              ; 4 (4)                         ; |mp1|datapath:Datapath|mux3:alumux     ; work         ;
-;       |mux4:regfilemux|    ; 56 (56)             ; 0 (0)        ; 0 (0)    ; 39 (39)   ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 47 (47)                        ; 0 (0)              ; 9 (9)                         ; |mp1|datapath:Datapath|mux4:regfilemux ; work         ;
+;       |mux3:alumux|        ; 21 (21)             ; 0 (0)        ; 0 (0)    ; 18 (18)   ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 18 (18)                        ; 0 (0)              ; 3 (3)                         ; |mp1|datapath:Datapath|mux3:alumux     ; work         ;
+;       |mux4:regfilemux|    ; 56 (56)             ; 0 (0)        ; 0 (0)    ; 39 (39)   ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 43 (43)                        ; 0 (0)              ; 13 (13)                       ; |mp1|datapath:Datapath|mux4:regfilemux ; work         ;
 ;       |mux5:marmux|        ; 18 (18)             ; 0 (0)        ; 0 (0)    ; 18 (18)   ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 1 (1)                          ; 0 (0)              ; 17 (17)                       ; |mp1|datapath:Datapath|mux5:marmux     ; work         ;
-;       |mux5:pcmux|         ; 17 (17)             ; 0 (0)        ; 0 (0)    ; 17 (17)   ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 15 (15)                        ; 0 (0)              ; 2 (2)                         ; |mp1|datapath:Datapath|mux5:pcmux      ; work         ;
+;       |mux5:pcmux|         ; 17 (17)             ; 0 (0)        ; 0 (0)    ; 17 (17)   ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 16 (16)                        ; 0 (0)              ; 1 (1)                         ; |mp1|datapath:Datapath|mux5:pcmux      ; work         ;
 ;       |plus2:_plus2|       ; 15 (15)             ; 0 (0)        ; 0 (0)    ; 8 (8)     ; 0 (0)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 0 (0)                          ; 0 (0)              ; 15 (15)                       ; |mp1|datapath:Datapath|plus2:_plus2    ; work         ;
-;       |regfile:REGFILE|    ; 74 (74)             ; 0 (0)        ; 0 (0)    ; 120 (120) ; 128 (128)                 ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 51 (51)                        ; 94 (94)            ; 34 (34)                       ; |mp1|datapath:Datapath|regfile:REGFILE ; work         ;
+;       |regfile:REGFILE|    ; 74 (74)             ; 0 (0)        ; 0 (0)    ; 116 (116) ; 128 (128)                 ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 20 (20)                        ; 59 (59)            ; 69 (69)                       ; |mp1|datapath:Datapath|regfile:REGFILE ; work         ;
 ;       |register:CC|        ; 0 (0)               ; 0 (0)        ; 0 (0)    ; 3 (3)     ; 3 (3)                     ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 0 (0)                          ; 0 (0)              ; 3 (3)                         ; |mp1|datapath:Datapath|register:CC     ; work         ;
 ;       |register:MAR|       ; 3 (3)               ; 0 (0)        ; 0 (0)    ; 19 (19)   ; 16 (16)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 3 (3)                          ; 0 (0)              ; 16 (16)                       ; |mp1|datapath:Datapath|register:MAR    ; work         ;
 ;       |register:MDR|       ; 0 (0)               ; 0 (0)        ; 0 (0)    ; 16 (16)   ; 16 (16)                   ; 0 (0)         ; 0                 ; 0    ; 0      ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; 0 (0)                          ; 0 (0)              ; 16 (16)                       ; |mp1|datapath:Datapath|register:MDR    ; work         ;
@@ -1417,21 +1426,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mem_byte_enable[1] ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[0]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[1]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
-; mem_address[2]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (2) 146 ps ; (0) 75 ps  ; --     ; --     ; --              ;
+; mem_address[2]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[3]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[4]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
-; mem_address[5]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
+; mem_address[5]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (1) 112 ps ; (3) 176 ps ; --     ; --     ; --              ;
 ; mem_address[6]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[7]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[8]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[9]     ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[10]    ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
-; mem_address[11]    ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (2) 146 ps ; (1) 108 ps ; --     ; --     ; --              ;
+; mem_address[11]    ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[12]    ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[13]    ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[14]    ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_address[15]    ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
-; mem_wdata[0]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (5) 241 ps ; --     ; --     ; --              ;
+; mem_wdata[0]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[1]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[2]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[3]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
@@ -1439,8 +1448,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mem_wdata[5]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[6]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[7]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
-; mem_wdata[8]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (2) 146 ps ; (6) 274 ps ; --     ; --     ; --              ;
-; mem_wdata[9]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (2) 146 ps ; (5) 241 ps ; --     ; --     ; --              ;
+; mem_wdata[8]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
+; mem_wdata[9]       ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[10]      ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[11]      ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_wdata[12]      ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
@@ -1449,22 +1458,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mem_wdata[15]      ; Output   ; -- ; --         ; --          ; --          ; --            ; -- ; --         ; --          ; (0) 79 ps  ; (0) 75 ps  ; --     ; --     ; --              ;
 ; mem_resp           ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
 ; clk                ; Input    ; -- ; (0) 189 ps ; (0) 100 ps  ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[0]       ; Input    ; -- ; (7) 506 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[1]       ; Input    ; -- ; (7) 506 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[0]       ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[1]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
 ; mem_rdata[2]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
 ; mem_rdata[3]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[4]       ; Input    ; -- ; (7) 506 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[5]       ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[6]       ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[7]       ; Input    ; -- ; (7) 506 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[8]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[9]       ; Input    ; -- ; (7) 506 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[10]      ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[11]      ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[12]      ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[4]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[5]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[6]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[7]       ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[8]       ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[9]       ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[10]      ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[11]      ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[12]      ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
 ; mem_rdata[13]      ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[14]      ; Input    ; -- ; (7) 506 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
-; mem_rdata[15]      ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[14]      ; Input    ; -- ; (7) 441 ps ; (7) 1914 ps ; --          ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
+; mem_rdata[15]      ; Input    ; -- ; (7) 441 ps ; --          ; (7) 1914 ps ; --            ; -- ; --         ; --          ; --         ; --         ; --     ; --     ; --              ;
 +--------------------+----------+----+------------+-------------+-------------+---------------+----+------------+-------------+------------+------------+--------+--------+-----------------+
 
 
@@ -1496,13 +1505,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - control:Control|Selector54~0            ; 0                 ; 7       ;
 ; clk                                            ;                   ;         ;
 ; mem_rdata[0]                                   ;                   ;         ;
-;      - datapath:Datapath|register:MDR|data[0]  ; 0                 ; 7       ;
-;      - datapath:Datapath|mux5:marmux|f[0]~0    ; 0                 ; 7       ;
-;      - datapath:Datapath|register:pc|data[0]~1 ; 0                 ; 7       ;
+;      - datapath:Datapath|register:MDR|data[0]  ; 1                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[0]~0    ; 1                 ; 7       ;
+;      - datapath:Datapath|register:pc|data[0]~1 ; 1                 ; 7       ;
 ; mem_rdata[1]                                   ;                   ;         ;
-;      - datapath:Datapath|register:MDR|data[1]  ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:marmux|f[1]~1    ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[1]~0     ; 1                 ; 7       ;
+;      - datapath:Datapath|register:MDR|data[1]  ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[1]~1    ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[1]~0     ; 0                 ; 7       ;
 ; mem_rdata[2]                                   ;                   ;         ;
 ;      - datapath:Datapath|register:MDR|data[2]  ; 0                 ; 7       ;
 ;      - datapath:Datapath|mux5:marmux|f[2]~2    ; 0                 ; 7       ;
@@ -1512,53 +1521,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - datapath:Datapath|mux5:marmux|f[3]~3    ; 0                 ; 7       ;
 ;      - datapath:Datapath|mux5:pcmux|f[3]~2     ; 0                 ; 7       ;
 ; mem_rdata[4]                                   ;                   ;         ;
-;      - datapath:Datapath|register:MDR|data[4]  ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:marmux|f[4]~4    ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[4]~3     ; 1                 ; 7       ;
+;      - datapath:Datapath|register:MDR|data[4]  ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[4]~4    ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[4]~3     ; 0                 ; 7       ;
 ; mem_rdata[5]                                   ;                   ;         ;
-;      - datapath:Datapath|register:MDR|data[5]  ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:marmux|f[5]~5    ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[5]~4     ; 1                 ; 7       ;
+;      - datapath:Datapath|register:MDR|data[5]  ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[5]~5    ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[5]~4     ; 0                 ; 7       ;
 ; mem_rdata[6]                                   ;                   ;         ;
-;      - datapath:Datapath|register:MDR|data[6]  ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:marmux|f[6]~6    ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[6]~5     ; 1                 ; 7       ;
+;      - datapath:Datapath|register:MDR|data[6]  ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[6]~6    ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[6]~5     ; 0                 ; 7       ;
 ; mem_rdata[7]                                   ;                   ;         ;
 ;      - datapath:Datapath|register:MDR|data[7]  ; 0                 ; 7       ;
 ;      - datapath:Datapath|mux5:marmux|f[7]~7    ; 0                 ; 7       ;
 ;      - datapath:Datapath|mux5:pcmux|f[7]~6     ; 0                 ; 7       ;
 ; mem_rdata[8]                                   ;                   ;         ;
-;      - datapath:Datapath|mux5:marmux|f[8]~8    ; 0                 ; 7       ;
-;      - datapath:Datapath|mux2:mdrmux|f[8]~0    ; 0                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[8]~7     ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[8]~8    ; 1                 ; 7       ;
+;      - datapath:Datapath|mux2:mdrmux|f[8]~0    ; 1                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[8]~7     ; 1                 ; 7       ;
 ; mem_rdata[9]                                   ;                   ;         ;
 ;      - datapath:Datapath|mux5:marmux|f[9]~9    ; 1                 ; 7       ;
 ;      - datapath:Datapath|mux2:mdrmux|f[9]~1    ; 1                 ; 7       ;
 ;      - datapath:Datapath|mux5:pcmux|f[9]~8     ; 1                 ; 7       ;
 ; mem_rdata[10]                                  ;                   ;         ;
-;      - datapath:Datapath|mux5:marmux|f[10]~10  ; 0                 ; 7       ;
-;      - datapath:Datapath|mux2:mdrmux|f[10]~2   ; 0                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[10]~9    ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[10]~10  ; 1                 ; 7       ;
+;      - datapath:Datapath|mux2:mdrmux|f[10]~2   ; 1                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[10]~9    ; 1                 ; 7       ;
 ; mem_rdata[11]                                  ;                   ;         ;
-;      - datapath:Datapath|mux5:marmux|f[11]~11  ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[11]~10   ; 1                 ; 7       ;
-;      - datapath:Datapath|mux2:mdrmux|f[11]~16  ; 1                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[11]~11  ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[11]~10   ; 0                 ; 7       ;
+;      - datapath:Datapath|mux2:mdrmux|f[11]~16  ; 0                 ; 7       ;
 ; mem_rdata[12]                                  ;                   ;         ;
-;      - datapath:Datapath|mux5:marmux|f[12]~12  ; 0                 ; 7       ;
-;      - datapath:Datapath|mux2:mdrmux|f[12]~3   ; 0                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[12]~11   ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[12]~12  ; 1                 ; 7       ;
+;      - datapath:Datapath|mux2:mdrmux|f[12]~3   ; 1                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[12]~11   ; 1                 ; 7       ;
 ; mem_rdata[13]                                  ;                   ;         ;
 ;      - datapath:Datapath|mux5:marmux|f[13]~13  ; 0                 ; 7       ;
 ;      - datapath:Datapath|mux5:pcmux|f[13]~12   ; 0                 ; 7       ;
 ;      - datapath:Datapath|mux2:mdrmux|f[13]~12  ; 0                 ; 7       ;
 ; mem_rdata[14]                                  ;                   ;         ;
-;      - datapath:Datapath|mux5:marmux|f[14]~14  ; 1                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[14]~13   ; 1                 ; 7       ;
-;      - datapath:Datapath|mux2:mdrmux|f[14]~8   ; 1                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[14]~14  ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[14]~13   ; 0                 ; 7       ;
+;      - datapath:Datapath|mux2:mdrmux|f[14]~8   ; 0                 ; 7       ;
 ; mem_rdata[15]                                  ;                   ;         ;
-;      - datapath:Datapath|mux5:marmux|f[15]~15  ; 0                 ; 7       ;
-;      - datapath:Datapath|mux5:pcmux|f[15]~14   ; 0                 ; 7       ;
-;      - datapath:Datapath|mux2:mdrmux|f[15]~4   ; 0                 ; 7       ;
+;      - datapath:Datapath|mux5:marmux|f[15]~15  ; 1                 ; 7       ;
+;      - datapath:Datapath|mux5:pcmux|f[15]~14   ; 1                 ; 7       ;
+;      - datapath:Datapath|mux2:mdrmux|f[15]~4   ; 1                 ; 7       ;
 +------------------------------------------------+-------------------+---------+
 
 
@@ -1568,25 +1577,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                       ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                                        ; PIN_P28              ; 235     ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; control:Control|WideOr0                    ; LABCELL_X27_Y25_N32  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; control:Control|WideOr12~2                 ; LABCELL_X30_Y19_N2   ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; control:Control|WideOr3                    ; MLABCELL_X26_Y20_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; control:Control|WideOr4~0                  ; LABCELL_X36_Y20_N36  ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; control:Control|WideOr6                    ; MLABCELL_X35_Y22_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; control:Control|state.fetch3               ; FF_X29_Y25_N17       ; 17      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; control:Control|state.stb1_odd             ; FF_X35_Y20_N9        ; 28      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; control:Control|state.trap2                ; FF_X27_Y25_N11       ; 13      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|mux5:marmux|Equal0~1     ; MLABCELL_X29_Y25_N20 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|mux5:pcmux|Equal0~0      ; LABCELL_X27_Y23_N30  ; 15      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~385 ; MLABCELL_X29_Y23_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~386 ; MLABCELL_X29_Y23_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~387 ; MLABCELL_X29_Y23_N36 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~389 ; MLABCELL_X29_Y23_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~390 ; MLABCELL_X29_Y23_N32 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~391 ; MLABCELL_X29_Y23_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~392 ; MLABCELL_X29_Y23_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; datapath:Datapath|regfile:REGFILE|data~393 ; MLABCELL_X29_Y23_N38 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mem_resp                                   ; PIN_R4               ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; control:Control|WideOr0                    ; MLABCELL_X24_Y27_N32 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; control:Control|WideOr12~2                 ; LABCELL_X27_Y22_N2   ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; control:Control|WideOr3                    ; MLABCELL_X21_Y22_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; control:Control|WideOr4~0                  ; LABCELL_X22_Y22_N38  ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; control:Control|WideOr6                    ; LABCELL_X27_Y26_N26  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; control:Control|state.fetch3               ; FF_X26_Y22_N7        ; 17      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; control:Control|state.stb1_odd             ; FF_X22_Y25_N11       ; 28      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; control:Control|state.trap2                ; FF_X24_Y27_N29       ; 13      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|mux5:marmux|Equal0~1     ; MLABCELL_X26_Y22_N34 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|mux5:pcmux|Equal0~0      ; MLABCELL_X21_Y27_N30 ; 15      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~385 ; LABCELL_X25_Y23_N32  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~386 ; LABCELL_X25_Y23_N34  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~387 ; LABCELL_X25_Y23_N36  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~389 ; LABCELL_X25_Y23_N18  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~390 ; LABCELL_X25_Y23_N12  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~391 ; LABCELL_X25_Y23_N4   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~392 ; LABCELL_X25_Y23_N24  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; datapath:Datapath|regfile:REGFILE|data~393 ; LABCELL_X25_Y23_N38  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mem_resp                                   ; PIN_T1               ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1648,10 +1657,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; control:Control|WideOr0                    ; 16      ;
 ; datapath:Datapath|alu:ALU|ShiftLeft0~5     ; 16      ;
 ; datapath:Datapath|mux2:storemux|f[0]~2     ; 16      ;
-; datapath:Datapath|ir:IR|data[10]           ; 16      ;
 ; datapath:Datapath|mux5:pcmux|Equal0~0      ; 15      ;
 ; datapath:Datapath|register:pc|data[3]~2    ; 15      ;
-; datapath:Datapath|ir:IR|dest[0]~0          ; 15      ;
+; datapath:Datapath|ir:IR|data[10]           ; 15      ;
+; datapath:Datapath|ir:IR|always1~0          ; 15      ;
 ; datapath:Datapath|regfile:REGFILE|data~316 ; 14      ;
 ; datapath:Datapath|mux4:regfilemux|f[9]~13  ; 13      ;
 ; control:Control|state.trap2                ; 13      ;
@@ -1743,6 +1752,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:Datapath|alu:ALU|ShiftRight1~8    ; 5       ;
 ; datapath:Datapath|alu:ALU|ShiftRight1~7    ; 5       ;
 ; datapath:Datapath|alu:ALU|ShiftLeft0~0     ; 5       ;
+; datapath:Datapath|ir:IR|data[11]           ; 5       ;
 ; control:Control|Selector1~1                ; 5       ;
 ; control:Control|state.rshfa                ; 5       ;
 ; datapath:Datapath|register:MDR|data[15]    ; 5       ;
@@ -1790,7 +1800,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:Datapath|alu:ALU|ShiftLeft0~1     ; 4       ;
 ; datapath:Datapath|ir:IR|data[6]            ; 4       ;
 ; datapath:Datapath|ir:IR|data[7]            ; 4       ;
-; datapath:Datapath|ir:IR|data[11]           ; 4       ;
 ; control:Control|WideOr6~0                  ; 4       ;
 ; datapath:Datapath|register:MDR|data[7]     ; 4       ;
 ; datapath:Datapath|register:MDR|data[6]     ; 4       ;
@@ -2470,20 +2479,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+---------------------------+
 ; Routing Resource Type                        ; Usage                     ;
 +----------------------------------------------+---------------------------+
-; Block interconnects                          ; 1,428 / 173,800 ( < 1 % ) ;
-; C12 interconnects                            ; 24 / 6,572 ( < 1 % )      ;
-; C4 interconnects                             ; 747 / 114,480 ( < 1 % )   ;
+; Block interconnects                          ; 1,424 / 173,800 ( < 1 % ) ;
+; C12 interconnects                            ; 7 / 6,572 ( < 1 % )       ;
+; C4 interconnects                             ; 717 / 114,480 ( < 1 % )   ;
 ; DIFFIOCLKs                                   ; 0 / 32 ( 0 % )            ;
 ; DQS I/O Configuration Shift Register Outputs ; 0 / 62 ( 0 % )            ;
 ; DQS bus muxes                                ; 0 / 62 ( 0 % )            ;
 ; DQS-18 I/O buses                             ; 0 / 8 ( 0 % )             ;
 ; DQS-4 I/O buses                              ; 0 / 62 ( 0 % )            ;
 ; DQS-9 I/O buses                              ; 0 / 28 ( 0 % )            ;
-; Direct links                                 ; 84 / 173,800 ( < 1 % )    ;
+; Direct links                                 ; 90 / 173,800 ( < 1 % )    ;
 ; Global clocks                                ; 1 / 16 ( 6 % )            ;
 ; I/O Clock Divider Clock Outputs              ; 0 / 62 ( 0 % )            ;
 ; I/O Configuration Shift Register Outputs     ; 0 / 372 ( 0 % )           ;
-; Local interconnects                          ; 288 / 38,000 ( < 1 % )    ;
+; Local interconnects                          ; 293 / 38,000 ( < 1 % )    ;
 ; NDQS bus muxes                               ; 0 / 62 ( 0 % )            ;
 ; NDQS-18 I/O buses                            ; 0 / 8 ( 0 % )             ;
 ; NDQS-9 I/O buses                             ; 0 / 28 ( 0 % )            ;
@@ -2492,16 +2501,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Periphery clocks                             ; 0 / 56 ( 0 % )            ;
 ; Quadrant clocks                              ; 0 / 64 ( 0 % )            ;
 ; R20 interconnects                            ; 39 / 7,300 ( < 1 % )      ;
-; R20/C12 interconnect drivers                 ; 47 / 10,600 ( < 1 % )     ;
-; R4 interconnects                             ; 1,431 / 193,800 ( < 1 % ) ;
-; Spine clocks                                 ; 1 / 104 ( < 1 % )         ;
+; R20/C12 interconnect drivers                 ; 33 / 10,600 ( < 1 % )     ;
+; R4 interconnects                             ; 1,312 / 193,800 ( < 1 % ) ;
+; Spine clocks                                 ; 4 / 104 ( 4 % )           ;
 +----------------------------------------------+---------------------------+
 
 
 +-----------------------------------------------------------------+
 ; LAB Logic Elements                                              ;
 +----------------------------------+------------------------------+
-; Number of ALMs  (Average = 9.29) ; Number of LABs  (Total = 42) ;
+; Number of ALMs  (Average = 9.26) ; Number of LABs  (Total = 42) ;
 +----------------------------------+------------------------------+
 ; 1                                ; 1                            ;
 ; 2                                ; 1                            ;
@@ -2511,20 +2520,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 6                                ; 0                            ;
 ; 7                                ; 0                            ;
 ; 8                                ; 2                            ;
-; 9                                ; 2                            ;
-; 10                               ; 35                           ;
+; 9                                ; 3                            ;
+; 10                               ; 34                           ;
 +----------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.93) ; Number of LABs  (Total = 42) ;
+; LAB-wide Signals  (Average = 1.90) ; Number of LABs  (Total = 42) ;
 +------------------------------------+------------------------------+
 ; 1 Clock                            ; 38                           ;
 ; 1 Clock enable                     ; 12                           ;
 ; 1 Sync. clear                      ; 5                            ;
-; 1 Sync. load                       ; 6                            ;
+; 1 Sync. load                       ; 5                            ;
 ; 2 Clock enables                    ; 5                            ;
 ; 3 Clock enables                    ; 15                           ;
 +------------------------------------+------------------------------+
@@ -2533,16 +2542,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.67) ; Number of LABs  (Total = 42) ;
+; Number of Signals Sourced  (Average = 16.74) ; Number of LABs  (Total = 42) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 1                            ;
 ; 1                                            ; 1                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 1                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
@@ -2556,12 +2565,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 18                                           ; 6                            ;
 ; 19                                           ; 1                            ;
 ; 20                                           ; 3                            ;
-; 21                                           ; 3                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 0                            ;
 ; 28                                           ; 1                            ;
 ; 29                                           ; 1                            ;
@@ -2805,7 +2814,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; clk                  ; 8.5               ;
+; I/O             ; clk                  ; 11.2              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
@@ -2816,27 +2825,28 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+-----------------------------------------+-------------------+
 ; Source Register ; Destination Register                    ; Delay Added in ns ;
 +-----------------+-----------------------------------------+-------------------+
-; mem_rdata[10]   ; datapath:Datapath|register:MDR|data[10] ; 0.727             ;
-; mem_rdata[1]    ; mem_address[0]                          ; 0.718             ;
-; mem_rdata[6]    ; datapath:Datapath|register:MAR|data[6]  ; 0.580             ;
-; mem_rdata[7]    ; mem_address[0]                          ; 0.549             ;
-; mem_rdata[12]   ; datapath:Datapath|register:MDR|data[12] ; 0.462             ;
-; mem_rdata[13]   ; datapath:Datapath|register:MDR|data[13] ; 0.409             ;
-; mem_rdata[5]    ; datapath:Datapath|register:MAR|data[5]  ; 0.246             ;
-; mem_rdata[15]   ; datapath:Datapath|register:MAR|data[15] ; 0.245             ;
-; mem_rdata[0]    ; datapath:Datapath|register:pc|data[0]   ; 0.221             ;
-; mem_rdata[2]    ; datapath:Datapath|register:MAR|data[2]  ; 0.217             ;
-; mem_rdata[4]    ; datapath:Datapath|register:MAR|data[4]  ; 0.164             ;
-; mem_resp        ; control:Control|state.trap4             ; 0.163             ;
-; mem_rdata[14]   ; datapath:Datapath|register:MAR|data[14] ; 0.125             ;
+; mem_rdata[7]    ; mem_address[0]                          ; 0.850             ;
+; mem_rdata[10]   ; datapath:Datapath|register:MAR|data[10] ; 0.796             ;
+; mem_rdata[2]    ; datapath:Datapath|register:MAR|data[2]  ; 0.756             ;
+; mem_rdata[1]    ; datapath:Datapath|register:MAR|data[1]  ; 0.705             ;
+; mem_rdata[11]   ; datapath:Datapath|register:MAR|data[11] ; 0.657             ;
+; mem_rdata[4]    ; datapath:Datapath|register:MAR|data[4]  ; 0.644             ;
+; mem_rdata[6]    ; datapath:Datapath|register:MAR|data[6]  ; 0.622             ;
+; mem_rdata[8]    ; datapath:Datapath|register:MAR|data[8]  ; 0.319             ;
+; mem_rdata[5]    ; datapath:Datapath|register:MAR|data[5]  ; 0.289             ;
+; mem_rdata[14]   ; datapath:Datapath|register:MAR|data[14] ; 0.281             ;
+; mem_rdata[0]    ; datapath:Datapath|register:pc|data[0]   ; 0.167             ;
+; mem_resp        ; control:Control|state.ldb2              ; 0.142             ;
+; mem_rdata[13]   ; datapath:Datapath|register:MAR|data[13] ; 0.136             ;
+; mem_rdata[15]   ; datapath:Datapath|register:MAR|data[15] ; 0.083             ;
 +-----------------+-----------------------------------------+-------------------+
-Note: This table only shows the top 13 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 14 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (119006): Selected device EP3SE50F780C2 for design "mp1"
 Info (21077): Core supply voltage is 1.1V
 Info (21077): Low junction temperature is 0 degrees C
@@ -2942,7 +2952,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 7C does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
         Info (176213): I/O bank number 8C does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
         Info (176213): I/O bank number 8A does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2955,7 +2965,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.62 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.61 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2963,10 +2973,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file /home/zpaya2/ece411/mp1/output_files/mp1.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 793 megabytes
-    Info: Processing ended: Sat Sep 16 21:11:59 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 787 megabytes
+    Info: Processing ended: Sun Sep 17 02:25:03 2017
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +----------------------------+

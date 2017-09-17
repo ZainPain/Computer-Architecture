@@ -8,7 +8,7 @@ SEGMENT  CodeSegment:
 START:
 	ADD R1, R1, 15
 	ADD R1, R1, 1
-	RSHFA R2, R1,3
+	LSHF R2, R1,3
 	
 	
 HALT:                   ; Infinite loop to keep the processor

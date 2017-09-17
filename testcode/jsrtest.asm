@@ -6,18 +6,10 @@ ORIGIN 4x0000
 SEGMENT  CodeSegment:
 
 START:
-	ADD R1, R1, 1
-	ADD R1, R1, 1
-	ADD R1, R1, 1
-	ADD R1, R1, 1
+	jsr TEST
 	
-	ADD R1, R1, 1
-	ADD R1, R1, 1
-	ADD R1, R1, 1
-	ADD R1, R1, 1
-	JSRR R0
-	
-HALT:                   ; Infinite loop to keep the processor
+HALT:           
+	add r1, r1, 5        ; Infinite loop to keep the processor
 	BRnzp HALT      ; from trying to execute the data below.
                         ; Your own programs should also make use
                         ; of an infinite loop at the end.

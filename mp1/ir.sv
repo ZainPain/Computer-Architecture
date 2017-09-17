@@ -32,10 +32,12 @@ end
 always_comb
 begin
     opcode = lc3b_opcode'(data[15:12]);
-	 if(opcode == op_trap)
+	 if(opcode == op_trap || opcode == op_jsr) begin
 		dest = 3'b111;
-	 else
+	 end
+	 else begin
 		dest = data[11:9];
+	 end
     src1 = data[8:6];
     src2 = data[2:0];
 	 imm  = data[5];
@@ -44,9 +46,8 @@ begin
 	 offset11 = data[10:0];
 	 imm5 = data[4:0];
 	 imm4 = $unsigned(data[3:0]);
-	 if(opcode == op_jsr)
-			dest = 3'b111;
-	 bit11 = data[10];
+
+	 bit11 = data[11];
 	 bit4 = data[4];
 	 trap8 = data[7:0];
 end

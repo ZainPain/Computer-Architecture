@@ -9,7 +9,7 @@ START:
 	 
 	lea r1, var
 	ldr r2, r0, var
-	stb r2, r1, 3
+	stb r2, r1, 2
 	
 HALT:                   ; Infinite loop to keep the processor
 	BRnzp HALT      ; from trying to execute the data below.

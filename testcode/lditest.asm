@@ -6,8 +6,8 @@ ORIGIN 4x0000
 SEGMENT  CodeSegment:
 
 START:
-	ADD R1, R1, 0
-	LDI R2, R1, 7
+	ADD R1, R1, 2
+	LDI R2, R1, 10
 	
 HALT:                   ; Infinite loop to keep the processor
 	BRnzp HALT      ; from trying to execute the data below.
@@ -20,9 +20,9 @@ TEST:
 
 
 
-ZERO:   DATA2 4x0000
-ONE:    DATA2 4x0010
-RESULT: DATA2 4x000E
+ZERO:   DATA2 ONE
+ONE:    DATA2 RESULT
+RESULT: DATA2 4xabcd
 INPUT:  DATA2 4xABCD
 GOOD:   DATA2 4x600D
 
