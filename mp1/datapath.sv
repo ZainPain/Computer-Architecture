@@ -18,11 +18,11 @@ module datapath
 	 
 	 /* Select signals */
 	 
-	 input [1:0] pcmux_sel,
+	 input [2:0] pcmux_sel,
 	 input storemux_sel,
 	 input [1:0] alumux_sel,
 	 input [1:0] regfilemux_sel,
-	 input [1:0] marmux_sel,
+	 input [2:0] marmux_sel,
 	 input mdrmux_sel,
 	 input adjmux_sel,
 	 
@@ -86,6 +86,10 @@ lc3b_offset9 offset9;
 lc3b_offset6 offset6;
 lc3b_offset11 offset11;
 lc3b_word adj11_plus_pc_out;
+
+lc3b_byte trap8;
+lc3b_word trap8_out;
+
 /* Instantiating mux2 */
 mux2 #(.width(3)) storemux
 (
@@ -96,13 +100,14 @@ mux2 #(.width(3)) storemux
 );
 
 
-mux4 #(.width(16)) pcmux
+mux5 #(.width(16)) pcmux
 (
     .sel(pcmux_sel),
     .a(pc_plus2_out),
     .b(br_add_out),
 	 .c(sr1_out),
 	 .d(adj11_plus_pc_out),
+	 .e(mem_rdata),
     .f(pcmux_out)
 );
 
@@ -142,12 +147,14 @@ adder #(.width(16))_adder2
 	.in(pc_out),
 	.out(adj11_plus_pc_out)
 );
-mux3 marmux
+mux5 marmux
 (
 	.sel(marmux_sel),
 	.a(alu_out),
 	.b(pc_out),
 	.c(mem_wdata),
+	.d(mem_rdata),
+	.e(trap8_out),
 	.f(marmux_out)
 );
 
@@ -219,10 +226,17 @@ ir IR
 	 .offset11(offset11),
 	 .imm(imm),
 	 .imm5(imm5),
+	 .trap8(trap8),
 	 .imm4(imm4),
 	 .bit11(bit11),
 	 .bit4(bit4)
 );
+zext_no_shift #(.width(8)) trapadj
+(
+    .in(trap8),
+    .out(trap8_out)
+);
+
 adj #(.width(6)) ADJ6 
 (
 	.in(offset6),

@@ -18,7 +18,11 @@ add wave -noupdate -label {Register 6} -radix hexadecimal {/mp1_tb/dut/Datapath/
 add wave -noupdate -label {Register 7} -radix hexadecimal {/mp1_tb/dut/Datapath/REGFILE/data[7]}
 add wave -noupdate -label States /mp1_tb/dut/Control/state
 add wave -noupdate -label alu_out -radix hexadecimal /mp1_tb/dut/Datapath/alu_out
+add wave -noupdate -label MAR -radix hexadecimal /mp1_tb/dut/Datapath/MAR/data
+add wave -noupdate -label MDR -radix hexadecimal /mp1_tb/dut/Datapath/MDR/data
 TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {786022 ps} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 159
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left

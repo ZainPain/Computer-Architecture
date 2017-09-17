@@ -15,6 +15,7 @@ entity ir is
         offset11        : out    vl_logic_vector(10 downto 0);
         imm             : out    vl_logic;
         imm5            : out    vl_logic_vector(4 downto 0);
+        trap8           : out    vl_logic_vector(7 downto 0);
         imm4            : out    vl_logic_vector(15 downto 0);
         bit11           : out    vl_logic;
         bit4            : out    vl_logic

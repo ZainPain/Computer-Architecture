@@ -13,11 +13,11 @@ entity datapath is
         mask_enable     : in     vl_logic;
         truncate        : in     vl_logic;
         shift           : in     vl_logic;
-        pcmux_sel       : in     vl_logic_vector(1 downto 0);
+        pcmux_sel       : in     vl_logic_vector(2 downto 0);
         storemux_sel    : in     vl_logic;
         alumux_sel      : in     vl_logic_vector(1 downto 0);
         regfilemux_sel  : in     vl_logic_vector(1 downto 0);
-        marmux_sel      : in     vl_logic_vector(1 downto 0);
+        marmux_sel      : in     vl_logic_vector(2 downto 0);
         mdrmux_sel      : in     vl_logic;
         adjmux_sel      : in     vl_logic;
         aluop           : in     work.lc3b_types.lc3b_aluop;

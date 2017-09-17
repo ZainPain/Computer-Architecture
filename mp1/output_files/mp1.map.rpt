@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Fri Sep 15 20:28:03 2017
+Sat Sep 16 21:11:40 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -18,30 +18,31 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: datapath:Datapath|mux2:storemux
- 13. Parameter Settings for User Entity Instance: datapath:Datapath|mux4:pcmux
+ 13. Parameter Settings for User Entity Instance: datapath:Datapath|mux5:pcmux
  14. Parameter Settings for User Entity Instance: datapath:Datapath|plus2:_plus2
  15. Parameter Settings for User Entity Instance: datapath:Datapath|register:pc
  16. Parameter Settings for User Entity Instance: datapath:Datapath|adder:_adder
  17. Parameter Settings for User Entity Instance: datapath:Datapath|adj:ADJ11
  18. Parameter Settings for User Entity Instance: datapath:Datapath|adj:ADJ9
  19. Parameter Settings for User Entity Instance: datapath:Datapath|adder:_adder2
- 20. Parameter Settings for User Entity Instance: datapath:Datapath|mux3:marmux
+ 20. Parameter Settings for User Entity Instance: datapath:Datapath|mux5:marmux
  21. Parameter Settings for User Entity Instance: datapath:Datapath|register:MAR
  22. Parameter Settings for User Entity Instance: datapath:Datapath|mux2:mdrmux
  23. Parameter Settings for User Entity Instance: datapath:Datapath|register:MDR
  24. Parameter Settings for User Entity Instance: datapath:Datapath|mux4:regfilemux
  25. Parameter Settings for User Entity Instance: datapath:Datapath|register:CC
  26. Parameter Settings for User Entity Instance: datapath:Datapath|cccomp:CCCOMP
- 27. Parameter Settings for User Entity Instance: datapath:Datapath|adj:ADJ6
- 28. Parameter Settings for User Entity Instance: datapath:Datapath|adj_imm:adj6_no_shift
- 29. Parameter Settings for User Entity Instance: datapath:Datapath|mux2:adjmux
- 30. Parameter Settings for User Entity Instance: datapath:Datapath|mux3:alumux
- 31. Parameter Settings for User Entity Instance: datapath:Datapath|adj_imm:ADJ5
- 32. Parameter Settings for User Entity Instance: datapath:Datapath|mask:Mask
- 33. Parameter Settings for User Entity Instance: datapath:Datapath|stb_shifter:alu_out_to_mdrmux
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
- 36. Analysis & Synthesis Suppressed Messages
+ 27. Parameter Settings for User Entity Instance: datapath:Datapath|zext_no_shift:trapadj
+ 28. Parameter Settings for User Entity Instance: datapath:Datapath|adj:ADJ6
+ 29. Parameter Settings for User Entity Instance: datapath:Datapath|adj_imm:adj6_no_shift
+ 30. Parameter Settings for User Entity Instance: datapath:Datapath|mux2:adjmux
+ 31. Parameter Settings for User Entity Instance: datapath:Datapath|mux3:alumux
+ 32. Parameter Settings for User Entity Instance: datapath:Datapath|adj_imm:ADJ5
+ 33. Parameter Settings for User Entity Instance: datapath:Datapath|mask:Mask
+ 34. Parameter Settings for User Entity Instance: datapath:Datapath|stb_shifter:alu_out_to_mdrmux
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+ 37. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -67,16 +68,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Sep 15 20:28:03 2017       ;
+; Analysis & Synthesis Status   ; Successful - Sat Sep 16 21:11:40 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp1                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 524                                         ;
+;     Combinational ALUTs       ; 534                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 227                                         ;
-; Total registers               ; 227                                         ;
+;     Dedicated logic registers ; 235                                         ;
+; Total registers               ; 235                                         ;
 ; Total pins                    ; 54                                          ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -216,6 +217,8 @@ applicable agreement for further details.
 ; mask.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/mask.sv        ;         ;
 ; truncator.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/truncator.sv   ;         ;
 ; stb_shifter.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/stb_shifter.sv ;         ;
+; mux5.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/mux5.sv        ;         ;
+; zext.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp1/zext.sv        ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------+---------+
 
 
@@ -224,34 +227,34 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 524       ;
-;     -- Combinational ALUTs                    ; 524       ;
+; Estimated ALUTs Used                          ; 534       ;
+;     -- Combinational ALUTs                    ; 534       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 227       ;
+; Dedicated logic registers                     ; 235       ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 105       ;
-;     -- Due to unpartnered combinational logic ; 105       ;
+; Estimated ALUTs Unavailable                   ; 111       ;
+;     -- Due to unpartnered combinational logic ; 111       ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 524       ;
+; Total combinational functions                 ; 534       ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 69        ;
-;     -- 6 input functions                      ; 122       ;
-;     -- 5 input functions                      ; 112       ;
-;     -- 4 input functions                      ; 61        ;
-;     -- <=3 input functions                    ; 160       ;
+;     -- 7 input functions                      ; 73        ;
+;     -- 6 input functions                      ; 126       ;
+;     -- 5 input functions                      ; 116       ;
+;     -- 4 input functions                      ; 69        ;
+;     -- <=3 input functions                    ; 150       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 378       ;
-;     -- extended LUT mode                      ; 69        ;
+;     -- normal mode                            ; 384       ;
+;     -- extended LUT mode                      ; 73        ;
 ;     -- arithmetic mode                        ; 77        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 738       ;
+; Estimated ALUT/register pairs used            ; 748       ;
 ;                                               ;           ;
-; Total registers                               ; 227       ;
-;     -- Dedicated logic registers              ; 227       ;
+; Total registers                               ; 235       ;
+;     -- Dedicated logic registers              ; 235       ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -259,9 +262,9 @@ applicable agreement for further details.
 ; I/O pins                                      ; 54        ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 227       ;
-; Total fan-out                                 ; 3287      ;
-; Average fan-out                               ; 3.83      ;
+; Maximum fan-out                               ; 235       ;
+; Total fan-out                                 ; 3376      ;
+; Average fan-out                               ; 3.85      ;
 +-----------------------------------------------+-----------+
 
 
@@ -270,71 +273,79 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; |mp1                       ; 524 (0)           ; 227 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp1                                   ; work         ;
-;    |control:Control|       ; 59 (59)           ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|control:Control                   ; work         ;
-;    |datapath:Datapath|     ; 465 (0)           ; 195 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath                 ; work         ;
+; |mp1                       ; 534 (0)           ; 235 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp1                                   ; work         ;
+;    |control:Control|       ; 63 (63)           ; 40 (40)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|control:Control                   ; work         ;
+;    |datapath:Datapath|     ; 471 (0)           ; 195 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath                 ; work         ;
 ;       |adder:_adder2|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|adder:_adder2   ; work         ;
 ;       |adder:_adder|       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|adder:_adder    ; work         ;
 ;       |alu:ALU_IMM|        ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|alu:ALU_IMM     ; work         ;
-;       |alu:ALU|            ; 208 (208)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|alu:ALU         ; work         ;
-;       |cccomp:CCCOMP|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|cccomp:CCCOMP   ; work         ;
+;       |alu:ALU|            ; 198 (198)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|alu:ALU         ; work         ;
+;       |cccomp:CCCOMP|      ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|cccomp:CCCOMP   ; work         ;
 ;       |gencc:GENCC|        ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|gencc:GENCC     ; work         ;
-;       |ir:IR|              ; 3 (3)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|ir:IR           ; work         ;
-;       |mask:Mask|          ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mask:Mask       ; work         ;
+;       |ir:IR|              ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|ir:IR           ; work         ;
+;       |mux2:mdrmux|        ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux2:mdrmux     ; work         ;
 ;       |mux2:storemux|      ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux2:storemux   ; work         ;
-;       |mux3:alumux|        ; 20 (20)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux3:alumux     ; work         ;
-;       |mux3:marmux|        ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux3:marmux     ; work         ;
-;       |mux4:pcmux|         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux4:pcmux      ; work         ;
-;       |mux4:regfilemux|    ; 54 (54)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux4:regfilemux ; work         ;
+;       |mux3:alumux|        ; 21 (21)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux3:alumux     ; work         ;
+;       |mux4:regfilemux|    ; 56 (56)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux4:regfilemux ; work         ;
+;       |mux5:marmux|        ; 18 (18)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux5:marmux     ; work         ;
+;       |mux5:pcmux|         ; 17 (17)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|mux5:pcmux      ; work         ;
 ;       |plus2:_plus2|       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|plus2:_plus2    ; work         ;
-;       |regfile:REGFILE|    ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|regfile:REGFILE ; work         ;
+;       |regfile:REGFILE|    ; 74 (74)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|regfile:REGFILE ; work         ;
 ;       |register:CC|        ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:CC     ; work         ;
-;       |register:MAR|       ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:MAR    ; work         ;
-;       |register:MDR|       ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:MDR    ; work         ;
-;       |register:pc|        ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:pc     ; work         ;
+;       |register:MAR|       ; 3 (3)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:MAR    ; work         ;
+;       |register:MDR|       ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:MDR    ; work         ;
+;       |register:pc|        ; 3 (3)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:Datapath|register:pc     ; work         ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |mp1|control:Control|state                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
-+-----------------+-----------------+----------------+-----------------+----------------+-------------+-------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; Name            ; state.stb2_even ; state.stb2_odd ; state.stb1_even ; state.stb1_odd ; state.rshfa ; state.rshfl ; state.lshf ; state.shf ; state.ldi4 ; state.ldi3 ; state.ldi2 ; state.ldi1 ; state.ldb2 ; state.ldb1 ; state.jsr2 ; state.jsr1 ; state.lea ; state.jmp ; state.str2 ; state.str1 ; state.ldr2 ; state.ldr1 ; state.calc_addr ; state.br_taken ; state.br ; state.s_not ; state.s_and ; state.s_add ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
-+-----------------+-----------------+----------------+-----------------+----------------+-------------+-------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; state.fetch1    ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
-; state.fetch2    ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
-; state.fetch3    ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
-; state.decode    ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
-; state.s_add     ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_and     ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_not     ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br        ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 1        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br_taken  ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 1              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.calc_addr ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 1               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr1      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 1          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr2      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 1          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str1      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str2      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jmp       ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.lea       ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jsr1      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jsr2      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldb1      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldb2      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi1      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi2      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi3      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi4      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.shf       ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 1         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.lshf      ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 1          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.rshfl     ; 0               ; 0              ; 0               ; 0              ; 0           ; 1           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.rshfa     ; 0               ; 0              ; 0               ; 0              ; 1           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.stb1_odd  ; 0               ; 0              ; 0               ; 1              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.stb1_even ; 0               ; 0              ; 1               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.stb2_odd  ; 0               ; 1              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.stb2_even ; 1               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-+-----------------+-----------------+----------------+-----------------+----------------+-------------+-------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |mp1|control:Control|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++-----------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+-----------------+----------------+-----------------+----------------+-------------+-------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
+; Name            ; state.trap4 ; state.trap3 ; state.trap2 ; state.trap1 ; state.sti4 ; state.sti3 ; state.sti2 ; state.sti1 ; state.stb2_even ; state.stb2_odd ; state.stb1_even ; state.stb1_odd ; state.rshfa ; state.rshfl ; state.lshf ; state.shf ; state.ldi4 ; state.ldi3 ; state.ldi2 ; state.ldi1 ; state.ldb2 ; state.ldb1 ; state.jsr2 ; state.jsr1 ; state.lea ; state.jmp ; state.str2 ; state.str1 ; state.ldr2 ; state.ldr1 ; state.calc_addr ; state.br_taken ; state.br ; state.s_not ; state.s_and ; state.s_add ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
++-----------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+-----------------+----------------+-----------------+----------------+-------------+-------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
+; state.fetch1    ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
+; state.fetch2    ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
+; state.fetch3    ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
+; state.decode    ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
+; state.s_add     ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_and     ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_not     ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.br        ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 1        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.br_taken  ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 1              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.calc_addr ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 1               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr1      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 1          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr2      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 1          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str1      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str2      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jmp       ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.lea       ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jsr1      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jsr2      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldb1      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldb2      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi1      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi2      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi3      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldi4      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.shf       ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 1         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.lshf      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 1          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.rshfl     ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 1           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.rshfa     ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 1           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.stb1_odd  ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 1              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.stb1_even ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 1               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.stb2_odd  ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 1              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.stb2_even ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 1               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.sti1      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 1          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.sti2      ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 1          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.sti3      ; 0           ; 0           ; 0           ; 0           ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.sti4      ; 0           ; 0           ; 0           ; 0           ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.trap1     ; 0           ; 0           ; 0           ; 1           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.trap2     ; 0           ; 0           ; 1           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.trap3     ; 0           ; 1           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.trap4     ; 1           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0               ; 0              ; 0           ; 0           ; 0          ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
++-----------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+-----------------+----------------+-----------------+----------------+-------------+-------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
 
 
 +-------------------------------------------------------------+
@@ -383,12 +394,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 227   ;
+; Total registers                              ; 235   ;
 ; Number of registers using Synchronous Clear  ; 16    ;
-; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 194   ;
+; Number of registers using Clock Enable       ; 195   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -398,22 +409,24 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 0 ALUTs              ; 16 ALUTs               ; Yes        ; |mp1|datapath:Datapath|register:MDR|data[11] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 0 ALUTs              ; 16 ALUTs               ; Yes        ; |mp1|datapath:Datapath|register:MDR|data[7]  ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:MAR|data[8]  ;
-; 4:1                ; 15 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:pc|data[9]   ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|ShiftRight0   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 0 ALUTs              ; 16 ALUTs               ; Yes        ; |mp1|datapath:Datapath|register:MDR|data[2]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:MDR|data[13] ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:MAR|data[10] ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:MAR|data[1]  ;
+; 5:1                ; 15 bits   ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:Datapath|register:pc|data[3]   ;
+; 3:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|ir:IR|dest[0]         ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|ShiftLeft0    ;
 ; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|ShiftLeft0    ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux3:alumux|f[5]      ;
-; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux3:alumux|f[1]      ;
-; 6:1                ; 10 bits   ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:Control|next_states             ;
-; 6:1                ; 2 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp1|control:Control|next_states             ;
-; 8:1                ; 8 bits    ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux4:regfilemux|f[14] ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux3:alumux|f[4]      ;
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux3:alumux|f[3]      ;
+; 7:1                ; 11 bits   ; 44 ALUTs      ; 44 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:Control|next_states             ;
+; 7:1                ; 2 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp1|control:Control|next_states             ;
+; 8:1                ; 8 bits    ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|mux4:regfilemux|f[11] ;
 ; 9:1                ; 7 bits    ; 42 ALUTs      ; 35 ALUTs             ; 7 ALUTs                ; No         ; |mp1|datapath:Datapath|mux4:regfilemux|f[7]  ;
-; 10:1               ; 2 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:Control|Selector25              ;
-; 10:1               ; 2 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:Control|Selector33              ;
-; 10:1               ; 2 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:Control|Selector34              ;
-; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector41              ;
+; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector25              ;
+; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector34              ;
+; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector36              ;
+; 12:1               ; 2 bits    ; 16 ALUTs      ; 14 ALUTs             ; 2 ALUTs                ; No         ; |mp1|control:Control|Selector41              ;
 ; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|Selector6     ;
 ; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|Selector14    ;
 ; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; No         ; |mp1|datapath:Datapath|alu:ALU|Selector2     ;
@@ -432,7 +445,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:Datapath|mux4:pcmux ;
+; Parameter Settings for User Entity Instance: datapath:Datapath|mux5:pcmux ;
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
@@ -502,7 +515,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:Datapath|mux3:marmux ;
+; Parameter Settings for User Entity Instance: datapath:Datapath|mux5:marmux ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
@@ -568,6 +581,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------+
 ; width          ; 3     ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:Datapath|zext_no_shift:trapadj ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -656,7 +679,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Fri Sep 15 20:27:58 2017
+    Info: Processing started: Sat Sep 16 21:11:34 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file memory.sv
@@ -709,24 +732,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file truncat
     Info (12023): Found entity 1: truncator
 Info (12021): Found 1 design units, including 1 entities, in source file stb_shifter.sv
     Info (12023): Found entity 1: stb_shifter
+Info (12021): Found 1 design units, including 1 entities, in source file mux5.sv
+    Info (12023): Found entity 1: mux5
+Info (12021): Found 1 design units, including 1 entities, in source file zext.sv
+    Info (12023): Found entity 1: zext_no_shift
 Info (12127): Elaborating entity "mp1" for the top level hierarchy
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:Datapath"
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:Datapath|mux2:storemux"
-Info (12128): Elaborating entity "mux4" for hierarchy "datapath:Datapath|mux4:pcmux"
+Info (12128): Elaborating entity "mux5" for hierarchy "datapath:Datapath|mux5:pcmux"
 Info (12128): Elaborating entity "plus2" for hierarchy "datapath:Datapath|plus2:_plus2"
 Info (12128): Elaborating entity "register" for hierarchy "datapath:Datapath|register:pc"
 Info (12128): Elaborating entity "adder" for hierarchy "datapath:Datapath|adder:_adder"
 Info (12128): Elaborating entity "adj" for hierarchy "datapath:Datapath|adj:ADJ11"
 Info (12128): Elaborating entity "adj" for hierarchy "datapath:Datapath|adj:ADJ9"
-Info (12128): Elaborating entity "mux3" for hierarchy "datapath:Datapath|mux3:marmux"
+Info (12128): Elaborating entity "mux5" for hierarchy "datapath:Datapath|mux5:marmux"
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:Datapath|mux2:mdrmux"
 Info (12128): Elaborating entity "mux4" for hierarchy "datapath:Datapath|mux4:regfilemux"
 Info (12128): Elaborating entity "gencc" for hierarchy "datapath:Datapath|gencc:GENCC"
 Info (12128): Elaborating entity "register" for hierarchy "datapath:Datapath|register:CC"
 Info (12128): Elaborating entity "cccomp" for hierarchy "datapath:Datapath|cccomp:CCCOMP"
 Info (12128): Elaborating entity "ir" for hierarchy "datapath:Datapath|ir:IR"
+Info (12128): Elaborating entity "zext_no_shift" for hierarchy "datapath:Datapath|zext_no_shift:trapadj"
 Info (12128): Elaborating entity "adj" for hierarchy "datapath:Datapath|adj:ADJ6"
 Info (12128): Elaborating entity "adj_imm" for hierarchy "datapath:Datapath|adj_imm:adj6_no_shift"
+Info (12128): Elaborating entity "mux3" for hierarchy "datapath:Datapath|mux3:alumux"
 Info (12128): Elaborating entity "truncator" for hierarchy "datapath:Datapath|truncator:Truncate_SR1"
 Info (12128): Elaborating entity "regfile" for hierarchy "datapath:Datapath|regfile:REGFILE"
 Info (12128): Elaborating entity "alu" for hierarchy "datapath:Datapath|alu:ALU"
@@ -734,7 +763,7 @@ Info (12128): Elaborating entity "adj_imm" for hierarchy "datapath:Datapath|adj_
 Info (12128): Elaborating entity "mask" for hierarchy "datapath:Datapath|mask:Mask"
 Info (12128): Elaborating entity "stb_shifter" for hierarchy "datapath:Datapath|stb_shifter:alu_out_to_mdrmux"
 Info (12128): Elaborating entity "control" for hierarchy "control:Control"
-Info (10264): Verilog HDL Case Statement information at control.sv(114): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at control.sv(122): all case item expressions in this case statement are onehot
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276006): RAM logic "datapath:Datapath|regfile:REGFILE|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
 Info (286030): Timing-Driven Synthesis is running
@@ -742,14 +771,14 @@ Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/zpaya2/ece411/mp1/output_files/mp1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 740 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 744 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 686 logic cells
+    Info (21061): Implemented 690 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 445 megabytes
-    Info: Processing ended: Fri Sep 15 20:28:03 2017
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 457 megabytes
+    Info: Processing ended: Sat Sep 16 21:11:41 2017
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:04
 
 

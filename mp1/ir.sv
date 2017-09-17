@@ -12,6 +12,7 @@ module ir
 	 output lc3b_offset11 offset11,
 	 output logic imm,
 	 output logic [4:0] imm5,
+	 output lc3b_byte trap8,
 	 output lc3b_word imm4,
 	 output logic bit11,
 	 output logic bit4
@@ -31,8 +32,10 @@ end
 always_comb
 begin
     opcode = lc3b_opcode'(data[15:12]);
-
-    dest = data[11:9];
+	 if(opcode == op_trap)
+		dest = 3'b111;
+	 else
+		dest = data[11:9];
     src1 = data[8:6];
     src2 = data[2:0];
 	 imm  = data[5];
@@ -45,5 +48,6 @@ begin
 			dest = 3'b111;
 	 bit11 = data[10];
 	 bit4 = data[4];
+	 trap8 = data[7:0];
 end
 endmodule : ir

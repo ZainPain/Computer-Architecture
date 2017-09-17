@@ -19,11 +19,11 @@ entity control is
         mask_enable     : out    vl_logic;
         truncate        : out    vl_logic;
         shift           : out    vl_logic;
-        pcmux_sel       : out    vl_logic_vector(1 downto 0);
+        pcmux_sel       : out    vl_logic_vector(2 downto 0);
         storemux_sel    : out    vl_logic;
         alumux_sel      : out    vl_logic_vector(1 downto 0);
         regfilemux_sel  : out    vl_logic_vector(1 downto 0);
-        marmux_sel      : out    vl_logic_vector(1 downto 0);
+        marmux_sel      : out    vl_logic_vector(2 downto 0);
         mdrmux_sel      : out    vl_logic;
         adjmux_sel      : out    vl_logic;
         aluop           : out    work.lc3b_types.lc3b_aluop;

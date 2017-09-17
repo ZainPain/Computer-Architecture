@@ -25,11 +25,11 @@ module mp1
 	 logic mask_enable;
 	 logic truncate;
 	 logic shift;
-	 logic [1:0] pcmux_sel;
+	 logic [2:0] pcmux_sel;
 	 logic storemux_sel;
 	 logic [1:0] alumux_sel;
 	 logic [1:0] regfilemux_sel;
-	 logic [1:0]marmux_sel;
+	 logic [2:0] marmux_sel;
 	 logic mdrmux_sel;
 	 logic adjmux_sel;
 	 lc3b_aluop aluop;

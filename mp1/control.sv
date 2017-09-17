@@ -25,11 +25,11 @@ module control
 	 output logic truncate,
 	 output logic shift,
 	 /* Datapath mux select bits =*/
-	 output logic [1:0] pcmux_sel,
+	 output logic [2:0] pcmux_sel,
 	 output logic storemux_sel,
 	 output logic [1:0] alumux_sel,
 	 output logic [1:0] regfilemux_sel,
-	 output logic [1:0]marmux_sel,
+	 output logic [2:0]marmux_sel,
 	 output logic mdrmux_sel,
 	 output logic adjmux_sel,
 	 
@@ -76,7 +76,15 @@ enum int unsigned {
 	stb1_odd,
 	stb1_even,
 	stb2_odd,
-	stb2_even
+	stb2_even,
+	sti1,
+	sti2,
+	sti3,
+	sti4,
+	trap1,
+	trap2,
+	trap3,
+	trap4
 	
 	
     /* List of states */
@@ -95,11 +103,11 @@ begin : state_actions
 	 load_cc = 1'b0;
 	 shift = 1'b0;
 	 /* MUX Select bits */
-	 pcmux_sel = 1'b0;
+	 pcmux_sel = 3'b000;
 	 storemux_sel = 1'b0;
 	 alumux_sel = 1'b00;
 	 regfilemux_sel = 2'b00;
-	 marmux_sel = 1'b0;
+	 marmux_sel = 3'b000;
 	 mdrmux_sel = 1'b0;
 	 adjmux_sel = 1'b0;
 	 mask_enable = 1'b0;
@@ -116,11 +124,11 @@ begin : state_actions
 		fetch1:begin
 			
 			/* MAR <= PC */
-			marmux_sel = 1'b1;
+			marmux_sel = 3'b001;
 			load_mar = 1'b1;
 			
 			/* PC <= PC + 2 */
-			pcmux_sel = 1'b0;
+			pcmux_sel = 3'b000;
 			load_pc = 1'b1;
 		end
 		
@@ -190,7 +198,7 @@ begin : state_actions
 		
 		br_taken: begin
 			/* PC <- PC + SEXT(IR[8:0] << 1) */
-			pcmux_sel = 1'b1;
+			pcmux_sel = 3'b001;
 			load_pc = 1'b1;
 		end
 		
@@ -234,7 +242,7 @@ begin : state_actions
 		jmp:
 			begin
 				load_pc = 1'b1;
-				pcmux_sel = 2'b10;
+				pcmux_sel = 3'b010;
 			end
 			
 		lea:
@@ -247,16 +255,16 @@ begin : state_actions
 			begin
 				load_regfile = 1'b1;
 				regfilemux_sel = 2'b11;
-				pcmux_sel = 2'b11;
+				pcmux_sel = 3'b011;
 			end
 			
 		jsr2:
 			begin
 				load_pc = 1'b1;
 				if(bit11 == 1'b0) /* PC = BaseR*/
-					pcmux_sel = 2'b10;
+					pcmux_sel = 3'b010;
 				else				/* PC = PC + Offset11 << 1 */
-					pcmux_sel = 2'b11;
+					pcmux_sel = 3'b011;
 			end
 			
 		ldb1:
@@ -287,7 +295,7 @@ begin : state_actions
 		
 		ldi2: begin
 			/* DR <- MDR */
-			marmux_sel = 2'b10;
+			marmux_sel = 3'b010;
 			load_mar = 1'b1;
 		end
 		
@@ -356,6 +364,48 @@ begin : state_actions
 			mem_byte_enable = 2'b01;
 			//mem_byte_enable
 		end
+		
+		sti1: begin
+//			load_mar = 1'b1;
+//			marmux_sel = 2'b11;
+			mem_read = 1'b1;
+			
+		end
+		sti2: begin
+			load_mar = 1'b1;
+			marmux_sel = 3'b011;
+			mem_read =1'b1;
+		end
+		sti3: begin
+			load_mdr = 1'b1;
+			storemux_sel = 1'b1;
+			aluop = alu_pass;
+		end
+		
+		sti4: begin
+			mem_write = 1'b1;
+		end
+		
+		trap1: begin
+			regfilemux_sel = 2'b11;
+			load_regfile = 1'b1;
+			
+		end
+		
+		trap2: begin
+			marmux_sel = 3'b100;
+			load_mar = 1'b1;
+		end
+		trap3: begin
+			mem_read = 1'b1;
+		end
+		
+		trap4: begin
+			pcmux_sel = 3'b100;
+			load_pc = 1'b1;
+		end
+		
+		
 		default: /* Do Nothing */;
 	endcase
 	 
@@ -423,7 +473,14 @@ begin : next_state_logic
 						next_states <= shf;
 					
 					op_stb:
+						next_states <= calc_addr; 
+					
+					op_sti:
 						next_states <= calc_addr;
+						
+					op_trap:
+						next_states <= trap1;
+						
 						
 					default: /* Do Nothing */;
 					
@@ -469,6 +526,8 @@ begin : next_state_logic
 						else
 							next_states <= stb1_odd;
 					end
+				else if (opcode == op_sti)
+					next_states <= sti1;
 			end
 		
 		ldr1:
@@ -586,6 +645,50 @@ begin : next_state_logic
 				else
 					next_states <= stb2_even;
 		end
+		
+		sti1: begin
+			if(mem_resp)
+				next_states <= sti2;
+			else
+				next_states <= sti1;
+		end
+		
+		sti2: begin
+			if(mem_resp)
+				next_states <= sti3;
+			else next_states <= sti2;
+		end
+		
+		sti3:
+			next_states <= sti4;
+			
+		sti4: begin
+			if(mem_resp)
+				next_states <= fetch1;
+			else
+				next_states <= sti4;
+		end
+		
+		trap1: begin
+			next_states <= trap2;
+		end
+		
+		trap2: begin
+			next_states <= trap3;
+		end
+		
+		trap3: begin
+			if(mem_resp)
+				next_states <= trap4;
+			else
+				next_states <= trap3;
+		end
+		
+		trap4: begin
+			next_states <= fetch1;
+		end
+
+		
 		endcase
 	 
 end
