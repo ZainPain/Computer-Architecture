@@ -1,0 +1,15 @@
+module adder #(parameter width = 16)
+(
+	input lc3b_offset9 offset
+	input [width-1:0] inPC
+	output logic [width-1:0] outPC
+);
+
+always_comb 
+begin
+	
+	outPC = inPC + offset;
+	
+	
+end
+endmodule : mux2
