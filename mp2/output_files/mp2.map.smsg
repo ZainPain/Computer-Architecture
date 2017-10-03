@@ -1,4 +1,0 @@
-Warning (10268): Verilog HDL information at physical_memory.sv(35): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at cpu_control.sv(415): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at memory.sv(36): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at cache_control.sv(60): always construct contains both blocking and non-blocking assignments
