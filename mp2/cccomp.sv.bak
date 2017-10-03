@@ -1,7 +1,0 @@
-module cccomp #(parameter width = 3)
-(
-	input load,
-	input lc3b_nzp in,
-	output logic 
-
-);
