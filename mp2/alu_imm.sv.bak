@@ -1,0 +1,23 @@
+import lc3b_types::*;
+
+module alu_imm
+(
+    input lc3b_aluop aluop_imm,
+    input lc3b_word a,
+	 input [width:0] b,
+    output lc3b_word f
+);
+
+always_comb
+begin
+    case (aluop)
+        alu_add: 
+		  assign f = a + b;
+        alu_and: 
+		  assign f = a & b;
+        
+        default: $display("Unknown aluop");
+    endcase
+end
+
+endmodule : alu
