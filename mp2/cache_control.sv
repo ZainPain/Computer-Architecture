@@ -1,21 +1,31 @@
 import lc3b_types::*;
 module cache_control
 (
-	input clk,
-	input hit,
-	output load_tag0,
-	output load_tag1,
-	output load_lru,
-	output load_data0,
-	output load_data1,
-	output load_valid0,
-	output load_valid1,
-	output inviction,
 	
-	input mem_resp,
-	input logic mem_read,
-	input logic mem_write,
-	input lc3b_mem_wmask mem_byte_enable
+	input clk,
+	/* control signals */
+	input hit,
+	
+	/* load signals */
+	output load_tag1,
+	output load_tag2,
+	output load_lru,
+	output load_data1,
+	output load_data2,
+	output load_valid1,
+	output load_valid2,
+	output eviction,
+	
+	/* mem signals */
+	input mem_read,
+	input mem_write,
+	input pmem_resp,
+	input [1:0] mem_byte_enable,
+	
+	output mem_resp,
+	output pmem_read,
+	output pmem_write
+	
 );
 enum int unsigned {
 	idle,
@@ -28,15 +38,17 @@ begin : state_actions
 /* Default output assignments */
 /* FIRST ALWAYS COMB */
 	
-	load_tag0 = 1'b0;
 	load_tag1 = 1'b0;
+	load_tag2 = 1'b0;
 	load_lru = 1'b0;
-	load_data0 = 1'b0;
 	load_data1 = 1'b0;
-	load_valid0 = 1'b0;
+	load_data2 = 1'b0;
 	load_valid1 = 1'b0;
-	inviction = 1'b0;
-	
+	load_valid2 = 1'b0;
+	eviction = 1'b0;
+	pmem_read = mem_read;
+	pmem_write = mem_write;
+	mem_resp = pmem_resp;
 	case(state)
 	
 		idle:
@@ -79,7 +91,7 @@ begin : next_state_logic
 			else
 				next_state <= allocate;
 		end
-
+	default:/* Nothing */;
 	 endcase
 	 
 	 

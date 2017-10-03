@@ -50,12 +50,6 @@ module cache
 	logic dirty2_out;
 	/* DATA IN SIGNALS END */
 	
-/* SOME ASSIGNMENTS */
-assign pmem_address = mem_address;
-assign pmem_read = mem_read;
-assign pmem_write = mem_write;
-assign mem_resp = pmem_resp;
-
 /** INSTANTIATE CACHE DATAPATH **/
 cache_datapath DATAPATH
 (	
@@ -79,8 +73,7 @@ cache_datapath DATAPATH
 	/* SELECT SIGNALS END */
 	
 	/* DATA IN SIGNALS */
-	.data1_in(data1_in),
-	.data2_in(data2_in),
+
 	.tag1_in(tag1_in),
 	.tag2_in(tag2_in),
 	.valid1_in(valid1_in),
@@ -94,9 +87,41 @@ cache_datapath DATAPATH
 	
 	/** MEM SIGNALS **/
 	.mem_address(mem_address),
-	.mem_rdata(mem_rdata)
+	.pmem_rdata(pmem_rdata),
+	.mem_wdata(mem_wdata),
+	.mem_rdata(mem_rdata),
+	.pmem_wdata(pmem_wdata),	
+	.pmem_address(pmem_address)
 	/** MEM SIGNALS END **/
 	
 );
 /** INSTANTIATE CACHE CONTROL **/
+cache_control CONTROLLER
+(
+	
+	.clk(clk),
+	/* control signals */
+	.hit(hit),
+	
+	/* load signals */
+	.load_tag1(load_tag1),
+	.load_tag2(load_tag2),
+	.load_lru(load_lru),
+	.load_data1(load_data1),
+	.load_data2(load_data2),
+	.load_valid1(load_valid1),
+	.load_valid2(load_valid2),
+	.eviction(eviction),
+	
+	/* mem signals */
+	.mem_read(mem_read),
+	.mem_write(mem_write),
+	.pmem_resp(pmem_resp),
+	.mem_byte_enable(mem_byte_enable),
+	
+	.mem_resp(mem_resp),
+	.pmem_read(pmem_read),
+	.pmem_write(pmem_write)
+	
+);
 endmodule : cache

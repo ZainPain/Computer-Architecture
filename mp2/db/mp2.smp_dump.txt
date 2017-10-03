@@ -1,4 +1,10 @@
 
+State Machine - |mp2|cache:CACHE|cache_control:CONTROLLER|state
+Name state.idle state.write_back state.allocate 
+state.idle 0 0 0 
+state.allocate 1 0 1 
+state.write_back 1 1 0 
+
 State Machine - |mp2|cpu:CPU|control:Control|state
 Name state.trap4 state.trap3 state.trap2 state.trap1 state.sti4 state.sti3 state.sti2 state.sti1 state.stb2_even state.stb2_odd state.stb1_even state.stb1_odd state.rshfa state.rshfl state.lshf state.shf state.ldi4 state.ldi3 state.ldi2 state.ldi1 state.ldb2 state.ldb1 state.jsr2 state.jsr1 state.lea state.jmp state.str2 state.str1 state.ldr2 state.ldr1 state.calc_addr state.br_taken state.br state.s_not state.s_and state.s_add state.decode state.fetch3 state.fetch2 state.fetch1 
 state.fetch1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 

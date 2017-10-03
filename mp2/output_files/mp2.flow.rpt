@@ -1,5 +1,5 @@
 Flow report for mp2
-Tue Oct  3 00:56:55 2017
+Tue Oct  3 02:52:25 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Tue Oct  3 00:56:55 2017       ;
+; Flow Status                   ; Successful - Tue Oct  3 02:52:24 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp2                                         ;
 ; Top-level Entity Name         ; mp2                                         ;
@@ -48,10 +48,10 @@ applicable agreement for further details.
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
 ; Logic utilization             ; 2 %                                         ;
-;     Combinational ALUTs       ; 519 / 38,000 ( 1 % )                        ;
+;     Combinational ALUTs       ; 499 / 38,000 ( 1 % )                        ;
 ;     Memory ALUTs              ; 0 / 19,000 ( 0 % )                          ;
-;     Dedicated logic registers ; 235 / 38,000 ( < 1 % )                      ;
-; Total registers               ; 235                                         ;
+;     Dedicated logic registers ; 219 / 38,000 ( < 1 % )                      ;
+; Total registers               ; 219                                         ;
 ; Total pins                    ; 276 / 488 ( 57 % )                          ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0 / 5,455,872 ( 0 % )                       ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/03/2017 00:56:07 ;
+; Start date & time ; 10/03/2017 02:51:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp2                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 26830023713944.150701016616840        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 26830023713944.150701709626043        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp2_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp2_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
@@ -106,12 +106,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 444 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 794 MB              ; 00:00:18                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 430 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 496 MB              ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 443 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:00:17     ; 1.6                     ; 791 MB              ; 00:00:17                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 435 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 515 MB              ; 00:00:03                           ;
 ; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 385 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:34     ; --                      ; --                  ; 00:00:31                           ;
+; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

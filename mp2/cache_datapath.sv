@@ -21,8 +21,7 @@ module cache_datapath
 	/* SELECT SIGNALS END */
 	
 	/* DATA IN SIGNALS */
-	input lc3b_data data1_in,
-	input lc3b_data data2_in,
+
 	input lc3b_tag tag1_in,
 	input lc3b_tag tag2_in,
 	input valid1_in,
@@ -36,7 +35,12 @@ module cache_datapath
 	
 	/** MEM SIGNALS **/
 	input lc3b_word mem_address,
-	output lc3b_word mem_rdata
+	input lc3b_data pmem_rdata,
+	input lc3b_word mem_wdata,
+	
+	output lc3b_word mem_rdata,
+	output lc3b_data pmem_wdata,
+	output lc3b_word pmem_address
 	/** MEM SIGNALS END **/
 	
 );
@@ -61,6 +65,7 @@ logic comp2_out;
 logic hit1_out;
 logic hit2_out;
 logic way_select;
+/* SOME ASSIGNMENTS */
 
 components Extract
 (
@@ -75,7 +80,7 @@ array #(.width(128)) data_array1
     .clk(clk),
     .write(load_data1),
     .index(index),
-    .datain(data1_in),
+    .datain(pmem_rdata),
     .dataout(data1_out)
 
 );
@@ -86,7 +91,7 @@ array #(.width(128)) data_array2
     .clk(clk),
     .write(load_data2),
     .index(index),
-    .datain(data2_in),
+    .datain(pmem_rdata),
     .dataout(data2_out)
 
 );

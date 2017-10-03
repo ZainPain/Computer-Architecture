@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp2
-Tue Oct  3 00:56:12 2017
+Tue Oct  3 02:51:42 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -13,54 +13,56 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |mp2|cpu:CPU|control:Control|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux2:storemux
- 13. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux5:pcmux
- 14. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|plus2:_plus2
- 15. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:pc
- 16. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adder:_adder
- 17. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj:ADJ11
- 18. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj:ADJ9
- 19. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adder:_adder2
- 20. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux5:marmux
- 21. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:MAR
- 22. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux2:mdrmux
- 23. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:MDR
- 24. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux4:regfilemux
- 25. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:CC
- 26. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|cccomp:CCCOMP
- 27. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|zext_no_shift:trapadj
- 28. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj:ADJ6
- 29. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj_imm:adj6_no_shift
- 30. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux2:adjmux
- 31. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux3:alumux
- 32. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj_imm:ADJ5
- 33. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mask:Mask
- 34. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|stb_shifter:alu_out_to_mdrmux
- 35. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:data_array1
- 36. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:data_array2
- 37. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:tag_array1
- 38. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:tag_array2
- 39. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:valid1
- 40. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:valid2
- 41. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|mux16by2:datamux
- 42. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:LRU
- 43. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:tagcomp1
- 44. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:tagcomp2
- 45. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:hit1
- 46. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:hit2
- 47. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|__OR__:_OR
- 48. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|mux2:way_selector
- 49. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:dirty1
- 50. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:dirty2
- 51. Port Connectivity Checks: "cache:CACHE|cache_datapath:DATAPATH|mux2:way_selector"
- 52. Port Connectivity Checks: "cache:CACHE|cache_datapath:DATAPATH"
- 53. Elapsed Time Per Partition
- 54. Analysis & Synthesis Messages
- 55. Analysis & Synthesis Suppressed Messages
+  8. State Machine - |mp2|cache:CACHE|cache_control:CONTROLLER|state
+  9. State Machine - |mp2|cpu:CPU|control:Control|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux2:storemux
+ 15. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux5:pcmux
+ 16. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|plus2:_plus2
+ 17. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:pc
+ 18. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adder:_adder
+ 19. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj:ADJ11
+ 20. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj:ADJ9
+ 21. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adder:_adder2
+ 22. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux5:marmux
+ 23. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:MAR
+ 24. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux2:mdrmux
+ 25. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:MDR
+ 26. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux4:regfilemux
+ 27. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|register:CC
+ 28. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|cccomp:CCCOMP
+ 29. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|zext_no_shift:trapadj
+ 30. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj:ADJ6
+ 31. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj_imm:adj6_no_shift
+ 32. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux2:adjmux
+ 33. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mux3:alumux
+ 34. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|adj_imm:ADJ5
+ 35. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|mask:Mask
+ 36. Parameter Settings for User Entity Instance: cpu:CPU|datapath:Datapath|stb_shifter:alu_out_to_mdrmux
+ 37. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:data_array1
+ 38. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:data_array2
+ 39. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:tag_array1
+ 40. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:tag_array2
+ 41. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:valid1
+ 42. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:valid2
+ 43. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|mux16by2:datamux
+ 44. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:LRU
+ 45. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:tagcomp1
+ 46. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:tagcomp2
+ 47. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:hit1
+ 48. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|comparator:hit2
+ 49. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|__OR__:_OR
+ 50. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|mux2:way_selector
+ 51. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:dirty1
+ 52. Parameter Settings for User Entity Instance: cache:CACHE|cache_datapath:DATAPATH|array:dirty2
+ 53. Port Connectivity Checks: "cache:CACHE|cache_datapath:DATAPATH|mux2:way_selector"
+ 54. Port Connectivity Checks: "cache:CACHE|cache_datapath:DATAPATH"
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
+ 57. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -86,16 +88,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue Oct  3 00:56:12 2017       ;
+; Analysis & Synthesis Status   ; Successful - Tue Oct  3 02:51:42 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp2                                         ;
 ; Top-level Entity Name         ; mp2                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 519                                         ;
+;     Combinational ALUTs       ; 499                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 235                                         ;
-; Total registers               ; 235                                         ;
+;     Dedicated logic registers ; 219                                         ;
+; Total registers               ; 219                                         ;
 ; Total pins                    ; 276                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -238,6 +240,7 @@ applicable agreement for further details.
 ; mux5.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp2/mux5.sv                     ;         ;
 ; zext.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp2/zext.sv                     ;         ;
 ; cache.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp2/cache.sv                    ;         ;
+; cache_control.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp2/cache_control.sv            ;         ;
 ; cache_datapath.sv                ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp2/cache_datapath.sv           ;         ;
 ; dataArray.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp2/dataArray.sv                ;         ;
 ; 8by1mux.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/zpaya2/ece411/mp2/8by1mux.sv                  ;         ;
@@ -253,34 +256,34 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 519       ;
-;     -- Combinational ALUTs                    ; 519       ;
+; Estimated ALUTs Used                          ; 499       ;
+;     -- Combinational ALUTs                    ; 499       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 235       ;
+; Dedicated logic registers                     ; 219       ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 90        ;
-;     -- Due to unpartnered combinational logic ; 90        ;
+; Estimated ALUTs Unavailable                   ; 78        ;
+;     -- Due to unpartnered combinational logic ; 78        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 519       ;
+; Total combinational functions                 ; 499       ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 68        ;
-;     -- 6 input functions                      ; 110       ;
-;     -- 5 input functions                      ; 113       ;
-;     -- 4 input functions                      ; 78        ;
-;     -- <=3 input functions                    ; 150       ;
+;     -- 7 input functions                      ; 70        ;
+;     -- 6 input functions                      ; 100       ;
+;     -- 5 input functions                      ; 118       ;
+;     -- 4 input functions                      ; 73        ;
+;     -- <=3 input functions                    ; 138       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 374       ;
-;     -- extended LUT mode                      ; 68        ;
+;     -- normal mode                            ; 352       ;
+;     -- extended LUT mode                      ; 70        ;
 ;     -- arithmetic mode                        ; 77        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 720       ;
+; Estimated ALUT/register pairs used            ; 687       ;
 ;                                               ;           ;
-; Total registers                               ; 235       ;
-;     -- Dedicated logic registers              ; 235       ;
+; Total registers                               ; 219       ;
+;     -- Dedicated logic registers              ; 219       ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -288,9 +291,9 @@ applicable agreement for further details.
 ; I/O pins                                      ; 276       ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 235       ;
-; Total fan-out                                 ; 3457      ;
-; Average fan-out                               ; 2.65      ;
+; Maximum fan-out                               ; 219       ;
+; Total fan-out                                 ; 3298      ;
+; Average fan-out                               ; 2.60      ;
 +-----------------------------------------------+-----------+
 
 
@@ -299,30 +302,40 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------+--------------+
-; |mp2                       ; 519 (0)           ; 235 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 276  ; 0            ; |mp2                                           ; work         ;
-;    |cpu:CPU|               ; 519 (0)           ; 235 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU                                   ; work         ;
-;       |control:Control|    ; 61 (61)           ; 40 (40)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|control:Control                   ; work         ;
-;       |datapath:Datapath|  ; 458 (0)           ; 195 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath                 ; work         ;
+; |mp2                       ; 499 (0)           ; 219 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 276  ; 0            ; |mp2                                           ; work         ;
+;    |cpu:CPU|               ; 499 (0)           ; 219 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU                                   ; work         ;
+;       |control:Control|    ; 63 (63)           ; 40 (40)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|control:Control                   ; work         ;
+;       |datapath:Datapath|  ; 436 (0)           ; 179 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath                 ; work         ;
 ;          |adder:_adder2|   ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|adder:_adder2   ; work         ;
 ;          |adder:_adder|    ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|adder:_adder    ; work         ;
 ;          |alu:ALU_IMM|     ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU_IMM     ; work         ;
-;          |alu:ALU|         ; 187 (187)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU         ; work         ;
+;          |alu:ALU|         ; 193 (193)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU         ; work         ;
 ;          |cccomp:CCCOMP|   ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|cccomp:CCCOMP   ; work         ;
-;          |gencc:GENCC|     ; 10 (10)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|gencc:GENCC     ; work         ;
+;          |gencc:GENCC|     ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|gencc:GENCC     ; work         ;
 ;          |ir:IR|           ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|ir:IR           ; work         ;
 ;          |mux2:storemux|   ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|mux2:storemux   ; work         ;
 ;          |mux3:alumux|     ; 21 (21)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|mux3:alumux     ; work         ;
-;          |mux4:regfilemux| ; 59 (59)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|mux4:regfilemux ; work         ;
-;          |mux5:marmux|     ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|mux5:marmux     ; work         ;
+;          |mux4:regfilemux| ; 56 (56)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|mux4:regfilemux ; work         ;
 ;          |mux5:pcmux|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|mux5:pcmux      ; work         ;
 ;          |plus2:_plus2|    ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|plus2:_plus2    ; work         ;
 ;          |regfile:REGFILE| ; 74 (74)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|regfile:REGFILE ; work         ;
 ;          |register:CC|     ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|register:CC     ; work         ;
-;          |register:MAR|    ; 3 (3)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|register:MAR    ; work         ;
 ;          |register:MDR|    ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|register:MDR    ; work         ;
-;          |register:pc|     ; 5 (5)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|register:pc     ; work         ;
+;          |register:pc|     ; 3 (3)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:CPU|datapath:Datapath|register:pc     ; work         ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------+
+; State Machine - |mp2|cache:CACHE|cache_control:CONTROLLER|state   ;
++------------------+------------+------------------+----------------+
+; Name             ; state.idle ; state.write_back ; state.allocate ;
++------------------+------------+------------------+----------------+
+; state.idle       ; 0          ; 0                ; 0              ;
+; state.allocate   ; 1          ; 0                ; 1              ;
+; state.write_back ; 1          ; 1                ; 0              ;
++------------------+------------+------------------+----------------+
 
 
 Encoding Type:  One-Hot
@@ -374,45 +387,94 @@ Encoding Type:  One-Hot
 +-----------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+-----------------+----------------+-----------------+----------------+-------------+-------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; cpu:CPU|control:Control|state~2        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~3        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~4        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~5        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~6        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~7        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~8        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~9        ; Lost fanout        ;
-; cpu:CPU|control:Control|state~10       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~11       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~12       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~13       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~14       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~15       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~16       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~17       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~18       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~19       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~20       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~21       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~22       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~23       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~24       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~25       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~26       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~27       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~28       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~29       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~30       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~31       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~32       ; Lost fanout        ;
-; cpu:CPU|control:Control|state~33       ; Lost fanout        ;
-; Total Number of Removed Registers = 32 ;                    ;
-+----------------------------------------+--------------------+
++----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                         ;
++-------------------------------------------------------+--------------------+
+; Register name                                         ; Reason for Removal ;
++-------------------------------------------------------+--------------------+
+; cpu:CPU|datapath:Datapath|register:MAR|data[0..6]     ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state.idle       ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~4          ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~5          ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~6          ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~7          ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~8          ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~9          ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~10         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~11         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~12         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~13         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~14         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~15         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~16         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~17         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~18         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~19         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~20         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~21         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~22         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~23         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~24         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~25         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~26         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~27         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~28         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~29         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~30         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~31         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~32         ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state~33         ; Lost fanout        ;
+; cpu:CPU|control:Control|state~2                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~3                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~4                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~5                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~6                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~7                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~8                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~9                       ; Lost fanout        ;
+; cpu:CPU|control:Control|state~10                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~11                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~12                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~13                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~14                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~15                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~16                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~17                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~18                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~19                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~20                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~21                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~22                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~23                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~24                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~25                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~26                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~27                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~28                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~29                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~30                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~31                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~32                      ; Lost fanout        ;
+; cpu:CPU|control:Control|state~33                      ; Lost fanout        ;
+; cpu:CPU|datapath:Datapath|register:MAR|data[7..15]    ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state.allocate   ; Lost fanout        ;
+; cache:CACHE|cache_control:CONTROLLER|state.write_back ; Lost fanout        ;
+; Total Number of Removed Registers = 81                ;                    ;
++-------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                  ;
++-------------------------------------------------+--------------------+-------------------------------------------------------+
+; Register name                                   ; Reason for Removal ; Registers Removed due to This Register                ;
++-------------------------------------------------+--------------------+-------------------------------------------------------+
+; cache:CACHE|cache_control:CONTROLLER|state.idle ; Lost Fanouts       ; cpu:CPU|datapath:Datapath|register:MAR|data[7],       ;
+;                                                 ;                    ; cpu:CPU|datapath:Datapath|register:MAR|data[8],       ;
+;                                                 ;                    ; cpu:CPU|datapath:Datapath|register:MAR|data[9],       ;
+;                                                 ;                    ; cpu:CPU|datapath:Datapath|register:MAR|data[10],      ;
+;                                                 ;                    ; cache:CACHE|cache_control:CONTROLLER|state.allocate,  ;
+;                                                 ;                    ; cache:CACHE|cache_control:CONTROLLER|state.write_back ;
++-------------------------------------------------+--------------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -420,12 +482,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 235   ;
-; Number of registers using Synchronous Clear  ; 47    ;
+; Total registers                              ; 219   ;
+; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 195   ;
+; Number of registers using Clock Enable       ; 179   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -436,26 +498,27 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; 3:1                ; 8 bits    ; 16 ALUTs      ; 0 ALUTs              ; 16 ALUTs               ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:MDR|data[2]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 0 ALUTs              ; 16 ALUTs               ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:MDR|data[14] ;
-; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:MAR|data[0]  ;
-; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:MAR|data[8]  ;
-; 5:1                ; 15 bits   ; 45 ALUTs      ; 30 ALUTs             ; 15 ALUTs               ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:pc|data[1]   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 0 ALUTs              ; 16 ALUTs               ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:MDR|data[15] ;
+; 4:1                ; 7 bits    ; 14 ALUTs      ; 14 ALUTs             ; 0 ALUTs                ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:MAR|data[10] ;
+; 5:1                ; 2 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:MAR|data[7]  ;
+; 5:1                ; 15 bits   ; 45 ALUTs      ; 30 ALUTs             ; 15 ALUTs               ; Yes        ; |mp2|cpu:CPU|datapath:Datapath|register:pc|data[8]   ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|ShiftLeft0    ;
 ; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|ShiftLeft0    ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cache:CACHE|cache_control:CONTROLLER|Selector0  ;
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|mux3:alumux|f[4]      ;
-; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|mux3:alumux|f[1]      ;
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|mux3:alumux|f[3]      ;
 ; 7:1                ; 11 bits   ; 44 ALUTs      ; 44 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|control:Control|next_states             ;
 ; 7:1                ; 2 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|control:Control|next_states             ;
-; 8:1                ; 8 bits    ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|mux4:regfilemux|f[10] ;
+; 8:1                ; 8 bits    ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|mux4:regfilemux|f[8]  ;
 ; 9:1                ; 7 bits    ; 42 ALUTs      ; 35 ALUTs             ; 7 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|mux4:regfilemux|f[2]  ;
 ; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:CPU|control:Control|Selector26              ;
 ; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:CPU|control:Control|Selector34              ;
-; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:CPU|control:Control|Selector36              ;
+; 11:1               ; 2 bits    ; 14 ALUTs      ; 12 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:CPU|control:Control|Selector35              ;
 ; 12:1               ; 2 bits    ; 16 ALUTs      ; 14 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:CPU|control:Control|Selector42              ;
 ; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|Selector6     ;
-; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|Selector14    ;
-; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|Selector1     ;
-; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|Selector10    ;
+; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|Selector13    ;
+; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|Selector2     ;
+; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:CPU|datapath:Datapath|alu:ALU|Selector9     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -863,7 +926,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port       ; Type   ; Severity ; Details                                                                             ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
-; hit        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; dirty1_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; dirty2_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -884,7 +946,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Tue Oct  3 00:56:06 2017
+    Info: Processing started: Tue Oct  3 02:51:36 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp2 -c mp2
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.sv
@@ -993,8 +1055,9 @@ Info (12128): Elaborating entity "stb_shifter" for hierarchy "cpu:CPU|datapath:D
 Info (12128): Elaborating entity "control" for hierarchy "cpu:CPU|control:Control"
 Info (10264): Verilog HDL Case Statement information at cpu_control.sv(122): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "cache" for hierarchy "cache:CACHE"
-Warning (10034): Output port "pmem_wdata" at cache.sv(8) has no driver
 Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:CACHE|cache_datapath:DATAPATH"
+Warning (10034): Output port "pmem_wdata" at cache_datapath.sv(42) has no driver
+Warning (10034): Output port "pmem_address" at cache_datapath.sv(46) has no driver
 Info (12128): Elaborating entity "components" for hierarchy "cache:CACHE|cache_datapath:DATAPATH|components:Extract"
 Info (12128): Elaborating entity "array" for hierarchy "cache:CACHE|cache_datapath:DATAPATH|array:data_array1"
 Info (12128): Elaborating entity "array" for hierarchy "cache:CACHE|cache_datapath:DATAPATH|array:tag_array1"
@@ -1004,10 +1067,32 @@ Info (12128): Elaborating entity "comparator" for hierarchy "cache:CACHE|cache_d
 Info (12128): Elaborating entity "comparator" for hierarchy "cache:CACHE|cache_datapath:DATAPATH|comparator:hit1"
 Info (12128): Elaborating entity "__OR__" for hierarchy "cache:CACHE|cache_datapath:DATAPATH|__OR__:_OR"
 Info (12128): Elaborating entity "mux2" for hierarchy "cache:CACHE|cache_datapath:DATAPATH|mux2:way_selector"
-Info (276014): Found 2 instances of uninferred RAM logic
+Info (12128): Elaborating entity "cache_control" for hierarchy "cache:CACHE|cache_control:CONTROLLER"
+Info (10264): Verilog HDL Case Statement information at cache_control.sv(77): all case item expressions in this case statement are onehot
+Info (276014): Found 6 instances of uninferred RAM logic
+    Info (276004): RAM logic "cache:CACHE|cache_datapath:DATAPATH|array:valid1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "cache:CACHE|cache_datapath:DATAPATH|array:tag_array1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "cache:CACHE|cache_datapath:DATAPATH|array:valid2|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "cache:CACHE|cache_datapath:DATAPATH|array:tag_array2|data" is uninferred due to inappropriate RAM size
     Info (276006): RAM logic "cpu:CPU|datapath:Datapath|regfile:REGFILE|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
     Info (276004): RAM logic "cache:CACHE|cache_datapath:DATAPATH|array:data_array1|data" is uninferred due to inappropriate RAM size
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pmem_address[0]" is stuck at GND
+    Warning (13410): Pin "pmem_address[1]" is stuck at GND
+    Warning (13410): Pin "pmem_address[2]" is stuck at GND
+    Warning (13410): Pin "pmem_address[3]" is stuck at GND
+    Warning (13410): Pin "pmem_address[4]" is stuck at GND
+    Warning (13410): Pin "pmem_address[5]" is stuck at GND
+    Warning (13410): Pin "pmem_address[6]" is stuck at GND
+    Warning (13410): Pin "pmem_address[7]" is stuck at GND
+    Warning (13410): Pin "pmem_address[8]" is stuck at GND
+    Warning (13410): Pin "pmem_address[9]" is stuck at GND
+    Warning (13410): Pin "pmem_address[10]" is stuck at GND
+    Warning (13410): Pin "pmem_address[11]" is stuck at GND
+    Warning (13410): Pin "pmem_address[12]" is stuck at GND
+    Warning (13410): Pin "pmem_address[13]" is stuck at GND
+    Warning (13410): Pin "pmem_address[14]" is stuck at GND
+    Warning (13410): Pin "pmem_address[15]" is stuck at GND
     Warning (13410): Pin "pmem_wdata[0]" is stuck at GND
     Warning (13410): Pin "pmem_wdata[1]" is stuck at GND
     Warning (13410): Pin "pmem_wdata[2]" is stuck at GND
@@ -1137,7 +1222,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pmem_wdata[126]" is stuck at GND
     Warning (13410): Pin "pmem_wdata[127]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (17049): 81 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/zpaya2/ece411/mp2/output_files/mp2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1270,15 +1355,15 @@ Warning (21074): Design contains 128 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pmem_rdata[125]"
     Warning (15610): No output dependent on input pin "pmem_rdata[126]"
     Warning (15610): No output dependent on input pin "pmem_rdata[127]"
-Info (21057): Implemented 959 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 939 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 130 input pins
     Info (21059): Implemented 146 output pins
-    Info (21061): Implemented 683 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 259 warnings
-    Info: Peak virtual memory: 449 megabytes
-    Info: Processing ended: Tue Oct  3 00:56:12 2017
+    Info (21061): Implemented 663 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 276 warnings
+    Info: Peak virtual memory: 448 megabytes
+    Info: Processing ended: Tue Oct  3 02:51:42 2017
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +------------------------------------------+
