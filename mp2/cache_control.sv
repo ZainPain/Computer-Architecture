@@ -83,6 +83,8 @@ begin : state_actions
 		
 		allocate:
 		begin
+			mem_resp = pmem_resp;
+			pmem_read = mem_read;
 			/* state for when a miss occurs */
 			if(!valid1_out)
 			begin
@@ -91,8 +93,7 @@ begin : state_actions
 				
 				load_data1 = 1'b1;
 				load_tag1 = 1'b1;
-				mem_resp = pmem_resp;
-				pmem_read = mem_read;
+
 				load_lru = 1'b1;
 				lru_in = 1'b0;
 			end
@@ -109,22 +110,39 @@ begin : state_actions
 				lru_in = 1'b1;
 			end
 			else
-			eviction = 1'b1;
 			begin/* eviction case*/
 				if(lru_out) /* if lru out is 1 that means way 1 was recently used thus we replace way 0 */
 				begin
-					load_data1 = 1'b1;
-					load_tag1 = 1'b1;
-					load_lru = 1'b1;
-					lru_in = 1'b0;
-					
+//					load_data1 = 1'b1;
+//					load_tag1 = 1'b1;
+//					load_lru = 1'b1;
+//					lru_in = 1'b0;
+//					eviction = 1'b1;
+				load_valid1 = 1'b1;
+				valid1_in = 1'b1;
+				
+				load_data1 = 1'b1;
+				load_tag1 = 1'b1;
+
+				load_lru = 1'b1;
+				lru_in = 1'b0;
 				end
 				else
 				begin
-					load_data2 = 1'b1;
-					load_tag2 = 1'b1;
-					load_lru = 1'b1;
-					lru_in = 1'b1;
+//					load_data2 = 1'b1;
+//					load_tag2 = 1'b1;
+//					load_lru = 1'b1;
+//					lru_in = 1'b1;
+//					eviction = 1'b1;
+				load_valid2 = 1'b1;
+				valid2_in = 1'b1;
+				
+				load_data2 = 1'b1;
+				load_tag2 = 1'b1;
+				mem_resp = pmem_resp;
+				pmem_read = mem_read;
+				load_lru = 1'b1;
+				lru_in = 1'b1;
 				end
 			end
 		end

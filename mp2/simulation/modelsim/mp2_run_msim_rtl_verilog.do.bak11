@@ -1,52 +1,44 @@
-transcript on
-if {[file exists rtl_work]} {
-	vdel -lib rtl_work -all
-}
-vlib rtl_work
-vmap work rtl_work
-
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/lc3b_types.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/plus2.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/register.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mux2.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mux3.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mux4.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/stb_shifter.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mux5.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cache_control.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/comparator.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/or.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/Comparator.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/stupidmuxsv.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/Array.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cpu_control.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/adj.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/alu.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/gencc.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/ir.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/regfile.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/adder.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cccomp.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/adj_imm.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mask.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/truncator.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/zext.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cache.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cache_datapath.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/8by1mux.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mp2.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/extract_cache_components.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/Arraytag.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/Arraybit.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cpu_datapath.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cpu.sv}
-
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mp2_tb.sv}
-vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/physical_memory.sv}
-
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp2_tb
-
-add wave *
-view structure
-view signals
-run 200 ns
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -label clk /mp2_tb/clk
+add wave -noupdate -label pmem_resp /mp2_tb/pmem_resp
+add wave -noupdate -label pmem_read /mp2_tb/pmem_read
+add wave -noupdate -label pmem_write /mp2_tb/pmem_write
+add wave -noupdate -label pmem_address -radix hexadecimal /mp2_tb/pmem_address
+add wave -noupdate -label pmem_rdata -radix hexadecimal /mp2_tb/pmem_rdata
+add wave -noupdate -label pmem_wdata -radix hexadecimal /mp2_tb/pmem_wdata
+add wave -noupdate -label data -radix decimal -childformat {{{/mp2_tb/dut/CPU/Datapath/REGFILE/data[7]} -radix hexadecimal} {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[6]} -radix hexadecimal} {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[5]} -radix hexadecimal} {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[4]} -radix hexadecimal} {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[3]} -radix hexadecimal} {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[2]} -radix hexadecimal} {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[1]} -radix hexadecimal} {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[0]} -radix hexadecimal}} -expand -subitemconfig {{/mp2_tb/dut/CPU/Datapath/REGFILE/data[7]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CPU/Datapath/REGFILE/data[6]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CPU/Datapath/REGFILE/data[5]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CPU/Datapath/REGFILE/data[4]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CPU/Datapath/REGFILE/data[3]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CPU/Datapath/REGFILE/data[2]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CPU/Datapath/REGFILE/data[1]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CPU/Datapath/REGFILE/data[0]} {-height 15 -radix hexadecimal}} /mp2_tb/dut/CPU/Datapath/REGFILE/data
+add wave -noupdate -label state -radix hexadecimal /mp2_tb/dut/CPU/Control/state
+add wave -noupdate -label tag -radix hexadecimal -childformat {{{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[8]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[7]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[6]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[5]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[4]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[3]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[2]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[1]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[0]} -radix hexadecimal}} -subitemconfig {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[8]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[7]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[6]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[5]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[4]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[3]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[2]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[1]} {-radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/tag[0]} {-radix hexadecimal}} /mp2_tb/dut/CACHE/CACHE_DATAPATH/tag
+add wave -noupdate -label index -radix hexadecimal /mp2_tb/dut/CACHE/CACHE_DATAPATH/index
+add wave -noupdate -label offset -radix hexadecimal /mp2_tb/dut/CACHE/CACHE_DATAPATH/offset
+add wave -noupdate -label mem_resp -radix hexadecimal /mp2_tb/dut/CPU/mem_resp
+add wave -noupdate -label mem_rdata -radix hexadecimal /mp2_tb/dut/CPU/mem_rdata
+add wave -noupdate -label mem_read -radix hexadecimal /mp2_tb/dut/CPU/mem_read
+add wave -noupdate -label mem_write -radix hexadecimal /mp2_tb/dut/CPU/mem_write
+add wave -noupdate -label mem_byte_enable -radix hexadecimal /mp2_tb/dut/CPU/mem_byte_enable
+add wave -noupdate -label mem_address -radix hexadecimal /mp2_tb/dut/CPU/mem_address
+add wave -noupdate -label mem_wdata -radix hexadecimal /mp2_tb/dut/CPU/mem_wdata
+add wave -noupdate -label cache_state /mp2_tb/dut/CACHE/CACHE_CONTROLLER/state
+add wave -noupdate -label tag_array1 -radix hexadecimal /mp2_tb/dut/CACHE/CACHE_DATAPATH/tag_array1/dataout
+add wave -noupdate -label tag_array2 -radix hexadecimal /mp2_tb/dut/CACHE/CACHE_DATAPATH/tag_array2/data
+add wave -noupdate -label data_array1 -radix hexadecimal -childformat {{{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[7]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[6]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[5]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[4]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[3]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[2]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[1]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[0]} -radix hexadecimal}} -expand -subitemconfig {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[7]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[6]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[5]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[4]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[3]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[2]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[1]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data[0]} {-height 15 -radix hexadecimal}} /mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array1/data
+add wave -noupdate -label data_array2 -radix hexadecimal -childformat {{{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[7]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[6]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[5]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[4]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[3]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[2]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[1]} -radix hexadecimal} {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[0]} -radix hexadecimal}} -expand -subitemconfig {{/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[7]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[6]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[5]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[4]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[3]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[2]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[1]} {-height 15 -radix hexadecimal} {/mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data[0]} {-height 15 -radix hexadecimal}} /mp2_tb/dut/CACHE/CACHE_DATAPATH/data_array2/data
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {369760 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 159
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 200000
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {8969 ns} {9001632 ps}

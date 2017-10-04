@@ -325,45 +325,7 @@
 # run 200 ns
 # You F'ed up
 do wave.do
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/pc_out'.
-# Executing ONERROR command at macro ./wave.do line 4
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/mem_address'.
-# Executing ONERROR command at macro ./wave.do line 5
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/mem_read'.
-# Executing ONERROR command at macro ./wave.do line 6
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/mem_rdata'.
-# Executing ONERROR command at macro ./wave.do line 7
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/mem_write'.
-# Executing ONERROR command at macro ./wave.do line 8
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/mem_byte_enable'.
-# Executing ONERROR command at macro ./wave.do line 9
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/mem_wdata'.
-# Executing ONERROR command at macro ./wave.do line 10
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[0]'.
-# Executing ONERROR command at macro ./wave.do line 11
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[1]'.
-# Executing ONERROR command at macro ./wave.do line 12
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[2]'.
-# Executing ONERROR command at macro ./wave.do line 13
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[3]'.
-# Executing ONERROR command at macro ./wave.do line 14
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[4]'.
-# Executing ONERROR command at macro ./wave.do line 15
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[5]'.
-# Executing ONERROR command at macro ./wave.do line 16
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[6]'.
-# Executing ONERROR command at macro ./wave.do line 17
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/REGFILE/data[7]'.
-# Executing ONERROR command at macro ./wave.do line 18
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Control/state'.
-# Executing ONERROR command at macro ./wave.do line 19
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/alu_out'.
-# Executing ONERROR command at macro ./wave.do line 20
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/MAR/data'.
-# Executing ONERROR command at macro ./wave.do line 21
-# ** Error: (vish-4014) No objects found matching '/mp2_tb/dut/Datapath/MDR/data'.
-# Executing ONERROR command at macro ./wave.do line 22
-restart -f; run 2000ns;
+restart -f; run 3000ns;
 # Loading sv_std.std
 # Loading work.mp2_tb
 # Loading work.lc3b_types
@@ -422,65 +384,3 @@ restart -f; run 2000ns;
 # Loading work.cache_control
 # Loading work.physical_memory
 # You F'ed up
-add wave -position end  sim:/mp2_tb/dut/CPU/Datapath/REGFILE/data
-add wave -position end  sim:/mp2_tb/dut/CPU/Datapath/REGFILE/data
-restart -f; run 2000ns;
-# Loading sv_std.std
-# Loading work.mp2_tb
-# Loading work.lc3b_types
-# Loading work.mp2_sv_unit
-# Loading work.mp2
-# Loading work.cpu_sv_unit
-# Loading work.cpu
-# Loading work.cpu_datapath_sv_unit
-# Loading work.datapath
-# Loading work.mux2
-# Loading work.mux5
-# Loading work.plus2
-# Loading work.register
-# Loading work.adder_sv_unit
-# Loading work.adder
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.mux4
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.cccomp_sv_unit
-# Loading work.cccomp
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.zext_sv_unit
-# Loading work.zext_no_shift
-# Loading work.adj_imm_sv_unit
-# Loading work.adj_imm
-# Loading work.mux3
-# Loading work.truncator_sv_unit
-# Loading work.truncator
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.mask_sv_unit
-# Loading work.mask
-# Loading work.stb_shifter
-# Loading work.cpu_control_sv_unit
-# Loading work.control
-# Loading work.cache_sv_unit
-# Loading work.cache
-# Loading work.cache_datapath_sv_unit
-# Loading work.cache_datapath
-# Loading work.extract_cache_components_sv_unit
-# Loading work.components
-# Loading work.Array_sv_unit
-# Loading work.Array
-# Loading work._8by1mux_sv_unit
-# Loading work.mux16by2
-# Loading work.comparator_sv_unit
-# Loading work.comparator
-# Loading work.or_sv_unit
-# Loading work.__OR__
-# Loading work.cache_control_sv_unit
-# Loading work.cache_control
-# Loading work.physical_memory
-# You F'ed up
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/zpaya2/ece411/mp2/simulation/modelsim/wave.do
