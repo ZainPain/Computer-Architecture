@@ -13,8 +13,7 @@ entity cache_datapath is
         load_dirty1     : in     vl_logic;
         load_dirty2     : in     vl_logic;
         hit             : out    vl_logic;
-        way_select      : out    vl_logic;
-        eviction        : in     vl_logic;
+        hit2_out        : out    vl_logic;
         valid1_in       : in     vl_logic;
         valid2_in       : in     vl_logic;
         valid1_out      : out    vl_logic;

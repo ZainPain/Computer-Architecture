@@ -2980,8 +2980,7 @@ load_lru => load_lru.IN1
 load_dirty1 => load_dirty1.IN1
 load_dirty2 => load_dirty2.IN1
 hit <= __OR__:_OR_hits.out
-way_select <= way_select.DB_MAX_OUTPUT_PORT_TYPE
-eviction => eviction.IN1
+hit2_out <= hit2_out.DB_MAX_OUTPUT_PORT_TYPE
 valid1_in => valid1_in.IN1
 valid2_in => valid2_in.IN1
 valid1_out <= valid1_out.DB_MAX_OUTPUT_PORT_TYPE
@@ -2989,7 +2988,7 @@ valid2_out <= valid2_out.DB_MAX_OUTPUT_PORT_TYPE
 dirty1_in => dirty1_in.IN1
 dirty2_in => dirty2_in.IN1
 lru_in => lru_in.IN1
-lru_out <= lru_out.DB_MAX_OUTPUT_PORT_TYPE
+lru_out <= Array:LRU.dataout
 dirty1_out <= Array:dirty1.dataout
 dirty2_out <= Array:dirty2.dataout
 mem_address[0] => mem_address[0].IN1
@@ -5040,13 +5039,6 @@ in2[0] => always0.IN1
 out <= always0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|cache:CACHE|cache_datapath:CACHE_DATAPATH|mux2:way_selector
-sel => f.OUTPUTSELECT
-a[0] => f.DATAB
-b[0] => f.DATAA
-f[0] <= f.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |mp2|cache:CACHE|cache_datapath:CACHE_DATAPATH|Array:dirty1
 clk => data.we_a.CLK
 clk => data.waddr_a[2].CLK
@@ -5098,7 +5090,7 @@ clk => state~1.DATAIN
 hit => always0.IN0
 hit => always1.IN0
 hit => always1.IN0
-way_select => lru_in.DATAB
+hit2_out => lru_in.DATAB
 load_tag1 <= load_tag1.DB_MAX_OUTPUT_PORT_TYPE
 load_tag2 <= load_tag2.DB_MAX_OUTPUT_PORT_TYPE
 load_lru <= load_lru.DB_MAX_OUTPUT_PORT_TYPE
@@ -5106,7 +5098,6 @@ load_data1 <= load_data1.DB_MAX_OUTPUT_PORT_TYPE
 load_data2 <= load_data2.DB_MAX_OUTPUT_PORT_TYPE
 load_valid1 <= load_valid1.DB_MAX_OUTPUT_PORT_TYPE
 load_valid2 <= load_valid2.DB_MAX_OUTPUT_PORT_TYPE
-eviction <= <GND>
 valid1_in <= valid1_in.DB_MAX_OUTPUT_PORT_TYPE
 valid2_in <= valid2_in.DB_MAX_OUTPUT_PORT_TYPE
 valid1_out => ~NO_FANOUT~

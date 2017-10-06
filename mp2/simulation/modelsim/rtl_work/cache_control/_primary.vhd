@@ -4,7 +4,7 @@ entity cache_control is
     port(
         clk             : in     vl_logic;
         hit             : in     vl_logic;
-        way_select      : in     vl_logic;
+        hit2_out        : in     vl_logic;
         load_tag1       : out    vl_logic;
         load_tag2       : out    vl_logic;
         load_lru        : out    vl_logic;
@@ -12,7 +12,6 @@ entity cache_control is
         load_data2      : out    vl_logic;
         load_valid1     : out    vl_logic;
         load_valid2     : out    vl_logic;
-        eviction        : out    vl_logic;
         valid1_in       : out    vl_logic;
         valid2_in       : out    vl_logic;
         valid1_out      : in     vl_logic;

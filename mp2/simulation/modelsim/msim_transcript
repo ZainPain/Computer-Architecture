@@ -334,6 +334,7 @@
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
 # You F'ed up
+# You F'ed up
 do wave.do
 restart -f; run 1500ns;
 # Loading sv_std.std
@@ -396,6 +397,7 @@ restart -f; run 1500ns;
 # Loading work.cache_control
 # Loading work.physical_memory
 # You F'ed up
+# You F'ed up
 restart -f; run 2500ns;
 # Loading sv_std.std
 # Loading work.mp2_tb
@@ -456,4 +458,5 @@ restart -f; run 2500ns;
 # Loading work.cache_control_sv_unit
 # Loading work.cache_control
 # Loading work.physical_memory
+# You F'ed up
 # You F'ed up

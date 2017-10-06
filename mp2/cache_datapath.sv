@@ -14,13 +14,9 @@ module cache_datapath
 	input logic load_dirty1,
 	input logic load_dirty2,
 	output logic hit,
-	output logic way_select,
+	output logic hit2_out,
 	/* LOAD SIGNALS END */
-	
-	/* SELECT SIGNALS  */
-	input logic eviction,
-	/* SELECT SIGNALS END */
-	
+
 	/* DATA IN SIGNALS */
 
 	input logic valid1_in,
@@ -60,7 +56,6 @@ lc3b_tag tag2_out;
 logic comp1_out;
 logic comp2_out;
 logic hit1_out;
-logic hit2_out;
 /* SOME ASSIGNMENTS */
 always_comb
 begin
@@ -143,7 +138,7 @@ mux16by2  datamux
 (
 	.in1(data1_out),
 	.in2(data2_out),
-	.way_select(way_select),
+	.way_select(hit2_out),
 	.offset(offset),
 	.out(mem_rdata)
 	
@@ -197,14 +192,6 @@ __OR__  _OR_hits
 	.in2(hit2_out),
 	.out(hit)
 	
-);
-
-mux2 #(.width(1)) way_selector
-(
-	.sel(eviction),
-	.a(hit2_out),
-	.b(lru_out),
-	.f(way_select)
 );
 
 Array #(.width(1)) dirty1

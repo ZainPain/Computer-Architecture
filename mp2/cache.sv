@@ -34,7 +34,7 @@ module cache
 	/* LOAD SIGNALS END */
 	
 	/* SELECT SIGNALS  */
-	logic eviction;
+	logic hit2_out;
 	/* SELECT SIGNALS END */
 	
 	/* DATA IN SIGNALS */
@@ -70,13 +70,9 @@ cache_datapath CACHE_DATAPATH
 	.load_dirty1(load_dirty1),
 	.load_dirty2(load_dirty2),
 	.hit(hit),
-	.way_select(way_select),
+	.hit2_out(hit2_out),
 	/* LOAD SIGNALS END */
-	
-	/* SELECT SIGNALS  */
-	.eviction(eviction),
-	/* SELECT SIGNALS END */
-	
+
 	/* DATA IN SIGNALS */
 
 	.valid1_in(valid1_in),
@@ -109,7 +105,7 @@ cache_control CACHE_CONTROLLER
 	.clk(clk),
 	/* control signals */
 	.hit(hit),
-	.way_select(way_select),
+	.hit2_out(hit2_out),
 	/* load signals */
 	.load_tag1(load_tag1),
 	.load_tag2(load_tag2),
@@ -118,7 +114,6 @@ cache_control CACHE_CONTROLLER
 	.load_data2(load_data2),
 	.load_valid1(load_valid1),
 	.load_valid2(load_valid2),
-	.eviction(eviction),
 	
 	.valid1_in(valid1_in),
 	.valid2_in(valid2_in),

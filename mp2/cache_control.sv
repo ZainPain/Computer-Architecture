@@ -5,7 +5,7 @@ module cache_control
 	input logic clk,
 	/* control signals */
 	input logic hit,
-	input logic way_select,
+	input logic hit2_out,
 	/* load signals */
 	output logic load_tag1,
 	output logic load_tag2,
@@ -14,7 +14,6 @@ module cache_control
 	output logic load_data2,
 	output logic load_valid1,
 	output logic load_valid2,
-	output logic eviction,
 	
 	/* set value */
 	output logic valid1_in,
@@ -52,7 +51,6 @@ begin : state_actions
 	load_data2 = 1'b0;
 	load_valid1 = 1'b0;
 	load_valid2 = 1'b0;
-	eviction = 1'b0;
 	pmem_read = 1'b0;
 	pmem_write = 1'b0;
 	mem_resp = 1'b0; 
@@ -70,7 +68,7 @@ begin : state_actions
 				/* check way_select where the mux's select bit == 0 */
 				load_lru = 1'b1;
 				mem_resp = 1'b1;
-				if(way_select)
+				if(hit2_out)
 				begin
 					/* this is the case where way_select is 1 which corresponds to way 1 having a hit */
 					lru_in = 1'b1;
