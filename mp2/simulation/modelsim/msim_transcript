@@ -235,6 +235,14 @@
 # 
 # Top level modules:
 # 	components
+# vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/write_to_dataArray.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package write_to_dataArray_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module write_to_dataArray
+# 
+# Top level modules:
+# 	write_to_dataArray
 # vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cpu_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cpu_datapath_sv_unit
@@ -315,6 +323,8 @@
 # Loading work.components
 # Loading work.Array_sv_unit
 # Loading work.Array
+# Loading work.write_to_dataArray_sv_unit
+# Loading work.write_to_dataArray
 # Loading work._8by1mux_sv_unit
 # Loading work.mux16by2
 # Loading work.comparator_sv_unit
@@ -335,8 +345,12 @@
 # run 200 ns
 # You F'ed up
 # You F'ed up
+# get rekt
+# get rekt
+# get rekt
+# get rekt
 do wave.do
-restart -f; run 1500ns;
+restart -f; run 30000ns;
 # Loading sv_std.std
 # Loading work.mp2_tb
 # Loading work.lc3b_types
@@ -385,6 +399,8 @@ restart -f; run 1500ns;
 # Loading work.components
 # Loading work.Array_sv_unit
 # Loading work.Array
+# Loading work.write_to_dataArray_sv_unit
+# Loading work.write_to_dataArray
 # Loading work._8by1mux_sv_unit
 # Loading work.mux16by2
 # Loading work.comparator_sv_unit
@@ -398,65 +414,7 @@ restart -f; run 1500ns;
 # Loading work.physical_memory
 # You F'ed up
 # You F'ed up
-restart -f; run 2500ns;
-# Loading sv_std.std
-# Loading work.mp2_tb
-# Loading work.lc3b_types
-# Loading work.mp2_sv_unit
-# Loading work.mp2
-# Loading work.cpu_sv_unit
-# Loading work.cpu
-# Loading work.cpu_datapath_sv_unit
-# Loading work.datapath
-# Loading work.mux2
-# Loading work.mux5
-# Loading work.plus2
-# Loading work.register
-# Loading work.adder_sv_unit
-# Loading work.adder
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.mux4
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.cccomp_sv_unit
-# Loading work.cccomp
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.zext_sv_unit
-# Loading work.zext_no_shift
-# Loading work.adj_imm_sv_unit
-# Loading work.adj_imm
-# Loading work.mux3
-# Loading work.truncator_sv_unit
-# Loading work.truncator
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.mask_sv_unit
-# Loading work.mask
-# Loading work.stb_shifter
-# Loading work.cpu_control_sv_unit
-# Loading work.control
-# Loading work.cache_sv_unit
-# Loading work.cache
-# Loading work.cache_datapath_sv_unit
-# Loading work.cache_datapath
-# Loading work.extract_cache_components_sv_unit
-# Loading work.components
-# Loading work.Array_sv_unit
-# Loading work.Array
-# Loading work._8by1mux_sv_unit
-# Loading work.mux16by2
-# Loading work.comparator_sv_unit
-# Loading work.comparator
-# Loading work.__and___sv_unit
-# Loading work.__AND__
-# Loading work.or_sv_unit
-# Loading work.__OR__
-# Loading work.cache_control_sv_unit
-# Loading work.cache_control
-# Loading work.physical_memory
-# You F'ed up
-# You F'ed up
+# get rekt
+# get rekt
+# get rekt
+# get rekt

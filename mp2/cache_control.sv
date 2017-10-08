@@ -14,6 +14,8 @@ module cache_control
 	output logic load_data2,
 	output logic load_valid1,
 	output logic load_valid2,
+	output logic load_dirty1,
+	output logic load_dirty2,
 	
 	/* set value */
 	output logic valid1_in,
@@ -22,6 +24,15 @@ module cache_control
 	input logic valid2_out,
 	output logic lru_in,
 	input logic lru_out,
+	output logic dirty1_in,
+	output logic dirty2_in,
+	input logic dirty1_out,
+	input logic dirty2_out,
+	
+	output logic writemux1_sel,
+	output logic writemux2_sel,
+	output logic pmem_write_sel,
+	output logic pmem_sel,
 	/* mem signals */
 	input logic mem_read,
 	input logic mem_write,
@@ -51,12 +62,22 @@ begin : state_actions
 	load_data2 = 1'b0;
 	load_valid1 = 1'b0;
 	load_valid2 = 1'b0;
+	load_dirty1 = 1'b0;
+	load_dirty2 = 1'b0;
+	
 	pmem_read = 1'b0;
 	pmem_write = 1'b0;
 	mem_resp = 1'b0; 
 	lru_in = 1'b0;
 	valid1_in = 1'b0;
 	valid2_in = 1'b0;
+	dirty1_in = 1'b0;
+	dirty2_in = 1'b0;
+	
+	writemux1_sel = 1'b0; /* pmem_read is default*/
+	writemux2_sel = 1'b0;
+	pmem_write_sel = 1'b0;
+	pmem_sel = 1'b0;
 	case(state)
 	
 		idle:
@@ -71,11 +92,40 @@ begin : state_actions
 				if(hit2_out)
 				begin
 					/* this is the case where way_select is 1 which corresponds to way 1 having a hit */
-					lru_in = 1'b1;
+					lru_in = 1'b0;
 				end
 				else 
+					lru_in = 1'b1;;
+					
+			end
+			else if (hit && mem_write)	
+			begin
+				if(hit2_out && valid2_out)
+				begin
+					mem_resp = 1'b1;
+					load_dirty2 = 1'b1;
+					dirty2_in = 1'b1;
+					
+					load_data2 = 1'b1;
+					writemux2_sel = 1'b1;
+					
+					load_lru = 1'b1;
 					lru_in = 1'b0;
 					
+				end
+				else if(!hit2_out && valid1_out)
+				begin
+					mem_resp = 1'b1;
+					load_dirty1 = 1'b1;
+					dirty1_in = 1'b1;
+					
+					load_data1 = 1'b1;
+					writemux1_sel = 1'b1;
+					
+					load_lru = 1'b1;
+					lru_in = 1'b1;
+					
+				end
 			end
 		end
 		
@@ -86,15 +136,23 @@ begin : state_actions
 			begin
 				load_valid2 = 1'b1;
 				valid2_in = 1'b1;
+				
 				load_data2 = 1'b1;
 				load_tag2 = 1'b1;
+				
+				load_dirty2 = 1'b1;
+				dirty2_in = 1'b0;
 			end
 			else
 			begin
 				load_valid1 = 1'b1;
 				valid1_in = 1'b1;
+				
 				load_data1 = 1'b1;
 				load_tag1 = 1'b1;
+				
+				load_dirty1 = 1'b1;
+				dirty1_in = 1'b0;
 			end
 				
 			
@@ -102,7 +160,13 @@ begin : state_actions
 		
 		write_back:
 		begin
-			/* Do nothing for this checkpoint */
+			pmem_write = 1'b1;
+			pmem_sel = 1'b1;
+			if(lru_out)
+				pmem_write_sel = 1'b1;
+			else 
+				pmem_write_sel = 1'b0;
+			
 		end
 		default: /* Do Nothing */;
 		endcase
@@ -118,8 +182,10 @@ begin : next_state_logic
 		idle:
 		begin
 			/* stay in idle unless there is a cache miss */
-			if((!hit && mem_read) || (!hit && mem_write))
+			if((!hit && (mem_read || mem_write)) && (!dirty1_out && !dirty2_out))
 				next_state <= allocate;
+			else if ((!hit && (mem_read || mem_write)) && (dirty1_out || dirty2_out))
+				next_state <= write_back;
 			else 
 				next_state <= idle;
 		end
@@ -134,7 +200,10 @@ begin : next_state_logic
 		end
 		write_back:
 		begin
-			next_state <= idle;	/* Not using write-back for this checkpoint*/
+			if(pmem_resp) /* this means data has been written to physical memory (write_back) and now we want to replace that line with desired mem address */
+				next_state <= allocate;
+			else
+			next_state <= write_back;	/* Not using write-back for this checkpoint*/
 		end
 	default:/* Nothing */;
 	 endcase

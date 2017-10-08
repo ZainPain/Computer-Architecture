@@ -30,11 +30,16 @@ module cache_datapath
 	output logic dirty1_out,
 	output logic dirty2_out,
 	/* DATA IN SIGNALS END */
-	
+	input logic writemux1_sel,
+	input logic writemux2_sel,
+	input logic pmem_write_sel,
+	input logic pmem_sel,
 	/** MEM SIGNALS **/
 	input lc3b_word mem_address,
 	input lc3b_data pmem_rdata,
 	input lc3b_word mem_wdata,
+	
+	input logic [1:0] mem_byte_enable,
 	
 	output lc3b_word mem_rdata,
 	output lc3b_data pmem_wdata,
@@ -56,11 +61,35 @@ lc3b_tag tag2_out;
 logic comp1_out;
 logic comp2_out;
 logic hit1_out;
+lc3b_data write_data1_out;
+lc3b_data write_data2_out;
+
+lc3b_data write1_mux_out;
+lc3b_data write2_mux_out;
+lc3b_tag tagmux_out;
+lc3b_word tagmux_out_extended;
 /* SOME ASSIGNMENTS */
+mux2 #(.width(9)) tagmux
+(
+	.sel(lru_out),
+	.a(tag1_out),
+	.b(tag2_out),
+	.f(tagmux_out)
+);
+
 always_comb
 begin
-	pmem_address = mem_address;
+	tagmux_out_extended = {tagmux_out,index,4'b0000};
 end
+
+mux2 #(.width(16)) p_address
+(
+	.sel(pmem_sel),
+	.a(mem_address),
+	.b(tagmux_out_extended),
+	.f(pmem_address)
+);
+
 components Extract
 (
 	.mem_address(mem_address),
@@ -74,9 +103,26 @@ Array  data_array1
     .clk(clk),
     .write(load_data1),
     .index(index),
-    .datain(pmem_rdata),
+    .datain(write1_mux_out),
     .dataout(data1_out)
 
+);
+write_to_dataArray write_data_1
+(
+	.in(data1_out),
+	.mem_wdata(mem_wdata),
+	.mem_byte_enable(mem_byte_enable),
+	.offset(offset),
+	.out(write_data1_out)
+	
+);
+
+mux2 #(.width(128)) write_data1_mux
+(
+	.sel(writemux1_sel),
+	.a(pmem_rdata),
+	.b(write_data1_out),
+	.f(write1_mux_out)
 );
 
 Array  data_array2
@@ -85,10 +131,37 @@ Array  data_array2
     .clk(clk),
     .write(load_data2),
     .index(index),
-    .datain(pmem_rdata),
+    .datain(write2_mux_out),
     .dataout(data2_out)
 
 );
+
+write_to_dataArray write_data_2
+(
+	.in(data2_out),
+	.mem_wdata(mem_wdata),
+	.mem_byte_enable(mem_byte_enable),
+	.offset(offset),
+	.out(write_data2_out)
+	
+);
+
+mux2 #(.width(128)) write_data2_mux
+(
+	.sel(writemux2_sel),
+	.a(pmem_rdata),
+	.b(write_data2_out),
+	.f(write2_mux_out)
+);
+
+mux2 #(.width(128)) write_pmem_mux
+(
+	.sel(pmem_write_sel),
+	.a(data1_out),
+	.b(data2_out),
+	.f(pmem_wdata)
+);
+
 /* tag is loaded into tag array when a miss occurs based on valid bit and lru decision */
 Array #(.width(9)) tag_array1//#(.width(9))
 (

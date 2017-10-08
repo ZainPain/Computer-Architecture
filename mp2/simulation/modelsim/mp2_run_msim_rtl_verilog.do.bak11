@@ -35,6 +35,7 @@ vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cac
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/8by1mux.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/mp2.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/extract_cache_components.sv}
+vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/write_to_dataArray.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cpu_datapath.sv}
 vlog -sv -work work +incdir+/home/zpaya2/ece411/mp2 {/home/zpaya2/ece411/mp2/cpu.sv}
 

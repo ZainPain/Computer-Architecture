@@ -52,6 +52,10 @@ module cache
 	logic lru_out;
 	logic dirty1_out;
 	logic dirty2_out;
+	logic writemux1_sel;
+	logic writemux2_sel;
+	logic pmem_write_sel;
+	logic pmem_sel;
 	/* DATA IN SIGNALS END */
 	
 /** INSTANTIATE CACHE DATAPATH **/
@@ -87,11 +91,15 @@ cache_datapath CACHE_DATAPATH
 	.dirty1_out(dirty1_out),
 	.dirty2_out(dirty2_out),
 	/* DATA IN SIGNALS END */
-	
+	.writemux1_sel(writemux1_sel),
+	.writemux2_sel(writemux2_sel),
+	.pmem_write_sel(pmem_write_sel),
+	.pmem_sel(pmem_sel),
 	/** MEM SIGNALS **/
 	.mem_address(mem_address),
 	.pmem_rdata(pmem_rdata),
 	.mem_wdata(mem_wdata),
+	.mem_byte_enable(mem_byte_enable),
 	.mem_rdata(mem_rdata),
 	.pmem_wdata(pmem_wdata),	
 	.pmem_address(pmem_address)
@@ -114,6 +122,8 @@ cache_control CACHE_CONTROLLER
 	.load_data2(load_data2),
 	.load_valid1(load_valid1),
 	.load_valid2(load_valid2),
+	.load_dirty1(load_dirty1),
+	.load_dirty2(load_dirty2),
 	
 	.valid1_in(valid1_in),
 	.valid2_in(valid2_in),
@@ -121,6 +131,15 @@ cache_control CACHE_CONTROLLER
 	.valid2_out(valid2_out),
 	.lru_in(lru_in),
 	.lru_out(lru_out),
+	.dirty1_in(dirty1_in),
+	.dirty2_in(dirty2_in),
+	.dirty1_out(dirty1_out),
+	.dirty2_out(dirty2_out),
+	
+	.writemux1_sel(writemux1_sel),
+	.writemux2_sel(writemux2_sel),
+	.pmem_write_sel(pmem_write_sel),
+	.pmem_sel(pmem_sel),
 	/* mem signals */
 	.mem_read(mem_read),
 	.mem_write(mem_write),
