@@ -1,0 +1,18 @@
+__date__, Define
+__file__, Define
+__line__, Define
+__time__, Define
+__version_3__, Define
+__version__, Define
+boot, Label, 4x4E, 4x0
+dataseg, Label, 4xCE, 4x0
+dsp, Label, 4x5C, 4xE
+fetch_stall_test, Label, 4xAC, 4x5E
+inf, Label, 4xC8, 4x7A
+ldr_str_test, Label, 4x5E, 4x10
+total, Label, 4xEE, 4x20
+victim, Label, 4xFE, 4x30
+w, Label, 4xDA, 4xC
+x, Label, 4xDC, 4xE
+y, Label, 4xDE, 4x10
+z, Label, 4xE0, 4x12

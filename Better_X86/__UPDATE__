@@ -1,0 +1,9 @@
+work:
+	
+	perhaps revise control_rom
+	add branch functionality in control_rom
+	instantiate modules in datapath
+	possibly fix testbench file
+	
+test:
+	everything

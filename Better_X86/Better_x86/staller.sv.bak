@@ -1,0 +1,25 @@
+import lc3b_types::*;
+
+module staller #(parameter width = 3)
+(
+	input logic load_in,
+	input logic mem_read,
+	input logic mem_write,
+	output logic stall
+
+);
+
+always_comb
+begin
+	
+	/* if the condition is met, we enable branching */
+	if(((nzp[2] && dest[2])  || (nzp[1] && dest[1]) || (nzp[0] && dest[0])))
+		out = 1;
+	else if(dest[2] && dest[1] && dest[0])
+		out = 0;
+	else
+		out=0;
+
+end
+
+endmodule : staller

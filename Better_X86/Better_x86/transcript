@@ -1,0 +1,287 @@
+# do /tmp/tmp.4uHiIH9SNn/do.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/lc3b_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lc3b_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/plus2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module plus2
+# 
+# Top level modules:
+# 	plus2
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/mux5.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux5
+# 
+# Top level modules:
+# 	mux5
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/mux3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux3
+# 
+# Top level modules:
+# 	mux3
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/mp3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3
+# 
+# Top level modules:
+# 	mp3
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/branch_logic.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package branch_logic_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module branch_logic
+# 
+# Top level modules:
+# 	branch_logic
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/zext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package zext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module zext
+# 
+# Top level modules:
+# 	zext
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/sext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package sext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module sext
+# 
+# Top level modules:
+# 	sext
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package regfile_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/gencc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package gencc_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module gencc
+# 
+# Top level modules:
+# 	gencc
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/cpu_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cpu_datapath
+# 
+# Top level modules:
+# 	cpu_datapath
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/control_rom.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package control_rom_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module control_rom
+# 
+# Top level modules:
+# 	control_rom
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/cc_comp.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cc_comp_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cccomp
+# 
+# Top level modules:
+# 	cccomp
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/adj.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adj_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adj
+# 
+# Top level modules:
+# 	adj
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/MEM_WB_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package MEM_WB_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module MEM_WB_reg
+# 
+# Top level modules:
+# 	MEM_WB_reg
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/IF_ID_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package IF_ID_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module IF_ID_reg
+# 
+# Top level modules:
+# 	IF_ID_reg
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/ID_EX_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ID_EX_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ID_EX_reg
+# 
+# Top level modules:
+# 	ID_EX_reg
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/EX_MEM_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package EX_MEM_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module EX_MEM_reg
+# 
+# Top level modules:
+# 	EX_MEM_reg
+# 
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/mp3_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mp3_tb
+# 
+# Top level modules:
+# 	mp3_tb
+# vlog -sv -work work +incdir+/home/ppng2/ECE411/ECE411/Better_X86/Better_x86 {/home/ppng2/ECE411/ECE411/Better_X86/Better_x86/magic_dual_port.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module magic_memory_dp
+# 
+# Top level modules:
+# 	magic_memory_dp
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.lc3b_types
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.register
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.IF_ID_reg_sv_unit
+# Loading work.IF_ID_reg
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.mux2
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_reg_sv_unit
+# Loading work.ID_EX_reg
+# Loading work.mux5
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.EX_MEM_reg_sv_unit
+# Loading work.EX_MEM_reg
+# Loading work.mux3
+# Loading work.MEM_WB_reg_sv_unit
+# Loading work.MEM_WB_reg
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cc_comp_sv_unit
+# Loading work.cccomp
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.magic_memory_dp
+# 
+#add wave *
+#view structure
+#view signals
+# restart -f
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.lc3b_types
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.register
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.IF_ID_reg_sv_unit
+# Loading work.IF_ID_reg
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.mux2
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_reg_sv_unit
+# Loading work.ID_EX_reg
+# Loading work.mux5
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.EX_MEM_reg_sv_unit
+# Loading work.EX_MEM_reg
+# Loading work.mux3
+# Loading work.MEM_WB_reg_sv_unit
+# Loading work.MEM_WB_reg
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cc_comp_sv_unit
+# Loading work.cccomp
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.magic_memory_dp
+# add list -radix hexadecimal {/mp3_tb/dut/cpu_d/REG_FILE/data}
+# run 100000ns
+# write list /tmp/tmp.4uHiIH9SNn/test_list.lst
+# exit

@@ -1,0 +1,20 @@
+import lc3b_types::*;
+
+module branch_logic
+(
+	input lc3b_opcode opcode,
+	input logic branch_enable,
+	input logic [2:0] pcmux_sel,
+	output logic [2:0] pcmux_sel_updated
+);
+
+always_comb
+begin
+	if(opcode == op_br && ~branch_enable)
+		pcmux_sel_updated = 3'b011;	/* Don't take branch if no branch_enable is false */
+									/* This will also NOT branch on NOPs */
+	else
+		pcmux_sel_updated = pcmux_sel; /* Let signal thru */
+end
+
+endmodule : branch_logic

@@ -1,0 +1,460 @@
+import lc3b_types::*;
+
+module cpu_datapath
+(
+    input clk,
+
+    /* Port A Instruction Memory */
+    output read_a,
+    output write_a,
+    output [1:0] wmask_a,
+    output [15:0] address_a,
+    output [15:0] wdata_a,
+    input logic resp_a,
+    input logic [15:0] rdata_a,
+
+    /* Port B Data Memory */
+    output read_b,
+    output write_b,
+    output [1:0] wmask_b,
+    output [15:0] address_b,
+    output [15:0] wdata_b,
+    input logic resp_b,
+    input logic [15:0] rdata_b
+);
+//SET THESE TO ALWAYS STORE 2 BYTES FOR CP1
+assign wmask_a = 2'b11;
+assign wmask_b = 2'b11;
+
+//NOTE NEED TO PUT LOAD_PC ELSEWHERE
+
+logic load_pc;
+logic load_IF_ID;
+logic load_ID_EX;
+logic load_EX_MEM;
+logic load_MEM_WB;
+
+logic reset_IF_ID;
+logic reset_ID_EX;
+logic reset_EX_MEM;
+logic reset_MEM_WB;
+
+lc3b_word pcmux_out;
+lc3b_word pc_out;
+lc3b_word pc_plus2;
+lc3b_word EX_MEM_pc_adder_out;
+lc3b_word MEM_WB_sr1;
+
+lc3b_control_word IF_ID_ctrl;
+lc3b_control_word ID_EX_ctrl;
+lc3b_control_word EX_MEM_ctrl;
+lc3b_control_word MEM_WB_ctrl;
+
+lc3b_word MEM_WB_trap_vect8;
+lc3b_word trapmux_out;
+
+/* WIRES FOR IF_ID_EX */
+
+lc3b_word IF_ID_EX_inst;
+lc3b_word IF_ID_EX_pc;
+lc3b_reg IF_ID_EX_dest;
+
+lc3b_offset6 IF_ID_offset6;
+lc3b_imm5 IF_ID_imm5;
+lc3b_imm4 IF_ID_imm4;
+lc3b_trapvect8 IF_ID_trapvect8;
+lc3b_offset11 IF_ID_offset11;
+lc3b_offset9 IF_ID_offset9;
+
+lc3b_reg IF_ID_sr1;
+lc3b_reg IF_ID_sr2;
+
+lc3b_opcode IF_ID_opcode;
+logic IF_ID_ir11;
+logic IF_ID_ir5;
+logic IF_ID_ir4;
+
+lc3b_word IF_ID_EX_sr1;
+lc3b_word IF_ID_EX_sr2;
+
+lc3b_reg storemux_out;
+
+lc3b_word IF_ID_EX_sext6_out;
+lc3b_word IF_ID_EX_sext5_out;
+lc3b_word IF_ID_EX_sext4_out;
+lc3b_word IF_ID_EX_trapvect8_out;
+lc3b_word IF_ID_EX_adj6_out;
+lc3b_word IF_ID_EX_adj9_out;
+lc3b_word IF_ID_EX_adj11_out;
+lc3b_word IF_ID_EX_ztrapvect8;
+
+/* WIRES FOR ID_EX_MEM */
+
+lc3b_word ID_EX_MEM_inst;
+lc3b_word ID_EX_MEM_pc;
+
+lc3b_word ID_EX_sr1;
+lc3b_word ID_EX_sr2;
+lc3b_reg ID_EX_MEM_dest;
+
+lc3b_word ID_EX_sext6;
+lc3b_word ID_EX_sext5;
+lc3b_word ID_EX_sext4;
+lc3b_word ID_EX_adj6;
+lc3b_word ID_EX_adj9;
+lc3b_word ID_EX_adj11;
+lc3b_word ID_EX_MEM_ztrapvect8;
+
+lc3b_word ID_EX_alumux_out;
+lc3b_word ID_EX_MEM_alu;
+lc3b_word ID_EX_addermux_out;
+lc3b_word ID_EX_MEM_pc_adder_out;
+
+/* WIRES FOR EX_MEM_WB */
+lc3b_word EX_MEM_WB_inst;
+lc3b_word EX_MEM_WB_pc;
+
+lc3b_word EX_MEM_alu_out;
+lc3b_word EX_MEM_sr2;
+lc3b_reg EX_MEM_WB_dest;
+lc3b_word EX_MEM_WB_pc_adder;
+lc3b_word EX_MEM_ztrapvect8;
+
+/* WIRES FOR MEM_WB_ID */
+lc3b_word MEM_WB_inst;
+lc3b_word MEM_WB_pc;
+
+lc3b_word MEM_WB_alu_out;
+lc3b_word MEM_WB_dmem;
+lc3b_word MEM_WB_pc_adder;
+lc3b_word MEM_WB_sr2;
+lc3b_reg MEM_WB_dest;
+
+lc3b_nzp gencc_out;
+lc3b_nzp cc_out;
+lc3b_word regfilemux_out;
+logic branch_enable;
+logic [1:0] pcmux_sel_updated;
+logic [7:0] ldbmux_out;
+
+// REGISTERS
+register PC
+(
+  .clk(clk),
+  .load(load_pc),
+  .in(pcmux_out),
+  .out(pc_out)
+);
+/* need to look at this further in our design */
+mux4 #(.width(16)) PC_MUX
+(
+	.sel(pcmux_sel_updated),
+	.a(MEM_WB_sr2),
+	.b(MEM_WB_pc_adder),
+	.c(MEM_WB_dmem),
+	.d(pc_plus2),
+	.f(pcmux_out)
+
+);
+
+plus2 PC_PLUS2
+(
+	.in(pc_out),
+	.out(pc_plus2)
+);
+
+IF_ID_reg IF_ID
+(
+	.clk(clk),
+	.load(load_IF_ID),
+	.reset(reset_IF_ID),
+
+	.inst_in(rdata_a),
+	.pc_in(pc_out),
+
+	.inst_out(IF_ID_EX_inst),
+	.pc_out(IF_ID_EX_pc),
+
+	.offset6(IF_ID_offset6),
+	.imm5(IF_ID_imm5),
+	.imm4(IF_ID_imm4),
+	.trap_vect8(IF_ID_trapvect8),
+	.offset9(IF_ID_offset9),
+	.offset11(IF_ID_offset11),
+
+	.dest(IF_ID_EX_dest),
+	.sr1(IF_ID_sr1),
+	.sr2(IF_ID_sr2),
+
+	.opcode(IF_ID_opcode),
+	.ir11(IF_ID_ir11),
+	.ir5(IF_ID_ir5),
+	.ir4(IF_ID_ir4)
+);
+
+regfile REG_FILE
+(
+  .clk(clk),
+  .load(MEM_WB_ctrl.load_regfile),
+  .in(regfilemux_out),
+  .src_a(IF_ID_sr1),
+  .src_b(storemux_out),
+  .dest(MEM_WB_dest),
+  .reg_a(IF_ID_EX_sr1),
+  .reg_b(IF_ID_EX_sr2)
+);
+
+mux2 #(.width(3)) STORE_MUX
+(
+  .sel(IF_ID_ctrl.storemux_sel),
+  .a(IF_ID_sr2),
+  .b(IF_ID_EX_dest),
+  .f(storemux_out)
+);
+
+control_rom Control
+(
+  .opcode(IF_ID_opcode),
+  .bit11(IF_ID_ir11),
+  .bit5(IF_ID_ir5),
+  .bit4(IF_ID_ir4),
+  .ctrl(IF_ID_ctrl)
+);
+
+sext #(.width(6)) SEXT6
+(
+  .in(IF_ID_offset6),
+  .out(IF_ID_EX_sext6_out)
+);
+
+sext #(.width(5)) SEXT5
+(
+  .in(IF_ID_imm5),
+  .out(IF_ID_EX_sext5_out)
+);
+
+sext #(.width(4)) SEXT4
+(
+  .in(IF_ID_imm4),
+  .out(IF_ID_EX_sext4_out)
+);
+
+adj #(.width(6)) ADJ6
+(
+  .in(IF_ID_offset6),
+  .out(IF_ID_EX_adj6_out)
+);
+
+zext #(.width(8)) ZEXT8
+(
+  .in(IF_ID_trapvect8),
+  .out(IF_ID_EX_ztrapvect8)
+);
+
+adj #(.width(9)) ADJ9
+(
+  .in(IF_ID_offset9),
+  .out(IF_ID_EX_adj9_out)
+);
+
+adj #(.width(11)) ADJ11
+(
+  .in(IF_ID_offset11),
+  .out(IF_ID_EX_adj11_out)
+);
+
+ID_EX_reg ID_EX
+(
+  .clk(clk),
+  .load(load_ID_EX),
+  .reset(reset_ID_EX),
+
+  .inst_in(IF_ID_EX_inst),	/* Maybe for debugging purpose only */
+  .pc_in(IF_ID_EX_pc),
+
+  .control_in(IF_ID_ctrl),
+  .reg_a(IF_ID_EX_sr1),
+  .reg_b(IF_ID_EX_sr2),
+  .dest_in(IF_ID_EX_dest),
+
+  .sext6_in(IF_ID_EX_sext6_out),
+  .sext5_in(IF_ID_EX_sext5_out),
+  .sext4_in(IF_ID_EX_sext4_out),
+  .adj6_in(IF_ID_EX_adj6_out),
+  .adj9_in(IF_ID_EX_adj9_out),
+  .adj11_in(IF_ID_EX_adj11_out),
+  .trap_vect8_in(IF_ID_EX_ztrapvect8),
+
+  .inst_out(ID_EX_MEM_inst),	/* Maybe for debugging purpose only */
+  .pc_out(ID_EX_MEM_pc),
+
+  .control_out(ID_EX_ctrl),
+  .sr1(ID_EX_sr1),
+  .sr2(ID_EX_sr2),
+  .dest_out(ID_EX_MEM_dest),
+
+  .sext6_out(ID_EX_sext6),
+  .sext5_out(ID_EX_sext5),
+  .sext4_out(ID_EX_sext4),
+  .adj6_out(ID_EX_adj6),
+  .adj9_out(ID_EX_adj9),
+  .adj11_out(ID_EX_adj11),
+  .trap_vect8_out(ID_EX_MEM_ztrapvect8)
+);
+
+mux5 #(.width(16)) ALU_MUX
+(
+  .sel(ID_EX_ctrl.alumux_sel),
+  .a(ID_EX_sr2),
+  .b(ID_EX_sext6),
+  .c(ID_EX_adj6),
+  .d(ID_EX_sext5),
+  .e(ID_EX_sext4),
+  .f(ID_EX_alumux_out)
+);
+
+alu ALU
+(
+  .aluop(ID_EX_ctrl.aluop),
+  .a(ID_EX_sr1),
+  .b(ID_EX_alumux_out),
+  .f(ID_EX_MEM_alu)
+);
+
+mux2 #(.width(16)) ADDER_MUX
+(
+  .sel(ID_EX_ctrl.addermux_sel),
+  .a(ID_EX_adj9),
+  .b(ID_EX_adj11),
+  .f(ID_EX_addermux_out)
+);
+
+adder #(.width(16)) PC_ADDER
+(
+  .in1(ID_EX_addermux_out),
+  .in2(ID_EX_MEM_pc),
+  .out(ID_EX_MEM_pc_adder_out)
+);
+
+EX_MEM_reg EX_MEM
+(
+  .clk(clk),
+  .load(load_EX_MEM),
+  .reset(reset_EX_MEM),
+
+  .inst_in(ID_EX_MEM_inst),
+  .pc_in(ID_EX_MEM_pc),
+
+  .control_in(ID_EX_ctrl),
+  .alu_out_in(ID_EX_MEM_alu),
+  .sr2_in(ID_EX_sr2),
+  .dest_in(ID_EX_MEM_dest),
+  .trap_vect8_in(ID_EX_MEM_ztrapvect8),
+
+  .branch_address_in(ID_EX_MEM_pc_adder_out),
+
+  .inst_out(EX_MEM_WB_inst),
+  .pc_out(EX_MEM_WB_pc),
+
+  .control_out(EX_MEM_ctrl),
+  .alu_out_out(EX_MEM_alu_out),
+  .sr2_out(EX_MEM_sr2),
+  .dest_out(EX_MEM_WB_dest),
+  .trap_vect8_out(EX_MEM_ztrapvect8),
+
+  .branch_address_out(EX_MEM_WB_pc_adder)
+);
+
+/* REQUIRED FOR STI/LDI BUT NOT FOR CP1 */
+/*n_bit_counter #(.width(1)) ONE_BIT_COUNTER
+(
+  .out(),
+  .load(),
+  .clk(clk),
+  .reset()
+); */
+
+mux3 #(.width(16)) DATA_MUX
+(
+  .sel(EX_MEM_ctrl.datamux_sel),
+  .a(rdata_b),
+  .b(EX_MEM_ztrapvect8),
+  .c(EX_MEM_alu_out),
+  .f(address_b)
+);
+
+assign wdata_b = EX_MEM_sr2;
+
+MEM_WB_reg MEM_WB
+(
+  .clk(clk),
+  .load(load_MEM_WB),
+  .reset(reset_MEM_WB),
+
+  .inst_in(EX_MEM_WB_inst),
+  .pc_in(EX_MEM_WB_pc),
+
+  .control_in(EX_MEM_ctrl),
+  .alu_out_in(EX_MEM_alu_out),
+  .mem_out_in(rdata_b),
+  .branch_address_in(EX_MEM_WB_pc_adder),
+  .sr2_in(EX_MEM_sr2),
+  .dest_in(EX_MEM_WB_dest),
+
+  .pc_out(MEM_WB_pc),
+  .alu_out_out(MEM_WB_alu_out),
+  .mem_out_out(MEM_WB_dmem),
+  .branch_address_out(MEM_WB_pc_adder),
+  .sr2_out(MEM_WB_sr2),
+  .dest_out(MEM_WB_dest)
+);
+
+mux2 #(.width(8)) LDB_MUX
+(
+  .sel(ID_EX_ctrl.ldbmux_sel),
+  .a(MEM_WB_dmem[15:8]),
+  .b(MEM_WB_dmem[7:0]),
+  .f(ldbmux_out)
+);
+
+mux5 #(.width(16)) REG_FILE_MUX
+(
+  .sel(MEM_WB_ctrl.regfilemux_sel),
+  .a({8'd0, ldbmux_out}),
+  .b(MEM_WB_dmem),
+  .c(MEM_WB_pc_adder),
+  .d(MEM_WB_pc),
+  .e(MEM_WB_alu_out),
+  .f(regfilemux_out)
+);
+
+register #(.width(3)) CC
+(
+  .clk(clk),
+  .load(MEM_WB_ctrl.load_cc),
+  .in(gencc_out),
+  .out(cc_out)
+);
+
+gencc GENCC
+(
+  .in(regfilemux_out),
+  .out(gencc_out)
+);
+
+cccomp CCCOMP
+(
+  .dest(MEM_WB_dest),
+  .nzp(cc_out),
+  .out(branch_enable)
+);
+
+branch_logic BRANCH_LOGIC
+(
+  .opcode(MEM_WB_ctrl.opcode),
+  .branch_enable(branch_enable),
+  .pcmux_sel(MEM_WB_ctrl.pcmux_sel),
+  .pcmux_sel_updated(pcmux_sel_updated)
+);
+
+endmodule : cpu_datapath

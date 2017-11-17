@@ -1,0 +1,130 @@
+import lc3b_types::*;
+
+module ID_EX_reg
+(
+	input clk,
+	input load,
+	input reset,
+
+	input lc3b_word inst_in,	/* Maybe for debugging purpose only */
+	input lc3b_word pc_in,
+
+	input lc3b_control_word control_in,
+	input lc3b_word reg_a, reg_b,
+	input lc3b_reg dest_in,
+
+	input lc3b_word sext6_in,
+	input lc3b_word sext5_in,
+	input lc3b_word sext4_in,
+	input lc3b_word adj6_in,
+	input lc3b_word adj9_in,
+	input lc3b_word adj11_in,
+	input lc3b_word trap_vect8_in,
+
+	output lc3b_word inst_out,	/* Maybe for debugging purpose only */
+	output lc3b_word pc_out,
+
+	output lc3b_control_word control_out,
+	output lc3b_word sr1, sr2,
+	output lc3b_reg dest_out,
+
+	/* ALU_MUX signals */
+	output lc3b_word sext6_out,
+	output lc3b_word sext5_out,
+	output lc3b_word sext4_out,
+	output lc3b_word adj6_out,
+	output lc3b_word adj9_out,
+	output lc3b_word adj11_out,
+	output lc3b_word trap_vect8_out
+);
+
+lc3b_control_word control;
+
+lc3b_word instruction;
+lc3b_word pc_value;
+
+lc3b_word data_a;
+lc3b_word data_b;
+lc3b_reg dest;
+
+lc3b_word sext6;
+lc3b_word sext5;
+lc3b_word sext4;
+lc3b_word adj6;
+lc3b_word adj9;
+lc3b_word adj11;
+lc3b_word trap_vect8;
+
+// initially store nothing
+initial
+begin
+	control = 0;
+	instruction = 16'd0;
+	pc_value = 16'd0;
+	data_a = 16'd0;
+	data_b = 16'd0;
+	dest = 3'd0;
+	sext6 = 16'd0;
+	sext5 = 16'd0;
+	sext4 = 16'd0;
+	adj6 = 16'd0;
+	adj9 = 16'd0;
+	adj11 = 16'd0;
+	trap_vect8 = 16'd0;
+end
+
+//load during positive edge
+always_ff @(posedge clk)
+begin
+	if(load)
+	begin
+		control = control_in;
+		instruction = inst_in;
+		pc_value = pc_in;
+		data_a = reg_a;
+		data_b = reg_b;
+		dest = dest_in;
+		sext6 = sext6_in;
+		sext5 = sext5_in;
+		sext4 = sext4_in;
+		adj6 = adj6_in;
+		adj9 = adj9_in;
+		adj11 = adj11_in;
+		trap_vect8 = trap_vect8_in;
+	end
+	else if(reset)
+	begin
+		control = 0;
+		instruction = 16'd0;
+		pc_value = 16'd0;
+		data_a = 16'd0;
+		data_b = 16'd0;
+		dest = 3'd0;
+		sext6 = 16'd0;
+		sext5 = 16'd0;
+		sext4 = 16'd0;
+		adj6 = 16'd0;
+		adj9 = 16'd0;
+		adj11 = 16'd0;
+		trap_vect8 = 16'd0;
+	end
+end
+
+always_comb
+begin
+	control_out = control;
+	inst_out = instruction;
+	pc_out = pc_value;
+	sr1 = data_a;
+	sr2 = data_b;
+	dest_out = dest;
+	sext6_out = sext6;
+	sext5_out = sext5;
+	sext4_out = sext4;
+	adj6_out = adj6;
+	adj9_out = adj9;
+	adj11_out = adj11;
+	trap_vect8_out = trap_vect8;
+end
+
+endmodule : ID_EX_reg
