@@ -21,6 +21,7 @@ entity ID_EX_reg is
         adj9_in         : in     vl_logic_vector(15 downto 0);
         adj11_in        : in     vl_logic_vector(15 downto 0);
         trap_vect8_in   : in     vl_logic_vector(15 downto 0);
+        ir5             : in     vl_logic;
         inst_out        : out    vl_logic_vector(15 downto 0);
         pc_out          : out    vl_logic_vector(15 downto 0);
         control_out     : out    work.lc3b_types.lc3b_control_word;
@@ -29,6 +30,7 @@ entity ID_EX_reg is
         dest_out        : out    vl_logic_vector(2 downto 0);
         src1_out        : out    vl_logic_vector(2 downto 0);
         src2_out        : out    vl_logic_vector(2 downto 0);
+        ir5_out         : out    vl_logic;
         sext6_out       : out    vl_logic_vector(15 downto 0);
         sext5_out       : out    vl_logic_vector(15 downto 0);
         sext4_out       : out    vl_logic_vector(15 downto 0);

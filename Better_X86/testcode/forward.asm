@@ -1,8 +1,13 @@
 ORIGIN 4x0000
 SEGMENT  CodeSegment:
-    add r1, r1, 15
-    add r1, r1, 15
-    add r2, r1, r1
+    add r1, r1, 15	; 15
+    add r1, r1, 15	;r1 = 30
+    nop
+    add r2, r1, r1	;r2 = 60
+    nop
+
+    add r3, r2, r1	;r3 = 90
+    add r3, r3, r3	;r3 = 180
 
 DONE:
 	BRnzp DONE

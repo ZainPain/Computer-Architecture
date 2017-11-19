@@ -1,0 +1,29 @@
+import lc3b_types::*;
+
+module hazard_detection
+(
+	input ID_EX_mem_read,
+	input lc3b_reg ID_EX_dest,
+	input lc3b_reg IF_ID_sr1,
+	input lc3b_reg IF_ID_sr2,
+	input logic prev_load,
+	output logic forward_load,
+	output logic forward_reset
+);
+
+always_comb
+begin
+	forward_load = 1;
+	forward_reset = 0;
+	if(ID_EX_ctrl.mem_read && ((ID_EX_MEM_dest == IF_ID_sr1) || ID_EX_MEM_dest == IF_ID_sr2))
+	begin
+		forward_load = 0;
+		forward_reset = 1;
+	end
+	else if(dcache_resp && EX_MEM_ctrl.mem_read)
+	begin
+		forward_load = 1;
+		forward_reset = 0;
+	end
+end
+endmodule : hazard_detection

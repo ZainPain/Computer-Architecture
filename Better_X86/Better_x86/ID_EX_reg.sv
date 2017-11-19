@@ -22,6 +22,7 @@ module ID_EX_reg
 	input lc3b_word adj9_in,
 	input lc3b_word adj11_in,
 	input lc3b_word trap_vect8_in,
+	input logic ir5,
 
 	output lc3b_word inst_out,	/* Maybe for debugging purpose only */
 	output lc3b_word pc_out,
@@ -31,7 +32,7 @@ module ID_EX_reg
 	output lc3b_reg dest_out,
 	output lc3b_reg src1_out,				/* inputs for dataforwarding */
 	output lc3b_reg src2_out,				/* input for dataforwarding */
-
+	output logic ir5_out,
 	/* ALU_MUX signals */
 	output lc3b_word sext6_out,
 	output lc3b_word sext5_out,
@@ -60,7 +61,7 @@ lc3b_word adj11;
 lc3b_word trap_vect8;
 lc3b_reg src1;
 lc3b_reg src2;
-
+logic bit5;
 // initially store nothing
 initial
 begin
@@ -79,6 +80,7 @@ begin
 	trap_vect8 = 16'd0;
 	src1 = 3'b000;
 	src2 = 3'b000;
+	bit5 = 1'b0;
 end
 
 //load during positive edge
@@ -101,6 +103,7 @@ begin
 		trap_vect8 = trap_vect8_in;
 		src1 = src1_in;
 		src2 = src2_in;
+		bit5 = ir5;
 	end
 	else if(reset)
 	begin
@@ -119,6 +122,7 @@ begin
 		trap_vect8 = 16'd0;
 		src1 = 3'b000;
 		src2 = 3'b000;
+		bit5 = 1'b0;
 	end
 end
 
@@ -139,6 +143,7 @@ begin
 	trap_vect8_out = trap_vect8;
 	src1_out = src1;
 	src2_out = src2;
+	ir5_out = bit5;
 end
 
 endmodule : ID_EX_reg

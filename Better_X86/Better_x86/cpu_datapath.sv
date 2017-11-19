@@ -148,12 +148,17 @@ lc3b_word forwardA_out;
 lc3b_word forwardB_out;
 lc3b_reg forward_regA;
 lc3b_reg forward_regB;
+logic forward_load;
+logic controlmux_sel;
+lc3b_control_word zero;
+lc3b_control_word controlmux_out;
+logic ID_EX_bit5_out;
 
 mux3 forwardA
 ( 
 	.sel(forwardA_sel),
 	.a(ID_EX_sr1), 
-	.b(regfilemux_out), 
+	.b(MEM_WB_alu_out), 
 	.c(EX_MEM_alu_out),
 	.f(forwardA_out)
 );
@@ -162,12 +167,14 @@ mux3 forwardB
 (
 	.sel(forwardB_sel),
 	.a(ID_EX_alumux_out), 
-	.b(regfilemux_out), 
+	.b(MEM_WB_alu_out), 
 	.c(EX_MEM_alu_out),
 	.f(forwardB_out)
 );
 forward Forward_unit
 (
+	.opcode(ID_EX_ctrl.opcode),
+	.bit5(ID_EX_bit5_out),
 	.ID_EX_sr1(forward_regA),
 	.ID_EX_sr2(forward_regB),
 	.EX_MEM_write(EX_MEM_ctrl.load_regfile),
@@ -178,23 +185,30 @@ forward Forward_unit
 	.ForwardB(forwardB_sel)
 		
 );
-logic forward_load;
-logic forward_reset;
-always_comb
-begin
-	forward_load = 1;
-	forward_reset = 0;
-	if(ID_EX_ctrl.mem_read && ((ID_EX_MEM_dest == IF_ID_sr1) || ID_EX_MEM_dest == IF_ID_sr2))
-	begin
-		forward_load = 0;
-		forward_reset = 1;
-	end
-	else if(dcache_resp && EX_MEM_ctrl.mem_read)
-	begin
-		forward_load = 1;
-		forward_reset = 0;
-	end
-end
+
+/* HAZARD DETECTION (FOR FORWARDING) */
+hazard_detection hd
+(
+	.ID_EX_mem_read(ID_EX_ctrl.mem_read),
+	.ID_EX_dest(ID_EX_MEM_dest),
+	.IF_ID_sr1(IF_ID_sr1),
+	.IF_ID_sr2(IF_ID_sr2),
+
+	.forward_load(forward_load),
+	.controlmux_sel(controlmux_sel)
+);
+NOPS nops
+(
+	.zero_signal(zero)
+);
+
+mux2 #(.width($bits(lc3b_control_word))) ControlMux
+(
+	.sel(controlmux_sel),
+	.a(IF_ID_ctrl),
+	.b(zero),
+	.f(controlmux_out)
+);
 /* FORWARDING IMPLEMENTATION ENDED */
 
 
@@ -222,6 +236,7 @@ assign load_EX_MEM=load_pipeline_reg;
 assign load_MEM_WB=(load_pipeline_reg && MEM_WB_ctrl.opcode != op_br && ~unconditional_branch) || (load_pipeline_reg && ~branch_enable_true && ~unconditional_branch) || (load_pipeline_reg && branch_enable_true && icache_resp) 
 || (load_pipeline_reg && unconditional_branch && icache_resp);
 
+
 staller MEM_WB_stall(
 	.op_code(EX_MEM_ctrl.opcode),
 	.resp(dcache_resp),
@@ -242,7 +257,7 @@ staller MEM_WB_stall(
 register PC
 (
   .clk(clk),
-  .load(load_pc),
+  .load(load_pc && forward_load),
   .in(pcmux_out),
   .out(pc_out)
 );
@@ -275,7 +290,7 @@ plus2 PC_PLUS2
 IF_ID_reg IF_ID
 (
 	.clk(clk),
-	.load(load_IF_ID),
+	.load(load_IF_ID && forward_load),
 	.reset(reset_IF_ID),
 
 	.inst_in(icache_rdata),
@@ -376,15 +391,15 @@ adj #(.width(11)) ADJ11
 ID_EX_reg ID_EX
 (
   .clk(clk),
-  .load(load_ID_EX),
-  .reset(reset_ID_EX),
+  .load(load_ID_EX && !controlmux_sel),
+  .reset(reset_ID_EX || controlmux_sel),
 
-  .inst_in(IF_ID_EX_inst),	/* Maybe for debugging purpose only */
+  .inst_in(IF_ID_EX_inst),			/* Maybe for debugging purpose only */
   .pc_in(IF_ID_EX_pc),
 
-  .control_in(IF_ID_ctrl),
-  .src1_in(IF_ID_sr1),		/* NEWLY ADDED FOR FORWARDING */
-  .src2_in(IF_ID_sr2),		/* NEWLY ADDED FOR FORWARDING */
+  .control_in(controlmux_out),	/* changed from ID_ID_ctrl -> controlmux_out */
+  .src1_in(IF_ID_sr1),				/* NEWLY ADDED FOR FORWARDING */
+  .src2_in(IF_ID_sr2),				/* NEWLY ADDED FOR FORWARDING */
   .reg_a(IF_ID_EX_sr1),
   .reg_b(IF_ID_EX_sr2),
   .dest_in(IF_ID_EX_dest),
@@ -396,8 +411,9 @@ ID_EX_reg ID_EX
   .adj9_in(IF_ID_EX_adj9_out),
   .adj11_in(IF_ID_EX_adj11_out),
   .trap_vect8_in(IF_ID_EX_ztrapvect8),
+  .ir5(IF_ID_ir5),					/* ADDED FOR VERIFICATION OF FORWARDING */
 
-  .inst_out(ID_EX_MEM_inst),	/* Maybe for debugging purpose only */
+  .inst_out(ID_EX_MEM_inst),		/* Maybe for debugging purpose only */
   .pc_out(ID_EX_MEM_pc),
 
   .control_out(ID_EX_ctrl),
@@ -406,6 +422,7 @@ ID_EX_reg ID_EX
   .dest_out(ID_EX_MEM_dest),
   .src1_out(forward_regA),									/*NEWLY ADDED FOR FORWARDING */
   .src2_out(forward_regB),									/*NEWLY ADDED FOR FORWARDING */
+  .ir5_out(ID_EX_bit5_out),								/* ADDED FOR VERIFICATION OF FORWARDING */
   .sext6_out(ID_EX_sext6),
   .sext5_out(ID_EX_sext5),
   .sext4_out(ID_EX_sext4),
