@@ -203,11 +203,11 @@ assign icache_wmask = 2'b11;
 
 
 //assign load_pc = 1'b1;
-assign load_pc = (icache_resp && (load_EX_MEM || branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp) && forward_load);
+assign load_pc = (icache_resp && (load_EX_MEM || branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp));
 
 // assigning RESET SIGNALS
 assign reset_IF_ID = (~(icache_resp && (load_EX_MEM || branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp)) && load_pipeline_reg) ? 1'b1 : 1'b0;//1'b0;
-assign reset_ID_EX = ((branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp) || forward_reset) ? 1'b1 : 1'b0;//1'b0;
+assign reset_ID_EX = ((branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp)) ? 1'b1 : 1'b0;//1'b0;
 assign reset_EX_MEM = (branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp) ? 1'b1 : 1'b0;//1'b0;
 //assign reset_MEM_WB = 1'b0; //branch_enable_true ? 1'b1 : 1'b0;
 // assign I-mem signals
@@ -216,8 +216,8 @@ assign icache_write = 1'b0;
 assign icache_address = pc_out;
 
 assign unconditional_branch = MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp;
-assign load_IF_ID=load_pipeline_reg && forward_load;
-assign load_ID_EX=load_pipeline_reg && forward_load;
+assign load_IF_ID=load_pipeline_reg;
+assign load_ID_EX=load_pipeline_reg;
 assign load_EX_MEM=load_pipeline_reg;
 assign load_MEM_WB=(load_pipeline_reg && MEM_WB_ctrl.opcode != op_br && ~unconditional_branch) || (load_pipeline_reg && ~branch_enable_true && ~unconditional_branch) || (load_pipeline_reg && branch_enable_true && icache_resp) 
 || (load_pipeline_reg && unconditional_branch && icache_resp);

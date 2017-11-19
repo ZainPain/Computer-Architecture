@@ -21,7 +21,7 @@ begin
 		ForwardA = 2'b01;
 		ForwardB = 2'b00;
 	end
-	else if( MEM_WB_write && !( /*EX_MEM_write && */(EX_MEM_dest == ID_EX_sr2)) && ( MEM_WB_dest == ID_EX_sr1) && ( MEM_WB_dest != ID_EX_sr2))
+	else if( MEM_WB_write && !( /*EX_MEM_write && */(EX_MEM_dest == ID_EX_sr2)) && ( MEM_WB_dest != ID_EX_sr1) && ( MEM_WB_dest == ID_EX_sr2))
 	begin
 		ForwardA = 2'b00;
 		ForwardB = 2'b01;

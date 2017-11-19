@@ -9,25 +9,25 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/lc3b_types.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/lc3b_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lc3b_types
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/decoder.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module decoder
 # 
 # Top level modules:
 # 	decoder
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux8.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux8.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux8
 # 
 # Top level modules:
 # 	mux8
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/l1_cache_control.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l1_cache_control_sv_unit
 # -- Importing package lc3b_types
@@ -35,61 +35,61 @@
 # 
 # Top level modules:
 # 	l1_cache_control
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/demux2.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/demux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module demux2
 # 
 # Top level modules:
 # 	demux2
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cache_arbiter_control.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module cache_arbiter_control
 # 
 # Top level modules:
 # 	cache_arbiter_control
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/n_bit_counter.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/n_bit_counter.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module n_bit_counter
 # 
 # Top level modules:
 # 	n_bit_counter
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/register.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/register.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/plus2.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/plus2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module plus2
 # 
 # Top level modules:
 # 	plus2
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux5.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux5.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux5
 # 
 # Top level modules:
 # 	mux5
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux4.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux4.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux3.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux3.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux3
 # 
 # Top level modules:
 # 	mux3
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux2.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/adder.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adder_sv_unit
 # -- Importing package lc3b_types
@@ -97,13 +97,13 @@
 # 
 # Top level modules:
 # 	adder
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/byte_detect.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/byte_detect.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module byteDetect
 # 
 # Top level modules:
 # 	byteDetect
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/memory_caches.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package memory_caches_sv_unit
 # -- Importing package lc3b_types
@@ -111,7 +111,7 @@
 # 
 # Top level modules:
 # 	memory_caches
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/l1_cache_datapath.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l1_cache_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -119,7 +119,7 @@
 # 
 # Top level modules:
 # 	l1_cache_datapath
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cache_arbiter_datapath.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_arbiter_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -127,7 +127,7 @@
 # 
 # Top level modules:
 # 	cache_arbiter_datapath
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cache_arbiter.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_arbiter_sv_unit
 # -- Importing package lc3b_types
@@ -135,7 +135,7 @@
 # 
 # Top level modules:
 # 	cache_arbiter
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/branch_logic.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/branch_logic.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package branch_logic_sv_unit
 # -- Importing package lc3b_types
@@ -143,7 +143,7 @@
 # 
 # Top level modules:
 # 	branch_logic
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/zext.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/zext.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package zext_sv_unit
 # -- Importing package lc3b_types
@@ -151,7 +151,7 @@
 # 
 # Top level modules:
 # 	zext
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/sext.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/sext.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package sext_sv_unit
 # -- Importing package lc3b_types
@@ -159,7 +159,7 @@
 # 
 # Top level modules:
 # 	sext
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/regfile.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package regfile_sv_unit
 # -- Importing package lc3b_types
@@ -167,7 +167,7 @@
 # 
 # Top level modules:
 # 	regfile
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/gencc.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/gencc.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package gencc_sv_unit
 # -- Importing package lc3b_types
@@ -175,190 +175,7 @@
 # 
 # Top level modules:
 # 	gencc
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# ** Error: /home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv(192): near "(": syntax error, unexpected '('
-# ** Error: /home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv(197): near "end": syntax error, unexpected end
-# ** Error: /software/altera/13.1/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./mp3_run_msim_rtl_verilog.do line 32
-# /software/altera/13.1/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv}"
-do mp3_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/lc3b_types.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package lc3b_types
-# 
-# Top level modules:
-# 	--none--
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/decoder.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux8.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mux8
-# 
-# Top level modules:
-# 	mux8
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/l1_cache_control.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package l1_cache_control_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module l1_cache_control
-# 
-# Top level modules:
-# 	l1_cache_control
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/demux2.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module demux2
-# 
-# Top level modules:
-# 	demux2
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cache_arbiter_control.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module cache_arbiter_control
-# 
-# Top level modules:
-# 	cache_arbiter_control
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/n_bit_counter.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module n_bit_counter
-# 
-# Top level modules:
-# 	n_bit_counter
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/register.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/plus2.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module plus2
-# 
-# Top level modules:
-# 	plus2
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux5.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mux5
-# 
-# Top level modules:
-# 	mux5
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux4.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mux4
-# 
-# Top level modules:
-# 	mux4
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux3.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mux3
-# 
-# Top level modules:
-# 	mux3
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mux2.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mux2
-# 
-# Top level modules:
-# 	mux2
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/adder.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package adder_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/byte_detect.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module byteDetect
-# 
-# Top level modules:
-# 	byteDetect
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/memory_caches.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package memory_caches_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module memory_caches
-# 
-# Top level modules:
-# 	memory_caches
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/l1_cache_datapath.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package l1_cache_datapath_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module l1_cache_datapath
-# 
-# Top level modules:
-# 	l1_cache_datapath
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cache_arbiter_datapath.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package cache_arbiter_datapath_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module cache_arbiter_datapath
-# 
-# Top level modules:
-# 	cache_arbiter_datapath
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cache_arbiter.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package cache_arbiter_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module cache_arbiter
-# 
-# Top level modules:
-# 	cache_arbiter
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/branch_logic.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package branch_logic_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module branch_logic
-# 
-# Top level modules:
-# 	branch_logic
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/zext.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package zext_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module zext
-# 
-# Top level modules:
-# 	zext
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/sext.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package sext_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module sext
-# 
-# Top level modules:
-# 	sext
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/regfile.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package regfile_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/gencc.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package gencc_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module gencc
-# 
-# Top level modules:
-# 	gencc
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cpu_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cpu_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -366,7 +183,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	cpu_datapath
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/control_rom.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/control_rom.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package control_rom_sv_unit
 # -- Importing package lc3b_types
@@ -374,7 +191,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	control_rom
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/cc_comp.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cc_comp.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cc_comp_sv_unit
 # -- Importing package lc3b_types
@@ -382,7 +199,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	cccomp
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/alu.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/alu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package alu_sv_unit
 # -- Importing package lc3b_types
@@ -390,7 +207,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/adj.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
 # -- Importing package lc3b_types
@@ -398,7 +215,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	adj
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/MEM_WB_reg.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/MEM_WB_reg.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package MEM_WB_reg_sv_unit
 # -- Importing package lc3b_types
@@ -406,7 +223,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	MEM_WB_reg
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/IF_ID_reg.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/IF_ID_reg.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package IF_ID_reg_sv_unit
 # -- Importing package lc3b_types
@@ -414,7 +231,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	IF_ID_reg
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/ID_EX_reg.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/ID_EX_reg.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package ID_EX_reg_sv_unit
 # -- Importing package lc3b_types
@@ -422,7 +239,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	ID_EX_reg
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/EX_MEM_reg.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/EX_MEM_reg.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package EX_MEM_reg_sv_unit
 # -- Importing package lc3b_types
@@ -430,7 +247,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	EX_MEM_reg
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/Array.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Array.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package Array_sv_unit
 # -- Importing package lc3b_types
@@ -438,7 +255,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	array
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mp3.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp3_sv_unit
 # -- Importing package lc3b_types
@@ -446,7 +263,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	mp3
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/staller.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/staller.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package staller_sv_unit
 # -- Importing package lc3b_types
@@ -454,7 +271,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	staller
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/Forwarding.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package Forwarding_sv_unit
 # -- Importing package lc3b_types
@@ -462,7 +279,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	forward
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/l1_cache.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l1_cache_sv_unit
 # -- Importing package lc3b_types
@@ -471,7 +288,7 @@ do mp3_run_msim_rtl_verilog.do
 # Top level modules:
 # 	l1_cache
 # 
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mp3_tb.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp3_tb_sv_unit
 # -- Importing package lc3b_types
@@ -479,7 +296,7 @@ do mp3_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	mp3_tb
-# vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/physical_memory.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/physical_memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module physical_memory
 # 
@@ -562,8 +379,591 @@ do mp3_run_msim_rtl_verilog.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
-do forward.do
-restart -f; run 24000ns
+do wave.do
+restart -f; run 25000ns
+# Loading sv_std.std
+# Loading work.lc3b_types
+# Loading work.mp3_tb_sv_unit
+# Loading work.mp3_tb
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.mux3
+# Loading work.Forwarding_sv_unit
+# Loading work.forward
+# Loading work.staller_sv_unit
+# Loading work.staller
+# Loading work.register
+# Loading work.mux5
+# Loading work.plus2
+# Loading work.IF_ID_reg_sv_unit
+# Loading work.IF_ID_reg
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.mux2
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_reg_sv_unit
+# Loading work.ID_EX_reg
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.EX_MEM_reg_sv_unit
+# Loading work.EX_MEM_reg
+# Loading work.byteDetect
+# Loading work.n_bit_counter
+# Loading work.MEM_WB_reg_sv_unit
+# Loading work.MEM_WB_reg
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cc_comp_sv_unit
+# Loading work.cccomp
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.memory_caches_sv_unit
+# Loading work.memory_caches
+# Loading work.cache_arbiter_sv_unit
+# Loading work.cache_arbiter
+# Loading work.cache_arbiter_datapath_sv_unit
+# Loading work.cache_arbiter_datapath
+# Loading work.demux2
+# Loading work.cache_arbiter_control
+# Loading work.l1_cache_sv_unit
+# Loading work.l1_cache
+# Loading work.l1_cache_datapath_sv_unit
+# Loading work.l1_cache_datapath
+# Loading work.decoder
+# Loading work.Array_sv_unit
+# Loading work.array
+# Loading work.mux4
+# Loading work.mux8
+# Loading work.l1_cache_control_sv_unit
+# Loading work.l1_cache_control
+# Loading work.physical_memory
+restart -f run 16000ns
+# Loading sv_std.std
+# Loading work.lc3b_types
+# Loading work.mp3_tb_sv_unit
+# Loading work.mp3_tb
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.mux3
+# Loading work.Forwarding_sv_unit
+# Loading work.forward
+# Loading work.staller_sv_unit
+# Loading work.staller
+# Loading work.register
+# Loading work.mux5
+# Loading work.plus2
+# Loading work.IF_ID_reg_sv_unit
+# Loading work.IF_ID_reg
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.mux2
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_reg_sv_unit
+# Loading work.ID_EX_reg
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.EX_MEM_reg_sv_unit
+# Loading work.EX_MEM_reg
+# Loading work.byteDetect
+# Loading work.n_bit_counter
+# Loading work.MEM_WB_reg_sv_unit
+# Loading work.MEM_WB_reg
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cc_comp_sv_unit
+# Loading work.cccomp
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.memory_caches_sv_unit
+# Loading work.memory_caches
+# Loading work.cache_arbiter_sv_unit
+# Loading work.cache_arbiter
+# Loading work.cache_arbiter_datapath_sv_unit
+# Loading work.cache_arbiter_datapath
+# Loading work.demux2
+# Loading work.cache_arbiter_control
+# Loading work.l1_cache_sv_unit
+# Loading work.l1_cache
+# Loading work.l1_cache_datapath_sv_unit
+# Loading work.l1_cache_datapath
+# Loading work.decoder
+# Loading work.Array_sv_unit
+# Loading work.array
+# Loading work.mux4
+# Loading work.mux8
+# Loading work.l1_cache_control_sv_unit
+# Loading work.l1_cache_control
+# Loading work.physical_memory
+restart -f run 16000ns
+# Loading sv_std.std
+# Loading work.lc3b_types
+# Loading work.mp3_tb_sv_unit
+# Loading work.mp3_tb
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.mux3
+# Loading work.Forwarding_sv_unit
+# Loading work.forward
+# Loading work.staller_sv_unit
+# Loading work.staller
+# Loading work.register
+# Loading work.mux5
+# Loading work.plus2
+# Loading work.IF_ID_reg_sv_unit
+# Loading work.IF_ID_reg
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.mux2
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_reg_sv_unit
+# Loading work.ID_EX_reg
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.EX_MEM_reg_sv_unit
+# Loading work.EX_MEM_reg
+# Loading work.byteDetect
+# Loading work.n_bit_counter
+# Loading work.MEM_WB_reg_sv_unit
+# Loading work.MEM_WB_reg
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cc_comp_sv_unit
+# Loading work.cccomp
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.memory_caches_sv_unit
+# Loading work.memory_caches
+# Loading work.cache_arbiter_sv_unit
+# Loading work.cache_arbiter
+# Loading work.cache_arbiter_datapath_sv_unit
+# Loading work.cache_arbiter_datapath
+# Loading work.demux2
+# Loading work.cache_arbiter_control
+# Loading work.l1_cache_sv_unit
+# Loading work.l1_cache
+# Loading work.l1_cache_datapath_sv_unit
+# Loading work.l1_cache_datapath
+# Loading work.decoder
+# Loading work.Array_sv_unit
+# Loading work.array
+# Loading work.mux4
+# Loading work.mux8
+# Loading work.l1_cache_control_sv_unit
+# Loading work.l1_cache_control
+# Loading work.physical_memory
+do mp3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/lc3b_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lc3b_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8
+# 
+# Top level modules:
+# 	mux8
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package l1_cache_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module l1_cache_control
+# 
+# Top level modules:
+# 	l1_cache_control
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/demux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module demux2
+# 
+# Top level modules:
+# 	demux2
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_arbiter_control
+# 
+# Top level modules:
+# 	cache_arbiter_control
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/n_bit_counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module n_bit_counter
+# 
+# Top level modules:
+# 	n_bit_counter
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/plus2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module plus2
+# 
+# Top level modules:
+# 	plus2
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux5.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux5
+# 
+# Top level modules:
+# 	mux5
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux3
+# 
+# Top level modules:
+# 	mux3
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/byte_detect.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module byteDetect
+# 
+# Top level modules:
+# 	byteDetect
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package memory_caches_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module memory_caches
+# 
+# Top level modules:
+# 	memory_caches
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package l1_cache_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module l1_cache_datapath
+# 
+# Top level modules:
+# 	l1_cache_datapath
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_arbiter_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_arbiter_datapath
+# 
+# Top level modules:
+# 	cache_arbiter_datapath
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_arbiter_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_arbiter
+# 
+# Top level modules:
+# 	cache_arbiter
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/branch_logic.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package branch_logic_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module branch_logic
+# 
+# Top level modules:
+# 	branch_logic
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/zext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package zext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module zext
+# 
+# Top level modules:
+# 	zext
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/sext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package sext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module sext
+# 
+# Top level modules:
+# 	sext
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package regfile_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/gencc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package gencc_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module gencc
+# 
+# Top level modules:
+# 	gencc
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cpu_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cpu_datapath
+# 
+# Top level modules:
+# 	cpu_datapath
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/control_rom.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package control_rom_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module control_rom
+# 
+# Top level modules:
+# 	control_rom
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cc_comp.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cc_comp_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cccomp
+# 
+# Top level modules:
+# 	cccomp
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adj.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adj_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adj
+# 
+# Top level modules:
+# 	adj
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/MEM_WB_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package MEM_WB_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module MEM_WB_reg
+# 
+# Top level modules:
+# 	MEM_WB_reg
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/IF_ID_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package IF_ID_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module IF_ID_reg
+# 
+# Top level modules:
+# 	IF_ID_reg
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/ID_EX_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ID_EX_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ID_EX_reg
+# 
+# Top level modules:
+# 	ID_EX_reg
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/EX_MEM_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package EX_MEM_reg_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module EX_MEM_reg
+# 
+# Top level modules:
+# 	EX_MEM_reg
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package Array_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module array
+# 
+# Top level modules:
+# 	array
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3
+# 
+# Top level modules:
+# 	mp3
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/staller.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package staller_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module staller
+# 
+# Top level modules:
+# 	staller
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package Forwarding_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module forward
+# 
+# Top level modules:
+# 	forward
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package l1_cache_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module l1_cache
+# 
+# Top level modules:
+# 	l1_cache
+# 
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_tb_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3_tb
+# 
+# Top level modules:
+# 	mp3_tb
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/physical_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module physical_memory
+# 
+# Top level modules:
+# 	physical_memory
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
+# Loading sv_std.std
+# Loading work.lc3b_types
+# Loading work.mp3_tb_sv_unit
+# Loading work.mp3_tb
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.mux3
+# Loading work.Forwarding_sv_unit
+# Loading work.forward
+# Loading work.staller_sv_unit
+# Loading work.staller
+# Loading work.register
+# Loading work.mux5
+# Loading work.plus2
+# Loading work.IF_ID_reg_sv_unit
+# Loading work.IF_ID_reg
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.mux2
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_reg_sv_unit
+# Loading work.ID_EX_reg
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.EX_MEM_reg_sv_unit
+# Loading work.EX_MEM_reg
+# Loading work.byteDetect
+# Loading work.n_bit_counter
+# Loading work.MEM_WB_reg_sv_unit
+# Loading work.MEM_WB_reg
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cc_comp_sv_unit
+# Loading work.cccomp
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.memory_caches_sv_unit
+# Loading work.memory_caches
+# Loading work.cache_arbiter_sv_unit
+# Loading work.cache_arbiter
+# Loading work.cache_arbiter_datapath_sv_unit
+# Loading work.cache_arbiter_datapath
+# Loading work.demux2
+# Loading work.cache_arbiter_control
+# Loading work.l1_cache_sv_unit
+# Loading work.l1_cache
+# Loading work.l1_cache_datapath_sv_unit
+# Loading work.l1_cache_datapath
+# Loading work.decoder
+# Loading work.Array_sv_unit
+# Loading work.array
+# Loading work.mux4
+# Loading work.mux8
+# Loading work.l1_cache_control_sv_unit
+# Loading work.l1_cache_control
+# Loading work.physical_memory
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ns
+do wave.do
+restart -f; run 21000ns
 # Loading sv_std.std
 # Loading work.lc3b_types
 # Loading work.mp3_tb_sv_unit

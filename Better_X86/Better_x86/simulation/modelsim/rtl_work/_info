@@ -2,39 +2,39 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/zpaya2/Better_X86/Better_x86/simulation/modelsim
+Z0 d/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 DXx4 work 10 lc3b_types 0 22 gfM<IL49DR70>@2?4On>c2
-DXx4 work 13 adder_sv_unit 0 22 iSa=a4XfaKlRSDJ81neBO0
+Z2 DXx4 work 10 lc3b_types 0 22 Qj]cQ0]0iHPaPmQX_X<bW0
+DXx4 work 13 adder_sv_unit 0 22 2:R<h9>^c]i5iECNom5HQ3
 V@BfzlAiAB:Xn=eD9_jW=A3
 r1
 31
-Im`;M9j9=QZZXmQJLjS@[83
+IJGN?TXV;4h13flhB3Mkn51
 S1
-Z3 d/home/zpaya2/Better_X86/Better_x86/simulation/modelsim
+Z3 d/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/simulation/modelsim
 Z4 w1510452527
-Z5 8/home/zpaya2/Better_X86/Better_x86/adder.sv
-Z6 F/home/zpaya2/Better_X86/Better_x86/adder.sv
+Z5 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adder.sv
+Z6 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adder.sv
 L0 3
 Z7 OV;L;10.1d;51
-Z8 !s108 1510877942.092611
-Z9 !s107 /home/zpaya2/Better_X86/Better_x86/adder.sv|
-Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/adder.sv|
+Z8 !s108 1511055086.306222
+Z9 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adder.sv|
+Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adder.sv|
 Z11 o-sv -work work -O0
-Z12 !s92 -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 -O0
+Z12 !s92 -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 -O0
 !s85 0
 !i10b 1
-!s100 M`N4H:<RWiM[XX:ded[ZT1
+!s100 f3`YY0DUE80o]B4QJfEWN0
 !s105 adder_sv_unit
 !s101 -O0
 Xadder_sv_unit
 R1
 R2
-ViSa=a4XfaKlRSDJ81neBO0
+V2:R<h9>^c]i5iECNom5HQ3
 r1
 31
-IiSa=a4XfaKlRSDJ81neBO0
+I2:R<h9>^c]i5iECNom5HQ3
 S1
 R3
 R4
@@ -49,41 +49,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 Gg`lNib?SKcH;9G[a90O23
+!s100 TVm7G=ihoXOfzJ`XJoWF_2
 !i103 1
 !s101 -O0
 vadj
 R1
 R2
-DXx4 work 11 adj_sv_unit 0 22 9gPkeSiJ3H@0WQ6=NcK810
+DXx4 work 11 adj_sv_unit 0 22 M0W_P>[l^=@Cn52jgh^U53
 VE;zLPZ?c`8[LaP1M[Ui<V1
 r1
 31
-I_I@>]m^KB3ET4hQ=Mfl4;2
+Il8j:95JJR]f8ZBc71<]:I3
 S1
 R3
 R4
-Z13 8/home/zpaya2/Better_X86/Better_x86/adj.sv
-Z14 F/home/zpaya2/Better_X86/Better_x86/adj.sv
+Z13 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adj.sv
+Z14 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adj.sv
 L0 6
 R7
-Z15 !s108 1510877944.141242
-Z16 !s107 /home/zpaya2/Better_X86/Better_x86/adj.sv|
-Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/adj.sv|
+Z15 !s108 1511055089.043328
+Z16 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adj.sv|
+Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adj.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 3NXT7=QZ0iDnN6@?QR_LA0
+!s100 `oR92[C5@^I^MU<ZJNkMz1
 !s105 adj_sv_unit
 !s101 -O0
 Xadj_sv_unit
 R1
 R2
-V9gPkeSiJ3H@0WQ6=NcK810
+VM0W_P>[l^=@Cn52jgh^U53
 r1
 31
-I9gPkeSiJ3H@0WQ6=NcK810
+IM0W_P>[l^=@Cn52jgh^U53
 S1
 R3
 R4
@@ -98,41 +98,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 [`HzN4dZiZ4:IM4J1GRd<2
+!s100 5:S2j=3P^jLI=lGNFFc4>1
 !i103 1
 !s101 -O0
 valu
 R1
 R2
-DXx4 work 11 alu_sv_unit 0 22 hKzcdfh[;I4lK1Ug2[l5A3
+DXx4 work 11 alu_sv_unit 0 22 ?:b2Dd9e<<Bb;WjVZ4WKG0
 V=ZN?TEUMd1Ge?6dcD7B5a3
 r1
 31
-IaP7U_Vg8O<hLczK:2VW4m1
+I:3Y`_Bi^269h8OiG;^:j=0
 S1
 R3
 R4
-Z18 8/home/zpaya2/Better_X86/Better_x86/alu.sv
-Z19 F/home/zpaya2/Better_X86/Better_x86/alu.sv
+Z18 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/alu.sv
+Z19 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/alu.sv
 L0 3
 R7
-Z20 !s108 1510877943.953777
-Z21 !s107 /home/zpaya2/Better_X86/Better_x86/alu.sv|
-Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/alu.sv|
+Z20 !s108 1511055088.860967
+Z21 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/alu.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/alu.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 4l`Oj?Yme@J^I6>8UVD]l1
+!s100 >Fg<[Y<n;GgLB1_UO=cYO3
 !s105 alu_sv_unit
 !s101 -O0
 Xalu_sv_unit
 R1
 R2
-VhKzcdfh[;I4lK1Ug2[l5A3
+V?:b2Dd9e<<Bb;WjVZ4WKG0
 r1
 31
-IhKzcdfh[;I4lK1Ug2[l5A3
+I?:b2Dd9e<<Bb;WjVZ4WKG0
 S1
 R3
 R4
@@ -147,41 +147,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 e^YbMPeReHPYFnl<1Q1a^1
+!s100 zjcD[0U:5H2?F:[fzkZ^02
 !i103 1
 !s101 -O0
 varray
 R1
 R2
-DXx4 work 13 Array_sv_unit 0 22 7fk8EjHaB95:kW3HE0nk]0
+DXx4 work 13 Array_sv_unit 0 22 2ULhC`dV8eIm:IA2VJZB72
 VbX7UlW@n_MiWTMTol9F9c0
 r1
 31
-IH8<kUInZPnL?7a[20KD2C1
+IdY17ao>[Cl<d8kBhPSZ]j0
 S1
 R3
 R4
-Z23 8/home/zpaya2/Better_X86/Better_x86/Array.sv
-Z24 F/home/zpaya2/Better_X86/Better_x86/Array.sv
+Z23 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Array.sv
+Z24 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Array.sv
 L0 3
 R7
-Z25 !s108 1510877945.153049
-Z26 !s107 /home/zpaya2/Better_X86/Better_x86/Array.sv|
-Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/Array.sv|
+Z25 !s108 1511055090.035169
+Z26 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Array.sv|
+Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Array.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 J`_?QLSbJJHDbOnV:cdd43
+!s100 f?=mdZ`TNO3mFzLk5Z:SR3
 !s105 Array_sv_unit
 !s101 -O0
 XArray_sv_unit
 R1
 R2
-V7fk8EjHaB95:kW3HE0nk]0
+V2ULhC`dV8eIm:IA2VJZB72
 r1
 31
-I7fk8EjHaB95:kW3HE0nk]0
+I2ULhC`dV8eIm:IA2VJZB72
 S1
 R3
 R4
@@ -197,41 +197,41 @@ R12
 n@array_sv_unit
 !s85 0
 !i10b 1
-!s100 FanOoBZh0K25eaabUNz5F3
+!s100 ^5_0KQl<9NeT9NWa^5KJi2
 !i103 1
 !s101 -O0
 vbranch_logic
 R1
 R2
-DXx4 work 20 branch_logic_sv_unit 0 22 8S;TNP;kO0XUK[T5aSoji2
+DXx4 work 20 branch_logic_sv_unit 0 22 j?B`6oQ<9Mg`?SPK7JUZ>2
 V`AD?ozY?lY43D3ohg^2]o2
 r1
 31
-IVIQaTY_SB9A?2I6`K4cK[3
+IZCS96jBG5PG`5dlacb30e3
 S1
 R3
 Z28 w1510463617
-Z29 8/home/zpaya2/Better_X86/Better_x86/branch_logic.sv
-Z30 F/home/zpaya2/Better_X86/Better_x86/branch_logic.sv
+Z29 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/branch_logic.sv
+Z30 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/branch_logic.sv
 L0 3
 R7
-Z31 !s108 1510877942.797341
-Z32 !s107 /home/zpaya2/Better_X86/Better_x86/branch_logic.sv|
-Z33 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/branch_logic.sv|
+Z31 !s108 1511055087.289877
+Z32 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/branch_logic.sv|
+Z33 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/branch_logic.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 FO_LBW?aY[`33MPnoHLHM2
+!s100 NfC6PY>:gYnohMSKDI`fW1
 !s105 branch_logic_sv_unit
 !s101 -O0
 Xbranch_logic_sv_unit
 R1
 R2
-V8S;TNP;kO0XUK[T5aSoji2
+Vj?B`6oQ<9Mg`?SPK7JUZ>2
 r1
 31
-I8S;TNP;kO0XUK[T5aSoji2
+Ij?B`6oQ<9Mg`?SPK7JUZ>2
 S1
 R3
 R28
@@ -246,18 +246,18 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 IKmTe^Se^;YR3NboLzTCo1
+!s100 cfE6cDM<IF1I18l3U`PnY1
 !i103 1
 !s101 -O0
 vbyteDetect
 R1
-Ii`9>B0nM`I30@YPV6CkYb0
+ISRflOjVGD2b6fN`M6fN1P1
 VlkY8mg]`EXGhaH25W35d@0
 S1
 R3
 Z34 w1510785071
-8/home/zpaya2/Better_X86/Better_x86/byte_detect.sv
-F/home/zpaya2/Better_X86/Better_x86/byte_detect.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/byte_detect.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/byte_detect.sv
 L0 1
 R7
 r1
@@ -266,47 +266,47 @@ R11
 R12
 nbyte@detect
 !i10b 1
-!s100 >N10OdBjN=og=dTLH49oN3
+!s100 G9bdB1[XzdbzYX?<ZlS9o3
 !s105 byte_detect_sv_unit
 !s85 0
-!s108 1510877942.206350
-!s107 /home/zpaya2/Better_X86/Better_x86/byte_detect.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/byte_detect.sv|
+!s108 1511055086.446722
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/byte_detect.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/byte_detect.sv|
 !s101 -O0
 vcache_arbiter
 R1
 R2
-DXx4 work 21 cache_arbiter_sv_unit 0 22 OZ2:AoCFTjnTe^S80o6]=3
+DXx4 work 21 cache_arbiter_sv_unit 0 22 lE3268i0C6ERU8:Q1C]@:2
 VCCe3K<fSKk86[<HLEdm^Q1
 r1
 31
-IoBf`cQaGGe>E24^@`P9UP1
+I_n>7jijOOYCSjf3eCj@oC2
 S1
 R3
 R4
-Z35 8/home/zpaya2/Better_X86/Better_x86/cache_arbiter.sv
-Z36 F/home/zpaya2/Better_X86/Better_x86/cache_arbiter.sv
+Z35 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter.sv
+Z36 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter.sv
 L0 3
 R7
-Z37 !s108 1510877942.628997
-Z38 !s107 /home/zpaya2/Better_X86/Better_x86/cache_arbiter.sv|
-Z39 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/cache_arbiter.sv|
+Z37 !s108 1511055087.096247
+Z38 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter.sv|
+Z39 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 Q^E>Q?FVX>Eil[SDD>f1_0
+!s100 OcI63Um7DX[E<CB@<bWI80
 !s105 cache_arbiter_sv_unit
 !s101 -O0
 vcache_arbiter_control
 R1
-I7OlIom@<o4M<CieelAEoV0
+IFL5X`a340=F]95PzgUUSI2
 V[1Q8fBGJ7jnm1GIMg4<KF3
 S1
 R3
 R4
-8/home/zpaya2/Better_X86/Better_x86/cache_arbiter_control.sv
-F/home/zpaya2/Better_X86/Better_x86/cache_arbiter_control.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_control.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_control.sv
 L0 1
 R7
 r1
@@ -314,45 +314,45 @@ r1
 R11
 R12
 !i10b 1
-!s100 >S=M18QW5`@o`4LaUBSh@1
+!s100 ZLk3>MINm;833FE2PI>cU1
 !s105 cache_arbiter_control_sv_unit
 !s85 0
-!s108 1510877941.520819
-!s107 /home/zpaya2/Better_X86/Better_x86/cache_arbiter_control.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/cache_arbiter_control.sv|
+!s108 1511055085.371836
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_control.sv|
 !s101 -O0
 vcache_arbiter_datapath
 R1
 R2
-DXx4 work 30 cache_arbiter_datapath_sv_unit 0 22 >J0BFDjSWS[3Ll>_L7>Sm0
+DXx4 work 30 cache_arbiter_datapath_sv_unit 0 22 HD;<M^cHPMQBKb7DD8a7B2
 V<S>l0oY[GMcRB<^CKnid@3
 r1
 31
-I?LjDg6GICCF=:?@>^L?[L0
+IlEm6?jJzJ==hhfFf4b3kG3
 S1
 R3
 R4
-Z40 8/home/zpaya2/Better_X86/Better_x86/cache_arbiter_datapath.sv
-Z41 F/home/zpaya2/Better_X86/Better_x86/cache_arbiter_datapath.sv
+Z40 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_datapath.sv
+Z41 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_datapath.sv
 L0 3
 R7
-Z42 !s108 1510877942.522538
-Z43 !s107 /home/zpaya2/Better_X86/Better_x86/cache_arbiter_datapath.sv|
-Z44 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/cache_arbiter_datapath.sv|
+Z42 !s108 1511055086.903674
+Z43 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_datapath.sv|
+Z44 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 NHZXD@AjXGTV9FifWBG_R0
+!s100 @Cn2kGcYOLIhTFX[oLTjC1
 !s105 cache_arbiter_datapath_sv_unit
 !s101 -O0
 Xcache_arbiter_datapath_sv_unit
 R1
 R2
-V>J0BFDjSWS[3Ll>_L7>Sm0
+VHD;<M^cHPMQBKb7DD8a7B2
 r1
 31
-I>J0BFDjSWS[3Ll>_L7>Sm0
+IHD;<M^cHPMQBKb7DD8a7B2
 S1
 R3
 R4
@@ -367,16 +367,16 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 ULLbO6mGLkQNFBdcmTmBN2
+!s100 ISe9U6fZ1?U4_ZUmiUCXR2
 !i103 1
 !s101 -O0
 Xcache_arbiter_sv_unit
 R1
 R2
-VOZ2:AoCFTjnTe^S80o6]=3
+VlE3268i0C6ERU8:Q1C]@:2
 r1
 31
-IOZ2:AoCFTjnTe^S80o6]=3
+IlE3268i0C6ERU8:Q1C]@:2
 S1
 R3
 R4
@@ -391,41 +391,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 XL50;giD>HIN1K20A[Y[z1
+!s100 >ziF3>U8Ec@I0_;mj_bg82
 !i103 1
 !s101 -O0
 Xcc_comp_sv_unit
 R1
 R2
-V4QK@2;DF^E]KX=B@MDeiS2
+V=LS9=2D_<^LMl94EJ3gC<3
 r1
 31
-I4QK@2;DF^E]KX=B@MDeiS2
+I=LS9=2D_<^LMl94EJ3gC<3
 S1
 R3
 Z45 w1510460353
-Z46 8/home/zpaya2/Better_X86/Better_x86/cc_comp.sv
-Z47 F/home/zpaya2/Better_X86/Better_x86/cc_comp.sv
+Z46 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cc_comp.sv
+Z47 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cc_comp.sv
 L0 1
 R7
-Z48 !s108 1510877943.840131
-Z49 !s107 /home/zpaya2/Better_X86/Better_x86/cc_comp.sv|
-Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/cc_comp.sv|
+Z48 !s108 1511055088.667406
+Z49 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cc_comp.sv|
+Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cc_comp.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 @Eng`EX^8ATzcJ4_;Ml[S2
+!s100 4FmkYW[1D7<3P4kbih7]Z0
 !i103 1
 !s101 -O0
 vcccomp
 R1
 R2
-DXx4 work 15 cc_comp_sv_unit 0 22 4QK@2;DF^E]KX=B@MDeiS2
+DXx4 work 15 cc_comp_sv_unit 0 22 =LS9=2D_<^LMl94EJ3gC<3
 VhICJ:X>YNgj5>_A`HcoE[2
 r1
 31
-ILMb5@JT=d3?NGhNP7gE?J2
+IYA2]GWiE`;PQYFV3nHmF;1
 S1
 R3
 R45
@@ -440,41 +440,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 Y3ZFaQ6TWCTS71A_6jhWJ0
+!s100 B>Shn5gGRflBVZHCP]8C53
 !s105 cc_comp_sv_unit
 !s101 -O0
 vcontrol_rom
 R1
 R2
-DXx4 work 19 control_rom_sv_unit 0 22 IXI^D5AJM5VN^A?O]`adm3
+DXx4 work 19 control_rom_sv_unit 0 22 YHCeXcSNa[NJf;OUbbbhd1
 VU?6=hfDkl:RKSmMA:U:To3
 r1
 31
-I<z4cb2^mjLich`;XNEk0N0
+Ij>DRAn>D9hZbN^c4I98oi0
 S1
 R3
 R34
-Z51 8/home/zpaya2/Better_X86/Better_x86/control_rom.sv
-Z52 F/home/zpaya2/Better_X86/Better_x86/control_rom.sv
+Z51 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/control_rom.sv
+Z52 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/control_rom.sv
 L0 2
 R7
-Z53 !s108 1510877943.561684
-Z54 !s107 /home/zpaya2/Better_X86/Better_x86/control_rom.sv|
-Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/control_rom.sv|
+Z53 !s108 1511055088.440354
+Z54 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/control_rom.sv|
+Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/control_rom.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 K7=IPXPG`TIz@f:TfNaWH1
+!s100 nFHdHVEJ^`QzNo]O47D9=0
 !s105 control_rom_sv_unit
 !s101 -O0
 Xcontrol_rom_sv_unit
 R1
 R2
-VIXI^D5AJM5VN^A?O]`adm3
+VYHCeXcSNa[NJf;OUbbbhd1
 r1
 31
-IIXI^D5AJM5VN^A?O]`adm3
+IYHCeXcSNa[NJf;OUbbbhd1
 S1
 R3
 R34
@@ -489,41 +489,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 =zoYLV2T3N1eRKo1SD76Q0
+!s100 ^>fU`BfR6J:R0d^:W_?]K0
 !i103 1
 !s101 -O0
 vcpu_datapath
 R1
 R2
-DXx4 work 20 cpu_datapath_sv_unit 0 22 jPI28hRbzoLQ`1b`D2=_Q3
+DXx4 work 20 cpu_datapath_sv_unit 0 22 E]UUFBP`lR5QkKFk1?G^<1
 VVRhM[1RAGAQYkSe1zSeCl0
 r1
 31
-I>L;7DKDCJ4b=6iRb3GhiB2
+I13GXHZNX]>iU02jQXPkCf2
 S1
 R3
-Z56 w1510877933
-Z57 8/home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv
-Z58 F/home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv
+Z56 w1511054499
+Z57 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cpu_datapath.sv
+Z58 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cpu_datapath.sv
 L0 3
 R7
-Z59 !s108 1510877943.424532
-Z60 !s107 /home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv|
-Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/cpu_datapath.sv|
+Z59 !s108 1511055088.256269
+Z60 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cpu_datapath.sv|
+Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cpu_datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 E_b[m^Cm3SPNS[8a248JA1
+!s100 0HFciN@=?lG<EJMM5VWRo2
 !s105 cpu_datapath_sv_unit
 !s101 -O0
 Xcpu_datapath_sv_unit
 R1
 R2
-VjPI28hRbzoLQ`1b`D2=_Q3
+VE]UUFBP`lR5QkKFk1?G^<1
 r1
 31
-IjPI28hRbzoLQ`1b`D2=_Q3
+IE]UUFBP`lR5QkKFk1?G^<1
 S1
 R3
 R56
@@ -538,18 +538,18 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 CQQYSVhYG0JO671aEJC:R3
+!s100 Ok>inT8@VzBi_IV^;RQ]?3
 !i103 1
 !s101 -O0
 vdecoder
 R1
-ImRIffY3hb2llaVm^BbTTk1
+IKBzWKkO;7J1C>KTaHiY8A0
 VIJ9W=j?@o7Vlhcc]6AYGh2
 S1
 R3
 Z62 w1510452531
-8/home/zpaya2/Better_X86/Better_x86/decoder.sv
-F/home/zpaya2/Better_X86/Better_x86/decoder.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv
 L0 1
 R7
 r1
@@ -557,22 +557,22 @@ r1
 R11
 R12
 !i10b 1
-!s100 =<UZZ[hl`9EhG^OOKhnQz3
+!s100 mAgL5>3lnRFzFLDZa?F5D2
 !s105 decoder_sv_unit
 !s85 0
-!s108 1510877941.195546
-!s107 /home/zpaya2/Better_X86/Better_x86/decoder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/decoder.sv|
+!s108 1511055084.854531
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv|
 !s101 -O0
 vdemux2
 R1
-IZ09I;c28QRQ=U[F=Q7]gU0
+ImOj`cUP[I2KWgkOW@^WhQ1
 V=a1K<=>DG];d0PIzfZeaL0
 S1
 R3
 R62
-8/home/zpaya2/Better_X86/Better_x86/demux2.sv
-F/home/zpaya2/Better_X86/Better_x86/demux2.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/demux2.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/demux2.sv
 L0 1
 R7
 r1
@@ -580,46 +580,46 @@ r1
 R11
 R12
 !i10b 1
-!s100 dHHg>5VMX4LhBg]eYf[Ie2
+!s100 i_O9=Nllj:2oTGVn3^Ife0
 !s105 demux2_sv_unit
 !s85 0
-!s108 1510877941.448960
-!s107 /home/zpaya2/Better_X86/Better_x86/demux2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/demux2.sv|
+!s108 1511055085.263035
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/demux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/demux2.sv|
 !s101 -O0
 vEX_MEM_reg
 R1
 R2
-DXx4 work 18 EX_MEM_reg_sv_unit 0 22 7=BgU`PZKCG4<VLL5OI?j3
+DXx4 work 18 EX_MEM_reg_sv_unit 0 22 FkYg9@4^]R<iO`>DUbGlJ2
 VG4cKg;hK2T46QX2^[YfN;2
 r1
 31
-ICTnfH_V`nn>zB7o_2]YD03
+I9Pjb>]e=zP1dYZ8KOFe=L3
 S1
 R3
 R34
-Z63 8/home/zpaya2/Better_X86/Better_x86/EX_MEM_reg.sv
-Z64 F/home/zpaya2/Better_X86/Better_x86/EX_MEM_reg.sv
+Z63 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/EX_MEM_reg.sv
+Z64 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/EX_MEM_reg.sv
 L0 3
 R7
-Z65 !s108 1510877945.013831
-Z66 !s107 /home/zpaya2/Better_X86/Better_x86/EX_MEM_reg.sv|
-Z67 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/EX_MEM_reg.sv|
+Z65 !s108 1511055089.784066
+Z66 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/EX_MEM_reg.sv|
+Z67 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/EX_MEM_reg.sv|
 R11
 R12
 n@e@x_@m@e@m_reg
 !s85 0
 !i10b 1
-!s100 i19>hfBRE_7zXL`e<Nm9J3
+!s100 mfKk==jZ:zZf>h<m8bkLa3
 !s105 EX_MEM_reg_sv_unit
 !s101 -O0
 XEX_MEM_reg_sv_unit
 R1
 R2
-V7=BgU`PZKCG4<VLL5OI?j3
+VFkYg9@4^]R<iO`>DUbGlJ2
 r1
 31
-I7=BgU`PZKCG4<VLL5OI?j3
+IFkYg9@4^]R<iO`>DUbGlJ2
 S1
 R3
 R34
@@ -635,41 +635,41 @@ R12
 n@e@x_@m@e@m_reg_sv_unit
 !s85 0
 !i10b 1
-!s100 Vek=bIROBY0AJZjEQiORC2
+!s100 L[lgP33Ja@m80XlkB<Ykd0
 !i103 1
 !s101 -O0
 vforward
 R1
 R2
-DXx4 work 18 Forwarding_sv_unit 0 22 ``i[len1>MUZH<g9GJ@6S3
+DXx4 work 18 Forwarding_sv_unit 0 22 Q8_C_bJ2`Nn1n;iCzBDij2
 V7g^zQnIlC<:39@W1RgUd^0
 r1
 31
-If:RXBfE1Xj]2G21mG`fPS2
+IO^lL`E6VDe3fLU<EePNbc3
 S1
 R3
-Z68 w1510874118
-Z69 8/home/zpaya2/Better_X86/Better_x86/Forwarding.sv
-Z70 F/home/zpaya2/Better_X86/Better_x86/Forwarding.sv
+Z68 w1510950992
+Z69 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv
+Z70 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv
 L0 3
 R7
-Z71 !s108 1510877945.574833
-Z72 !s107 /home/zpaya2/Better_X86/Better_x86/Forwarding.sv|
-Z73 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/Forwarding.sv|
+Z71 !s108 1511055090.710330
+Z72 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv|
+Z73 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 2oOmZ:KX_4c^CK==>ibjX0
+!s100 Yh43Qzh@kKzo?H=`CT3_i3
 !s105 Forwarding_sv_unit
 !s101 -O0
 XForwarding_sv_unit
 R1
 R2
-V``i[len1>MUZH<g9GJ@6S3
+VQ8_C_bJ2`Nn1n;iCzBDij2
 r1
 31
-I``i[len1>MUZH<g9GJ@6S3
+IQ8_C_bJ2`Nn1n;iCzBDij2
 S1
 R3
 R68
@@ -685,41 +685,41 @@ R12
 n@forwarding_sv_unit
 !s85 0
 !i10b 1
-!s100 jmYUnUKD^5h5NoIN_D9N@1
+!s100 Y`[HcAiN8:eA5Gk9nE2Qk2
 !i103 1
 !s101 -O0
 vgencc
 R1
 R2
-DXx4 work 13 gencc_sv_unit 0 22 h=@8Ra]_Bl736kKGLKG790
+DXx4 work 13 gencc_sv_unit 0 22 bXN>RKjOoEW<b]nIFC1EW3
 VWC`9gVLYW_h075<FQmcHc2
 r1
 31
-ImGX`WCDEWJE9ZSP@o9>YT3
+I>>5goO>ZoI3ezKUc3fR703
 S1
 R3
 R62
-Z74 8/home/zpaya2/Better_X86/Better_x86/gencc.sv
-Z75 F/home/zpaya2/Better_X86/Better_x86/gencc.sv
+Z74 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/gencc.sv
+Z75 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/gencc.sv
 L0 3
 R7
-Z76 !s108 1510877943.310503
-Z77 !s107 /home/zpaya2/Better_X86/Better_x86/gencc.sv|
-Z78 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/gencc.sv|
+Z76 !s108 1511055088.092043
+Z77 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/gencc.sv|
+Z78 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/gencc.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 jAeP]7eI8^KQ7IA0mgCL@0
+!s100 R`QdGPc9nkgFlA15@1MnJ3
 !s105 gencc_sv_unit
 !s101 -O0
 Xgencc_sv_unit
 R1
 R2
-Vh=@8Ra]_Bl736kKGLKG790
+VbXN>RKjOoEW<b]nIFC1EW3
 r1
 31
-Ih=@8Ra]_Bl736kKGLKG790
+IbXN>RKjOoEW<b]nIFC1EW3
 S1
 R3
 R62
@@ -734,42 +734,42 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 j5i]kZZT<CQ99mYc:7i9l0
+!s100 5dm6n]Oa?IHGSfc2kYo9O2
 !i103 1
 !s101 -O0
 vID_EX_reg
 R1
 R2
-DXx4 work 17 ID_EX_reg_sv_unit 0 22 nS08`ISce9FLRfQG3P3A:3
+DXx4 work 17 ID_EX_reg_sv_unit 0 22 [eZ2hObRgOHCnR8WKoYV?3
 VjZF7nSZaSU8LLfSGbVUQG0
 r1
 31
-IKlIVEH92A34FgD^=;<LA<3
+IOZSGPWSDW5Zha;[gm[A1X2
 S1
 R3
 Z79 w1510790860
-Z80 8/home/zpaya2/Better_X86/Better_x86/ID_EX_reg.sv
-Z81 F/home/zpaya2/Better_X86/Better_x86/ID_EX_reg.sv
+Z80 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/ID_EX_reg.sv
+Z81 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/ID_EX_reg.sv
 L0 3
 R7
-Z82 !s108 1510877944.879526
-Z83 !s107 /home/zpaya2/Better_X86/Better_x86/ID_EX_reg.sv|
-Z84 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/ID_EX_reg.sv|
+Z82 !s108 1511055089.593013
+Z83 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/ID_EX_reg.sv|
+Z84 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/ID_EX_reg.sv|
 R11
 R12
 n@i@d_@e@x_reg
 !s85 0
 !i10b 1
-!s100 eAfjX4Vb@:Ga8R4gIchQ>2
+!s100 kC:B8hO=XGJ`^maQGITX01
 !s105 ID_EX_reg_sv_unit
 !s101 -O0
 XID_EX_reg_sv_unit
 R1
 R2
-VnS08`ISce9FLRfQG3P3A:3
+V[eZ2hObRgOHCnR8WKoYV?3
 r1
 31
-InS08`ISce9FLRfQG3P3A:3
+I[eZ2hObRgOHCnR8WKoYV?3
 S1
 R3
 R79
@@ -785,42 +785,42 @@ R12
 n@i@d_@e@x_reg_sv_unit
 !s85 0
 !i10b 1
-!s100 RlnhX9JH6<[ZLlDTUfzUa2
+!s100 NUHJnW0HN0IB0nYg_R@T;2
 !i103 1
 !s101 -O0
 vIF_ID_reg
 R1
 R2
-DXx4 work 17 IF_ID_reg_sv_unit 0 22 8SgoEzTafK4=om:k26]4W1
+DXx4 work 17 IF_ID_reg_sv_unit 0 22 _zB5Y4kW:^Sh;hN[f2>IJ1
 VCd<>;eF?Ml`1_eW93IKk_0
 r1
 31
-I7bVQTm26KZZ53nCPS6K2n1
+IzDCYe]LA_TZKjiV;cRea[3
 S1
 R3
 R34
-Z85 8/home/zpaya2/Better_X86/Better_x86/IF_ID_reg.sv
-Z86 F/home/zpaya2/Better_X86/Better_x86/IF_ID_reg.sv
+Z85 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/IF_ID_reg.sv
+Z86 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/IF_ID_reg.sv
 L0 3
 R7
-Z87 !s108 1510877944.487957
-Z88 !s107 /home/zpaya2/Better_X86/Better_x86/IF_ID_reg.sv|
-Z89 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/IF_ID_reg.sv|
+Z87 !s108 1511055089.353990
+Z88 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/IF_ID_reg.sv|
+Z89 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/IF_ID_reg.sv|
 R11
 R12
 n@i@f_@i@d_reg
 !s85 0
 !i10b 1
-!s100 j1n9zG_IX;;7WjQKC`A8@3
+!s100 zn=IYM`1[M>AIZYnJL?I11
 !s105 IF_ID_reg_sv_unit
 !s101 -O0
 XIF_ID_reg_sv_unit
 R1
 R2
-V8SgoEzTafK4=om:k26]4W1
+V_zB5Y4kW:^Sh;hN[f2>IJ1
 r1
 31
-I8SgoEzTafK4=om:k26]4W1
+I_zB5Y4kW:^Sh;hN[f2>IJ1
 S1
 R3
 R34
@@ -836,66 +836,66 @@ R12
 n@i@f_@i@d_reg_sv_unit
 !s85 0
 !i10b 1
-!s100 MMk8jcaJ4Wbg`>=IO7ecS0
+!s100 M<THVBFfbiDhK>Ok:^THE2
 !i103 1
 !s101 -O0
 vl1_cache
 R1
 R2
-DXx4 work 16 l1_cache_sv_unit 0 22 0@bc>WUU1c;B^>MM:Ym[c1
+DXx4 work 16 l1_cache_sv_unit 0 22 hYKcO_X28?cP0W9nWT3dN0
 V7AKf6C1;M58Z?XMkfQQC22
 r1
 31
-I0@a^1eMM=nPoo:G[VL9ZU2
+IjVLiL2SkPno1mV:UcW1Kb1
 S1
 R3
 R62
-Z90 8/home/zpaya2/Better_X86/Better_x86/l1_cache.sv
-Z91 F/home/zpaya2/Better_X86/Better_x86/l1_cache.sv
+Z90 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv
+Z91 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv
 L0 3
 R7
-Z92 !s108 1510877945.677769
-Z93 !s107 /home/zpaya2/Better_X86/Better_x86/l1_cache.sv|
-Z94 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/l1_cache.sv|
+Z92 !s108 1511055090.856740
+Z93 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv|
+Z94 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 =Ff:BTj7VUOi2Ql^oAUK;2
+!s100 BZfl5gzjWF8H0AZMH_PJG0
 !s105 l1_cache_sv_unit
 !s101 -O0
 vl1_cache_control
 R1
 R2
-DXx4 work 24 l1_cache_control_sv_unit 0 22 ;KdS<>_@_GSEoP80?SJd^3
+DXx4 work 24 l1_cache_control_sv_unit 0 22 ?SGQFGa1[Vn[7jTVdzZ732
 VSR4Kz>0BQcEO=Ue6SCK9b1
 r1
 31
-ITcANT7ZM[7NZ>h;okiU9^3
+IoM`@^KMheb>0HnbhUneBC3
 S1
 R3
 Z95 w1510462169
-Z96 8/home/zpaya2/Better_X86/Better_x86/l1_cache_control.sv
-Z97 F/home/zpaya2/Better_X86/Better_x86/l1_cache_control.sv
+Z96 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_control.sv
+Z97 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_control.sv
 L0 3
 R7
-Z98 !s108 1510877941.333007
-Z99 !s107 /home/zpaya2/Better_X86/Better_x86/l1_cache_control.sv|
-Z100 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/l1_cache_control.sv|
+Z98 !s108 1511055085.088248
+Z99 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_control.sv|
+Z100 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_control.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 NCZP@>1z1iHQH;N2@Pf7;2
+!s100 KLKGk_nA@4XibSzCl6i^I3
 !s105 l1_cache_control_sv_unit
 !s101 -O0
 Xl1_cache_control_sv_unit
 R1
 R2
-V;KdS<>_@_GSEoP80?SJd^3
+V?SGQFGa1[Vn[7jTVdzZ732
 r1
 31
-I;KdS<>_@_GSEoP80?SJd^3
+I?SGQFGa1[Vn[7jTVdzZ732
 S1
 R3
 R95
@@ -910,41 +910,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 d0UH1kPJ7>IjHn0KzjQ_g0
+!s100 7k35YZa?bY6a2goJgkcmo3
 !i103 1
 !s101 -O0
 vl1_cache_datapath
 R1
 R2
-DXx4 work 25 l1_cache_datapath_sv_unit 0 22 N`J8MAUC2^A9@`Wac>ALo2
+DXx4 work 25 l1_cache_datapath_sv_unit 0 22 ?@DG7X05e7F4gR>ADzFhR2
 V:oJL34iG;4h57d]CYLhK=2
 r1
 31
-I5MFncFm2z:34hQZ5GS61>3
+IK_L8?l_[Pl>?R7J3>46la2
 S1
 R3
 R62
-Z101 8/home/zpaya2/Better_X86/Better_x86/l1_cache_datapath.sv
-Z102 F/home/zpaya2/Better_X86/Better_x86/l1_cache_datapath.sv
+Z101 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_datapath.sv
+Z102 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_datapath.sv
 L0 3
 R7
-Z103 !s108 1510877942.413048
-Z104 !s107 /home/zpaya2/Better_X86/Better_x86/l1_cache_datapath.sv|
-Z105 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/l1_cache_datapath.sv|
+Z103 !s108 1511055086.713402
+Z104 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_datapath.sv|
+Z105 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 mo9mUL1cHClZRdKYbl:I90
+!s100 ENlW<BlQBRQnA@P91QfS52
 !s105 l1_cache_datapath_sv_unit
 !s101 -O0
 Xl1_cache_datapath_sv_unit
 R1
 R2
-VN`J8MAUC2^A9@`Wac>ALo2
+V?@DG7X05e7F4gR>ADzFhR2
 r1
 31
-IN`J8MAUC2^A9@`Wac>ALo2
+I?@DG7X05e7F4gR>ADzFhR2
 S1
 R3
 R62
@@ -959,16 +959,16 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 <CU@I_KoP9PXhGA?<bT>U0
+!s100 _GPneaX2d^3;nQDNPf_Nc1
 !i103 1
 !s101 -O0
 Xl1_cache_sv_unit
 R1
 R2
-V0@bc>WUU1c;B^>MM:Ym[c1
+VhYKcO_X28?cP0W9nWT3dN0
 r1
 31
-I0@bc>WUU1c;B^>MM:Ym[c1
+IhYKcO_X28?cP0W9nWT3dN0
 S1
 R3
 R62
@@ -983,18 +983,18 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 QeOo@jQM[C:0M;6ki`cE[0
+!s100 ]E36WTo02j]EzTnRZ_>=g3
 !i103 1
 !s101 -O0
 Xlc3b_types
 R1
-IgfM<IL49DR70>@2?4On>c2
-VgfM<IL49DR70>@2?4On>c2
+IQj]cQ0]0iHPaPmQX_X<bW0
+VQj]cQ0]0iHPaPmQX_X<bW0
 S1
 R3
 w1510455457
-8/home/zpaya2/Better_X86/Better_x86/lc3b_types.sv
-F/home/zpaya2/Better_X86/Better_x86/lc3b_types.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/lc3b_types.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/lc3b_types.sv
 L0 1
 R7
 r1
@@ -1002,45 +1002,45 @@ r1
 R11
 R12
 !i10b 1
-!s100 ;9Ub_BC=GIQ5fSf^M5fa@1
+!s100 H=g9LIacX51@_W18dZR2`3
 !s85 0
-!s108 1510877941.121351
-!s107 /home/zpaya2/Better_X86/Better_x86/lc3b_types.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/lc3b_types.sv|
+!s108 1511055084.710194
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/lc3b_types.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/lc3b_types.sv|
 !s101 -O0
 vMEM_WB_reg
 R1
 R2
-DXx4 work 18 MEM_WB_reg_sv_unit 0 22 i6?c]k4Rce7X0G8TTlB;<1
+DXx4 work 18 MEM_WB_reg_sv_unit 0 22 Ta@iNaKURi6C^0W6UQT3V3
 Vnd`CZVi@QOUK4XOLMlI<k3
 r1
 31
-I^Xl@cMoA^[9MD`Sf_5e^@3
+IE]gHc<VN@J53T`aS6z5Hf2
 S1
 R3
 R34
-Z106 8/home/zpaya2/Better_X86/Better_x86/MEM_WB_reg.sv
-Z107 F/home/zpaya2/Better_X86/Better_x86/MEM_WB_reg.sv
+Z106 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/MEM_WB_reg.sv
+Z107 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/MEM_WB_reg.sv
 L0 3
 R7
-Z108 !s108 1510877944.302596
-Z109 !s107 /home/zpaya2/Better_X86/Better_x86/MEM_WB_reg.sv|
-Z110 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/MEM_WB_reg.sv|
+Z108 !s108 1511055089.190275
+Z109 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/MEM_WB_reg.sv|
+Z110 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/MEM_WB_reg.sv|
 R11
 R12
 n@m@e@m_@w@b_reg
 !s85 0
 !i10b 1
-!s100 a==UWcQH5^ZP1z0n?^oB<1
+!s100 e0XdY>z1^=:S`fXI4V0Qk0
 !s105 MEM_WB_reg_sv_unit
 !s101 -O0
 XMEM_WB_reg_sv_unit
 R1
 R2
-Vi6?c]k4Rce7X0G8TTlB;<1
+VTa@iNaKURi6C^0W6UQT3V3
 r1
 31
-Ii6?c]k4Rce7X0G8TTlB;<1
+ITa@iNaKURi6C^0W6UQT3V3
 S1
 R3
 R34
@@ -1056,41 +1056,41 @@ R12
 n@m@e@m_@w@b_reg_sv_unit
 !s85 0
 !i10b 1
-!s100 KFZe0]8YHBncM`:F<P_441
+!s100 ]czIj0lm;f<4K__h]BZ0U2
 !i103 1
 !s101 -O0
 vmemory_caches
 R1
 R2
-DXx4 work 21 memory_caches_sv_unit 0 22 _h4mb<bJn^W5_Io]c>2^A2
+DXx4 work 21 memory_caches_sv_unit 0 22 k41V:MS66ZX?@io5P@k>U2
 Vk^QhcFNfM7EYIj2gAROV]0
 r1
 31
-I7K@Q`0C`TlETZg1j_O3QN0
+INOWAz6I;@[@Fd8cM6dKRo2
 S1
 R3
 R62
-Z111 8/home/zpaya2/Better_X86/Better_x86/memory_caches.sv
-Z112 F/home/zpaya2/Better_X86/Better_x86/memory_caches.sv
+Z111 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv
+Z112 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv
 L0 3
 R7
-Z113 !s108 1510877942.285765
-Z114 !s107 /home/zpaya2/Better_X86/Better_x86/memory_caches.sv|
-Z115 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/memory_caches.sv|
+Z113 !s108 1511055086.549088
+Z114 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv|
+Z115 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 ZL<cEdjMd=][J6B7>TJa51
+!s100 a^[HdBkVcVddBE`jJDk9O0
 !s105 memory_caches_sv_unit
 !s101 -O0
 Xmemory_caches_sv_unit
 R1
 R2
-V_h4mb<bJn^W5_Io]c>2^A2
+Vk41V:MS66ZX?@io5P@k>U2
 r1
 31
-I_h4mb<bJn^W5_Io]c>2^A2
+Ik41V:MS66ZX?@io5P@k>U2
 S1
 R3
 R62
@@ -1105,41 +1105,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 @>[nCCh7aF?b=39gW9YhC2
+!s100 ^L]_YzV;K_aEkB23Ckkf91
 !i103 1
 !s101 -O0
 vmp3
 R1
 R2
-DXx4 work 11 mp3_sv_unit 0 22 g37kh7dMQR9>]YZlYeo@f0
+DXx4 work 11 mp3_sv_unit 0 22 fPFo4ZA29N21X4D^dcDK@3
 V=T76C9NLdVcj6d@;_no@_2
 r1
 31
-IVYa3g0[Dh[BB_R:A9>oNc1
+I9dWO[bI`0OG=b1LD@o_e93
 S1
 R3
 R62
-Z116 8/home/zpaya2/Better_X86/Better_x86/mp3.sv
-Z117 F/home/zpaya2/Better_X86/Better_x86/mp3.sv
+Z116 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3.sv
+Z117 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3.sv
 L0 3
 R7
-Z118 !s108 1510877945.303659
-Z119 !s107 /home/zpaya2/Better_X86/Better_x86/mp3.sv|
-Z120 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/mp3.sv|
+Z118 !s108 1511055090.276170
+Z119 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3.sv|
+Z120 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 DOa>ZkcK>zecmbV_?CelS0
+!s100 d`=G4^UlIHdmV2fSTOT3K2
 !s105 mp3_sv_unit
 !s101 -O0
 Xmp3_sv_unit
 R1
 R2
-Vg37kh7dMQR9>]YZlYeo@f0
+VfPFo4ZA29N21X4D^dcDK@3
 r1
 31
-Ig37kh7dMQR9>]YZlYeo@f0
+IfPFo4ZA29N21X4D^dcDK@3
 S1
 R3
 R62
@@ -1154,41 +1154,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 9cK88FOUi5jJEN=7B4A2P2
+!s100 PQDN4^V3Vh<9FfoUEAJSR1
 !i103 1
 !s101 -O0
 vmp3_tb
 R1
 R2
-DXx4 work 14 mp3_tb_sv_unit 0 22 QSdCJ_dzldXTW]c>9d^MZ1
+DXx4 work 14 mp3_tb_sv_unit 0 22 99bUFh=LRmeW^EncSckD=0
 VGRaNXc@:Z3jVCaTT0F9jW2
 r1
 31
-Iai50@]NzI[=:]0LV]H@Q73
+IbaPh@gJjJVJ2M8E470a>R2
 S1
 R3
 R62
-Z121 8/home/zpaya2/Better_X86/Better_x86/mp3_tb.sv
-Z122 F/home/zpaya2/Better_X86/Better_x86/mp3_tb.sv
+Z121 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3_tb.sv
+Z122 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3_tb.sv
 L0 3
 R7
-Z123 !s108 1510877945.809178
-Z124 !s107 /home/zpaya2/Better_X86/Better_x86/mp3_tb.sv|
-Z125 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/mp3_tb.sv|
+Z123 !s108 1511055091.098111
+Z124 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3_tb.sv|
+Z125 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3_tb.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 K;D2L5Va:?B3RMAcPJAfU1
+!s100 N;G<o?RJ>AmGfR3o6HDfi2
 !s105 mp3_tb_sv_unit
 !s101 -O0
 Xmp3_tb_sv_unit
 R1
 R2
-VQSdCJ_dzldXTW]c>9d^MZ1
+V99bUFh=LRmeW^EncSckD=0
 r1
 31
-IQSdCJ_dzldXTW]c>9d^MZ1
+I99bUFh=LRmeW^EncSckD=0
 S1
 R3
 R62
@@ -1203,18 +1203,18 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 ElWl<6g^_hG5_68gZW1JJ2
+!s100 FRUTcYV<0BSS[P28hHZAn3
 !i103 1
 !s101 -O0
 vmux2
 R1
-IW?bA]kel1o51LnZ:RDTo<3
+IgQfHRmeZnj@RRLJ`gzH]^0
 V8m]l]_QnJ>bC;o8UdVIPk2
 S1
 R3
 R62
-8/home/zpaya2/Better_X86/Better_x86/mux2.sv
-F/home/zpaya2/Better_X86/Better_x86/mux2.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux2.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux2.sv
 L0 1
 R7
 r1
@@ -1222,22 +1222,22 @@ r1
 R11
 R12
 !i10b 1
-!s100 e]W1WD6]6A^MN@]UZ8>:V1
+!s100 8mJ=@bd<Sd0UnoHl1n^[P2
 !s105 mux2_sv_unit
 !s85 0
-!s108 1510877942.025351
-!s107 /home/zpaya2/Better_X86/Better_x86/mux2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/mux2.sv|
+!s108 1511055086.206733
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux2.sv|
 !s101 -O0
 vmux3
 R1
-IHA[<Uci3[8iOG7WjBU2m83
+ILhFHR20M:R<_^BJP^NNi:0
 VOjLX2LlYRmHI`;:6lO3PL3
 S1
 R3
 R62
-8/home/zpaya2/Better_X86/Better_x86/mux3.sv
-F/home/zpaya2/Better_X86/Better_x86/mux3.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux3.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux3.sv
 L0 1
 R7
 r1
@@ -1245,22 +1245,22 @@ r1
 R11
 R12
 !i10b 1
-!s100 MGo<QjUbmdIONUc3d@k^j3
+!s100 ;R08^;F>cPnN2hHAB57I41
 !s105 mux3_sv_unit
 !s85 0
-!s108 1510877941.942555
-!s107 /home/zpaya2/Better_X86/Better_x86/mux3.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/mux3.sv|
+!s108 1511055086.061085
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux3.sv|
 !s101 -O0
 vmux4
 R1
-IJ[z=gQgPz6N7<25IYJM7[2
+IM9gVj>zZ[;b?jlb`j85l`3
 VYCkK`QGYSnR6BP^DhRdne0
 S1
 R3
 R62
-8/home/zpaya2/Better_X86/Better_x86/mux4.sv
-F/home/zpaya2/Better_X86/Better_x86/mux4.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux4.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux4.sv
 L0 1
 R7
 r1
@@ -1268,22 +1268,22 @@ r1
 R11
 R12
 !i10b 1
-!s100 >nn=EJV6T<T=5h_EQhX;M0
+!s100 ^7854oYYmj4G:i^aP>3Pf2
 !s105 mux4_sv_unit
 !s85 0
-!s108 1510877941.874068
-!s107 /home/zpaya2/Better_X86/Better_x86/mux4.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/mux4.sv|
+!s108 1511055085.920567
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux4.sv|
 !s101 -O0
 vmux5
 R1
-IT4>ij<B0ggKMoCDQU22gZ0
+I5jak1e0`m>PJ:0;_GHimO3
 Vn8]=iPSQYQ4jCoG5BYm^o2
 S1
 R3
 R62
-8/home/zpaya2/Better_X86/Better_x86/mux5.sv
-F/home/zpaya2/Better_X86/Better_x86/mux5.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux5.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux5.sv
 L0 1
 R7
 r1
@@ -1291,22 +1291,22 @@ r1
 R11
 R12
 !i10b 1
-!s100 UDMC0^ULIHkhj<B]2A]=l3
+!s100 m5OI^kS4Fo@mLoHFjhVXI0
 !s105 mux5_sv_unit
 !s85 0
-!s108 1510877941.809964
-!s107 /home/zpaya2/Better_X86/Better_x86/mux5.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/mux5.sv|
+!s108 1511055085.813079
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux5.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux5.sv|
 !s101 -O0
 vmux8
 R1
-IJ2cDV`GX7i6R3KkKPB]Go0
+IZggJ>za15L@cBUUEWTW1P3
 VAamg^Wo0Jm38oaD4=IFB30
 S1
 R3
 R62
-8/home/zpaya2/Better_X86/Better_x86/mux8.sv
-F/home/zpaya2/Better_X86/Better_x86/mux8.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux8.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux8.sv
 L0 1
 R7
 r1
@@ -1314,22 +1314,22 @@ r1
 R11
 R12
 !i10b 1
-!s100 R=o9idb728LnW2YB;3Hb00
+!s100 aih1IXbKJoYfmGoD_C?c80
 !s105 mux8_sv_unit
 !s85 0
-!s108 1510877941.262871
-!s107 /home/zpaya2/Better_X86/Better_x86/mux8.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/mux8.sv|
+!s108 1511055084.979946
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux8.sv|
 !s101 -O0
 vn_bit_counter
 R1
-IQ9aON6N7GXh>3gj@V2?`W3
+ITozM2BdFSUGCQl15X8Xjn3
 VDFYb6MEN?R>fNmkVdN^213
 S1
 R3
 w1510785074
-8/home/zpaya2/Better_X86/Better_x86/n_bit_counter.sv
-F/home/zpaya2/Better_X86/Better_x86/n_bit_counter.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/n_bit_counter.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/n_bit_counter.sv
 L0 1
 R7
 r1
@@ -1337,45 +1337,45 @@ r1
 R11
 R12
 !i10b 1
-!s100 3^:kD?Jlez0bYX?][oJDn1
+!s100 [jaQ_aW0Kc>ZJ5g@3a3AZ3
 !s105 n_bit_counter_sv_unit
 !s85 0
-!s108 1510877941.592068
-!s107 /home/zpaya2/Better_X86/Better_x86/n_bit_counter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/n_bit_counter.sv|
+!s108 1511055085.527063
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/n_bit_counter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/n_bit_counter.sv|
 !s101 -O0
 vphysical_memory
 R1
 !i10b 1
-!s100 mbGWS=;l0KaOCY6FeAm2M1
-IBBRGXPh=lm=Z7ZVo=3jD:1
+!s100 KU1K:CKEAZX9L`L3LN>^Z3
+IA?Qb79>L;e7WLCgKIf`o61
 VgG8K4YU=J=NFQQn5=d0E52
 !s105 physical_memory_sv_unit
 S1
 R3
 Z126 w1510452532
-8/home/zpaya2/Better_X86/Better_x86/physical_memory.sv
-F/home/zpaya2/Better_X86/Better_x86/physical_memory.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/physical_memory.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/physical_memory.sv
 L0 1
 R7
 r1
 !s85 0
 31
-!s108 1510877945.912518
-!s107 /home/zpaya2/Better_X86/Better_x86/physical_memory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/physical_memory.sv|
+!s108 1511055091.316018
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/physical_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/physical_memory.sv|
 !s101 -O0
 R11
 R12
 vplus2
 R1
-IEz>`aMaLeXP:FCCVBgM4h0
+InQ7fR[>EhUWKG:G0hP<dO1
 V8Yjd6>kf[QVaNB:l@BLiW1
 S1
 R3
 R126
-8/home/zpaya2/Better_X86/Better_x86/plus2.sv
-F/home/zpaya2/Better_X86/Better_x86/plus2.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/plus2.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/plus2.sv
 L0 1
 R7
 r1
@@ -1383,45 +1383,45 @@ r1
 R11
 R12
 !i10b 1
-!s100 97dl;`eDgKcd19ljaba7B2
+!s100 GYiU<bPTMS_DaUahAP3gI0
 !s105 plus2_sv_unit
 !s85 0
-!s108 1510877941.732347
-!s107 /home/zpaya2/Better_X86/Better_x86/plus2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/plus2.sv|
+!s108 1511055085.711821
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/plus2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/plus2.sv|
 !s101 -O0
 vregfile
 R1
 R2
-DXx4 work 15 regfile_sv_unit 0 22 @:@`EH[M4[>?SMam;dNX13
+DXx4 work 15 regfile_sv_unit 0 22 HhI;cRnY]83m5_lzh9:Z[3
 V`Wb6ocgM=VWm:Fa<3Fznl1
 r1
 31
-Il@IJg]E@OQT9LnQo3b?D<1
+I<6Y:LF9MKX42K7^mkK?aQ2
 S1
 R3
 Z127 w1510871045
-Z128 8/home/zpaya2/Better_X86/Better_x86/regfile.sv
-Z129 F/home/zpaya2/Better_X86/Better_x86/regfile.sv
+Z128 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/regfile.sv
+Z129 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/regfile.sv
 L0 3
 R7
-Z130 !s108 1510877943.167646
-Z131 !s107 /home/zpaya2/Better_X86/Better_x86/regfile.sv|
-Z132 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/regfile.sv|
+Z130 !s108 1511055087.904660
+Z131 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/regfile.sv|
+Z132 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/regfile.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 N4DZPB7`KXzTbJc>3[IOj0
+!s100 AT7bMM:lHnj8W3ZU8=gWb0
 !s105 regfile_sv_unit
 !s101 -O0
 Xregfile_sv_unit
 R1
 R2
-V@:@`EH[M4[>?SMam;dNX13
+VHhI;cRnY]83m5_lzh9:Z[3
 r1
 31
-I@:@`EH[M4[>?SMam;dNX13
+IHhI;cRnY]83m5_lzh9:Z[3
 S1
 R3
 R127
@@ -1436,18 +1436,18 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 V>Bi]B3GI?UmUV0DbCGJl1
+!s100 of<M=g:KU`KRGRU_0G__>1
 !i103 1
 !s101 -O0
 vregister
 R1
-I>KEjn4oS@?nk]7G_8f2i]3
+IVoX?lQN=_<H]aYV:`D]cO1
 VVWH2GIcWRQ29K?3;26c491
 S1
 R3
 R126
-8/home/zpaya2/Better_X86/Better_x86/register.sv
-F/home/zpaya2/Better_X86/Better_x86/register.sv
+8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/register.sv
+F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/register.sv
 L0 1
 R7
 r1
@@ -1455,45 +1455,45 @@ r1
 R11
 R12
 !i10b 1
-!s100 hlJ2;Th<4?di<4Y3cH>R12
+!s100 Udc4]EV6odDhzfHc5MNG=2
 !s105 register_sv_unit
 !s85 0
-!s108 1510877941.659351
-!s107 /home/zpaya2/Better_X86/Better_x86/register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/register.sv|
+!s108 1511055085.620421
+!s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/register.sv|
 !s101 -O0
 vsext
 R1
 R2
-DXx4 work 12 sext_sv_unit 0 22 c]b3C`X[R@l_8db06kK2n1
+DXx4 work 12 sext_sv_unit 0 22 YGjOS204JoF^8>4K^@QjM3
 VlViJ]MWnKmm67DC4jAYD_2
 r1
 31
-IRO_>e7f;Ai8E11Ol?MIn<3
+I8NNRQn:VenYYQUZWD7__02
 S1
 R3
 Z133 w1510452533
-Z134 8/home/zpaya2/Better_X86/Better_x86/sext.sv
-Z135 F/home/zpaya2/Better_X86/Better_x86/sext.sv
+Z134 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/sext.sv
+Z135 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/sext.sv
 L0 6
 R7
-Z136 !s108 1510877943.040198
-Z137 !s107 /home/zpaya2/Better_X86/Better_x86/sext.sv|
-Z138 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/sext.sv|
+Z136 !s108 1511055087.692919
+Z137 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/sext.sv|
+Z138 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/sext.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 MVFk@S_6Ui9AGWNi6I;md1
+!s100 AL_ZRPdzOPaQeX@A3@fof3
 !s105 sext_sv_unit
 !s101 -O0
 Xsext_sv_unit
 R1
 R2
-Vc]b3C`X[R@l_8db06kK2n1
+VYGjOS204JoF^8>4K^@QjM3
 r1
 31
-Ic]b3C`X[R@l_8db06kK2n1
+IYGjOS204JoF^8>4K^@QjM3
 S1
 R3
 R133
@@ -1508,41 +1508,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 bXQjX<aG>lH40f`GnaTGS2
+!s100 H8ZS7KNZU5edElm:G=W7z3
 !i103 1
 !s101 -O0
 vstaller
 R1
 R2
-DXx4 work 15 staller_sv_unit 0 22 CTW9_<BW@@iS`geYmdfP73
-VNkIzn1hW7WnhK_YT>kP8Q0
+DXx4 work 15 staller_sv_unit 0 22 jh7LbF_[;ROi=i3QP5`KB0
+V7M]o=n26@D@QQW]e7L;8A0
 r1
 31
-IJJjmlzMEI8CH]K4b>G:1Y2
+I;`W>EJ1:5bT90a`efJW;f2
 S1
 R3
-Z139 w1510785079
-Z140 8/home/zpaya2/Better_X86/Better_x86/staller.sv
-Z141 F/home/zpaya2/Better_X86/Better_x86/staller.sv
+Z139 w1511054315
+Z140 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/staller.sv
+Z141 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/staller.sv
 L0 3
 R7
-Z142 !s108 1510877945.443066
-Z143 !s107 /home/zpaya2/Better_X86/Better_x86/staller.sv|
-Z144 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/staller.sv|
+Z142 !s108 1511055090.564216
+Z143 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/staller.sv|
+Z144 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/staller.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 _VQh[fJ`H:d4IaoKL5me>3
+!s100 z@8n;G;j<TAhm:VoWOMg52
 !s105 staller_sv_unit
 !s101 -O0
 Xstaller_sv_unit
 R1
 R2
-VCTW9_<BW@@iS`geYmdfP73
+Vjh7LbF_[;ROi=i3QP5`KB0
 r1
 31
-ICTW9_<BW@@iS`geYmdfP73
+Ijh7LbF_[;ROi=i3QP5`KB0
 S1
 R3
 R139
@@ -1557,41 +1557,41 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 zME_RaAePA2]]lMEcBi001
+!s100 e2nFJIf;^k@FX@WYV?0222
 !i103 1
 !s101 -O0
 vzext
 R1
 R2
-DXx4 work 12 zext_sv_unit 0 22 1h_?obOiIh_gVg0GJNe^70
+DXx4 work 12 zext_sv_unit 0 22 OQc4=V;GbPOFONAoQS]RO3
 VBN63hg]7XG]MT<oJ=W;L92
 r1
 31
-IIR7WMXa6Ozi<bLh?iLD^;1
+ITfHXh2HWUb>7gSZMa;eE=0
 S1
 R3
 Z145 w1510452537
-Z146 8/home/zpaya2/Better_X86/Better_x86/zext.sv
-Z147 F/home/zpaya2/Better_X86/Better_x86/zext.sv
+Z146 8/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/zext.sv
+Z147 F/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/zext.sv
 L0 6
 R7
-Z148 !s108 1510877942.922897
-Z149 !s107 /home/zpaya2/Better_X86/Better_x86/zext.sv|
-Z150 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Better_X86/Better_x86|/home/zpaya2/Better_X86/Better_x86/zext.sv|
+Z148 !s108 1511055087.460003
+Z149 !s107 /home/zpaya2/Computer_Architecture/Better_X86/Better_x86/zext.sv|
+Z150 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86|/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/zext.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 [R[VoKK1UWG2g80YN_RLg2
+!s100 >OB2j59:54TUP<MS;g5g82
 !s105 zext_sv_unit
 !s101 -O0
 Xzext_sv_unit
 R1
 R2
-V1h_?obOiIh_gVg0GJNe^70
+VOQc4=V;GbPOFONAoQS]RO3
 r1
 31
-I1h_?obOiIh_gVg0GJNe^70
+IOQc4=V;GbPOFONAoQS]RO3
 S1
 R3
 R145
@@ -1606,6 +1606,6 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 UI0IAdDDgbO_dA?J5:L6d1
+!s100 WGgToMT7UZ@AoQP[K:4T:2
 !i103 1
 !s101 -O0

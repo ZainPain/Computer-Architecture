@@ -316,6 +316,7 @@ icache_wdata[13] <= <GND>
 icache_wdata[14] <= <GND>
 icache_wdata[15] <= <GND>
 icache_resp => load_pc.IN1
+icache_resp => reset_IF_ID.IN1
 icache_resp => load_MEM_WB.IN1
 icache_resp => load_MEM_WB.IN1
 icache_resp => comb.IN1
