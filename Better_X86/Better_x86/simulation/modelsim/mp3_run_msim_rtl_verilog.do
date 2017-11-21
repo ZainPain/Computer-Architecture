@@ -6,6 +6,7 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/lc3b_types.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l2_cache_control.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux8.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_control.sv}
@@ -20,6 +21,11 @@ vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mux2.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/adder.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/byte_detect.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/NOPS.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Hazard Detection.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l2_cache_datapath.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/LRU_register.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache_datapath.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/cache_arbiter_datapath.sv}
@@ -41,9 +47,8 @@ vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Array.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/staller.sv}
-vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv}
-vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Hazard Detection.sv}
-vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/NOPS.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/writeback_forward.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l2_cache.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv}
 
 vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/mp3_tb.sv}

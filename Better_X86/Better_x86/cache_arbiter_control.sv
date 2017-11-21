@@ -35,7 +35,7 @@ begin: state_actions
 	load_mdr_l2_to_l1 = 0;
 	cache_write_sel = 0;
 	cache_address_sel = 0;
-   cache_resp_sel = 0;
+   	cache_resp_sel = 0;
 	l2_read = 0;
 	l2_write = 0;
 
@@ -50,13 +50,14 @@ begin: state_actions
 				load_mar = 1;
 				load_mdr_l1_to_l2 = 1;
 			end
-			else if (icache_read) begin
+			else if (icache_read && ~dcache_read && ~dcache_write) begin
 				cache_address_sel = 0;
 				load_mar = 1;
 			end
 		end
 		
 		data_write: begin
+			l2_write = 1;
 			if (l2_resp && dcache_read) begin
 				cache_resp_sel = 1;
 				cache_address_sel = 1;
@@ -67,15 +68,16 @@ begin: state_actions
 				cache_address_sel = 0;
 				load_mar = 1;
 			end
-			else if (l2_resp)
+			else if (l2_resp) begin
 				cache_resp_sel = 1;
+			end
 			else begin
-				l2_write = 1;
-            cache_address_sel = 1;
+            	cache_address_sel = 1;
             end
 		end
 
 		data_read: begin
+			l2_read = 1;
 			if (l2_resp && icache_read) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 1;
@@ -87,31 +89,29 @@ begin: state_actions
 				cache_resp_sel = 1;
 			end
 			else begin
-				l2_read = 1;
-				 cache_address_sel = 1;
+				cache_address_sel = 1;
             end
 		end
 
 		instruction_read: begin
+			l2_read = 1;
 			if (l2_resp && dcache_write) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 0;
 				cache_address_sel = 1;
 				load_mar = 1;
 				load_mdr_l1_to_l2 = 1;
-            end
+			end
 			else if (l2_resp && dcache_read) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 0;
 				cache_address_sel = 1;
 				load_mar = 1;
 			end
-			else if (l2_resp) begin
+			else if (l2_resp && ~dcache_read && ~dcache_write) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 0;
 			end
-			else
-				l2_read = 1;
 		end
 
 		default: ;
@@ -129,7 +129,7 @@ begin: next_state_logic
 				next_state <= data_read;
 			else if (dcache_write)
 				next_state <= data_write;
-			else if (icache_read)
+			else if (icache_read && ~dcache_read && ~dcache_write)
 				next_state <= instruction_read;
 			else
 				next_state <= idle;

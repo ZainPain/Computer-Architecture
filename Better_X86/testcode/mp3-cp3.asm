@@ -813,6 +813,7 @@ FINISH: ; Bypassing code section goes here
 
     LDR R1, R0, NINE
     LDR R2, R0, BIGNUMBER
+ 
     ADD R5, R1, R2
 
 
@@ -827,7 +828,7 @@ FINISH: ; Bypassing code section goes here
 
     LDR R6, R0, BYP2
     LDR R3, R0, BYP1
-
+   
 
     ADD R3, R6, R3
     ADD R2, R3, R3

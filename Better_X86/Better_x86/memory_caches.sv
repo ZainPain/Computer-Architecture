@@ -24,11 +24,11 @@ module memory_caches
 
     /* Physical Memory */
     input pmem_resp,
-    input lc3b_l1_line pmem_rdata,
+    input lc3b_l2_line pmem_rdata,
     output pmem_read,
     output pmem_write,
     output lc3b_word pmem_address,
-    output lc3b_l1_line pmem_wdata
+    output lc3b_l2_line pmem_wdata
 
 );
 
@@ -43,6 +43,13 @@ lc3b_l1_line dcache_rdata_arbiter;
 logic dcache_resp_arbiter;
 logic dcache_read_arbiter;
 logic dcache_write_arbiter;
+
+lc3b_word l2cache_address_arbiter;
+lc3b_l2_line l2cache_wdata_arbiter;
+lc3b_l2_line l2cache_rdata_arbiter;
+logic l2cache_resp_arbiter;
+logic l2cache_read_arbiter;
+logic l2cache_write_arbiter;
 
 cache_arbiter arbiter
 (
@@ -60,15 +67,22 @@ cache_arbiter arbiter
 	.dcache_read(dcache_read_arbiter),
 	.dcache_write(dcache_write_arbiter),
 
-	/* These inputs are connected to physical memory
-	for CP2. They will be swicthed L2 for CP3 and
-	L2 will be connected to physical memory instead */
-	.l2cache_address(pmem_address),
-	.l2cache_wdata(pmem_wdata),
-	.l2cache_rdata(pmem_rdata),
-	.l2_resp(pmem_resp),
-	.l2_read(pmem_read),
-	.l2_write(pmem_write)
+    .l2cache_address(l2cache_address_arbiter),
+	.l2cache_wdata(l2cache_wdata_arbiter),
+	.l2cache_rdata(l2cache_rdata_arbiter),
+	.l2_resp(l2cache_resp_arbiter),
+	.l2_read(l2cache_read_arbiter),
+	.l2_write(l2cache_write_arbiter)
+
+        /* These inputs are connected to physical memory
+    for CP2. They will be swicthed L2 for CP3 and
+    L2 will be connected to physical memory instead
+    .l2cache_address(pmem_address),
+    .l2cache_wdata(pmem_wdata),
+    .l2cache_rdata(pmem_rdata),
+    .l2_resp(pmem_resp),
+    .l2_read(pmem_read),
+    .l2_write(pmem_write) */
 );
 
 l1_cache icache
@@ -107,6 +121,24 @@ l1_cache dcache
     .pmem_resp(dcache_resp_arbiter),
     .pmem_read(dcache_read_arbiter),
     .pmem_write(dcache_write_arbiter)
+);
+
+l2_cache l2cache
+(
+    .clk(clk),
+    .mem_rdata(l2cache_rdata_arbiter),
+    .mem_address(l2cache_address_arbiter),
+    .mem_wdata(l2cache_wdata_arbiter),
+    .mem_resp(l2cache_resp_arbiter),
+    .mem_read(l2cache_read_arbiter),
+    .mem_write(l2cache_write_arbiter),
+    
+    .pmem_rdata(pmem_rdata),
+    .pmem_address(pmem_address),
+    .pmem_wdata(pmem_wdata),
+    .pmem_resp(pmem_resp),
+    .pmem_read(pmem_read),
+    .pmem_write(pmem_write)
 );
 
 endmodule : memory_caches

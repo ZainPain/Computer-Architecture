@@ -2,17 +2,16 @@ import lc3b_types::*;
 
 module NOPS
 (
-	output lc3b_control_word NOPS
+	output lc3b_control_word zero_signal
 );
 lc3b_control_word signal;
 always_comb
 begin
-	signal.opcode; = 4'b0000;
-   signal.aluop = 4'b0000;
+	signal.opcode = op_br;
+   signal.aluop = alu_add;
 	 
-   signal.load_cc 1'b0;
+   signal.load_cc = 1'b0;
    signal.load_regfile = 1'b0;
-	signal.load_pc 1'b0;
 	 
    signal.addermux_sel = 1'b0;
    signal.regfilemux_sel = 3'b000;
@@ -24,6 +23,6 @@ begin
    signal.storemux_sel = 1'b0;
    signal.mem_read = 1'b0;
    signal.mem_write = 1'b0;
-	NOPS = signal
+	zero_signal = signal;
 end
 endmodule : NOPS

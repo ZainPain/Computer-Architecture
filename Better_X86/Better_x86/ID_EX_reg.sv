@@ -10,11 +10,16 @@ module ID_EX_reg
 	input lc3b_word pc_in,
 
 	input lc3b_control_word control_in,
+	
 	input lc3b_reg src1_in,				/* inputs for dataforwarding */
 	input lc3b_reg src2_in,				/* input for dataforwarding */
+	
 	input lc3b_word reg_a, reg_b,
 	input lc3b_reg dest_in,
 
+	output lc3b_reg src1_out,				/* outputs for dataforwarding */
+	output lc3b_reg src2_out,				/* output for dataforwarding */
+	
 	input lc3b_word sext6_in,
 	input lc3b_word sext5_in,
 	input lc3b_word sext4_in,
@@ -22,7 +27,7 @@ module ID_EX_reg
 	input lc3b_word adj9_in,
 	input lc3b_word adj11_in,
 	input lc3b_word trap_vect8_in,
-	input logic ir5,
+	input logic ir5_in,						/* input for dataforwarding */
 
 	output lc3b_word inst_out,	/* Maybe for debugging purpose only */
 	output lc3b_word pc_out,
@@ -30,9 +35,7 @@ module ID_EX_reg
 	output lc3b_control_word control_out,
 	output lc3b_word sr1, sr2,
 	output lc3b_reg dest_out,
-	output lc3b_reg src1_out,				/* inputs for dataforwarding */
-	output lc3b_reg src2_out,				/* input for dataforwarding */
-	output logic ir5_out,
+	output logic ir5_out,				/* output for dataforwarding */
 	/* ALU_MUX signals */
 	output lc3b_word sext6_out,
 	output lc3b_word sext5_out,
@@ -41,6 +44,7 @@ module ID_EX_reg
 	output lc3b_word adj9_out,
 	output lc3b_word adj11_out,
 	output lc3b_word trap_vect8_out
+
 );
 
 lc3b_control_word control;
@@ -62,6 +66,7 @@ lc3b_word trap_vect8;
 lc3b_reg src1;
 lc3b_reg src2;
 logic bit5;
+
 // initially store nothing
 initial
 begin
@@ -101,9 +106,10 @@ begin
 		adj9 = adj9_in;
 		adj11 = adj11_in;
 		trap_vect8 = trap_vect8_in;
+		
 		src1 = src1_in;
 		src2 = src2_in;
-		bit5 = ir5;
+		bit5 = ir5_in;
 	end
 	else if(reset)
 	begin

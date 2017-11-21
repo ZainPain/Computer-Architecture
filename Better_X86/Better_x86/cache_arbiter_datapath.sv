@@ -113,7 +113,7 @@ register #(.width(1)) l2_read_reg
 register #(.width(16)) mar
 (
     .clk(clk),
-    .load(1'b1),
+    .load(load_mar),
     .in(addressmux_out),
     .out(l2cache_address)
 );
@@ -121,7 +121,7 @@ register #(.width(16)) mar
 register #(.width(128)) mdr_l1_to_l2
 (
     .clk(clk),
-    .load(1'b1),
+    .load(load_mdr_l1_to_l2),
     .in(dcache_wdata),
     .out(l2cache_wdata)
 );
@@ -129,7 +129,7 @@ register #(.width(128)) mdr_l1_to_l2
 register #(.width(128)) mdr_l2_to_l1
 (
     .clk(clk),
-    .load(1'b1),
+    .load(load_mdr_l2_to_l1),
     .in(l2cache_rdata),
     .out(mdr_l2_to_l1_out)
 );

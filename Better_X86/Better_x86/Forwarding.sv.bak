@@ -2,26 +2,72 @@ import lc3b_types::*;
 
 module forward
 (
+	input lc3b_opcode ID_EX_opcode,
+	input logic bit5,
 	input lc3b_reg ID_EX_sr1,
 	input lc3b_reg ID_EX_sr2,
-	input lc3b_reg ID_EX_dest,
-	input logic EX_MEM_write,
-	input logic MEM_WB_write,
+	
+	input logic EX_MEM_reg_write,
+	input logic MEM_WB_reg_write,
+	input logic MEM_WB_mem_write,
+	
 	input lc3b_reg EX_MEM_dest,
-	input lc3b_reg MEM_WB_reg,
+	input lc3b_reg MEM_WB_dest,
+	
+	input [1:0] writemux_sel,
+	
 	output logic [1:0] ForwardA,
-	output logic [1:0] ForwardB
+	output logic [1:0] ForwardB,
+	output logic [1:0] writemux_sel_updated
 		
 );
+
+/* Before forwarding, we must first verify that the operands are indeed correct for forwarding ( this means that there is a valid sr1 and sr2 in the instruction and it isnt using offset values).
+	there are only two instructions that use both SR1 and SR2 in calculation of their destination addresses. (ADD and AND).
+	This should take opcode and bit 6 to verify AND and ADD*/
+	
+
 always_comb
 begin
-	/* EX HAZARD */
-	if( EX_MEM_write && (EX_MEM_dest == ID_EX_sr1))
-		ForwardA = 2'b10;
-	if(EX_MEM_write && (EX_MEM_dest == ID_EX_sr2))
-		ForwardB = 2'b10;
+	/* Default to let sr1 and alumux_out to pass to ALU */
+	ForwardA = 2'b00;
+	ForwardB = 2'b00;
+	writemux_sel_updated = writemux_sel;
+	
 	
 	/* MEM HAZARD */
+	if( MEM_WB_reg_write && ( !EX_MEM_reg_write || (EX_MEM_dest != ID_EX_sr1)) && ( MEM_WB_dest == ID_EX_sr1))
+	begin
+		ForwardA = 2'b01;
+	end
+	if( MEM_WB_reg_write && ( !EX_MEM_reg_write || (EX_MEM_dest != ID_EX_sr2)) && ( MEM_WB_dest == ID_EX_sr2) && (ID_EX_opcode == op_add || ID_EX_opcode == op_and) && !bit5 )
+	begin
+		ForwardB = 2'b01;
+	end
+	
+	/* EX HAZARD */
+	if( EX_MEM_reg_write && ( EX_MEM_dest == ID_EX_sr1))
+	begin
+		ForwardA = 2'b10;
+	end
+	if( EX_MEM_reg_write && ( EX_MEM_dest == ID_EX_sr2) && (ID_EX_opcode == op_add || ID_EX_opcode == op_and) && !bit5 )
+	begin
+		ForwardB = 2'b10;
+	end
+	
+	/* WB -> MEM (STORE) */
+	if(MEM_WB_mem_write && (MEM_WB_dest == EX_MEM_dest))
+	begin
+		if(writemux_sel)
+			writemux_sel_updated = 2'b10;		// MEM_WB_alu_out
+		
+		else
+			writemux_sel_updated = 2'b11;		// MEM_WB_alu_out[7:0]
+	
+		
+	end
+
+
 end
 
 endmodule: forward

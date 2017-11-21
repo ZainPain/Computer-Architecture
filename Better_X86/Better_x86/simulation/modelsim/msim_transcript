@@ -15,6 +15,14 @@
 # 
 # Top level modules:
 # 	--none--
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l2_cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package l2_cache_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module l2_cache_control
+# 
+# Top level modules:
+# 	l2_cache_control
 # vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/decoder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module decoder
@@ -103,6 +111,46 @@
 # 
 # Top level modules:
 # 	byteDetect
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/NOPS.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package NOPS_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module NOPS
+# 
+# Top level modules:
+# 	NOPS
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Hazard Detection.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package Hazard20Detection_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module hazard_detection
+# 
+# Top level modules:
+# 	hazard_detection
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l2_cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package l2_cache_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module l2_cache_datapath
+# 
+# Top level modules:
+# 	l2_cache_datapath
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/LRU_register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package LRU_register_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module LRU_register
+# 
+# Top level modules:
+# 	LRU_register
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package Forwarding_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module forward
+# 
+# Top level modules:
+# 	forward
 # vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/memory_caches.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package memory_caches_sv_unit
@@ -271,30 +319,22 @@
 # 
 # Top level modules:
 # 	staller
-# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Forwarding.sv}
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/writeback_forward.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package Forwarding_sv_unit
+# -- Compiling package writeback_forward_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module forward
+# -- Compiling module writeback_forward
 # 
 # Top level modules:
-# 	forward
-# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/Hazard Detection.sv}
+# 	writeback_forward
+# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l2_cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package Hazard20Detection_sv_unit
+# -- Compiling package l2_cache_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module hazard_detection
+# -- Compiling module l2_cache
 # 
 # Top level modules:
-# 	hazard_detection
-# vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/NOPS.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package NOPS_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module NOPS
-# 
-# Top level modules:
-# 	NOPS
+# 	l2_cache
 # vlog -sv -work work +incdir+/home/zpaya2/Computer_Architecture/Better_X86/Better_x86 {/home/zpaya2/Computer_Architecture/Better_X86/Better_x86/l1_cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l1_cache_sv_unit
@@ -334,12 +374,14 @@
 # Loading work.forward
 # Loading work.Hazard20Detection_sv_unit
 # Loading work.hazard_detection
+# Loading work.writeback_forward_sv_unit
+# Loading work.writeback_forward
+# Loading work.mux2
+# Loading work.register
 # Loading work.NOPS_sv_unit
 # Loading work.NOPS
-# Loading work.mux2
 # Loading work.staller_sv_unit
 # Loading work.staller
-# Loading work.register
 # Loading work.mux5
 # Loading work.plus2
 # Loading work.IF_ID_reg_sv_unit
@@ -391,6 +433,14 @@
 # Loading work.mux8
 # Loading work.l1_cache_control_sv_unit
 # Loading work.l1_cache_control
+# Loading work.l2_cache_sv_unit
+# Loading work.l2_cache
+# Loading work.l2_cache_datapath_sv_unit
+# Loading work.l2_cache_datapath
+# Loading work.LRU_register_sv_unit
+# Loading work.LRU_register
+# Loading work.l2_cache_control_sv_unit
+# Loading work.l2_cache_control
 # Loading work.physical_memory
 # 
 # add wave *
@@ -399,8 +449,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
-do forward.do
-restart -f; run 300ns
+do wave.do
+restart -f; run 26000ns
 # Loading sv_std.std
 # Loading work.lc3b_types
 # Loading work.mp3_tb_sv_unit
@@ -414,12 +464,14 @@ restart -f; run 300ns
 # Loading work.forward
 # Loading work.Hazard20Detection_sv_unit
 # Loading work.hazard_detection
+# Loading work.writeback_forward_sv_unit
+# Loading work.writeback_forward
+# Loading work.mux2
+# Loading work.register
 # Loading work.NOPS_sv_unit
 # Loading work.NOPS
-# Loading work.mux2
 # Loading work.staller_sv_unit
 # Loading work.staller
-# Loading work.register
 # Loading work.mux5
 # Loading work.plus2
 # Loading work.IF_ID_reg_sv_unit
@@ -471,4 +523,12 @@ restart -f; run 300ns
 # Loading work.mux8
 # Loading work.l1_cache_control_sv_unit
 # Loading work.l1_cache_control
+# Loading work.l2_cache_sv_unit
+# Loading work.l2_cache
+# Loading work.l2_cache_datapath_sv_unit
+# Loading work.l2_cache_datapath
+# Loading work.LRU_register_sv_unit
+# Loading work.LRU_register
+# Loading work.l2_cache_control_sv_unit
+# Loading work.l2_cache_control
 # Loading work.physical_memory

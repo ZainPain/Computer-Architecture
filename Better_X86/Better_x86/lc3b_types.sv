@@ -62,7 +62,7 @@ typedef struct packed {
 	 
     logic load_cc;
     logic load_regfile;
-	 //logic load_pc;
+	 logic load_pc;
 	 
     logic addermux_sel;
     logic [2:0] regfilemux_sel;
@@ -74,11 +74,11 @@ typedef struct packed {
     logic storemux_sel;
     logic mem_read;
     logic mem_write;
-	/* 
+	 
     logic load_IF_ID;
 	 logic load_ID_EX;
 	 logic load_EX_MEM;
-	 logic load_MEM_WB;*/
+	 logic load_MEM_WB;
 	 
 } lc3b_control_word;
 

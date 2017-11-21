@@ -1,17 +1,21 @@
 
+State Machine - |mp3|memory_caches:caches|l2_cache:l2cache|l2_cache_control:l2_cc|state
+Name state.read_block1 state.write_block state.compare_tag 
+state.compare_tag 0 0 0 
+state.read_block1 1 0 1 
+state.write_block 0 1 1 
+
 State Machine - |mp3|memory_caches:caches|l1_cache:dcache|l1_cache_control:l1_cc|state
-Name state.write_block state.read_block2 state.read_block1 state.compare_tag 
-state.compare_tag 0 0 0 0 
-state.read_block1 0 0 1 1 
-state.read_block2 0 1 0 1 
-state.write_block 1 0 0 1 
+Name state.read_block1 state.write_block state.compare_tag 
+state.compare_tag 0 0 0 
+state.read_block1 1 0 1 
+state.write_block 0 1 1 
 
 State Machine - |mp3|memory_caches:caches|l1_cache:icache|l1_cache_control:l1_cc|state
-Name state.write_block state.read_block2 state.read_block1 state.compare_tag 
-state.compare_tag 0 0 0 0 
-state.read_block1 0 0 1 1 
-state.read_block2 0 1 0 1 
-state.write_block 1 0 0 1 
+Name state.read_block1 state.write_block state.compare_tag 
+state.compare_tag 0 0 0 
+state.read_block1 1 0 1 
+state.write_block 0 1 1 
 
 State Machine - |mp3|memory_caches:caches|cache_arbiter:arbiter|cache_arbiter_control:cac|state
 Name state.instruction_read state.data_read state.data_write state.idle 

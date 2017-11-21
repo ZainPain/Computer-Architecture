@@ -27,13 +27,11 @@ begin
     ctrl.datamux_sel = 2'b10; /* ALU_OUT */
 	 ctrl.writemux_sel = 1'b0;
 	/* These signals should be high unless if we want to stall pipeline */
-/*   
-	ctrl.load_IF_ID = 1'b1;
+    ctrl.load_IF_ID = 1'b1;
     ctrl.load_ID_EX = 1'b1;
 	ctrl.load_EX_MEM = 1'b1;
     ctrl.load_MEM_WB = 1'b1;
 	ctrl.load_pc = 1'b1;
-	*/
 	 
 	case(opcode)
 		

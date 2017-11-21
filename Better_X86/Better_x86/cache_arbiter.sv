@@ -61,6 +61,9 @@ cache_arbiter_datapath cad
 	.l2cache_wdata(l2cache_wdata),
 	.l2cache_rdata(l2cache_rdata),
 	.l2_resp(l2_resp)
+
+	//.load_dcache_resp(load_dcache_resp),
+	//.load_icache_resp(load_icache_resp)
 );
 
 cache_arbiter_control cac
@@ -81,5 +84,8 @@ cache_arbiter_control cac
 	.load_mdr_l2_to_l1(load_mdr_l2_to_l1),
 	.l2_read(l2_read),
 	.l2_write(l2_write)
+
+	//.load_dcache_resp(load_dcache_resp),
+	//.load_icache_resp(load_icache_resp)
 );
 endmodule : cache_arbiter

@@ -23,6 +23,7 @@ module cpu_datapath
     input logic [15:0] dcache_rdata
 );
 
+//NOTE NEED TO PUT LOAD_PC ELSEWHERE
 
 logic load_pc;
 logic load_IF_ID;
@@ -121,6 +122,7 @@ logic [1:0] EX_MEM_counter;
 logic[1:0] EX_MEM_datamux_sel;
 logic reset_counter;
 logic load_pipeline_reg;
+logic load_LDI_STI_ADDRESS;
 
 /* WIRES FOR MEM_WB_ID */
 lc3b_word MEM_WB_inst;
@@ -141,77 +143,136 @@ logic [2:0] pcmux_sel_updated;
 logic [7:0] ldbmux_out;
 logic unconditional_branch;
 
-/* FORWARDING IMPLEMENTED HERE */
+
+
+
+/* FORWARD IMPLEMENTATION HERE */
 logic [1:0] forwardA_sel;
 logic [1:0] forwardB_sel;
 lc3b_word forwardA_out;
 lc3b_word forwardB_out;
 lc3b_reg forward_regA;
 lc3b_reg forward_regB;
+logic ID_EX_ir5;
+logic writemux_sel_updated;
 logic forward_load;
-logic controlmux_sel;
-lc3b_control_word zero;
-lc3b_control_word controlmux_out;
-logic ID_EX_bit5_out;
+logic hazard;
+lc3b_word writebackmux_out;
+logic EX_MEM_mux_sel;
+lc3b_word EX_MEM_forward_out;
+logic sr2mux_sel;
+lc3b_word sr2mux_out;
+logic [1:0] writeback_mux_sel;
 
 mux3 forwardA
-( 
+(
 	.sel(forwardA_sel),
-	.a(ID_EX_sr1), 
-	.b(MEM_WB_alu_out), 
-	.c(EX_MEM_alu_out),
+	.a(ID_EX_sr1),
+	.b(writebackmux_out),		/* need to change to account for mem_out as well */
+	.c(EX_MEM_forward_out),
 	.f(forwardA_out)
 );
-
 mux3 forwardB
 (
 	.sel(forwardB_sel),
-	.a(ID_EX_alumux_out), 
-	.b(MEM_WB_alu_out), 
-	.c(EX_MEM_alu_out),
+	.a(ID_EX_alumux_out),
+	.b(writebackmux_out),		/* need to change to account for mem_out as well */
+	.c(EX_MEM_forward_out),
 	.f(forwardB_out)
 );
+
 forward Forward_unit
 (
-	.opcode(ID_EX_ctrl.opcode),
-	.bit5(ID_EX_bit5_out),
+	.ID_EX_opcode(ID_EX_ctrl.opcode),
+	.EX_MEM_opcode(EX_MEM_ctrl.opcode),
+	.bit5(ID_EX_ir5),
 	.ID_EX_sr1(forward_regA),
 	.ID_EX_sr2(forward_regB),
-	.EX_MEM_write(EX_MEM_ctrl.load_regfile),
-	.MEM_WB_write(MEM_WB_ctrl.load_regfile),
+	
+	.EX_MEM_reg_write(EX_MEM_ctrl.load_regfile),
+	.MEM_WB_reg_write(MEM_WB_ctrl.load_regfile),
+	.EX_MEM_mem_write(EX_MEM_ctrl.mem_write),
+	
+	.ID_EX_mem_write(ID_EX_ctrl.mem_write),
+	
 	.EX_MEM_dest(EX_MEM_WB_dest),
 	.MEM_WB_dest(MEM_WB_dest),
+	.IF_ID_EX_dest(ID_EX_MEM_dest),
+	
+	.writemux_sel(MEM_WB_ctrl.writemux_sel),	
+	
 	.ForwardA(forwardA_sel),
-	.ForwardB(forwardB_sel)
+	.ForwardB(forwardB_sel),
+	.writemux_sel_updated(writemux_sel_updated),
+	.EX_MEM_mux_sel(EX_MEM_mux_sel),
+	.sr2mux_sel(sr2mux_sel)
 		
 );
 
-/* HAZARD DETECTION (FOR FORWARDING) */
-hazard_detection hd
+hazard_detection HD
 (
+	.opcode(IF_ID_opcode),
+	.bit5(IF_ID_ir5),
 	.ID_EX_mem_read(ID_EX_ctrl.mem_read),
 	.ID_EX_dest(ID_EX_MEM_dest),
 	.IF_ID_sr1(IF_ID_sr1),
 	.IF_ID_sr2(IF_ID_sr2),
-
+	
 	.forward_load(forward_load),
-	.controlmux_sel(controlmux_sel)
-);
-NOPS nops
-(
-	.zero_signal(zero)
+	.hazard(hazard)
 );
 
-mux2 #(.width($bits(lc3b_control_word))) ControlMux
+/* this mux will forward either alu_out or mem_out depending on if the instruction at writeback stage was a load or not */
+writeback_forward		writebackmux_select_signal
 (
-	.sel(controlmux_sel),
+	.MEM_WB_ctrl(MEM_WB_ctrl),
+	.writeback_mux_sel(writeback_mux_sel)
+);
+mux3 writeback_to_EX_MEM_mux
+(
+	.sel(writeback_mux_sel),
+	.a(MEM_WB_alu_out),
+	.b(MEM_WB_dmem),
+	.c(MEM_WB_pc_adder),
+	.f(writebackmux_out)
+);
+
+mux2 EX_MEM_forward_mux
+(
+	.sel(EX_MEM_mux_sel),
+	.a(EX_MEM_alu_out),
+	.b(EX_MEM_WB_pc_adder),
+	.f(EX_MEM_forward_out)
+);
+mux2 WB_to_ID_EX_sr2_mux
+(
+	.sel(sr2mux_sel),
+	.a(ID_EX_sr2),
+	.b(writebackmux_out),
+	.f(sr2mux_out)
+);
+logic delayed_forward_load;
+register #(.width(1)) forward_load_reg
+(
+    .clk(clk),
+    .load(1'b1),
+    .in(forward_load),
+	 .out(delayed_forward_load)
+);
+lc3b_control_word NOP_ctrl;
+lc3b_control_word controlmux_out;
+NOPS zero_signal
+(
+	.zero_signal(NOP_ctrl)
+);
+mux2 #(.width(($bits(lc3b_control_word)))) controlmux
+(
+	.sel(hazard),
 	.a(IF_ID_ctrl),
-	.b(zero),
+	.b(NOP_ctrl),
 	.f(controlmux_out)
 );
-/* FORWARDING IMPLEMENTATION ENDED */
-
-
+/* FORWARD IMPLEMENTATION END */
 // SET THESE TO ALWAYS STORE 2 BYTES FOR CP1
 assign icache_wmask = 2'b11;
 
@@ -220,8 +281,8 @@ assign icache_wmask = 2'b11;
 assign load_pc = (icache_resp && (load_EX_MEM || branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp));
 
 // assigning RESET SIGNALS
-assign reset_IF_ID = (~(icache_resp && (load_EX_MEM || branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp)) && load_pipeline_reg) ? 1'b1 : 1'b0;//1'b0;
-assign reset_ID_EX = ((branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp)) ? 1'b1 : 1'b0;//1'b0;
+assign reset_IF_ID = (~load_pc && load_pipeline_reg && !hazard) ? 1'b1 : 1'b0;//1'b0;
+assign reset_ID_EX = (branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp) ? 1'b1 : 1'b0;//1'b0;
 assign reset_EX_MEM = (branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp) ? 1'b1 : 1'b0;//1'b0;
 //assign reset_MEM_WB = 1'b0; //branch_enable_true ? 1'b1 : 1'b0;
 // assign I-mem signals
@@ -236,19 +297,19 @@ assign load_EX_MEM=load_pipeline_reg;
 assign load_MEM_WB=(load_pipeline_reg && MEM_WB_ctrl.opcode != op_br && ~unconditional_branch) || (load_pipeline_reg && ~branch_enable_true && ~unconditional_branch) || (load_pipeline_reg && branch_enable_true && icache_resp) 
 || (load_pipeline_reg && unconditional_branch && icache_resp);
 
-
 staller MEM_WB_stall(
 	.op_code(EX_MEM_ctrl.opcode),
 	.resp(dcache_resp),
 	.mem_read( EX_MEM_ctrl.mem_read),
 	.mem_write( EX_MEM_ctrl.mem_write),
 	.counter(EX_MEM_counter),
-	
+    
 	.datamux_sel(EX_MEM_ctrl.datamux_sel),
 	.datamux_sel_updated(EX_MEM_datamux_sel),
 	.mem_read_updated(dcache_read),
 	.mem_write_updated(dcache_write),
 	.reset_counter(reset_counter),
+  .load_LDI_STI_ADDRESS(load_LDI_STI_ADDRESS),
 	
 	.load(load_pipeline_reg)
 );
@@ -261,7 +322,7 @@ register PC
   .in(pcmux_out),
   .out(pc_out)
 );
-/* need to look at this further in our design */
+
 mux5 #(.width(16)) PC_MUX
 (
 	.sel(pcmux_sel_updated),
@@ -391,18 +452,22 @@ adj #(.width(11)) ADJ11
 ID_EX_reg ID_EX
 (
   .clk(clk),
-  .load(load_ID_EX && !controlmux_sel),
-  .reset(reset_ID_EX || controlmux_sel),
+  .load(load_ID_EX),
+  .reset(reset_ID_EX),
 
-  .inst_in(IF_ID_EX_inst),			/* Maybe for debugging purpose only */
+
+  .inst_in(IF_ID_EX_inst),	/* Maybe for debugging purpose only */
   .pc_in(IF_ID_EX_pc),
 
-  .control_in(controlmux_out),	/* changed from ID_ID_ctrl -> controlmux_out */
-  .src1_in(IF_ID_sr1),				/* NEWLY ADDED FOR FORWARDING */
-  .src2_in(IF_ID_sr2),				/* NEWLY ADDED FOR FORWARDING */
+  .control_in(controlmux_out),
+  .src1_in(IF_ID_sr1),
+  .src2_in(IF_ID_sr2),
   .reg_a(IF_ID_EX_sr1),
   .reg_b(IF_ID_EX_sr2),
   .dest_in(IF_ID_EX_dest),
+  
+  .src1_out(forward_regA),				
+  .src2_out(forward_regB),
 
   .sext6_in(IF_ID_EX_sext6_out),
   .sext5_in(IF_ID_EX_sext5_out),
@@ -411,18 +476,17 @@ ID_EX_reg ID_EX
   .adj9_in(IF_ID_EX_adj9_out),
   .adj11_in(IF_ID_EX_adj11_out),
   .trap_vect8_in(IF_ID_EX_ztrapvect8),
-  .ir5(IF_ID_ir5),					/* ADDED FOR VERIFICATION OF FORWARDING */
+  .ir5_in(IF_ID_ir5),
 
-  .inst_out(ID_EX_MEM_inst),		/* Maybe for debugging purpose only */
+  .inst_out(ID_EX_MEM_inst),	/* Maybe for debugging purpose only */
   .pc_out(ID_EX_MEM_pc),
 
   .control_out(ID_EX_ctrl),
   .sr1(ID_EX_sr1),
   .sr2(ID_EX_sr2),
   .dest_out(ID_EX_MEM_dest),
-  .src1_out(forward_regA),									/*NEWLY ADDED FOR FORWARDING */
-  .src2_out(forward_regB),									/*NEWLY ADDED FOR FORWARDING */
-  .ir5_out(ID_EX_bit5_out),								/* ADDED FOR VERIFICATION OF FORWARDING */
+  .ir5_out(ID_EX_ir5),
+
   .sext6_out(ID_EX_sext6),
   .sext5_out(ID_EX_sext5),
   .sext4_out(ID_EX_sext4),
@@ -477,7 +541,7 @@ EX_MEM_reg EX_MEM
 
   .control_in(ID_EX_ctrl),
   .alu_out_in(ID_EX_MEM_alu),
-  .sr2_in(ID_EX_sr2),
+  .sr2_in(sr2mux_out),				/* ID_EX_sr2 */
   .dest_in(ID_EX_MEM_dest),
   .trap_vect8_in(ID_EX_MEM_ztrapvect8),
 
@@ -510,7 +574,7 @@ n_bit_counter #(.width(2)) ONE_BIT_COUNTER
   .clk(clk),
   .reset(reset_counter)
 );
-
+/*
 mux2 #(.width(16)) WRITEMUX
 (
   .sel(EX_MEM_ctrl.writemux_sel),
@@ -518,11 +582,37 @@ mux2 #(.width(16)) WRITEMUX
   .b({EX_MEM_sr2[7:0],EX_MEM_sr2[7:0]}),
   .f(dcache_wdata)
 );
+*/
+lc3b_word WB_MEM_mux_out;
+mux2 #(.width(16)) WRITEMUX
+(
+  .sel(EX_MEM_ctrl.writemux_sel),
+  .a(WB_MEM_mux_out),
+  .b({WB_MEM_mux_out[7:0],WB_MEM_mux_out[7:0]}),
+  .f(dcache_wdata)
+);
+mux2 WB_to_MEM_dest_mux
+(
+	.sel(writemux_sel_updated),
+	.a(EX_MEM_sr2),
+	.b(writebackmux_out),
+	.f(WB_MEM_mux_out)
+);
+/*
+mux4 #(.width(16)) WRITEMUX
+(
+  .sel(writemux_sel_updated),
+  .a(EX_MEM_sr2),
+  .b({EX_MEM_sr2[7:0],EX_MEM_sr2[7:0]}),
+  .c(writebackmux_out),
+  .d({writebackmux_out[7:0],writebackmux_out[7:0]}),
+  .f(dcache_wdata)
+);*/
 
 register #(.width(16)) LDI_STI_ADDRESS
 (
 	.clk(clk),
-	.load(1'b1),
+	.load(load_LDI_STI_ADDRESS),
 	.in(dcache_rdata),
 	.out(LDI_STI_address_out)
 );

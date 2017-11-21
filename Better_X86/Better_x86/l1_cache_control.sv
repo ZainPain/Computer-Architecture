@@ -154,10 +154,34 @@ begin : state_actions
 		
 		read_block1: begin
 			if (!pmem_resp)
-            pmem_read = 1;
+            	pmem_read = 1;
+            else if (lru_out)
+			begin
+				tag0_load = 1;
+				data0_load = 1;
+				write_array_sel = 1;
+				lru_in = 0;
+				lru_load = 1;
+				valid0_in = 1;
+				valid0_load = 1;
+				dirty0_in = 0;
+				dirty0_load = 1;
+			end
+			else if(~lru_out)
+			begin
+				tag1_load = 1;
+				data1_load = 1;
+				write_array_sel = 1;
+				lru_in = 1;
+				lru_load = 1;
+				valid1_in = 1;
+				valid1_load = 1;
+				dirty1_in = 0;
+				dirty1_load = 1;
+			end
         end
 
-		read_block2: begin
+		/*read_block2: begin
 			if (lru_out)
 			begin
 				tag0_load = 1;
@@ -182,7 +206,7 @@ begin : state_actions
 				dirty1_in = 0;
 				dirty1_load = 1;
 			end
-		end
+		end*/
 
 		default: /* Do nothing */;
 
@@ -220,13 +244,13 @@ begin : next_state_logic
 		
 		read_block1: begin
 			if (pmem_resp)
-				next_states <= read_block2;
+				next_states <= compare_tag;
 			else
 				next_states <= read_block1;
 		end
 
-		read_block2:
-			next_states <= compare_tag;
+		/*read_block2:
+			next_states <= compare_tag; */
 
 		default: /* Do nothing */;
 
