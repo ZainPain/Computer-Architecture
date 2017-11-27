@@ -1,0 +1,35 @@
+__date__, Define
+__file__, Define
+__line__, Define
+__time__, Define
+__version_3__, Define
+__version__, Define
+a, Label, 4xEA, 4x0
+b, Label, 4xEC, 4x2
+c, Label, 4x13A, 4x0
+codesegment, Label, 4x0, 4x0
+d, Label, 4x13C, 4x2
+dataseg0, Label, 4xEA, 4x0
+dataseg1, Label, 4x13A, 4x0
+dataseg2, Label, 4x18A, 4x0
+dataseg3, Label, 4x1DA, 4x0
+dataseg4, Label, 4x22A, 4x0
+dataseg5, Label, 4x27A, 4x0
+dataseg6, Label, 4x2CA, 4x0
+dataseg7, Label, 4x31A, 4x0
+dataseg8, Label, 4x36A, 4x0
+done, Label, 4xDA, 4xDA
+e, Label, 4x18A, 4x0
+f, Label, 4x18C, 4x2
+g, Label, 4x1DA, 4x0
+h, Label, 4x1DC, 4x2
+i, Label, 4x22A, 4x0
+j, Label, 4x22C, 4x2
+k, Label, 4x27A, 4x0
+l, Label, 4x27C, 4x2
+m, Label, 4x2CA, 4x0
+n, Label, 4x2CC, 4x2
+o, Label, 4x31A, 4x0
+p, Label, 4x31C, 4x2
+q, Label, 4x36A, 4x0
+r, Label, 4x36C, 4x2

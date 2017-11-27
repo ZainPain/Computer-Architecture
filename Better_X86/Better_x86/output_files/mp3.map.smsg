@@ -1,4 +1,4 @@
 Warning (10268): Verilog HDL information at l2_cache_control.sv(353): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at l1_cache_control.sv(217): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at cache_arbiter_control.sv(123): always construct contains both blocking and non-blocking assignments
-Info (10281): Verilog HDL Declaration information at cpu_datapath.sv(41): object "pc_plus2" differs only in case from object "PC_PLUS2" in the same scope
+Info (10281): Verilog HDL Declaration information at cpu_datapath.sv(42): object "pc_plus2" differs only in case from object "PC_PLUS2" in the same scope

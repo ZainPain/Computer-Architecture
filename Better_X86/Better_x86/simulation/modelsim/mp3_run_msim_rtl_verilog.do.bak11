@@ -48,6 +48,8 @@ vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Bet
 vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/mp3.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/staller.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/writeback_forward.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/Address_checker.sv}
+vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/Memory_mapped_IO.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/l2_cache.sv}
 vlog -sv -work work +incdir+/home/zpaya2/Better_X86/Better_x86 {/home/zpaya2/Better_X86/Better_x86/l1_cache.sv}
 

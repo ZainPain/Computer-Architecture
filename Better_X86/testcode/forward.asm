@@ -14,9 +14,9 @@ SEGMENT  CodeSegment:
 	nop
 	nop
 	nop
-	lea r6, B
-	stb r3, r6, 0
-	ldr r5, r7, 0
+	lea r4, DataSeg
+	ldr r4, r4, C
+	ldr r4, r4, 0
 
 
 
@@ -35,7 +35,7 @@ DSP:    DATA2 DataSeg
 SEGMENT DataSeg:
 A:  DATA2 4xCD11 ; 30
 B:  DATA2 4xEF22
-NOP
+C:  Data2 4xFFF1
 NOP
 NOP
 NOP

@@ -22,6 +22,7 @@ entity memory_caches is
         pmem_read       : out    vl_logic;
         pmem_write      : out    vl_logic;
         pmem_address    : out    vl_logic_vector(15 downto 0);
-        pmem_wdata      : out    vl_logic_vector(127 downto 0)
+        pmem_wdata      : out    vl_logic_vector(127 downto 0);
+        l2cache_resp    : out    vl_logic
     );
 end memory_caches;

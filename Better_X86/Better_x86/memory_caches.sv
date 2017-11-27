@@ -28,7 +28,9 @@ module memory_caches
     output pmem_read,
     output pmem_write,
     output lc3b_word pmem_address,
-    output lc3b_l2_line pmem_wdata
+    output lc3b_l2_line pmem_wdata,
+	 
+	 output logic l2cache_resp
 
 );
 
@@ -51,6 +53,7 @@ logic l2cache_resp_arbiter;
 logic l2cache_read_arbiter;
 logic l2cache_write_arbiter;
 
+assign l2cache_resp = l2cache_resp_arbiter;
 cache_arbiter arbiter
 (
 	.clk(clk),

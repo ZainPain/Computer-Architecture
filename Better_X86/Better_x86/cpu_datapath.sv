@@ -20,7 +20,8 @@ module cpu_datapath
     output [15:0] dcache_address,
     output [15:0] dcache_wdata,
     input logic dcache_resp,
-    input logic [15:0] dcache_rdata
+    input logic [15:0] dcache_rdata,
+	 input logic l2cache_resp
 );
 
 //NOTE NEED TO PUT LOAD_PC ELSEWHERE
@@ -251,6 +252,7 @@ mux2 WB_to_ID_EX_sr2_mux
 	.b(writebackmux_out),
 	.f(sr2mux_out)
 );
+/*
 logic delayed_forward_load;
 register #(.width(1)) forward_load_reg
 (
@@ -259,6 +261,7 @@ register #(.width(1)) forward_load_reg
     .in(forward_load),
 	 .out(delayed_forward_load)
 );
+*/
 lc3b_control_word NOP_ctrl;
 lc3b_control_word controlmux_out;
 NOPS zero_signal
@@ -273,7 +276,59 @@ mux2 #(.width(($bits(lc3b_control_word)))) controlmux
 	.f(controlmux_out)
 );
 /* FORWARD IMPLEMENTATION END */
-// SET THESE TO ALWAYS STORE 2 BYTES FOR CP1
+/* PERFORMANCE COUNTER  START */
+
+logic mem_read_checked;
+logic mem_write_checked;
+logic MMIO_read;
+logic MMIO_write;
+logic [3:0] performance_counter;
+logic memoryout_sel;
+lc3b_word performance_counter_out;
+logic branch_for_counter;
+logic branch_not_taken_for_counter;
+lc3b_word memorymux_out;
+address_checker AC
+(
+	.address(dcache_address),
+	.mem_read(EX_MEM_ctrl.mem_read),
+	.mem_write(EX_MEM_ctrl.mem_write),
+	.mem_read_update(mem_read_checked),
+	.mem_write_update(mem_write_checked),
+	.MMIO_read(MMIO_read),
+	.MMIO_write(MMIO_write),
+	.counter_address(performance_counter),
+	.memoryout_sel(memoryout_sel)
+	
+);
+Memory_Mapped_IO MMIO
+(
+	.clk(clk),
+	.counter(performance_counter),
+	.mem_read(EX_MEM_ctrl.mem_read),
+	.mem_write(EX_MEM_ctrl.mem_write),
+	.MMIO_read(MMIO_read),
+	.MMIO_write(MMIO_write),
+	.branch(branch_for_counter),
+	.branch_not(branch_not_taken_for_counter),
+	.Icache_resp(icache_resp),
+	.Dcache_resp(dcache_resp),
+	.L2cache_resp(l2cache_resp),
+	.stall_IF_ID(load_IF_ID && forward_load),
+	.stall_ID_EX(load_ID_EX),
+	.stall_EX_MEM(load_EX_MEM),
+	.stall_MEM_WB(load_MEM_WB),
+	.counter_out(performance_counter_out)
+);
+
+mux2 #(.width(16)) MEMORYMUX
+(
+	.sel(memoryout_sel),
+	.a(dcache_rdata),
+	.b(performance_counter_out),
+	.f(memorymux_out)
+);
+/* PERFORMANCE COUNTER END */
 assign icache_wmask = 2'b11;
 
 
@@ -281,7 +336,7 @@ assign icache_wmask = 2'b11;
 assign load_pc = (icache_resp && (load_EX_MEM || branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp));
 
 // assigning RESET SIGNALS
-assign reset_IF_ID = (~load_pc && load_pipeline_reg && !hazard) ? 1'b1 : 1'b0;//1'b0;
+assign reset_IF_ID = (~load_pc && load_pipeline_reg && (!hazard ||branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp)) ? 1'b1 : 1'b0;//1'b0;
 assign reset_ID_EX = (branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp) ? 1'b1 : 1'b0;//1'b0;
 assign reset_EX_MEM = (branch_enable_true || MEM_WB_ctrl.opcode == op_jsr || MEM_WB_ctrl.opcode == op_trap || MEM_WB_ctrl.opcode == op_jmp) ? 1'b1 : 1'b0;//1'b0;
 //assign reset_MEM_WB = 1'b0; //branch_enable_true ? 1'b1 : 1'b0;
@@ -297,11 +352,16 @@ assign load_EX_MEM=load_pipeline_reg;
 assign load_MEM_WB=(load_pipeline_reg && MEM_WB_ctrl.opcode != op_br && ~unconditional_branch) || (load_pipeline_reg && ~branch_enable_true && ~unconditional_branch) || (load_pipeline_reg && branch_enable_true && icache_resp) 
 || (load_pipeline_reg && unconditional_branch && icache_resp);
 
+
+assign branch_for_counter = unconditional_branch || branch_enable_true;
+
+assign branch_not_taken_for_counter = !branch_enable_true && (EX_MEM_ctrl.opcode == op_br) && (EX_MEM_WB_inst[11] || EX_MEM_WB_inst[10] || EX_MEM_WB_inst[9]); 
+
 staller MEM_WB_stall(
 	.op_code(EX_MEM_ctrl.opcode),
 	.resp(dcache_resp),
-	.mem_read( EX_MEM_ctrl.mem_read),
-	.mem_write( EX_MEM_ctrl.mem_write),
+	.mem_read( mem_read_checked),
+	.mem_write( mem_write_checked),
 	.counter(EX_MEM_counter),
     
 	.datamux_sel(EX_MEM_ctrl.datamux_sel),
@@ -341,12 +401,6 @@ plus2 PC_PLUS2
 	.out(pc_plus2)
 );
 
-/*register #(.width(1)) reset_IF_ID_reg
-(
-    .clk(clk),
-    .load(1'b1),
-    .in(~icache_resp)
-);*/
 
 IF_ID_reg IF_ID
 (
@@ -583,6 +637,16 @@ mux2 #(.width(16)) WRITEMUX
   .f(dcache_wdata)
 );
 */
+mux4 #(.width(16)) WRITEMUX 
+(
+	.sel({writemux_sel_updated,EX_MEM_ctrl.writemux_sel}),
+	.a(EX_MEM_sr2),
+	.b({EX_MEM_sr2[7:0],EX_MEM_sr2[7:0]}),
+	.c(writebackmux_out),
+	.d({writebackmux_out[7:0],writebackmux_out[7:0]}),
+	.f(dcache_wdata)
+);
+/*
 lc3b_word WB_MEM_mux_out;
 mux2 #(.width(16)) WRITEMUX
 (
@@ -598,6 +662,7 @@ mux2 WB_to_MEM_dest_mux
 	.b(writebackmux_out),
 	.f(WB_MEM_mux_out)
 );
+*/
 /*
 mux4 #(.width(16)) WRITEMUX
 (
@@ -637,7 +702,7 @@ MEM_WB_reg MEM_WB
 
   .control_in(EX_MEM_ctrl),
   .alu_out_in(EX_MEM_alu_out),
-  .mem_out_in(dcache_rdata),
+  .mem_out_in(memorymux_out),
   .branch_address_in(EX_MEM_WB_pc_adder),
   .sr2_in(EX_MEM_sr2),
   .dest_in(EX_MEM_WB_dest),

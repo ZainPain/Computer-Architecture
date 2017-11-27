@@ -1,0 +1,9 @@
+import lc3b_types::*;
+
+module Memory_Mapped_io
+(
+	input counter,
+	input mem_read,
+	input mem_write,
+	output lc3b_word_counter_out,
+);

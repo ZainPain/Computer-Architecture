@@ -4,13 +4,14 @@ __line__, Define
 __time__, Define
 __version_3__, Define
 __version__, Define
-a, Label, 4x34, 4x0
-b, Label, 4x36, 4x2
+a, Label, 4x32, 4x0
+b, Label, 4x34, 4x2
+c, Label, 4x36, 4x4
 codesegment, Label, 4x0, 4x0
-dataseg, Label, 4x34, 4x0
-done, Label, 4x22, 4x22
-dsp, Label, 4x32, 4x32
-w, Label, 4x40, 4xC
-x, Label, 4x42, 4xE
-y, Label, 4x44, 4x10
-z, Label, 4x46, 4x12
+dataseg, Label, 4x32, 4x0
+done, Label, 4x20, 4x20
+dsp, Label, 4x30, 4x30
+w, Label, 4x3E, 4xC
+x, Label, 4x40, 4xE
+y, Label, 4x42, 4x10
+z, Label, 4x44, 4x12
