@@ -64,7 +64,7 @@ lc3b_l2_line data2_out;
 lc3b_l2_line data3_out;
 lc3b_l2_line waymux_out;
 lc3b_l2_line write_mux_out;
-lc3b_l2_offset offset;
+//lc3b_l2_offset offset;
 lc3b_l2_index index;
 lc3b_l2_tag tag;
 lc3b_l2_tag tag0_out;

@@ -6,6 +6,8 @@ module cache_arbiter_control
 	input logic dcache_read,
 	input logic dcache_write,
 	input logic l2_resp,
+	input logic dcache_resp,
+	input logic icache_resp,
 
 	output logic cache_address_sel,
 	output logic [1:0] cache_read_sel,
@@ -58,7 +60,7 @@ begin: state_actions
 		
 		data_write: begin
 			l2_write = 1;
-			if (l2_resp && dcache_read) begin
+			/*if (l2_resp && dcache_read) begin
 				cache_resp_sel = 1;
 				cache_address_sel = 1;
 				load_mar = 1;
@@ -70,15 +72,18 @@ begin: state_actions
 			end
 			else if (l2_resp) begin
 				cache_resp_sel = 1;
+			end */
+			if (l2_resp) begin
+				cache_resp_sel = 1;
 			end
 			else begin
             	cache_address_sel = 1;
-            end
+			end
 		end
 
 		data_read: begin
 			l2_read = 1;
-			if (l2_resp && icache_read) begin
+			/*if (l2_resp && icache_read) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 1;
 				cache_address_sel = 0;
@@ -87,15 +92,19 @@ begin: state_actions
 			else if (l2_resp) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 1;
+			end */
+			if (l2_resp) begin
+				load_mdr_l2_to_l1 = 1;
+				cache_resp_sel = 1;
 			end
 			else begin
 				cache_address_sel = 1;
-            end
+			end
 		end
 
 		instruction_read: begin
 			l2_read = 1;
-			if (l2_resp && dcache_write) begin
+			/*if (l2_resp && dcache_write) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 0;
 				cache_address_sel = 1;
@@ -109,6 +118,10 @@ begin: state_actions
 				load_mar = 1;
 			end
 			else if (l2_resp && ~dcache_read && ~dcache_write) begin
+				load_mdr_l2_to_l1 = 1;
+				cache_resp_sel = 0;
+			end */
+			if (l2_resp) begin
 				load_mdr_l2_to_l1 = 1;
 				cache_resp_sel = 0;
 			end
@@ -125,42 +138,48 @@ begin: next_state_logic
 
 	case(state)
 		idle: begin
-			if(dcache_read)
+			if(dcache_read && !dcache_resp)
 				next_state <= data_read;
-			else if (dcache_write)
+			else if (dcache_write && !dcache_resp)
 				next_state <= data_write;
-			else if (icache_read && ~dcache_read && ~dcache_write)
+			else if (icache_read && ~dcache_read && ~dcache_write && !icache_resp)
 				next_state <= instruction_read;
 			else
 				next_state <= idle;
 		end
 
 		data_write: begin
-			if (l2_resp && dcache_read)
+			/*if (l2_resp && dcache_read)
 				next_state <= data_read;
 			else if (l2_resp && icache_read)
 				next_state <= instruction_read;
 			else if (l2_resp)
+				next_state <= idle; */
+			if (l2_resp)
 				next_state <= idle;
 			else
 				next_state <= data_write;
 		end
 
 		data_read: begin
-			if (l2_resp && icache_read)
+			/*if (l2_resp && icache_read)
 				next_state <= instruction_read;
 			else if (l2_resp)
+				next_state <= idle; */
+			if (l2_resp)
 				next_state <= idle;
 			else
 				next_state <= data_read;
 		end
 
 		instruction_read:
-			if (l2_resp && dcache_write)
+			/*if (l2_resp && dcache_write)
 				next_state <= data_write;
 			else if (l2_resp && dcache_read)
 				next_state <= data_read;
 			else if (l2_resp)
+				next_state <= idle; */
+			if (l2_resp)
 				next_state <= idle;
 			else
 				next_state <= instruction_read;

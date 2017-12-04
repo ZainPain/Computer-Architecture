@@ -8,7 +8,10 @@ module IF_ID_reg
 
 	input lc3b_word inst_in,
 	input lc3b_word pc_in,
-
+  
+  input btb_speculatively_taken_in,
+  input [1:0] pht_prediction_out_in,
+	input [9:0]pht_index_out_in,
 	output lc3b_word inst_out,	/* Maybe for debugging purpose only */
 	output lc3b_word pc_out,
 
@@ -22,7 +25,10 @@ module IF_ID_reg
 	output lc3b_reg dest,
 	output lc3b_reg sr1,
 	output lc3b_reg sr2,
-
+  
+  output logic btb_speculatively_taken_out,
+  output logic [1:0] pht_prediction_out_out,
+	output logic [9:0]pht_index_out_out,
 	/* Signals for control rom*/
 	output lc3b_opcode opcode,
 	output logic ir11,
@@ -33,12 +39,16 @@ module IF_ID_reg
 // internal registers
 lc3b_word pc_value;
 lc3b_word instruction;
-
-
+logic btb_speculatively_taken;
+logic [1:0] pht_prediction_out;
+logic [9:0]pht_index_out;
 initial
 begin
 	pc_value = 16'd0;
 	instruction = 16'd0;
+  btb_speculatively_taken = 0;
+  pht_prediction_out = 0;
+  pht_index_out = 0;
 end
 
 always_ff @(posedge clk)
@@ -47,12 +57,18 @@ begin
 	begin
 		pc_value = pc_in;
 		instruction = inst_in;
+    btb_speculatively_taken = btb_speculatively_taken_in;
+    pht_prediction_out = pht_prediction_out_in;
+    pht_index_out = pht_index_out_in;
 	end
 
 	else if(reset)
 	begin
 		pc_value = 16'd0;
 		instruction = 16'd0;
+    btb_speculatively_taken = 0;
+    pht_prediction_out = 0;
+    pht_index_out = 0;
 	end
 end
 
@@ -81,7 +97,10 @@ begin
 	ir5 = instruction[5];
 	ir4 = instruction[4];
 	offset9 = instruction[8:0];
-
+  
+  btb_speculatively_taken_out = btb_speculatively_taken;
+  pht_prediction_out_out = pht_prediction_out;
+  pht_index_out_out = pht_index_out;
 end
 
 endmodule : IF_ID_reg

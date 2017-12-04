@@ -19,7 +19,7 @@ begin
     ctrl.addermux_sel = 1'b0;
     ctrl.regfilemux_sel = 3'b100;
     ctrl.ldbmux_sel = 1'b0;
-    ctrl.pcmux_sel = 2'b11;
+    ctrl.pcmux_sel = 3'b011;
     ctrl.mem_read = 1'b0;
     ctrl.mem_write = 1'b0;
     ctrl.alumux_sel = 3'b00;
@@ -114,7 +114,7 @@ begin
 		/* NOTE: LOAD_PC should generally always be high unless we are stalling the pipeline */
 																								/* LOOKS OKAY FOR NOW, MIGHT NEED TO FIX SOMETHING */
 			ctrl.addermux_sel = 1'b0; // adj9 + pc
-			ctrl.pcmux_sel = 2'b01;	// pcmux_out = addermux_out
+			ctrl.pcmux_sel = 3'b001;	// pcmux_out = addermux_out
 
 			
 		end
@@ -125,7 +125,8 @@ begin
 
 		op_jmp:begin			/* WORKS ON TESTCODE I WROTE */
 		/* NOTE: PC = BaseR */
-			/* BaseR = IR[8:6] which requires SR1 portion of instruction. */
+			/* BaseR = 
+			 which requires SR1 portion of instruction. */
 			/* SR1 -> ALU_OUT -> PCMUX -> PC */
 			ctrl.aluop = alu_pass;
 			ctrl.pcmux_sel = 3'b100; 
@@ -222,7 +223,7 @@ begin
 		
 		op_sti:begin	/* TO DO */
 			ctrl.alumux_sel = 3'b010;
-			ctrl.mem_read = 1'b1;
+			ctrl.mem_write = 1'b1;
 			ctrl.storemux_sel = 1'b1;
 		end
 		

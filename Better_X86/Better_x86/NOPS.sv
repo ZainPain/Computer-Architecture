@@ -7,7 +7,7 @@ module NOPS
 lc3b_control_word signal;
 always_comb
 begin
-	signal.opcode = op_rti;
+	signal.opcode = op_nop;
    signal.aluop = alu_add;
 	 
    signal.load_cc = 1'b0;
@@ -17,7 +17,7 @@ begin
    signal.regfilemux_sel = 3'b000;
    signal.ldbmux_sel = 1'b0;
 	signal.datamux_sel = 2'b00;
-	signal.pcmux_sel = 3'b000;
+	signal.pcmux_sel = 3'b011;
 	signal.alumux_sel = 3'b000;
 	signal.writemux_sel = 1'b0;
    signal.storemux_sel = 1'b0;

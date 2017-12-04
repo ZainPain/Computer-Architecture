@@ -16,7 +16,10 @@ module ID_EX_reg
 	
 	input lc3b_word reg_a, reg_b,
 	input lc3b_reg dest_in,
-
+  
+  input btb_speculatively_taken_in,
+  input [1:0] pht_prediction_out_in,
+  input [9:0]pht_index_out_in,
 	output lc3b_reg src1_out,				/* outputs for dataforwarding */
 	output lc3b_reg src2_out,				/* output for dataforwarding */
 	
@@ -36,6 +39,9 @@ module ID_EX_reg
 	output lc3b_word sr1, sr2,
 	output lc3b_reg dest_out,
 	output logic ir5_out,				/* output for dataforwarding */
+  output logic btb_speculatively_taken_out,
+  output logic [1:0] pht_prediction_out_out,
+  output logic [9:0]pht_index_out_out,
 	/* ALU_MUX signals */
 	output lc3b_word sext6_out,
 	output lc3b_word sext5_out,
@@ -66,6 +72,9 @@ lc3b_word trap_vect8;
 lc3b_reg src1;
 lc3b_reg src2;
 logic bit5;
+logic [1:0] pht_prediction_out;
+logic [9:0]pht_index_out;
+logic btb_speculatively_taken;
 
 // initially store nothing
 initial
@@ -86,6 +95,9 @@ begin
 	src1 = 3'b000;
 	src2 = 3'b000;
 	bit5 = 1'b0;
+  btb_speculatively_taken = 0;
+  pht_index_out = 0;
+  pht_prediction_out = 0;
 end
 
 //load during positive edge
@@ -110,6 +122,10 @@ begin
 		src1 = src1_in;
 		src2 = src2_in;
 		bit5 = ir5_in;
+    btb_speculatively_taken = btb_speculatively_taken_in;
+    pht_index_out = pht_index_out_in;
+    pht_prediction_out = pht_prediction_out_in;
+    
 	end
 	else if(reset)
 	begin
@@ -129,6 +145,9 @@ begin
 		src1 = 3'b000;
 		src2 = 3'b000;
 		bit5 = 1'b0;
+    btb_speculatively_taken = 0;
+    pht_index_out = 0;
+    pht_prediction_out = 0;
 	end
 end
 
@@ -150,6 +169,9 @@ begin
 	src1_out = src1;
 	src2_out = src2;
 	ir5_out = bit5;
+  btb_speculatively_taken_out = btb_speculatively_taken;
+  pht_prediction_out_out = pht_prediction_out;
+  pht_index_out_out = pht_index_out;
 end
 
 endmodule : ID_EX_reg

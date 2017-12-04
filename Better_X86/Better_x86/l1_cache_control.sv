@@ -116,18 +116,18 @@ begin : state_actions
                     begin    
                         pmem_address_sel = 2'b01;
                         waymux_sel = 0;
-                        pmem_write = 1;
+                        //pmem_write = 1;
                     end
                     else if(~lru_out && dirty1_out) /* set 1 needs to be written back */
                     begin
                         pmem_address_sel = 2'b10;
                         waymux_sel = 1;
-                        pmem_write = 1;
+                        //pmem_write = 1;
                     end
                 end
-			else if ((no_match || match0_invalid || match1_invalid)
+			/*else if ((no_match || match0_invalid || match1_invalid)
 				&& (mem_read || mem_write))
-				pmem_read = 1;
+				pmem_read = 1;*/
 		end
 		
 		write_block: begin
@@ -135,13 +135,13 @@ begin : state_actions
 			begin    
 				pmem_address_sel = 2'b01;
 				waymux_sel = 0;
-                pmem_write = 1;
+            pmem_write = 1;
 			end
 			else if(~lru_out && dirty1_out) /* set 1 needs to be written back */
 			begin
 				pmem_address_sel = 2'b10;
 				waymux_sel = 1;
-                pmem_write = 1;
+            pmem_write = 1;
 			end
 		end
 
@@ -153,9 +153,9 @@ begin : state_actions
 		end */
 		
 		read_block1: begin
-			if (!pmem_resp)
-            	pmem_read = 1;
-            else if (lru_out)
+			//if (!pmem_resp)
+         pmem_read = 1;
+         if (pmem_resp && lru_out)
 			begin
 				tag0_load = 1;
 				data0_load = 1;
@@ -167,7 +167,7 @@ begin : state_actions
 				dirty0_in = 0;
 				dirty0_load = 1;
 			end
-			else if(~lru_out)
+			else if(pmem_resp && ~lru_out)
 			begin
 				tag1_load = 1;
 				data1_load = 1;

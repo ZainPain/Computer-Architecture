@@ -4,6 +4,7 @@ module hazard_detection
 (
 	input lc3b_opcode opcode,
 	input logic bit5,
+	input logic bit11,
 	input ID_EX_mem_read,
 	input lc3b_reg ID_EX_dest,
 	input lc3b_reg IF_ID_sr1,
@@ -13,12 +14,15 @@ module hazard_detection
 	output logic hazard
 );
 
+logic regfile_read;
 always_comb
 begin
 	
+	regfile_read = !(opcode == op_br || opcode == op_lea || ((opcode == op_jsr) && bit11) || opcode == op_trap);
 	hazard = 1'b0;
 	forward_load = 1'b1;
-	if(ID_EX_mem_read && ((ID_EX_dest == IF_ID_sr1) || (ID_EX_dest == IF_ID_sr2 && (opcode == op_add || opcode == op_and) && !bit5 ) ) )
+	if(ID_EX_mem_read && (((ID_EX_dest == IF_ID_sr1) && regfile_read) || ((ID_EX_dest == IF_ID_sr2) && (opcode == op_add || opcode == op_and) && !bit5 ) ) )
+
 	begin
 		forward_load = 1'b0;		// stop loading for pc and IF_ID
 		hazard = 1'b1;	

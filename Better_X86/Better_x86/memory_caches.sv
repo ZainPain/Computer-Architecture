@@ -126,7 +126,18 @@ l1_cache dcache
     .pmem_write(dcache_write_arbiter)
 );
 
-l2_cache l2cache
+    /*********SIGNALS FROM L2 TO VICTIM***********/
+    logic pmem_write_l2_to_victim, pmem_read_l2_to_victim;
+    lc3b_l2_line pmem_wdata_l2_to_victim;
+    lc3b_word pmem_address_l2_to_victim;
+
+    /**********SIGNALS FROM VICTIM TO L2*********/
+    logic pmem_resp_victim_to_l2;
+    lc3b_l2_line pmem_rdata_victim_to_l2;
+
+    // COMMENT OUT MY INSTANTIATIONS AND UNCOMMENT THIS IS YOU WANT
+    // TO TEST WTIHOUT VICTIMING
+/*l2_cache l2cache
 (
     .clk(clk),
     .mem_rdata(l2cache_rdata_arbiter),
@@ -142,6 +153,47 @@ l2_cache l2cache
     .pmem_resp(pmem_resp),
     .pmem_read(pmem_read),
     .pmem_write(pmem_write)
+);*/
+
+
+l2_cache l2cache
+(
+    .clk(clk),
+    .mem_rdata(l2cache_rdata_arbiter),
+    .mem_address(l2cache_address_arbiter),
+    .mem_wdata(l2cache_wdata_arbiter),
+    .mem_resp(l2cache_resp_arbiter),
+    .mem_read(l2cache_read_arbiter),
+    .mem_write(l2cache_write_arbiter),
+    
+    .pmem_rdata(pmem_rdata_victim_to_l2),
+    .pmem_address(pmem_address_l2_to_victim),
+    .pmem_wdata(pmem_wdata_l2_to_victim),
+    .pmem_resp(pmem_resp_victim_to_l2),
+    .pmem_read(pmem_read_l2_to_victim),
+    .pmem_write(pmem_write_l2_to_victim)
 );
+
+    victim victim_cache(
+        .clk(clk),
+
+        // inputs from L2 and pmem
+        .mem_address(pmem_address_l2_to_victim), // l2 to victim
+        .mem_wdata(pmem_wdata_l2_to_victim), // l2 to victim
+        .mem_write(pmem_write_l2_to_victim), // l2 to victim
+        .mem_read(pmem_read_l2_to_victim), // l2 to victim
+        .pmem_rdata(pmem_rdata), // pmem to victim
+        .pmem_resp(pmem_resp), // pmem to victim
+
+        // outputs to L2 and pmem
+        .mem_resp(pmem_resp_victim_to_l2), // victim to l2
+        .pmem_read(pmem_read), // victim to pmem
+        .pmem_write(pmem_write), // victim to pmem
+        .pmem_address(pmem_address), // victim to pmem
+        .pmem_wdata(pmem_wdata), // victim to pmem
+        .mem_rdata(pmem_rdata_victim_to_l2) // victim to l2
+        );
+
+
 
 endmodule : memory_caches

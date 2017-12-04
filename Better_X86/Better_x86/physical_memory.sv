@@ -12,7 +12,7 @@ module physical_memory
 timeunit 1ns;
 timeprecision 1ns;
 
-parameter DELAY_MEM = 0;
+parameter DELAY_MEM = 200;
 
 logic [127:0] mem [0:2**($bits(address)-4)-1];
 logic [11:0] internal_address;

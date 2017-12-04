@@ -28,7 +28,7 @@ begin
     begin
         lru0[i] = 2'b00;
         lru1[i] = 2'b01;
-        lru2[i] = 2'b10;
+       	lru2[i] = 2'b10;
         lru3[i] = 2'b11;
     end
 end

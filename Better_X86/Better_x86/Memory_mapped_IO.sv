@@ -18,7 +18,8 @@ module Memory_Mapped_IO
 	input stall_ID_EX,
 	input stall_EX_MEM,
 	input stall_MEM_WB,
-	output lc3b_word counter_out
+	output lc3b_word counter_out,
+  input misprediction_in
 );
 
 lc3b_word Icache_hit;
@@ -39,6 +40,8 @@ lc3b_word _stall_ID_EX;
 lc3b_word _stall_EX_MEM;
 lc3b_word _stall_MEM_WB;
 
+logic misprediction;
+
 logic Icache_access;
 logic Dcache_access;
 logic L2cache_access;
@@ -57,7 +60,7 @@ logic PC_IFID;
 
 initial
 begin
-
+  misprediction = 0;
 	Icache_access = 1'b0;
 	Icache_hit = 4'h0000;
 	Icache_miss = 4'h0000;
@@ -68,7 +71,7 @@ begin
 	
 	L2cache_access = 1'b0;
 	L2cache_hit = 4'h0000;
-	L2cache_miss = -1;
+	L2cache_miss = 16'hFFFF;
 	
 	total_branch = 4'h0000;
 	branch_taken = 4'h0000;
@@ -79,12 +82,13 @@ begin
 	_stall_EX_MEM = 4'h0000;
 	_stall_MEM_WB = 4'h0000;
 	
+
 	IF_ID = 1'b0;
 	ID_EX = 1'b0;
 	EX_MEM = 1'b0;
 	MEM_WB = 1'b0;
 	
-	stall_all = -1;
+	stall_all = 16'hFFFF;
 	stall_PC_IFID = 4'h0000;
 	
 	all = 1'b0;
@@ -92,7 +96,11 @@ begin
 end
 always_ff @ (negedge clk)
 begin
-
+  
+  if(misprediction_in) 
+  begin
+    misprediction += 1'b1;
+   end
 	if(!Dcache_resp && (mem_read || mem_write) && !Dcache_access)
 	begin
 		Dcache_miss = Dcache_miss + 1'b1;
@@ -129,14 +137,18 @@ begin
 
 	if(branch)
 	begin
-		total_branch = total_branch + 1'b1;
 		branch_taken = branch_taken + 1'b1;
 	end
+	
 	if(branch_not)
 		branch_not_taken = branch_not_taken + 1'b1;
+	if(branch || branch_not)
+		total_branch = total_branch + 1'b1;
 		
 		
-		
+	/* STALL COUNTERS */	
+	
+	/* IF_ID */
 	if(stall_IF_ID && !IF_ID)
 	begin
 		_stall_IF_ID = _stall_IF_ID + 1'b1;
@@ -147,10 +159,12 @@ begin
 	else if(!stall_IF_ID)
 	begin
 		IF_ID = 1'b0;
-		PC_IFID = 1'b0;
+		
 
 	end
+	/* IF_ID END */
 	
+	/* ID_EX */
 	if(stall_ID_EX && !ID_EX)
 	begin
 		_stall_ID_EX = _stall_ID_EX + 1'b1;
@@ -164,7 +178,9 @@ begin
 		all = 1'b0;
 
 	end
+	/* ID_EX END*/
 	
+	/* EX_MEM */
 	if(stall_EX_MEM && !EX_MEM)
 	begin
 		_stall_EX_MEM = _stall_EX_MEM + 1'b1;
@@ -177,6 +193,9 @@ begin
 		all = 1'b0;
 	end
 	
+	/* EX_MEM END */
+	
+	/* MEM_WB */
 	if(stall_MEM_WB && !MEM_WB)
 	begin
 		_stall_MEM_WB = _stall_MEM_WB + 1'b1;
@@ -187,18 +206,25 @@ begin
 		MEM_WB = 1'b1;
 		all = 1'b0;
 	end
+	/* MEM_WB END */
 	
-	if(IF_ID && ID_EX && EX_MEM && MEM_WB & !all)
+	/* STALL ALL */
+	if(stall_IF_ID && (stall_ID_EX && stall_EX_MEM && stall_MEM_WB) && !all)
 	begin
 		stall_all = stall_all + 1'b1;
 		all = 1'b1;
 	end
-	
-	if(IF_ID && !ID_EX && !EX_MEM && !MEM_WB && !PC_IFID)
+	/* STALL ALL END */
+
+	if(stall_IF_ID && (!stall_ID_EX && !stall_EX_MEM && !stall_MEM_WB) && !PC_IFID)
 	begin
 		stall_PC_IFID = stall_PC_IFID + 1'b1;
 		PC_IFID = 1'b1;
 	end
+	else if(!IF_ID)
+		PC_IFID = 1'b0;
+	
+    
 	/* READ/WRITE */
 	
 	if(counter == 4'b0000)
@@ -272,6 +298,9 @@ begin
 	begin
 		if(MMIO_write)
 			stall_PC_IFID = 4'h0000;
+  else if(counter == 4'b1011)
+    if(MMIO_write)
+      misprediction = 0;
 		
 	end
 	
@@ -322,6 +351,8 @@ begin
 	/* STALL PCIFID */
 	else if(counter == 4'b1010)
 			counter_out = stall_PC_IFID;
+	else if(counter == 4'b1011)
+			counter_out = misprediction;
 
 end
 

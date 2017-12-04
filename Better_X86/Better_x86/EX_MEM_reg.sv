@@ -16,6 +16,9 @@ module EX_MEM_reg
 	input lc3b_word trap_vect8_in,
 
 	input lc3b_word branch_address_in,
+  input btb_speculatively_taken_in,
+  input [9:0]pht_index_out_in,
+  input [1:0] pht_prediction_out_in,
 
 	output lc3b_word inst_out,	/* Maybe for debugging purpose only */
 	output lc3b_word pc_out,
@@ -26,7 +29,10 @@ module EX_MEM_reg
 	output lc3b_reg dest_out,
 	output lc3b_word trap_vect8_out,
 
-	output lc3b_word branch_address_out
+	output lc3b_word branch_address_out,
+  output logic btb_speculatively_taken_out,
+  output logic [9:0]pht_index_out_out,
+  output logic [1:0] pht_prediction_out_out
 );
 
 lc3b_control_word control;
@@ -39,6 +45,9 @@ lc3b_word branch_address;
 lc3b_reg dest;
 lc3b_word trap_vect8;
 
+logic btb_speculatively_taken;
+logic [9:0]pht_index_out;
+logic [1:0] pht_prediction_out;
 initial
 begin
 	control = 0;
@@ -49,6 +58,9 @@ begin
 	branch_address = 16'd0;
 	dest = 3'd0;
 	trap_vect8 = 16'd0;
+  btb_speculatively_taken = 0;
+  pht_index_out = 0;
+  pht_prediction_out = 0;
 end
 
 always_ff @(posedge clk)
@@ -63,6 +75,9 @@ begin
 		branch_address = branch_address_in;
 		dest = dest_in;
 		trap_vect8 = trap_vect8_in;
+    btb_speculatively_taken = btb_speculatively_taken_in;
+    pht_index_out = pht_index_out_in;
+    pht_prediction_out = pht_prediction_out_in;
 	end
 
 	else if(reset)
@@ -75,6 +90,9 @@ begin
 		branch_address = 16'd0;
 		dest = 3'd0;
 		trap_vect8 = 16'd0;
+    btb_speculatively_taken = 0;
+    pht_index_out = 0;
+    pht_prediction_out = 0;
 	end
 end
 
@@ -88,5 +106,8 @@ begin
 	branch_address_out = branch_address;
 	dest_out = dest;
 	trap_vect8_out = trap_vect8;
+  btb_speculatively_taken_out = btb_speculatively_taken;
+  pht_index_out_out = pht_index_out;
+  pht_prediction_out_out = pht_prediction_out;
 end
 endmodule : EX_MEM_reg

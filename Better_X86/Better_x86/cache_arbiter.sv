@@ -74,6 +74,8 @@ cache_arbiter_control cac
 	.dcache_read(dcache_read),
 	.dcache_write(dcache_write),
 	.l2_resp(l2_resp),
+	.dcache_resp(dcache_resp),
+	.icache_resp(icache_resp),
 
 	.cache_address_sel(cache_address_sel),
 	.cache_read_sel(cache_read_sel),

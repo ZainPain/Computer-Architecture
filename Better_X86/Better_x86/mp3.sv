@@ -30,7 +30,6 @@ logic dcache_write;
 logic [1:0] dcache_wmask;
 
 logic l2cache_resp;
-
 cpu_datapath cpu_d
 (
     .clk(clk),
@@ -85,8 +84,6 @@ memory_caches caches
     .pmem_write(pmem_write),
     .pmem_address(pmem_address),
     .pmem_wdata(pmem_wdata),
-	 
 	 .l2cache_resp(l2cache_resp)
 );
-
 endmodule : mp3
